@@ -1,0 +1,80 @@
+=======
+ FACTS 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show some facts
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *chuck*
+
+    :description: generate chuck norris fact
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !chuck
+        <output> Chuck Norris once bet NASA he could survive re-entry
+        <output>  without a spacesuit. On July 19th, 1999, a naked Chuck
+        <output>  Norris re-entered the earth's atmosphere, streaking
+        <output>  over 14 states and reaching a temperature of 3000
+        <output>  degrees. An embarrassed NASA publically claimed it
+        <output>  was a meteor, and still owes him a beer.
+
+
+2) *schneier*
+
+    :description: generate bruce schneier fact
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !schneier
+        <output> The universe was created to serve as Bruce Schneier's
+        <output>  crib text.
+
+
+3) *theo*
+
+    :description: generate theo de raadt fact
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !theo
+        <output> It'd be one fucking happy planet if it wasn't for what's
+        <output>  under this fucking sticker.
+
+

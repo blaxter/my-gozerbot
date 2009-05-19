@@ -1,0 +1,61 @@
+====
+ AT 
+====
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+:doc created at: Sun Jan  4 21:02:38 2009
+ 
+| 
+
+description
+-----------
+| 
+
+schedule a command at a specific time
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *at*
+
+    :description: start a job at given time
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !at 23:00 say moooo
+        <output> job scheduled
+
+
+2) *at-list*
+
+    :description: show list of at jobs
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !at-list
+        <output> 12: at Sun Jan  4 23:00:00 2009, "say moooo"
+
+

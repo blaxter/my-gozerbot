@@ -1,0 +1,30 @@
+=======
+Upgrade
+=======
+
+__copyright__ = 'this file is in the public domain'
+
+
+if you have the bot installed via mercurial or subversion run the 
+!upgrade command.
+
+from 0.8 to 0.8.1 or 0.8.2:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1) stop the bot
+2) mv the old gozerbot dir
+3) untar the tar file
+4) copy (cp -R) the gozerdata, logs and myplugs dirs
+5) start the bot
+
+from 0.8 to 0.9 or 0.9 to 0.9.0.2:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+upgrade to python2.5
+
+1) run gozerbot-upgrade <old bot dir> <new bot dir>
+2) install the gozerplugs tarball in the new bot dir or use the
+   gozerbot-install program to install the plugins you want
+3) start the bot
+4) run the !plugs-upgrade command
+5) check with the !size command if the upgrade has worked 

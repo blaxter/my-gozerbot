@@ -1,0 +1,100 @@
+==========
+ GREETING 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+the greeting plugin allows users to set messages to be said when they join a channel
+
+| 
+
+  say greet message when user joins 
+
+| 
+
+commands
+--------
+| 
+
+1) *greeting-add*
+
+    :description: add greeting message
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !greeting-add yooo dudes
+        <output> greeting message added
+
+
+2) *greeting-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !greeting-cfg
+        <output> options: enable=[] .. version="GOZERBOT 0.9"
+
+
+3) *greeting-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !greeting-cfgsave
+        <output> config saved
+
+
+4) *greeting-del*
+
+    :description: delete greeting message
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !greeting-delete 1
+        <output> none
+5) *greeting-list*
+
+    :description: show greetings of user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !greeting-list
+        <output> yooo dudes
+
+

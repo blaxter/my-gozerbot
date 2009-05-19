@@ -1,0 +1,34 @@
+=============
+ NICKCAPTURE 
+=============
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:39 2009
+ 
+| 
+
+description
+-----------
+| 
+
+nickcapture takes a nick back if a user quits
+
+| 
+
+  nick recapture callback 
+
+| 
+
+commands
+--------
+| 
+
+no commands in this plugin

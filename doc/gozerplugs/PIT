@@ -1,0 +1,62 @@
+=====
+ PIT 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+http://www.paste-it.net paste functionality
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *pit*
+2) *pit-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !pit-cfg
+        <output> options: expiry=604800 .. items=50 .. url="http://www.paste-it.net/ajax/pit/"
+        <output>  .. useragent="paste-it.net command line client (Compatible;
+        <output>  GOZERBOT 0.9)" .. version="GOZERBOT 0.9" .. waitforqueue=50
+
+
+3) *pit-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !pit-cfgsave
+        <output> config saved
+
+

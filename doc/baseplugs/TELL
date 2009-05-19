@@ -1,0 +1,47 @@
+======
+ TELL 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:42 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the tell command sends the output of a command to another user
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *tell*
+
+    :description: tell <nick> <command> .. send output of command to another user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !tell dunker version
+        <output> GOZERBOT 0.9-RC3 SQLITE HG revision 2717
+
+

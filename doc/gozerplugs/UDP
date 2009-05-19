@@ -1,0 +1,98 @@
+=====
+ UDP 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+run the udp listen thread
+
+| 
+
+ 
+ the bot has the capability to listen for udp packets which it will use
+ to /msg a given nick or channel.
+ 
+ 1) plugin config
+   udp = 1 # set to 1 to enable
+   udphost = 'localhost'
+   udpport = 5500
+   udpallow = ['127.0.0.1', ]
+   udpallowednicks = ['#gozerbot', 'dunker']
+   udppassword = 'mekker'
+   udpseed = "blablablablablaz" # needs to be 16 chars wide
+ 
+ udpallow is set to the ip from which udp packets are accepted .. 
+ udpallowednicks are nicks/channels the bot is allowed to send messages to
+ and udppassword is passed along with the message. set udpseed if you want to
+ have your messages encrypted.
+ 
+ 2) limiter
+ 
+ on IRC the bot's /msg to a user/channel are limited to 1 per 3 seconds so the
+ bot will not excessflood on the server. you can use partyudp if you need no 
+ delay between sent messages, this will use dcc chat to deliver the message.
+ on jabber bots there is no delay
+ 
+ 3) toudp
+ 
+ ::
+ 
+   # files/toudp.py
+   
+   use this script to pipeline a programs output to the bot
+   
+   example: tail -f /var/log/httpd-access.log | ./todup.py
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *udp-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !udp-cfg
+        <output> options: udp=1 .. udpallow=['127.0.0.1'] .. udpallowednicks=['#gozerbot',
+        <output>  'dunker'] .. udpbot="default" .. udpdblog=0 .. udphost="localhost"
+        <output>  .. udpipv6=0 .. udpmasks=['192.168*'] .. udpparty=0
+        <output>  .. udpport=5500 .. udpsleep=0 .. udpstrip=1 .. version="GOZERBOT
+        <output>  0.9"
+
+
+2) *udp-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !udp-cfgsave
+        <output> config saved
+
+

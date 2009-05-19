@@ -1,0 +1,207 @@
+=======
+ KARMA 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+maintain karma of items .. use ++ to raise karma by 1 or use -- to lower by 1 .. reason might be given after a "#"
+
+| 
+
+  karma plugin 
+
+| 
+
+commands
+--------
+| 
+
+1) *karma-bad (bad)*
+
+    :description: show lowest top 10 karma
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-bad
+        <output> karma void
+
+
+2) *karma-del*
+
+    :description: karma-del <item> .. delete karma item
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !karma-del dunker
+        <output> can't delete dunker
+
+
+3) *karma-get (karma)*
+
+    :description: karma-get <item> .. show karma of <item>
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-get dunker
+        <output> dunker has no karma yet
+
+
+4) *karma-good (good)*
+
+    :description: show top 10 karma
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-good
+        <output> karma void
+
+
+5) *karma-search*
+
+    :description: karma-search <txt> .. search karma
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-search gozerbot
+        <output> no karma items matching gozerbot found
+
+
+6) *karma-whatdown*
+
+    :description: karma-whatdown <nick> .. show what karma items <nick> has downed
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-whatdown dunker
+        <output> no karma items downed by dunker
+
+
+7) *karma-whatup*
+
+    :description: karma-whatup <nick> .. show what karma items <nick> has upped
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-whatup dunker
+        <output> no karma items upped by dunker
+
+
+8) *karma-whodown*
+
+    :description: karma-whodown <item> .. show who lowered the karma of <item>
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-whodown gozerbot
+        <output> no whokarmadown data available for gozerbot
+
+
+9) *karma-whoup*
+
+    :description: karma-whoup <item> .. show who raised the karma of <item>
+
+    :permissions: USER .. WEB .. ANONKARMA .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !karma-whoup gozerbot
+        <output> no whokarmaup data available for gozerbot
+
+
+10) *karma-whydown (wkd)*
+
+    :description: karma-whydown <item> .. show the reason why karma of <item> was lowered
+
+    :permissions: USER .. WEB .. ANONKARMA
+
+    :examples:
+
+    ::
+
+        <user> !karma-whydown gozerbot
+        <output> gozerbot has no reason for karmadown yet
+
+
+11) *karma-whyup (wku)*
+
+    :description: karma-whyup <item> .. show the reason why karma of <item> was raised
+
+    :permissions: USER .. WEB .. ANONKARMA
+
+    :examples:
+
+    ::
+
+        <user> !karma-whyup gozerbot
+        <output> gozerbot has no reason for karmaup yet
+
+
+
+regular expressions
+-------------------
+| 
+
+1) ^(.+)\+\+\s+#(.*)$
+      <item>++ ['#' <reason>] .. increase karma of item with optional         reason 
+2) ^(.+)\-\-\s+#(.*)$
+      <item>-- ['#' <reason> .. decrease karma item with reason 
+3) ^(.+)\+\+\s+#(.*)$
+      <item>++ ['#' <reason>] .. increase karma of item with optional         reason 
+4) ^(.+)\-\-\s+#(.*)$
+      <item>-- ['#' <reason> .. decrease karma item with reason 
+5) ^(.+)\+\+$
+      increase karma without reason 
+6) ^(.+)\-\-$
+      decrease karma item without reason 
+7) ^(.+)\+\+$
+      increase karma without reason 
+8) ^(.+)\-\-$
+      decrease karma item without reason 

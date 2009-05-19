@@ -1,0 +1,43 @@
+======
+ DOPE 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+for all the junkies out there
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *joint*
+
+    :description: get a joint
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !joint
+        <output> none

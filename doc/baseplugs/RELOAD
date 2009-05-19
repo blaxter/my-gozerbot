@@ -1,0 +1,61 @@
+========
+ RELOAD 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:39 2009
+ 
+| 
+
+description
+-----------
+| 
+
+reload a plugin
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *reload (load)*
+
+    :description: reload <plugin>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !reload core
+        <output> core
+
+
+2) *unload*
+
+    :description: unload <plugin>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !unload relay
+        <output> there is no relay module
+
+

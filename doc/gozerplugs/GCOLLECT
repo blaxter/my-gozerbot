@@ -1,0 +1,88 @@
+==========
+ GCOLLECT 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+help the garbage collector
+
+| 
+
+  run garbage collector 
+
+| 
+
+commands
+--------
+| 
+
+1) *gcollect*
+
+    :description: run garbage collector
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !gcollect
+        <output> collector runned
+
+
+2) *gcollect-disable*
+
+    :description: disable the garbage collector
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !gcollect-disable
+        <output> gcollect disabled
+
+
+3) *gcollect-enable*
+
+    :description: enable the garbage collector
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !gcollect-enable
+        <output> gcollect enabled
+
+
+4) *gcollect-wait*
+
+    :description: set wait of garbage collector
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !gcollect-wait 300
+        <output> gcollect wait set to 300
+
+

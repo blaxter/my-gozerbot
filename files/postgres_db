@@ -1,0 +1,88 @@
+CREATE TABLE userhosts (
+    userhost VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (userhost)
+);
+
+CREATE TABLE perms (
+    name VARCHAR(255) NOT NULL,
+    perm VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE email (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE permits (
+    name VARCHAR(255) NOT NULL,
+    permit VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE statuses (
+    name VARCHAR(255)  NOT NULL,
+    status VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE passwords (
+    name VARCHAR(255) NOT NULL,
+    passwd VARCHAR(255) NOT NULL,
+    PRIMARY KEY (name)
+);
+
+CREATE TABLE infoitems (
+    indx SERIAL PRIMARY KEY,
+    item VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    userhost VARCHAR(255) NOT NULL,
+    time INTEGER NOT NULL
+);
+
+CREATE TABLE karma (
+    item VARCHAR(255) NOT NULL,
+    value INTEGER NOT NULL,
+    PRIMARY KEY (item)
+);
+
+CREATE TABLE whykarma (
+    item VARCHAR(255) NOT NULL,
+    updown VARCHAR(10) NOT NULL,
+    why TEXT NOT NULL
+);
+
+CREATE TABLE whokarma (
+    item VARCHAR(255) NOT NULL,
+    nick VARCHAR(255) NOT NULL,
+    updown VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE quotes (
+  indx SERIAL PRIMARY KEY,
+  quote text NOT NULL,
+  userhost VARCHAR(255) NOT NULL,
+  createtime INTEGER NOT NULL,
+  nick VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE todo (
+  indx SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  time INTEGER DEFAULT NULL,
+  duration INTEGER DEFAULT NULL,
+  warnsec INTEGER DEFAULT NULL,
+  descr TEXT NOT NULL,
+  priority INTEGER DEFAULT NULL
+);
+
+CREATE TABLE birthday (
+    name VARCHAR(255) NOT NULL,
+    birthday varchar(255) NOT NULL,
+    PRIMARY KEY (name)
+);
+
+CREATE TABLE list (
+    indx SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    listname VARCHAR(255) NOT NULL,
+    item TEXT NOT NULL
+);

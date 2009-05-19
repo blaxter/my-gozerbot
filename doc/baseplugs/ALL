@@ -1,0 +1,75 @@
+=====
+ ALL 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:56 2009
+ 
+| 
+
+description
+-----------
+| 
+
+allow commands to be executed by all users
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *all-add*
+
+    :description: add command to be allowed by all users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !all-add version
+        <output> version command is now allowed for all clients
+
+
+2) *all-list*
+
+    :description: list commands allowed by all users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !all-list
+        <output> version
+
+
+3) *all-del*
+
+    :description: remove command from the allowed list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !all-del version
+        <output> version command is removed from allowed list
+
+

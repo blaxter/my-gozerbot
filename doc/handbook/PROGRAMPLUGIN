@@ -1,0 +1,134 @@
+===============
+Program The Bot
+===============
+
+__copyright__ = 'this file is in the public domain'
+
+making your own plugin
+~~~~~~~~~~~~~~~~~~~~~~
+a plugin can do 2 things: implement commands or/and implement callbacks:
+
+make your command
+~~~~~~~~~~~~~~~~~
+::
+
+    from gozerbot.commands import cmnds
+
+    def yourhandlingfunction(bot, ievent):
+        DO WHAT YOU WANT THE COMMAND TODO
+
+    cmnds.add('yourcommand', yourhandlingfunction, 'USER')
+
+make a callback if you want to repond to messages the bot gets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+    from gozerbot.callbacks import callbacks
+
+    def preremind(bot, ievent):
+        """ remind precondition """
+        return remind.wouldremind(ievent.userhost)
+
+    def remindcb(bot, ievent):
+        """ remind callbacks """
+        remind.remind(bot, ievent.userhost)
+
+    callbacks.add('PRIVMSG', remindcb, preremind)
+
+the callbacks.add function registers 2 functions for PRIVMSG ircevents.
+the second function (preremind) checks if the callback should be run, it 
+returns 1 in that case. if this is the case the first function (remindcb)
+gets fired in its own thread so that it can potentially block. The test 
+function can be omitted by passing in None, in which case the callback 
+always fires when the bot sees such an ircevent.
+
+hello example
+~~~~~~~~~~~~~
+see plugs/hello.py:
+::
+
+    from gozerbot.commands import cmnds
+
+    def handle_hello(bot, ievent):
+        ievent.reply('hello ' + ievent.nick)
+
+    cmnds.add('hello', handle_hello, 'USER')
+
+
+we want to add a command that says "hello". first we do a 
+import cmnds from  gozerbot.commands so that we can add a command to it.
+then we go make the function that will do the command. it takes 2 arguments,
+bot and ievent. we use ievent.reply() to send a response.
+as a last step we add the function handling the command to the cmnds object.
+
+cmnds.add('hello', handle_hello, 'USER')
+
+first argument is the command, second argument is the function handling the
+command and the third is the permission that is needed to be allowed to do
+the command. you can use the 'ANY" permission to allow everybody.
+other permissions are for example 'USER' and 'OPER'. you can make permission
+a list of multiple permissions.
+
+control flow
+~~~~~~~~~~~~
+
+- the bot connects to the server
+- bot gets data back from server. string
+- this string gets converted to an ircevent
+- the bot checks if the ircevent triggers a command or a callback (functions)
+- the ircevent is passed on to the triggered function
+- function does stuff
+- response is given back with ievent.reply(txt)
+
+the bot and ievent arguments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+commands and callbacks get two arguments passed to them. first one is the bot
+the event took place on and the second the ircevent itself.
+
+the test command shows how a ircevent looks like:
+::
+
+    < bart> !test
+    < gozerbot> Ircevent ==> cmnd=PRIVMSG prefix=bart!~bart@127.0.0.1
+                postfix=#dunkbots nick=bart userhost=bart@127.0.0.1
+                channel=#dunkbots txt=test args=[] rest= speed=5
+
+each event has a cmnd attribute for the IRC command in question, in this case
+a PRIVMSG command. there are prefix and postfix attributes for the text before
+and after the command. nick, userhosts and channel attributes are set 
+if available. the txt attribute gives the txt if provided, if so args gives
+possible arguments given after the first word in txt and rest is all txt after
+the first word. there are more attributes to the ircevent object, see 
+gozerbot/ircevent.py
+
+see gozerbot/bot.py and gozerbot/irc.py for bot data members and methods
+
+the init and shutdown functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 special functions can be defined in a plugin: init() and shutdown().
+init is called upon plugin load/bot start and shutdown on plugin unload/
+bot shutdown.
+
+myplugs dir
+~~~~~~~~~~~
+you can put your own written plugs in their own directory, so you can easily
+copy them if you need to move the bot to a new directory.
+
+waitforuser
+~~~~~~~~~~~
+if you want to get a response from a user you can use the waitforuser
+command. it is in gozerbot.generic.
+
+example taken from plugs/misc.py, the response function:
+::
+
+    def handle_response(bot, ievent):   
+        """ response .. check if we can get a reply of user """
+        ievent.reply("say something so i can see if i can get a response from you")
+        reply = waitforuser(bot, ievent.userhost) 
+        if not reply:
+            ievent.reply("can't get a response")
+        else:
+            ievent.reply("you said %s" % reply.txt)
+
+take note that waitforuser returns the ievent that the user gives.

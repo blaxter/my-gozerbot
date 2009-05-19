@@ -1,0 +1,185 @@
+=======
+ QUOTE 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+manage quotes
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *quote (q)*
+
+    :description: show random quote
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote
+        <output> no quotes yet
+
+
+2) *quote-2 (2q)*
+
+    :description: quote-2 .. show 2 random quotes
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-2
+        <output> no quotes yet
+
+
+3) *quote-add (aq)*
+
+    :description: quote-add <txt> .. add quote
+
+    :permissions: USER .. QUOTEADD
+
+    :examples:
+
+    ::
+
+        <user> !quote-add mekker
+        <output> quote 1 added
+
+
+4) *quote-bad*
+
+    :description: show lowest 10 quote karma
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-bad
+        <output> quote karma void
+
+
+5) *quote-count (cq)*
+
+    :description: count nr of quotes
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-count
+        <output> quotes count is 1
+
+
+6) *quote-del (dq)*
+
+    :description: quote-del <nr> .. delete quote
+
+    :permissions: QUOTEDEL .. OPER .. QUOTE
+
+    :examples:
+
+    ::
+
+        <user> !quote-del 2
+        <output> can't delete quote with nr 2
+
+
+7) *quote-good*
+
+    :description: show top 10 quote karma
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-good
+        <output> quote karma void
+
+
+8) *quote-id (iq)*
+
+    :description: quote-id <nr> .. get quote <nr>
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-id 2
+        <output> can't fetch quote with id 2
+
+
+9) *quote-last (lq)*
+
+    :description: show last quote
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-last
+        <output> #1 mekker
+
+
+10) *quote-search (sq)*
+
+    :description: quote-search <txt> .. search quotes for <txt>
+
+    :permissions: USER .. WEB .. ANONQUOTE .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !quote-search bla
+        <output> no quotes found with bla
+
+
+11) *quote-who (wq)*
+
+    :description: quote-who <nr> .. show who quote <nr>
+
+    :permissions: USER .. WEB .. CLOUD .. ANONQUOTE
+
+    :examples:
+
+    ::
+
+        <user> !quote-who 1
+        <output> quote #1 was made by test on Thu Feb  5 13:45:35 2009
+
+

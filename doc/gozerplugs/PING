@@ -1,0 +1,61 @@
+======
+ PING 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: gozerplugs .. see http://gozerbot.org/gozerplugs
+:license: Public Domain
+:doc created at: Sun Jan  4 21:15:44 2009
+ 
+| 
+
+description
+-----------
+| 
+
+run ping/ping6 on remote host
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *ping*
+
+    :description: do a ping on <host>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ping gozerbot.org
+        <output> running ping on gozerbot.org .. rtt min/avg/max/mdev
+        <output>  = 18.496/18.700/18.817/0.182 ms
+
+
+2) *ping6*
+
+    :description: do a ping6 on <host>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ping6 gozerbot.org
+        <output> running ping on gozerbot.org .. error: unknown host
+
+

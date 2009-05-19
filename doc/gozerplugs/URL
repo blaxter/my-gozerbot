@@ -1,0 +1,73 @@
+=====
+ URL 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+maintain searchable logs of urls
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *url-search*
+
+    :description: search matching url entries
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !url-search gozerbot
+        <output> no urls known for channel #test
+
+
+2) *url-searchall*
+
+    :description: search matching url entries
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !url-searchall gozerbot
+        <output> no result found
+
+
+3) *url-size*
+
+    :description: show number of urls in cache
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !url-size
+        <output> 0
+
+

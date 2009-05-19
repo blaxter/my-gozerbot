@@ -1,0 +1,34 @@
+==========
+ IDENTIFY 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+auto-merges identified users
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *id*
+2) *id-add*
+3) *id-list*

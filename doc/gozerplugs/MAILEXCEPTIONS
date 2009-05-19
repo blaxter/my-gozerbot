@@ -1,0 +1,51 @@
+================
+ MAILEXCEPTIONS 
+================
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+mail list of occured exceptions to bart@gozerbot.org
+
+| 
+
+  mail exceptions in backlog 
+
+| 
+
+commands
+--------
+| 
+
+1) *mailexceptions*
+
+    :description: mailexceptions [<email>] .. mail exceptions log to bart@gozerbot.org or to provided email
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !mailexceptions
+        <output> no exceptions available
+
+
+
+    ::
+
+        <user> !mailexception mekker@miep
+        <output> none

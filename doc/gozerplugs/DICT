@@ -1,0 +1,55 @@
+======
+ DICT 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  GPL
+ 
+| 
+
+description
+-----------
+| 
+
+query a dict server
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *dict*
+
+    :description: search for info on dict server
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !dict python
+        <output> connecting to dict server dict.org .. gcide = Python
+        <output>  \Py"thon\, n. [NL., fr. L. Python the serpent slain
+        <output>  near Delphi by Apollo, Gr. ?.] 1. (Zool.) Any species
+        <output>  of very large snakes of the genus {Python}, and allied
+        <output>  genera, of the family {Pythonid[ae]}. They are nearly
+        <output>  allied to the boas. Called also {rock snake}. [1913
+        <output>  Webster]  Note: The pythons have small pelvic bones,
+        <output>  or anal spurs, two rows of subcaudal scales, and pitted
+        <output>  labials. They are found in Africa, Asia, and the East
+        <output>  Indies. [1913 Webster]  2. A diviner by spirits. "[Manasses]
+         - output trunked -
+
+

@@ -1,0 +1,488 @@
+=====
+ RSS 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+manage rss feeds
+
+| 
+
+ the rss mantra is of the following:
+ 
+ as OPER:
+ 
+ . add a url with rss-add
+ . start the watcher with rss-watch
+ 
+ now the user can start the bot sending messages of the feed to him with
+ rss-start. if an OPER gives a rss-start command in a channel data will be
+ send to the channel.
+  
+
+| 
+
+commands
+--------
+| 
+
+1) *rss-add*
+
+    :description: rss-add <name> <url> to the rsswatcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-add gozerbot http://gozerbot.org/hg/gozerbot/?cmd=changelog;style=rss
+        <output> rss item added
+
+
+2) *rss-watch*
+
+    :description: rss-watch <name> [seconds to sleep] .. go watching <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-watch gozerbot
+        <output> watcher started
+
+
+
+    ::
+
+        <user> !rss-watch gozerbot 600
+        <output> already watching gozerbot
+
+
+3) *rss-start*
+
+    :description: rss-start <name> .. start a rss feed (per user/channel) 
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-start gozerbot
+        <output> gozerbot started
+
+
+4) *rss-addchannel*
+
+    :description: rss-addchannel <name> [<botname>] <channel> ..add <channel> or <botname> <channel> to watchchannels of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-addchannel gozerbot #dunkbots
+        <output> #dunkbots added to gozerbot rss item
+
+
+
+    ::
+
+        <user> !rss-addchannel gozerbot main #dunkbots
+        <output> #dunkbots added to gozerbot rss item
+
+
+5) *rss-additem*
+
+    :description: add a token to the itemslist (per user/channel)
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-additem gozerbot link
+        <output> link added to (gozerbot,#test) itemslist
+
+
+6) *rss-addmarkup*
+
+    :description: add a markup option to the markuplist (per user/channel)
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-addmarkup gozerbot all-lines 1
+        <output> all-lines added to (gozerbot,#test) markuplist
+
+
+7) *rss-all*
+
+    :description: give titles of a feed
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-all gozerbot
+        <output> none
+8) *rss-channels*
+
+    :description: rss-channels <name> .. show channels
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-channels gozerbot
+        <output> ['gozerdata', '#test'] .. ('gozerdata', '#dunkbots')
+        <output>  .. ('main', '#dunkbots')
+
+
+9) *rss-del*
+
+    :description: rss-del <name> .. remove <name> from the rsswatcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-del mekker
+        <output> there is no mekker rss item
+
+
+10) *rss-delchannel*
+
+    :description: rss-delchannel <name> [<botname>] [<channel>] .. delete <channel> or <botname> <channel> from watchchannels of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-delchannel gozerbot #dunkbots
+        <output> #dunkbots removed from gozerbot rss item
+
+
+
+    ::
+
+        <user> !rss-delchannel gozerbot main #dunkbots
+        <output> #dunkbots removed from gozerbot rss item
+
+
+11) *rss-delitem*
+
+    :description: remove a token from the itemslist (per user/channel)
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-delitem gozerbot link
+        <output> link removed from (gozerbot,#test) itemslist
+
+
+12) *rss-delmarkup*
+
+    :description: remove a markup option from the markuplist (per user/channel)
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-delmarkup gozerbot all-lines
+        <output> all-lines removed from (gozerbot,#test) markuplist
+
+
+13) *rss-description*
+
+    :description: give description of item which title matches search key
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-description gozerbot gozer
+        <output> none
+14) *rss-feeds*
+
+    :description: rss-feeds <name> .. show what feeds are running in a channel
+
+    :permissions: USER .. RSS
+
+    :examples:
+
+    ::
+
+        <user> !rss-feeds
+        <output> #test has no feeds running
+
+
+
+    ::
+
+        <user> !rss-feeds #dunkbots
+        <output> #dunkbots has no feeds running
+
+
+15) *rss-get*
+
+    :description: rss-get <name> .. get data from <name>
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-get gozerbot
+        <output> can't match watcher data
+
+
+16) *rss-itemslist*
+
+    :description: rss-itemslist <name> .. get itemslist of <name> 
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-itemslist gozerbot
+        <output> title
+
+
+17) *rss-link*
+
+    :description: give link of item which title matches search key
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-link gozerbot gozer
+        <output> none
+18) *rss-list*
+
+    :description: get list of rss items
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-list
+        <output> gozerbot
+
+
+19) *rss-markup*
+
+    :description: show markup list for a feed (per user/channel)
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-markup gozerbot
+        <output> {}
+
+
+20) *rss-markuplist*
+
+    :description: show possible markup entries
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-markuplist
+        <output> all-lines: set this to 1 if you don't want items to
+        <output>  be aggregated  ..  separator: set this to desired
+        <output>  item separator  ..  tinyurl: set this to 1 when you
+        <output>  want to use tinyurls  ..  skipmerge: set this to 1
+        <output>  if you want to skip merge commits
+
+
+21) *rss-running*
+
+    :description: rss-running .. get running rsswatchers
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-running
+        <output> gozerbot [['gozerdata', '#test']]
+
+
+22) *rss-scan*
+
+    :description: rss-scan <name> .. get possible items of <name> 
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-scan gozerbot
+        <output> can't get data for gozerbot
+
+
+23) *rss-search*
+
+    :description: search titles of all current feeds
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-search goz
+        <output> none
+24) *rss-setsleeptime*
+
+    :description: rss-setsleeptime <name> <seconds> .. set sleeping time for <name> .. min 60 sec
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-setsleeptime gozerbot 600
+        <output> sleeptime set
+
+
+25) *rss-seturl*
+
+    :description: rss-seturl <name> <url> .. change url of rssitem
+
+    :permissions: RSS .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-seturl gozerbot http://gozerbot.org/hg/gozerbot/?cmd=changelog;style=rss
+        <output> url of gozerbot changed from http://gozerbot.org/hg/gozerbot/?cmd=changelog;style=rss
+        <output>  to http://gozerbot.org/hg/gozerbot/?cmd=changelog;style=rss
+
+
+26) *rss-sleeptime*
+
+    :description: rss-sleeptime <name> .. get sleeping time for <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-sleeptime gozerbot
+        <output> sleeptime for gozerbot is 600 seconds
+
+
+27) *rss-stop*
+
+    :description: rss-stop <name> .. stop a rss feed (per user/channel) 
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-stop gozerbot
+        <output> gozerbot stopped
+
+
+28) *rss-stopwatch*
+
+    :description: rss-stopwatch <name> .. stop polling <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-stopwatch gozerbot
+        <output> stopped gozerbot rss watch
+
+
+29) *rss-sync*
+
+    :description: rss-sync <name> .. sync data of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rss-sync gozerbot
+        <output> gozerbot synced
+
+
+30) *rss-url*
+
+    :description: rss-url <name> .. get url from rssitem with <name>
+
+    :permissions: RSS .. USER
+
+    :examples:
+
+    ::
+
+        <user> !rss-url gozerbot
+        <output> url of gozerbot: http://gozerbot.org/hg/gozerbot/?cmd=changelog;style=rss
+
+

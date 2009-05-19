@@ -1,0 +1,52 @@
+======
+ IDLE 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show how long a user or channel has been idle
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *idle (st)*
+
+    :description: idle [<nick>] .. show how idle the channel is or show how idle <nick> is
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !idle
+        <output> nobody said anything on channel #test yet
+
+
+
+    ::
+
+        <user> !idle test
+        <output> i haven't seen test
+
+

@@ -1,0 +1,260 @@
+========
+ MARKOV 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bas van Oostveen
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+Gozerbot speaking madness
+
+| 
+
+ 
+ 
+ Markov Talk for Gozerbot
+ 
+ The Chain:
+     (predictate) -> [list of possible words]
+ 
+ TODO:
+     - Propabilities
+     - Start searching for full sentence, not just the first ORDER_K words 
+       of a sentence
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *markov-enable*
+
+    :description: enable markov learning in [<channel>]
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-enable
+        <output> #test enabled
+
+
+
+    ::
+
+        <user> !markov-enable #dunkbots
+        <output> #dunkbots enabled
+
+
+2) *markov*
+
+    :description: ask for markov response
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !markov nice weather
+        <output> none
+3) *markov-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-cfg
+        <output> options: command=1 .. enable=[u'["gozerdata", "#test"]',
+        <output>  u'["gozerdata", "#dunkbots"]'] .. loud=1 .. onjoin=[]
+        <output>  .. version="GOZERBOT 0.9"
+
+
+4) *markov-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-cfgsave
+        <output> config saved
+
+
+5) *markov-learn*
+
+    :description: learn a logfile or learn an url
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-learn #dunkbots
+        <output> logging is not enabled in #dunkbots
+
+
+
+    ::
+
+        <user> !markov-learn http://gozerbot.org
+        <output> learned 75 lines
+
+
+6) *markov-learnadd*
+
+    :description: add channel or url to permanent learning .. this will learn the item on startup
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-learnadd #dunkbots
+        <output> #dunkbots is already in learnlist
+
+
+
+    ::
+
+        <user> !markov-learnadd http://gozerbot.org
+        <output> learned 75 lines .. done
+
+
+7) *markov-learndel*
+
+    :description: remove item from learnlist
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-learndel #dunkbots
+        <output> done
+
+
+
+    ::
+
+        <user> !markov-learndel http://gozerbot.org
+        <output> done
+
+
+8) *markov-learnlist*
+
+    :description: show items in learnlist
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-learnlist
+        <output> [u'#test']
+
+
+9) *markov-onjoinadd*
+
+    :description: add channel to onjoin config
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-onjoinadd
+        <output> #test added
+
+
+
+    ::
+
+        <user> !markov-onjoinadd #dunkbots
+        <output> #dunkbots added
+
+
+10) *markov-onjoinremove*
+
+    :description: remove channel from onjoin config
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-onjoinremove
+        <output> #test removed
+
+
+
+    ::
+
+        <user> !markov-onjoinremove #dunkbots
+        <output> #dunkbots removed
+
+
+11) *markov-size*
+
+    :description: size of markovchains
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-size
+        <output> I know 232 phrases
+
+
+12) *markov-disable*
+
+    :description: disable markov learning in [<channel>]
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !markov-disable
+        <output> #test disabled
+
+
+
+    ::
+
+        <user> !markov-disable #dunkbots
+        <output> #dunkbots disabled
+
+

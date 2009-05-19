@@ -1,0 +1,57 @@
+=====
+ NOT 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:51 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the not command is a negative grep used in pipelines
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *not*
+
+    :description: reverse grep used in pipelines
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !list | not todo
+        <output> 8b .. alarm .. alias .. all .. anon .. at .. autoreply
+        <output>  .. autovoice .. away .. banner .. bash .. beats ..
+        <output>  bender .. birthday .. botsnack .. bugtracker .. buzz
+        <output>  .. chanperm .. choice .. cloud .. code .. core ..
+        <output>  count .. country .. dict .. dig .. dns .. dope ..
+        <output>  drinks .. echo .. eval .. event .. facts .. fans ..
+        <output>  fleet .. gcalc .. gcollect .. googletalk .. grab ..
+        <output>  greeting .. grep .. hello .. hex2ip .. hexjoin ..
+        <output>  hg .. httpwatch .. identify .. idle .. ignore .. infoitem
+        <output>  .. install .. ipcalc .. irc .. jabber .. job .. karma
+         - output trunked -
+
+

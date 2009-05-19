@@ -1,0 +1,171 @@
+================
+ PROJECTTRACKER 
+================
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+track hours spent working on projects
+
+| 
+
+  track hours spent working on projects
+ 
+ Persitent data is stored in a gozerbot Persist object, 'projects'
+ 
+ user is owner of a project:
+    projects.data[username][project] exists
+    contrib.data[username][project] MUST NOT exist
+ 
+    projects.data[username][project]['hours'] may exist
+        dict: {user: total hours, ...}
+    projects.data[username][project]['desc'] may exist
+        string: project description
+    projects.data[username][project]['share'] may exist
+        list: other contributing users
+ 
+ user contributes to a project of another user:
+    contrib.data[username][project] exists
+        string: project owner username
+    projects.data[username][project] MUST NOT exist
+ 
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *pt-add*
+
+    :description: pt-add <projectname> [<description>] .. add a project to the project tracker
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-add gc Gozerbot coden ;]
+        <output> project gc added
+
+
+2) *pt*
+
+    :description: track time spent on a project
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt gc 4
+        <output> hours spent on Gozerbot coden ;] is now: 4.0
+
+
+3) *pt-delshare*
+
+    :description: stop sharing a project with another user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-delshare myproject somebody
+        <output> no project myproject
+
+
+4) *pt-list*
+
+    :description: list available projects
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-list
+        <output> Gozerbot coden ;] (gc)
+
+
+5) *pt-report*
+
+    :description: report hours of work on a project
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-report
+        <output> Gozerbot coden ;]: test (4.0)
+
+
+
+    ::
+
+        <user> !pt-report gc
+        <output> test (4.0)
+
+
+6) *pt-share*
+
+    :description: share a project with another user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-share myproject knorrie
+        <output> no project myproject
+
+
+7) *pt-sharelist*
+
+    :description: get a list of users we share a project with
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-sharelist myproject
+        <output> no project myproject
+
+
+8) *pt-del*
+
+    :description: delete a project from the project tracker or stop contibuting to it
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pt-del mekker
+        <output> no project mekker
+
+

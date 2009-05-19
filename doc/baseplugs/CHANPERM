@@ -1,0 +1,78 @@
+==========
+ CHANPERM 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:36 2009
+ 
+| 
+
+description
+-----------
+| 
+
+manage channel permissions
+
+| 
+
+  channel permission are used to allow all user in a channel to have 
+  permissions .. permission that use userstate information can not be used, 
+  for that the users must be meeted to the bot
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *chanperm*
+
+    :description: show channel permissions
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !chanperm
+        <output> channel #test has no permissions set
+
+
+2) *chanperm-add*
+
+    :description: add channel permission <perm>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !chanperm-add ANONKARMA
+        <output> ANONKARMA channel perm added
+
+
+3) *chanperm-del*
+
+    :description: delete channel permission <perm>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !chanperm-del ANONKARMA
+        <output> ANONKARMA channel perm deleted
+
+

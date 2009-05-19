@@ -1,0 +1,99 @@
+=========
+ TWITTER 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+do the twitter
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *twitter*
+
+    :description: adds a message to your twitter account
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !twitter just found the http://gozerbot.org project
+        <output> you need a twitter account for this command, use "!twitter-id
+        <output>  <username> <password>"first (in a private message!)
+
+
+2) *twitter-friends*
+
+    :description: shows your twitter friends
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !twitter-friends
+        <output> you need a twitter account for this command, use "!twitter-id
+        <output>  <username> <password>" first (in a private message!)
+
+
+3) *twitter-get*
+
+    :description: gets the twitter messages for a user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !twitter-get tehmaze
+        <output> resting after an exciting day at my new employer ..
+        <output>  Too bad this Android twitter app is always broken...
+        <output>  I can't post tweets .. Tomorrow back to life, back
+        <output>  to reality .. Hi from my Android phone .. A very comprehensive
+        <output>  Python (2.5) quick reference: http://rgruet.free.fr/PQR25/PQR2.5.html
+        <output>  .. reoganising the house .. @Yuffster enjoying the
+        <output>  journey so far? imho irssi is still the most competent
+        <output>  (IRC/IM) client around, especially when combined with
+        <output>  bitlbee .. VoIP hacking http://tinyurl.com/6tc36g
+        <output>  .. @drakonen oh hai .. enjoying some freshly baked
+         - output trunked -
+
+
+4) *twitter-id*
+
+    :description: adds your twitter account
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !twitter-id example secret
+        <output> test: use a private message!
+
+

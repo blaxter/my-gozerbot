@@ -1,0 +1,103 @@
+===========
+ USERSTATE 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:35 2009
+ 
+| 
+
+description
+-----------
+| 
+
+maintain state per user
+
+| 
+
+  userstate is stored in gozerdata/userstates 
+
+| 
+
+commands
+--------
+| 
+
+1) *userstate*
+
+    :description: get or set userstate
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !userstate
+        <output> TZ=1
+
+
+
+    ::
+
+        <user> !userstate TZ -1
+        <output> TZ=-1
+
+
+2) *userstate-get*
+
+    :description: get the userstate of another user
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !userstate-get dunker
+        <output> no userstate of dunker known
+
+
+3) *userstate-set*
+
+    :description: set userstate variable of another user
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !userstate-set dunker TZ -1
+        <output> userstate TZ set to -1
+
+
+4) *userstate-del*
+
+    :description: delete userstate variable
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !userstate-del TZ
+        <output> item TZ deleted
+
+
+
+    ::
+
+        <user> !userstate-del dunker TZ
+        <output> item TZ deleted
+
+

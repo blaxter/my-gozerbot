@@ -1,0 +1,26 @@
+======
+Jabber
+======
+
+__copyright__ = 'this file is in the public domain'
+
+- the jabber part of the bot works like the irc version .. the userhost
+  gets replaced by the JID. to add new users to the bot use the user-add
+  command .. !user-add <name> <jid> .. if you use !meet <nick> in a conference
+  an user with jid channel@server/nick wil be created.
+  the bot will only recognize you as owneruserhost in a direct message to the 
+  bot .. NOT in a conference.
+
+  NEW:
+
+  if you give the bot owner or admin affiliation it will use the proper JID of
+  a user, not the channel JID
+
+- to join a conference use !join <conference> .. 
+  example: !join gozerbot@conference.jabber.xs4all.nl/nick
+
+- relaying between irc and jabber fleet bots is possible
+
+- if you use a irc bot in the fleet the owner will not be recognized so you
+  need to add your irc userhost to the owner ..
+  example: !user-adduserhost owner bart@r8.cg.nu

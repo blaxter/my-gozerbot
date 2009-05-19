@@ -1,0 +1,34 @@
+======
+ UNIQ 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:33 2009
+ 
+| 
+
+description
+-----------
+| 
+
+unique elements of a pipeline
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *uniq*

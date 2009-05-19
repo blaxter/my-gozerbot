@@ -1,0 +1,171 @@
+===========
+ SHOUTCAST 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query a shoutcast server or periodically watch them
+
+| 
+
+  shoutcast watcher 
+
+| 
+
+commands
+--------
+| 
+
+1) *sc*
+
+    :description: sc <host:port> .. ask server:port for currently running song
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !sc stream1.jungletrain.net:8000
+        <output> Foundation - The Don
+
+
+2) *sc-add*
+
+    :description: sc-add <server:port> .. add server to watcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-add jungletrain stream1.jungletrain.net 180
+        <output> stream1.jungletrain.net added
+
+
+3) *sc-del*
+
+    :description: sc-del <name> .. remove node <name> from watcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-del jungletrain
+        <output> jungletrain deleted
+
+
+4) *sc-list*
+
+    :description: show list of watched shoutcast servers
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-list
+        <output> shoutcast nodes: []
+
+
+5) *sc-polltime*
+
+    :description: get polltime of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-polltime jungletrain
+        <output> none
+6) *sc-setpolltime*
+
+    :description: set poll time of the shoutcast watcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-setpolltime jungletrain 120
+        <output> jungletrain is not in nodes list
+
+
+7) *sc-startwatch*
+
+    :description: start the shoutcast watcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-startwatch
+        <output> shoutcast watcher is already running
+
+
+8) *sc-stopwatch*
+
+    :description: stop the shoutcast watcher
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !sc-stopwatch
+        <output> watcher stopped
+
+
+9) *shoutcast-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !shoutcast-cfg
+        <output> options: nodes=[] .. scwatch=0 .. version="GOZERBOT
+        <output>  0.9"
+
+
+10) *shoutcast-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !shoutcast-cfgsave
+        <output> config saved
+
+

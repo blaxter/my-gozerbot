@@ -1,0 +1,88 @@
+==========
+ BOTSNACK 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+give the bot a snack
+
+| 
+
+  eat it 
+
+| 
+
+commands
+--------
+| 
+
+1) *botsnack*
+
+    :description: give the bot a snack ;] .. botsnack responses can be added with botsnack-add
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !botsnack
+        <output> smikkel ;]
+
+
+2) *botsnack-add*
+
+    :description: botsnack-add <what> .. add a botsnack response, <nick> can be used to show nick of user giving the command
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !botsnack-add thnx <nick> ;]
+        <output> botsnack added
+
+
+3) *botsnack-del*
+
+    :description: delete entry from botsnack list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !botsnack-del thnx <nick> ;]
+        <output> botsnack thnx <nick> ;] removed
+
+
+4) *botsnack-list*
+
+    :description: show list of botsnack replies
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !botsnack-list
+        <output> []
+
+

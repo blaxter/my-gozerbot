@@ -1,0 +1,67 @@
+=========
+ COUNTRY 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show country belonging to country code
+
+| 
+
+  show what country belongs to country code and reverse 
+
+| 
+
+commands
+--------
+| 
+
+1) *country*
+
+    :description: country <code> .. show country belonging to code
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !country nl
+        <output> NL is Netherlands
+
+
+
+    ::
+
+        <user> !country .nl
+        <output> NL is Netherlands
+
+
+2) *country-rev*
+
+    :description: country-rev <country> .. show code belonging to country
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !country-rev netherlands
+        <output> netherlands is NL
+
+

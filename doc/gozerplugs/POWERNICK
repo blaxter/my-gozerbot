@@ -1,0 +1,73 @@
+===========
+ POWERNICK 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+plugin used to monitor log messages
+
+| 
+
+  relay log messages to nicks joined on the partyline (DCC CHAT) 
+
+| 
+
+commands
+--------
+| 
+
+1) *powernick*
+
+    :description: set powernick (gets /msg of bot logs)
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !powernick
+        <output> test is not joined on the partylist .. make a dcc chat
+        <output>  connection to the bot
+
+
+2) *powernick-del*
+
+    :description: remove powernick (gets
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !powernick-del
+        <output> no powernick set
+
+
+3) *powernick-list*
+
+    :description: show power nicks in use
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !powernick-list
+        <output> none

@@ -1,0 +1,54 @@
+========
+ CHOICE 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:33 2009
+ 
+| 
+
+description
+-----------
+| 
+
+make a random choice
+
+| 
+
+  the choice command can be used with a string or in a pipeline 
+
+| 
+
+commands
+--------
+| 
+
+1) *choice*
+
+    :description: make a random choice
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !choice a b c
+        <output> c
+
+
+
+    ::
+
+        <user> !list | choice
+        <output> core
+
+

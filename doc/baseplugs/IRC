@@ -1,0 +1,307 @@
+=====
+ IRC 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:04:06 2009
+ 
+| 
+
+description
+-----------
+| 
+
+irc related commands
+
+| 
+
+  irc related commands 
+
+| 
+
+commands
+--------
+| 
+
+1) *reconnect*
+
+    :description: reconnect to server
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !reconnect
+        <output> reconnecting
+
+
+2) *join*
+
+    :description: join <channel> [password]
+
+    :permissions: OPER .. JOIN
+
+    :examples:
+
+    ::
+
+        <user> !join #test
+        <output> none
+
+    ::
+
+        <user> !join #test mekker
+        <output> none
+3) *action*
+
+    :description: send an action message
+
+    :permissions: ACTION .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !action #test yoo dudes
+        <output> none
+4) *alternick*
+
+    :description: get/set alertnick
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !alternick
+        <output> none
+
+    ::
+
+        <user> !alternick gozerbot2
+        <output> none
+5) *broadcast*
+
+    :description: send a message to all channels and dcc users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !broadcast good morning
+        <output> none
+6) *channelmode*
+
+    :description: show mode of channel
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !channelmode
+        <output> none
+
+    ::
+
+        <user> !channelmode #test
+        <output> none
+7) *channels*
+
+    :description: show what channels the bot is on
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !channels
+        <output> none
+8) *chat*
+
+    :description: start a dcc chat session
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !chat
+        <output> none
+9) *cycle*
+
+    :description: part/join channel
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cycle
+        <output> none
+10) *delchan*
+
+    :description: delchan <channel> .. remove channel from bot.channels
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !delchan #mekker
+        <output> none
+11) *loud*
+
+    :description: disable silent mode of channel command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !loud
+        <output> none
+12) *nick*
+
+    :description: nick <nickname> .. set nick of the bot
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !nick mekker
+        <output> none
+13) *nicks*
+
+    :description: show nicks on channel the command was given in
+
+    :permissions: OPER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !nicks
+        <output> none
+14) *say*
+
+    :description: send txt to channel/user
+
+    :permissions: SAY .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !say #test good morning
+        <output> none
+15) *sendraw*
+
+    :description: sendraw <txt> .. send raw string to the server
+
+    :permissions: SENDRAW
+
+    :examples:
+
+    ::
+
+        <user> !sendraw PRIVMSG #test :yo!
+        <output> none
+16) *server*
+
+    :description: show server hostname of bot
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !server
+        <output> none
+17) *silent*
+
+    :description: set silent mode on channel the command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !silent
+        <output> none
+18) *voice*
+
+    :description: give voice to user
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !voice test
+        <output> none
+19) *withnotice*
+
+    :description: make bot use notice on channel the command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !withnotice
+        <output> none
+20) *withprivmsg*
+
+    :description: make bot use privmsg on channel command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !withprivmsg
+        <output> none
+21) *part*
+
+    :description: part [<channel>]
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !part
+        <output> none
+
+    ::
+
+        <user> !part #test
+        <output> none

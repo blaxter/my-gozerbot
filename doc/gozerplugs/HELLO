@@ -1,0 +1,45 @@
+=======
+ HELLO 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+hello world like plugin (used as example)
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *hello*
+
+    :description: hello 'world' example
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hello
+        <output> hello test
+
+

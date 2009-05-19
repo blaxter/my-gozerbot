@@ -1,0 +1,102 @@
+=========
+ TRACLOG 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+log irc channels in trac format
+
+| 
+
+  log irc channels in trac format (0.10.4) 
+
+| 
+
+commands
+--------
+| 
+
+1) *traclog-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !traclog-cfg
+        <output> options: channels=[] .. version="GOZERBOT 0.9"
+
+
+2) *traclog-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !traclog-cfgsave
+        <output> config saved
+
+
+3) *traclog-off*
+
+    :description: disable traclog on <channel> or the channel the commands is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !traclog-off
+        <output> traclog is not enabled in (gozerdata,#test)
+
+
+
+    ::
+
+        <user> !traclog-off #dunkbots
+        <output> traclog is not enabled in (gozerdata,#test)
+
+
+4) *traclog-on*
+
+    :description: enable  traclog on <channel> or the channel the commands is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !traclog-on
+        <output> traclog enabled on (gozerdata,#test)
+
+
+
+    ::
+
+        <user> !traclog-on #dunkbots
+        <output> traclog enabled on (gozerdata,#test)
+
+

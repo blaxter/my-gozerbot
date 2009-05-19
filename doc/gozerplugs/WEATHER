@@ -1,0 +1,55 @@
+=========
+ WEATHER 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Landon Fowles
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show weather by zipcode/city name
+
+| 
+
+  show weather based on Google's weather API 
+
+| 
+
+commands
+--------
+| 
+
+1) *weather (forecast)*
+
+    :description: get weather for <LOCATION> or <nick>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !weather London, England
+        <output> As of 2009-02-05 12:20:00 +0000, London, England (London,
+        <output>  England) has a temperature of 2C/36F with Humidity:
+        <output>  100%. Wind: N at 5 mph (8.0 km/h). Oh, and it's Rain.
+
+
+
+    ::
+
+        <user> !weather dunker
+        <output> dunker not found!
+
+

@@ -1,0 +1,67 @@
+=======
+ UMODE 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+ 
+| 
+
+description
+-----------
+| 
+
+on-connect bot usermode
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *usermode-add*
+
+    :description: add a usermode
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !usermode-add I
+        <output> none
+2) *usermode-list*
+
+    :description: show user modes
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !usermode-list
+        <output> none
+3) *usermode-del*
+
+    :description: remove a usermode
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !usermode-del I
+        <output> none

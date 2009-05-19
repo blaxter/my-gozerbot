@@ -1,0 +1,72 @@
+===========
+ WIKIPEDIA 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query wikipedia
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *wikipedia (wiki)*
+
+    :description: wikipedia ["-" <countrycode>] <what> .. search wikipedia for <what>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !wikipedia gozerbot
+        <output> http://en.wikipedia.org/wiki/Gozerbot ===>  .. {{advert|date=December
+        <output>  2008}} {{context|date=December 2008}} '''Gozerbot'''
+        <output>  is a Jabber/IRC bot, written in Python (programming
+        <output>  language)|Python. Gozerbot runs on Unix-like operating
+        <output>  systems. It requires a Shell (computing)|shell and
+        <output>  a Python (programming language)|Python interpreter
+        <output>  (computer science)|interpreter version 2.4 or higher.
+        <output>  == Notable Features == {{Col-begin}} ..  {{Col-2}}
+        <output>  * user management by userhost * fleet, combine multiple
+        <output>  bots * relaying between fleet bots * various list
+         - output trunked -
+
+
+
+    ::
+
+        <user> !wikipedia -nl bot
+        <output> http://nl.wikipedia.org/wiki/Bot ===>  .. {{dpintro}}
+        <output>  *bot (anatomie), een onderdeel van het skelet **been
+        <output>  (materiaal), botten als materiaal *bot (computerprogramma),
+        <output>  een zelfstandig computerprogramma dat menselijke taken
+        <output>  overneemt *bot (computerspel), een door de computer
+        <output>  bestuurde tegenstander in een computerspel *bot (vis),
+        <output>  een soort platvis *bot (gedrag), een manier van reageren
+        <output>  als menselijk gedrag *laars (Vlaams: ..  ''bot''),
+        <output>  een bepaald type schoeisel *Bot (Tarragona), een gemeente
+        <output>  in de Spaanse provincie Tarragona *robot, een machine
+         - output trunked -
+
+

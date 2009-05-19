@@ -1,0 +1,119 @@
+========
+ POPCON 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+ 
+| 
+
+description
+-----------
+| 
+
+gozerbots popularity contest at http://plugins.gozerbot.org/popcon/
+
+| 
+
+  enlists your bot in the popularity contest page at %s (if enabled with 
+  popcon-enable)
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *popcon*
+
+    :description: show whether the bot is participating in the popcon
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon
+        <output> bot is not participating in the popularity contest,
+        <output>  use popcon-enable to enable it
+
+
+2) *popcon-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon-cfg
+        <output> options: bot-id="" .. enabled=False .. url="http://plugins.gozerbot.org/popcon/"
+        <output>  .. version="GOZERBOT 0.9"
+
+
+3) *popcon-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon-cfgsave
+        <output> config saved
+
+
+4) *popcon-enable*
+
+    :description: join the popularity contest
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon-enable
+        <output> ok
+
+
+5) *popcon-update*
+
+    :description: update bots popcon data
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon-update
+        <output> bot is not participating in the popularity contest,
+        <output>  use popcon-enable to enable it
+
+
+6) *popcon-url*
+
+    :description: shows your bot's entry in the popularity contest (if enabled)
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !popcon-url
+        <output> none

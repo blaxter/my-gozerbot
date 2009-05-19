@@ -1,0 +1,78 @@
+=========
+ KICKBAN 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+channel ban list management
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *ban-add (ban)*
+
+    :description: adds a host to the ban list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ban-add *!*@lamers.are.us
+        <output> /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/runner.py:52
+        <output>  handle | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerplugs/kickban.py:77
+        <output>  handle_ban_add | <type 'exceptions.AttributeError'>:
+        <output>  'NoneType' object has no attribute 'lower'
+
+
+2) *ban-kickban (kickban)*
+
+    :description: kickbans the given nick
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !kickban Lam0r Get out of here
+        <output> /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/runner.py:52
+        <output>  handle | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerplugs/kickban.py:95
+        <output>  handle_kickban_add | <type 'exceptions.AttributeError'>:
+        <output>  'NoneType' object has no attribute 'lower'
+
+
+3) *ban-list (bans)*
+4) *ban-remove (unban)*
+
+    :description: removes a host from the ban list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ban-remove 1
+        <output> none

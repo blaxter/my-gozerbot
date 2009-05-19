@@ -1,0 +1,46 @@
+=======
+ BEATS 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show internet time
+
+| 
+
+  internet time .beats 
+
+| 
+
+commands
+--------
+| 
+
+1) *beats*
+
+    :description: show current internet time
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !beats
+        <output> @566
+
+

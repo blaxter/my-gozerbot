@@ -1,0 +1,91 @@
+=======
+ URBAN 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bas van Oostveen
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query the urban server
+
+| 
+
+  query urbandictionary 
+
+| 
+
+commands
+--------
+| 
+
+1) *urban (urbandictionary)*
+
+    :description: urban <what> .. search urbandictionary for <what>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !urban bot
+        <output> You need to install python-soappy for this plugin,
+        <output>  on debian/ubuntu you can use apt-get install python-soappy
+
+
+
+    ::
+
+        <user> !urban shizzle
+        <output> You need to install python-soappy for this plugin,
+        <output>  on debian/ubuntu you can use apt-get install python-soappy
+
+
+2) *urban-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !urban-cfg
+        <output> options: key="" .. url="http://api.urbandictionary.com/soap"
+        <output>  .. version="GOZERBOT 0.9"
+
+
+3) *urban-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !urban-cfgsave
+        <output> config saved
+
+
+4) *urban-count*
+5) *urban-daily*
+6) *urban-nearby*
+7) *urban-random*
+8) *urban-related*
+9) *urban-verifykey*
+10) *urban-version*

@@ -1,0 +1,45 @@
+======
+ BUZZ 
+======
+| 
+
+about
+-----
+| 
+
+:author:  unknown
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+create a buzz word
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *buzz*
+
+    :description: generate buzz
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !buzz
+        <output> brand bricks-and-clicks e-markets
+
+

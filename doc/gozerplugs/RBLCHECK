@@ -1,0 +1,74 @@
+==========
+ RBLCHECK 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+check blacklists
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *rblcheck*
+
+    :description: check <ip> with blacklists
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !rblcheck 127.0.0.1
+        <output> checking 119 blacklists
+
+
+2) *rblcheck-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rblcheck-cfg
+        <output> options: debug=0 .. max-threads=5 .. throttle=60 ..
+        <output>  version="GOZERBOT 0.9"
+
+
+3) *rblcheck-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !rblcheck-cfgsave
+        <output> config saved
+
+

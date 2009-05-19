@@ -1,0 +1,281 @@
+======
+ TODO 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+todo lists
+
+| 
+
+  manage todo lists .. by user or by channel .. a time/data string can 
+  be provided to set time on a todo item.
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *todo*
+
+    :description: todo [<item>] .. show todo items or add a todo item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo
+        <output> nothing todo ;]
+
+
+
+    ::
+
+        <user> !todo program the bot
+        <output> todo item 1 added
+
+
+
+    ::
+
+        <user> !todo 22:00 sleep
+        <output> time detected Thu Feb  5 22:00:00 2009 .. todo item
+        <output>  2 added
+
+
+2) *todo-chan (chantodo)*
+
+    :description: todo-chan [<item>] .. add channel todo
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-chan fix bla
+        <output> todo item 3 added
+
+
+3) *todo-chandone (chandone)*
+
+    :description: todo-chandone <listofnrs> .. remove item from channel todo list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-chandone 2
+        <output> no items deleted
+
+
+4) *todo-done (done)*
+
+    :description: todo-done <listofnrs> .. remove items from todo list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-done 1
+        <output> 1 item deleted
+
+
+
+    ::
+
+        <user> !todo-done 3 5 8
+        <output> no items deleted
+
+
+5) *todo-get*
+
+    :description: todo-get <nick> .. get the todo list of <nick>
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !todo-get dunker
+        <output> can't find user for bart@gozerbot.org
+
+
+6) *todo-getprio (prio)*
+
+    :description: todo-getprio [<channel|name>] <itemnr> .. get todo priority
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-getprio #dunkbots 5
+        <output> no todoitems known for #dunkbots
+
+
+
+    ::
+
+        <user> !todo-getprio 3
+        <output> no todo item 3 known for test
+
+
+7) *todo-set*
+
+    :description: todo-set <nick> <txt> .. set todo item of <nick>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-set dunker bot proggen
+        <output> can't find user for bart@gozerbot.org
+
+
+8) *todo-setprio (setprio)*
+
+    :description: todo-setprio [<channel|name>] <itemnr> <prio> .. set todo priority
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-setprio #dunkbots 2 5
+        <output> priority set
+
+
+
+    ::
+
+        <user> !todo-setprio owner 3 10
+        <output> priority set
+
+
+
+    ::
+
+        <user> !todo-setprio 2 10
+        <output> priority set
+
+
+9) *todo-settime*
+
+    :description: todo-settime [<channel|name>] <itemnr> <timestring> .. set todo time
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-settime #dunkbots 2 13:00
+        <output> /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/runner.py:52
+        <output>  handle | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerplugs/todo.py:692
+        <output>  handle_todosettime | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/eventbase.py:268
+        <output>  missing | <type 'exceptions.TypeError'>: 'in <string>'
+        <output>  requires string as left operand
+
+
+
+    ::
+
+        <user> !todo-settime owner 3 2-2-2010
+        <output> /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/runner.py:52
+        <output>  handle | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerplugs/todo.py:692
+        <output>  handle_todosettime | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/eventbase.py:268
+        <output>  missing | <type 'exceptions.TypeError'>: 'in <string>'
+        <output>  requires string as left operand
+
+
+
+    ::
+
+        <user> !todo-settime 2 22:00
+        <output> time of todo 2 set to Thu Feb  5 22:00:00 2009
+
+
+10) *todo-time (tt)*
+
+    :description: todo-time .. show todo items with time fields
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-time
+        <output> 2) [+10] Thu Feb  5 22:00:00 2009 sleep
+
+
+11) *todo-today (today)*
+
+    :description: todo-today .. todo items for today
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-today
+        <output> 2) [+10] Thu Feb  5 22:00:00 2009 sleep
+
+
+12) *todo-tomorrow (tomorrow)*
+
+    :description: todo-tomorrow .. todo items for tomorrow
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-tomorrow
+        <output> nothing todo ;]
+
+
+13) *todo-week*
+
+    :description: todo-week .. todo items for this week
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !todo-week
+        <output> 2) [+10] Thu Feb  5 22:00:00 2009 sleep
+
+

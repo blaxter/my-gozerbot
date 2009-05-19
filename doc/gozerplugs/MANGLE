@@ -1,0 +1,32 @@
+========
+ MANGLE 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+demangles several irssi encoding scripts
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+no commands in this plugin

@@ -1,0 +1,73 @@
+========
+ WISDOM 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show some wisdom
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *excuse*
+
+    :description: get an excuse
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !excuse
+        <output> Computer room being moved.  Our systems are down for
+        <output>  the weekend.
+
+
+2) *matrix*
+
+    :description: get a matrix quote
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !matrix
+        <output> none
+3) *motivation*
+
+    :description: get motivated
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !motivation
+        <output> Disloyalty: There comes a time when every team must
+        <output>  learn to make individual sacrifices.
+
+

@@ -1,0 +1,98 @@
+=====
+Basic
+=====
+
+Basic know your way around.
+
+1) See what permission you have
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !perms
+  < gozerbot> USER .. ADMIN .. MAIL .. RSS .. EVAL .. VOTE .. FORGET .. ALIAS
+            .. OPER .. QUOTE .. SENDRAW .. SAY
+
+2) See what plugins are available
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !list
+  < gozerbot> loaded plugins: alarm alias all at autoreply autovoice away 
+              backup birthday botsnack chanperm choice code collective 
+              convert core count country debug dig dns event fleet gcollect 
+              googletalk grab greeting grep hello hg idle ignore infoitem 
+              install irc jabber job karma lag links lists log mail 
+              mailexceptions markov misc nickcapture nickserv not ops pgp 
+              popcon probe quote relay (+1)
+
+if the response is longer than 375 characters the bot will cache the output
+and only show the first 2 lines of 375 chars. use !more to see the following 
+lines.
+
+::
+
+  < dunk> !more
+  < gozerbot> reload remind rest reverse rss search seen shop simplelog 
+              size snarf tail tcp tell timer to todo topic udp umode 
+              underauth update upgrade url user userstate webserver 
+              wikipedia
+
+3) See what commands a plugin provides
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An alias if it exists for a command is show in ()
+::
+
+  <@dunk> !commands todo
+  < gozerbot> todo has the following commands: todo .. todo-chan (chantodo) 
+              .. todo-chandone (chandone) .. todo-done (done) .. todo-get 
+              .. todo-getprio (prio) .. todo-set .. todo-setprio (setprio) 
+              .. todo-settime .. todo-time (tt) .. todo-today (today) .. 
+              todo-tomorrow (tomorrow) .. todo-week
+
+4) Get help on a plugin
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The help command only shows the commands you can do in a plugin.
+::
+
+  < dunk> !help collective
+  < gozerbot> plugin description: manage links to other bots .. to be
+              accessible a bot needs to run the webserver
+  < gozerbot> commands: coll .. coll-exec
+
+5) Get help on a command
+~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help meet
+  < gozerbot> meet is an alias for user-meet
+  < gozerbot> user-meet <nick> .. introduce <nick> to the bot .. alias: 
+              meet .. examples: user-meet dunker
+
+6) Use apro to find commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+   < bart> !apro plug
+   < gozerbot> commands matching plug: 1) plug-disable 2) plug-enable 3) 
+               plug-upgrade 4) plugins
+
+7) Use pipelines
+~~~~~~~~~~~~~~~~
+
+::
+
+  <@dunk> !list | count
+  < gozerbot> 35
+
+8) Use options
+~~~~~~~~~~~~~~
+
+commands can have options, see the options <command> to see which are
+available
+
+::
+  < bart> !options weather
+  < gozerbot> the following options are available for command weather:
+              --u --speed --filter --how --chan

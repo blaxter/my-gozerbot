@@ -1,0 +1,100 @@
+=====
+ JOB 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+:doc created at: Sun Jan  4 21:03:27 2009
+ 
+| 
+
+description
+-----------
+| 
+
+job management
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *job*
+
+    :description: show job data of <jobid> 
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !job 1
+        <output> <JobInterval instance next=1231099465.91, interval=60.0,
+        <output>  repeat=0, group=runner, function=<function cleanall
+        <output>  at 0x8e79a3c>>, fires at 2009-01-04 21:04:25.000006
+
+
+2) *job-groups*
+
+    :description: show all job groups
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !job-groups
+        <output> runner .. ignore .. alarm .. httpwatch .. lag .. gcollect
+
+
+3) *job-kill*
+
+    :description: kill job with <jobid>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !job-kill 100000
+        <output> killed 1 jobs
+
+
+4) *job-list (jobs)*
+
+    :description: show all waiting jobs or all jobs belonging to [group]
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !job-list
+        <output> 1 (cleanall) .. 2 (ignorecheck) .. 3 (test) .. 4 (test)
+        <output>  .. 5 (test) .. 6 (test) .. 7 (test) .. 8 (test) ..
+        <output>  9 (httpwatch) .. 10 (loop) .. 11 (gcollect)
+
+
+
+    ::
+
+        <user> !job-list rss
+        <output> no jobs
+
+

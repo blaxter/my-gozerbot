@@ -1,0 +1,91 @@
+=======
+ ALIAS 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:59 2009
+ 
+| 
+
+description
+-----------
+| 
+
+support for aliases
+
+| 
+
+  this alias plugin allows aliases for commands to be added. aliases are in
+  the form of <alias> -> <command> .. aliases to aliases are not allowed
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *alias-del*
+
+    :description: alias-del <what> .. delete alias
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !alias-del ll
+        <output> alias deleted
+
+
+2) *alias-get*
+
+    :description: alias-get <what> .. get alias
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !alias-get v
+        <output> version
+
+
+3) *alias-search*
+
+    :description: search aliases
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !alias-search web
+        <output> web-cfg => server-cfg
+
+
+4) *alias-set (alias)*
+
+    :description: alias-set <alias> <command> .. define alias
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !alias-set ll list
+        <output> alias added
+
+

@@ -1,0 +1,104 @@
+=======
+ ALARM 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+remind the user with given txt at a certain time
+
+| 
+
+  the alarm plugin allows for alarms that message the user giving the
+  command at a certain time or number of seconds from now
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *alarm*
+
+    :description: say txt at a specific time or time diff
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !alarm 12:00 lunchtime
+        <output> we are already past Thu Feb  5 12:00:00 2009
+
+
+
+    ::
+
+        <user> !alarm 3-11-2008 0:01 birthday !
+        <output> we are already past Mon Nov  3 00:01:00 2008
+
+
+
+    ::
+
+        <user> !alarm +180 egg ready
+        <output> alarm 5 set at Thu Feb  5 13:37:33 2009
+
+
+2) *alarm-del*
+
+    :description: delete alarm with id <nr>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !alarm-del 7
+        <output> failed to delete alarm with id 7
+
+
+3) *alarm-list*
+
+    :description: list current alarms
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !alarm-list
+        <output> 5) test: Thu Feb  5 13:37:33 2009 - egg ready 
+
+
+4) *alarm-mylist (myalarms)*
+
+    :description: list alarms of user giving the commands
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !alarm-mylist
+        <output> 5) Thu Feb  5 13:37:33 2009 - egg ready 
+
+

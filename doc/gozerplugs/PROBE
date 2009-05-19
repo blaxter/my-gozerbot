@@ -1,0 +1,47 @@
+=======
+ PROBE 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show if host:port is open
+
+| 
+
+  check if host:port is open 
+
+| 
+
+commands
+--------
+| 
+
+1) *probe*
+
+    :description: probe <host> <port> // show if host:port is open
+
+    :permissions: OPER .. PROBE
+
+    :examples:
+
+    ::
+
+        <user> !probe gozerbot.org 8088
+        <output> gozerbot.org:8088 is not up ==>  (111, 'Connection
+        <output>  refused')
+
+

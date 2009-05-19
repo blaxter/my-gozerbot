@@ -1,0 +1,142 @@
+=======
+ FLEET 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:22 2009
+ 
+| 
+
+description
+-----------
+| 
+
+manage list of bots
+
+| 
+
+  the fleet makes it possible to run multiple bots in one gozerbot.
+  this can both be irc and jabber bots
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *cmnd*
+
+    :description: cmnd all|<botname> <cmnd> .. excecute command on bot with <name> or on all fleet bots
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !cmnd main st
+        <output> none
+
+    ::
+
+        <user> !cmnd all st
+        <output> [gozerdata] .. nobody said anything on channel #test
+        <output>  yet
+
+
+2) *fleet-addirc (fleet-add)*
+
+    :description: fleet-addirc <name> <nick> <server> [ipv6] [port] [passwd] .. add new server to fleet
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fleet-addirc test3 gozertest localhost
+        <output> adding bot: name: test3 nick: gozertest server: localhost
+        <output>  ipv6: 0 ssl: 0 port:6667 .. connecting to localhost
+        <output>  .. test3 started
+
+
+3) *fleet-addjabber*
+
+    :description: fleet-addjabber <name> <host> <user> <passwd> [<port>] .. add new jabber server to fleet
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fleet-addjabber test2 jabber.xs4all.nl jtest@jabber.xs4all.nl xwe23
+        <output> use this command on a jabber bot (and change password
+        <output>  if you used it)
+
+
+4) *fleet-connect*
+
+    :description: connect bot with <name> to irc server
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fleet-connect test
+        <output> can't connect test
+
+
+5) *fleet-list*
+
+    :description: show current fleet list
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !fleet-list
+        <output> gozerdata .. test3
+
+
+6) *fleet-del*
+
+    :description: fleet-del <botname> .. delete bot from fleet list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fleet-del test
+        <output> test delete failed
+
+
+7) *fleet-disconnect*
+
+    :description: fleet-disconnect <name> .. disconnect bot with <name> from irc server
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fleet-disconnect test
+        <output> exiting test .. can't stop test bot
+
+

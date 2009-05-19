@@ -1,0 +1,46 @@
+====
+ 8B 
+====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+Ask the magic 8 ball
+
+| 
+
+  eight ball 
+
+| 
+
+commands
+--------
+| 
+
+1) *8b*
+
+    :description: show what the magic 8 ball has to say
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !8b
+        <output> Concentrate and ask again.
+
+

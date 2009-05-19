@@ -1,0 +1,96 @@
+# gozerbot database definition
+#
+#  __copyright__ = 'this file is in the public domain'
+
+CREATE TABLE userhosts (
+    userhost VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (userhost)
+) TYPE=MyISAM;
+
+CREATE TABLE perms (
+    name VARCHAR(255) NOT NULL,
+    perm VARCHAR(255) NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE email (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE permits (
+    name VARCHAR(255) NOT NULL,
+    permit VARCHAR(255) NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE statuses (
+    name VARCHAR(255)  NOT NULL,
+    status VARCHAR(255) NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE passwords (
+    name VARCHAR(255) NOT NULL,
+    passwd VARCHAR(255) NOT NULL,
+    PRIMARY KEY (name)
+) TYPE=MyISAM;
+
+CREATE TABLE infoitems (
+    indx INT(20) NOT NULL AUTO_INCREMENT,
+    item VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    userhost VARCHAR(255) NOT NULL,
+    time INT(20) NOT NULL,
+    PRIMARY KEY (indx)
+) TYPE=MyISAM;
+
+CREATE TABLE karma (
+    item VARCHAR(255) NOT NULL,
+    value INT(20) NOT NULL,
+    PRIMARY KEY (item)
+) TYPE=MyISAM;
+
+CREATE TABLE whykarma (
+    item VARCHAR(255) NOT NULL,
+    updown VARCHAR(10) NOT NULL,
+    why TEXT NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE whokarma (
+    item VARCHAR(255) NOT NULL,
+    nick VARCHAR(255) NOT NULL,
+    updown VARCHAR(10) NOT NULL
+) TYPE=MyISAM;
+
+CREATE TABLE quotes (
+  indx INT(20) NOT NULL auto_increment,
+  quote text NOT NULL,
+  userhost VARCHAR(255) NOT NULL,
+  createtime INT(20) NOT NULL,
+  nick VARCHAR(255) NOT NULL,
+  PRIMARY KEY (indx)
+) TYPE=MyISAM;
+
+CREATE TABLE todo (
+  indx INT(20) NOT NULL auto_increment,
+  name VARCHAR(255) NOT NULL,
+  time INT(20) DEFAULT NULL,
+  duration INT(20) DEFAULT NULL,
+  warnsec INT(20) DEFAULT NULL,
+  descr TEXT NOT NULL,
+  priority INT(20) DEFAULT NULL,
+  PRIMARY KEY  (indx)
+) TYPE=MyISAM;
+
+CREATE TABLE birthday (
+    name VARCHAR(255) NOT NULL,
+    birthday varchar(255) NOT NULL,
+    PRIMARY KEY (name)
+) TYPE=MyISAM;
+
+CREATE TABLE list (
+    indx INT(20) NOT NULL auto_increment,
+    username VARCHAR(255) NOT NULL,
+    listname VARCHAR(255) NOT NULL,
+    item TEXT NOT NULL,
+    PRIMARY KEY (indx)
+) TYPE=MyISAM;

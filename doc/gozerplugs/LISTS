@@ -1,0 +1,214 @@
+=======
+ LISTS 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+maintain lists
+
+| 
+
+  lists per global/channel/user 
+
+| 
+
+commands
+--------
+| 
+
+1) *lists*
+
+    :description: lists <listname> [',' <item>] .. show content of list or add item to list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists bla
+        <output> no bla list available
+
+
+
+    ::
+
+        <user> !lists bla, mekker
+        <output> mekker added to bla list
+
+
+2) *lists-chan*
+
+    :description: lists-chan <listname> [',' <item>] .. show content of list or add item to list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-chan bla
+        <output> no bla list available
+
+
+
+    ::
+
+        <user> !lists-chan bla, mekker
+        <output> mekker added to bla list
+
+
+3) *lists-chandel*
+
+    :description: lists-chandel <listname> ',' <listofnrs> .. remove items with indexnr from list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-chandel mekker , 1
+        <output> mekker is not an integer
+
+
+
+    ::
+
+        <user> !lists-chandel mekker , 0 3 6
+        <output> mekker is not an integer
+
+
+4) *lists-chanshow*
+
+    :description: show available channel lists
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-chanshow
+        <output> bla
+
+
+5) *lists-del*
+
+    :description: lists-del <listname> ',' <listofnrs> .. remove items with indexnr from list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-del mekker , 1
+        <output> mekker is not an integer
+
+
+
+    ::
+
+        <user> !lists-del mekker , 0 3 6
+        <output> mekker is not an integer
+
+
+6) *lists-global*
+
+    :description: lists-global <listname> [',' <item>] .. show content of list or add item to list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-global bla
+        <output> no bla list available
+
+
+
+    ::
+
+        <user> !lists-global bla, mekker
+        <output> mekker added to bla list
+
+
+7) *lists-globaldel*
+
+    :description: lists-globaldel <listname> ',' <listofnrs> .. remove items with indexnr from list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-globaldel mekker , 1
+        <output> mekker is not an integer
+
+
+
+    ::
+
+        <user> !lists-globaldel mekker , 0 3 6
+        <output> mekker is not an integer
+
+
+8) *lists-globalshow*
+
+    :description: show available global lists
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-globalshow
+        <output> bla
+
+
+9) *lists-merge*
+
+    :description: lists-merge <fromlist> <tolist> .. merge 2 lists
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-merge mekker miep
+        <output> no mekker list available or empty
+
+
+10) *lists-show*
+
+    :description: show available channel lists
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lists-show
+        <output> bla
+
+

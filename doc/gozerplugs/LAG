@@ -1,0 +1,46 @@
+=====
+ LAG 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+lag measuring
+
+| 
+
+  gozerbot lag meter 
+
+| 
+
+commands
+--------
+| 
+
+1) *lag*
+
+    :description: shows the current lag
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lag
+        <output> no lag metered
+
+

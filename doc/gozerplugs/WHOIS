@@ -1,0 +1,43 @@
+=======
+ WHOIS 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'maze' Modderman
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query a whois server
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *whois*
+
+    :description: do a whois lookup on the specified server
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !whois whois.arin.net AS112
+        <output> none

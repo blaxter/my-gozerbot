@@ -1,0 +1,60 @@
+======
+ AWAY 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+keep notice of who's away
+
+| 
+
+  keep away messages 
+
+| 
+
+commands
+--------
+| 
+
+1) *away-disable*
+
+    :description: disable the away plugin
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !away-disable
+        <output> away disabled
+
+
+2) *away-enable*
+
+    :description: enable the away plugin
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !away-enable
+        <output> away enabled
+
+

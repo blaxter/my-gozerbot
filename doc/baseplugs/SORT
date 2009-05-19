@@ -1,0 +1,57 @@
+======
+ SORT 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'maze' Modderman <http://tehmaze.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+:doc created at: Sun Jan  4 21:03:31 2009
+ 
+| 
+
+description
+-----------
+| 
+
+ sort elements (of a pipeline)
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *sort*
+
+    :description: sort the output of a command
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !list | sort
+        <output> 8b .. alarm .. alias .. all .. anon .. at .. autoreply
+        <output>  .. autovoice .. away .. banner .. bash .. beats ..
+        <output>  bender .. birthday .. botsnack .. bugtracker .. buzz
+        <output>  .. chanperm .. choice .. cloud .. code .. core ..
+        <output>  count .. country .. dict .. dig .. dns .. dope ..
+        <output>  drinks .. echo .. eval .. event .. facts .. fans ..
+        <output>  fleet .. gcalc .. gcollect .. googletalk .. grab ..
+        <output>  greeting .. grep .. hello .. hex2ip .. hexjoin ..
+        <output>  hg .. httpwatch .. identify .. idle .. ignore .. infoitem
+        <output>  .. install .. ipcalc .. irc .. jabber .. job .. karma
+         - output trunked -
+
+

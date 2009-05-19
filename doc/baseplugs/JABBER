@@ -1,0 +1,48 @@
+========
+ JABBER 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:30 2009
+ 
+| 
+
+description
+-----------
+| 
+
+jabber specific commands
+
+| 
+
+  jabber related commands 
+
+| 
+
+commands
+--------
+| 
+
+1) *jabber-ircstr*
+2) *jabber-ratelimit*
+
+    :description: limit jabber output
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !jabber-ratelimit 1
+        <output> this command only works on a jabber bot
+
+

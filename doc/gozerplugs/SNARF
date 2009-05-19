@@ -1,0 +1,134 @@
+=======
+ SNARF 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+ 
+| 
+
+description
+-----------
+| 
+
+the snarf plugin gets the title of the web page of the provided url or the last url in the log
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *snarf (title)*
+
+    :description: fetch the title from an URL
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !snarf http://gozerbot.org
+        <output> gozerbot.org: Gozerbot :: The IRC bot and Jabber bot
+        <output>  in one
+
+
+2) *snarf-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !snarf-cfg
+        <output> options: allow=['text/plain', 'text/html', 'application/xml']
+        <output>  .. version="GOZERBOT 0.9"
+
+
+3) *snarf-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !snarf-cfgsave
+        <output> config saved
+
+
+4) *snarf-enable (snarf-on)*
+
+    :description: enable snarfing in the channel
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !snarf-enable
+        <output> ok
+
+
+5) *snarf-list*
+
+    :description: show in which channels snarfing is enabled
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !snarf-list
+        <output> snarfers enable on: gozerdata: #test
+
+
+6) *validate (valid)*
+
+    :description: validate an URL
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !validate http://gozerbot.org
+        <output> gozerbot.org: (unknown) | modified: (undefined) | server:
+        <output>  Apache/2.2.8 (Ubuntu) mod_python/3.3.1 Python/2.5.2
+        <output>  | size: (undefined) | content-type: text/html | encoding:
+        <output>  utf-8 | doctype: XHTML 1.0 Strict
+
+
+7) *snarf-disable (snarf-off)*
+
+    :description: disable snarfing in the channel
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !snarf-disable
+        <output> ok
+
+

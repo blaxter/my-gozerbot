@@ -1,0 +1,57 @@
+====
+ TO 
+====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:04:01 2009
+ 
+| 
+
+description
+-----------
+| 
+
+send the output to another user .. used in a pipeline
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *to*
+
+    :description: send pipeline output to another user
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !list | to dunker
+        <output> test sends you this: .. 8b .. alarm .. alias .. all
+        <output>  .. anon .. at .. autoreply .. autovoice .. away ..
+        <output>  banner .. bash .. beats .. bender .. birthday .. botsnack
+        <output>  .. bugtracker .. buzz .. chanperm .. choice .. cloud
+        <output>  .. code .. core .. count .. country .. dict .. dig
+        <output>  .. dns .. dope .. drinks .. echo .. eval .. event
+        <output>  .. facts .. fans .. fleet .. gcalc .. gcollect ..
+        <output>  googletalk .. grab .. greeting .. grep .. hello ..
+        <output>  hex2ip .. hexjoin .. hg .. httpwatch .. identify ..
+        <output>  idle .. ignore .. infoitem .. install .. ipcalc ..
+         - output trunked -
+
+

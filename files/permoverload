@@ -1,0 +1,5 @@
+handle_ps,USER,ANY
+handle_version,ANY
+handle_rssstart,ANY
+handle_rssstop,ANY
+handle_rsslist,ANY

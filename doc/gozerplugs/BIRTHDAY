@@ -1,0 +1,95 @@
+==========
+ BIRTHDAY 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+manage birthday data
+
+| 
+
+  manage birthdays 
+
+| 
+
+commands
+--------
+| 
+
+1) *age (oud)*
+
+    :description: age <nick> .. show how old <nick> is
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !age dunker
+        <output> can't find user for bart@gozerbot.org
+
+
+2) *bd (jarig)*
+
+    :description: bd [<nr|user>] .. show birthdays for this month or show birthday of <nick>
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !bd
+        <output> no birthdays this month
+
+
+
+    ::
+
+        <user> !bd dunker
+        <output> can't find user for bart@gozerbot.org
+
+
+3) *bd-del (deljarig)*
+
+    :description: delete birthday data
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !bd-del
+        <output> no birthday known for test
+
+
+4) *bd-set (setbd)*
+
+    :description: bd-set <date> .. set birthday
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !bd-set 3-11-1967
+        <output> birthday set
+
+

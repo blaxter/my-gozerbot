@@ -1,0 +1,46 @@
+============
+ SHAKESPEAR 
+============
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+display a shakespearean insult
+
+| 
+
+  uses the random lib 
+
+| 
+
+commands
+--------
+| 
+
+1) *insult*
+
+    :description: show a shakespearean insult
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !insult
+        <output> Behold thy mirror fobbing shard-borne clotpole
+
+

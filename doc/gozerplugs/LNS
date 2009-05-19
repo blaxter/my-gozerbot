@@ -1,0 +1,88 @@
+=====
+ LNS 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+use the ln-s.net redirector
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *ln-off*
+
+    :description: diable ln in channel the command was given in
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ln-off
+        <output> ok
+
+
+2) *ln-on (lns-on)*
+
+    :description: enable ln in channel the command was given in
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ln-on
+        <output> ok
+
+
+3) *lns-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !lns-cfg
+        <output> options: url-api="http://ln-s.net/home/api.jsp" ..
+        <output>  url-len=64 .. version="GOZERBOT 0.9"
+
+
+4) *lns-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !lns-cfgsave
+        <output> config saved
+
+

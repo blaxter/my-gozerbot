@@ -1,0 +1,102 @@
+===========
+ SIMPLELOG 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+log irc channels to [hour:min] <nick> txt format
+
+| 
+
+  log irc channels to [hour:min] <nick> txt format 
+
+| 
+
+commands
+--------
+| 
+
+1) *simplelog-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !simplelog-cfg
+        <output> options: channels=[] .. version="GOZERBOT 0.9"
+
+
+2) *simplelog-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !simplelog-cfgsave
+        <output> config saved
+
+
+3) *simplelog-off*
+
+    :description: disable simplelog on <channel> or the channel the commands is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !simplelog-off
+        <output> simplelog is not enabled in (gozerdata,#test)
+
+
+
+    ::
+
+        <user> !simplelog-off #dunkbots
+        <output> simplelog is not enabled in (gozerdata,#test)
+
+
+4) *simplelog-on*
+
+    :description: enable simplelog on <channel> or the channel the commands is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !simplelog-on
+        <output> simplelog enabled on (gozerdata,#test)
+
+
+
+    ::
+
+        <user> !simplelog-on #dunkbots
+        <output> simplelog already enabled on (gozerdata,#test)
+
+

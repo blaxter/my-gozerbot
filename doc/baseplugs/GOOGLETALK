@@ -1,0 +1,34 @@
+============
+ GOOGLETALK 
+============
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:58 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the google talk plugin make it possible to link to the googletalk servers .. google changes the JID of the bot so this plugin detects this and sets the bots JID .. for this to work the bot must be in a googletalk users buddieslist
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+no commands in this plugin

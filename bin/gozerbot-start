@@ -1,0 +1,23 @@
+#!/bin/sh
+if [ $1 ]
+then
+  DATADIR=$1
+else
+  DATADIR="$HOME/.gozerbot"
+fi
+if [ -e $DATADIR ]
+then
+  cd $DATADIR
+else
+  mkdir -p $DATADIR
+  cd $DATADIR
+fi
+if [ -e gozerdata/mainconfig ]
+then
+   gozerbot >> gozerbot.log 2>&1 &
+else
+   gozerbot-init
+   echo "A default config file $DATADIR/gozerdata/mainconfig has been created."
+   echo "irc and jabber bot example files are installed in $DATADIR/gozerdata/fleet."
+   echo "Please edit those files and then run this script again to start gozerbot."
+fi

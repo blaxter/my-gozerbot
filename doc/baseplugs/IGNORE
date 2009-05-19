@@ -1,0 +1,75 @@
+========
+ IGNORE 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:36 2009
+ 
+| 
+
+description
+-----------
+| 
+
+ignore users for a certain time
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *ignore*
+
+    :description: ignore <nick> <seconds> .. ignore <nick> for <seconds>
+
+    :permissions: OPER .. IGNORE
+
+    :examples:
+
+    ::
+
+        <user> !ignore dunker 3600
+        <output> ignoring dunker for 3600 seconds
+
+
+2) *ignore-del*
+
+    :description: ignore-del <nick> .. unignore <nick>
+
+    :permissions: OPER .. IGNORE
+
+    :examples:
+
+    ::
+
+        <user> !ignore-del dunker
+        <output> ignore for dunker removed
+
+
+3) *ignore-list*
+
+    :description: show ignore list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ignore-list
+        <output> {}
+
+

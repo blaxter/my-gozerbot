@@ -1,0 +1,34 @@
+===========
+ UNDERAUTH 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  aafshar@gmail.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:42 2009
+ 
+| 
+
+description
+-----------
+| 
+
+provide callbacks that registers the bot with the undernet network
+
+| 
+
+ Handle non-ident connection on undernet
+
+| 
+
+commands
+--------
+| 
+
+no commands in this plugin

@@ -1,0 +1,46 @@
+=====
+ TEL 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show country telephone codes
+
+| 
+
+  telefone codes 
+
+| 
+
+commands
+--------
+| 
+
+1) *tel*
+
+    :description: show country telephone code
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !tel 31
+        <output> NETHERLANDS has dialing prefix 31
+
+

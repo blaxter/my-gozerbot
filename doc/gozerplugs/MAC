@@ -1,0 +1,45 @@
+=====
+ MAC 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+find manifacturer of network card
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *mac*
+
+    :description: find manufacturer of network card
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !mac AA0003
+        <output> DIGITAL EQUIPMENT CORPORATION
+
+

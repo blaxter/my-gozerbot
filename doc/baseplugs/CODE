@@ -1,0 +1,61 @@
+======
+ CODE 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:37 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the code plugin provides code related commands
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *code-exceptions (exceptions)*
+
+    :description: show exception list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !code-exceptions
+        <output> []
+
+
+2) *code-funcnames (funcnames)*
+
+    :description: show function names of a plugin
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !code-funcnames birthday
+        <output> handle_bddel .. handle_bd .. handle_bdset .. handle_age
+
+

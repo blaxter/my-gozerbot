@@ -1,0 +1,162 @@
+====
+Flow
+====
+
+__copyright__ = 'this file is in the public domain'
+
+1) receive string from server
+2) make string into an ircevent
+3) basic handling of the ircevent
+4) check if the event is a command to the bot, if so execute it
+5) check to see if it triggers any callbacks
+
+receive string and make it an ircevent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+in gozerbot/irc.py:
+::
+
+    # read on socket .. make ircevent .. call the handle_ievent method
+    res = self.fsock.readline()
+    ievent = Ircevent().parse(self, res)
+    self.handle_ievent(ievent)
+
+basic handling of the ircevent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+in gozerbot/bot.py:
+::
+
+    def handle_ievent(self, ievent):
+        """ call Irc class method .. add to backlog .. check for callbacks """
+        j = Ircevent()
+        Irc.handle_ievent(self, ievent)
+        self.backlog.append(ievent)
+        j.copyin(ievent)
+        callbacks.check(self, j)
+
+in gozerbot/irc.py:
+::
+
+    def handle_ievent(self, ievent):
+        """ handle ircevent .. dispatch to method """
+        try:
+            # see if the irc object has a method to handle the ievent
+            method = getattr(self,'handle_' + ievent.cmnd.lower())
+            # try to call method
+            try:
+                method(ievent)
+            except:
+                handle_exception()
+        except AttributeError:
+            pass
+        # see if there are wait callbacks
+        self.wait.check(ievent)
+
+this will call a function handle_CMND on the bot.
+
+command handling
+~~~~~~~~~~~~~~~~
+
+in gozerbot/bot.py:
+
+    the handle_privmsg function handles the PRIVMSG commands and checks if a 
+    command is given and if so calls plugins.trydispatch()
+
+in gozerbot/plugins.py:
+
+    the trydispatch function checks if the user should be ignored, if not
+    checks for pipelining or multiple commands. in case of pipelining
+    the ircevent queues entry will be chained. each command runs a dispatch
+    function in its own thread.
+    variables:  what is one of redispatcher of commands object, com is the 
+    command triggered, bot is the bot on which the command is given and
+    ievent is the ircevent that triggered the command
+    ::
+    
+    def dispatch(self, what, com, bot, ievent):
+        """ dispatch ievent """
+        if bot.stopped:
+            return 0   
+        # check for user provided channel
+        if com.options:
+            makeoptions(ievent, com.options)
+        else:
+            makeoptions(ievent)
+        makeargrest(ievent)
+        ievent.usercmnd = 1
+        rlog(10, 'plugins', 'dispatching %s for %s' % (ievent.command,
+        ievent.u
+        what.dispatch(com, bot, ievent)
+        return 1
+
+    dispatch pushes the triggered command to the dispatch function of what,
+    which can be a REdispatcher or Commands object.
+
+in gozerbot/redispatcher.py or gozerbot/commands.py:
+
+    this is were the actual dispatch is taking place, the command or re 
+    callback gets two arguments passed .. the bot and the ircevent.
+    dispatching is done in a thread or in one of the command runners. command
+    runners are worker threads the cant execute commands sequentialy.
+    ::
+    
+   def dispatch(self, com, bot, ievent):
+        """ dispatch on ircevent passing bot an ievent as arguments """
+        if bot.stopped:
+            return 0   
+        stats.up('cmnds', com.name)
+        stats.up('cmnds', com.plugname)
+        stats.up('cmnds', 'speed%s' % com.speed)
+        # execute command
+        if com.threaded: 
+            start_bot_command(com.func, (bot, ievent))
+        else:   
+            speed = ievent.speed or com.speed
+            ievent.speed = speed
+            cmndrunners[10-speed].put(com.name, com.func, bot, ievent)
+        return 1
+
+callback handling
+~~~~~~~~~~~~~~~~~
+
+in gozerbot/callbacks.py:
+
+    this functions checks to see if any callback for an ircevent is
+    registered and if so calls self.callback that will do the actual firing 
+    of the callback.
+    ::
+    
+	def check(self, bot, ievent):
+    	    """ check for callbacks to be fired """
+    	    # check for "ALL" callbacks   
+    	    if self.cbs.has_key('ALL'):   
+        	for cb in self.cbs['ALL']:
+            	    self.callback(cb, bot, ievent)
+    	    cmnd = ievent.cmnd.upper()   
+    	    # check for CMND callbacks   
+    	    if self.cbs.has_key(cmnd):   
+        	for cb in self.cbs[cmnd]:
+            	    self.callback(cb, bot, ievent)
+
+    snippet of self.callback:
+    
+        every callback has a optional test function that is used to determine
+        if the callback should fire or not .. cb.prereq. the actual callback
+        is called in its own thread or in the main bot loop
+	::
+	
+            # see if the callback pre requirement succeeds
+            if cb.prereq:
+                rlog(-10, 'callback', 'excecuting in loop %s' % str(cb.prereq))
+                if not cb.prereq(bot, ievent):
+                    return
+            # check if callback function is there
+            if not cb.func:
+                return
+            # start callback in its own thread
+            rlog(-10, 'callback', 'excecuting callback %s' % str(cb.func))
+            if cb.threaded:
+                thr.start_new_thread(cb.func, (bot, ievent), cb.kwargs)
+            else:
+                cb.func(bot, ievent, **cb.kwargs)

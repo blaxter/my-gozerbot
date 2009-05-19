@@ -1,0 +1,145 @@
+============
+ BUGTRACKER 
+============
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+various bug tracker support, define a bugtracker for the channel with bugtracker-set
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *bug-autoshow*
+
+    :description: toggle automatic retrieval of bug information
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !bug-autoshow
+        <output> no bugtracker configured
+
+
+2) *bug-close*
+
+    :description: close a bug
+
+    :permissions: OPER .. BUGS
+
+    :examples:
+
+    ::
+
+        <user> !bug-close 42 fixed Typo on line 23
+        <output> no bugtracker configured
+
+
+3) *bug-comments*
+
+    :description: show all comments on a bug
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !bug-comments 42
+        <output> no bugtracker configured
+
+
+4) *bug-list*
+
+    :description: list all open bugs
+
+    :permissions: USER .. BUGS
+
+    :examples:
+
+    ::
+
+        <user> !bug-list
+        <output> no bugtracker configured
+
+
+5) *bug-show (bug)*
+
+    :description: show a bug
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !bug-show 42
+        <output> no bugtracker configured
+
+
+6) *bugtracker-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !bugtracker-cfg
+        <output> options: sep=".." .. version="GOZERBOT 0.9"
+
+
+7) *bugtracker-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !bugtracker-cfgsave
+        <output> config saved
+
+
+8) *bugtracker-info*
+9) *bugtracker-set*
+
+    :description: set a bugtracker for the channel
+
+    :permissions: BUGSOPER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !bugtracker-set googlcode http://code.google.com/p/gozerbot
+        <output> error: unknown bugtracker type, supported: googlecode,
+        <output>  bugzilla, trac, flyspray, mantis
+
+

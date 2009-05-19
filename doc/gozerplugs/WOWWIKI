@@ -1,0 +1,45 @@
+=========
+ WOWWIKI 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query wowwiki
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *wowwiki (wow)*
+
+    :description: wowwiki <what> .. search wowwiki for <what>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !wowwiki gozerbot
+        <output> no data found on http://wowwiki.com/wiki/Special:Export/Gozerbot
+
+

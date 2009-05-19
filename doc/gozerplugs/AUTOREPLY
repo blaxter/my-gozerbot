@@ -1,0 +1,75 @@
+===========
+ AUTOREPLY 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+jabber autoreply
+
+| 
+
+  do autoreply on incoming jabber private messages except commands. to enable
+  use autoreply-cfg txt <message to send>. 
+
+| 
+
+commands
+--------
+| 
+
+1) *autoreply-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !autoreply-cfg
+        <output> options: txt="" .. version="GOZERBOT 0.9"
+
+
+2) *autoreply-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !autoreply-cfgsave
+        <output> config saved
+
+
+3) *autoreply-disable*
+
+    :description: disable the autoreply functionality
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !autoreply-disable
+        <output> autoreply is disabled
+
+

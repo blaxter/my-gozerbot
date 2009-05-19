@@ -1,0 +1,110 @@
+==========
+ NICKSERV 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+:doc created at: Sun Jan  4 21:03:18 2009
+ 
+| 
+
+description
+-----------
+| 
+
+authenticate the bot through (nick)services
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *ns-add*
+
+    :description: ns-add <password> [<nickserv nick>] [<identify command>] .. add nickserv
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ns-add mekker
+        <output> replacing previous configuration .. ok
+
+
+2) *ns-auth*
+
+    :description: ns-auth [<botname>]
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ns-auth
+        <output> ok
+
+
+
+    ::
+
+        <user> !ns-auth test
+        <output> fleet not found
+
+
+3) *ns-list*
+
+    :description: list all nickserv entries
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ns-list
+        <output> gozerdata: authenticating through NickServ
+
+
+4) *ns-send*
+
+    :description: ns-send <txt> .. send txt to nickserv
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ns-send identify bla
+        <output> send
+
+
+5) *ns-del*
+
+    :description: ns-del <fleetbot name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ns-del test
+        <output> fleet not found
+
+

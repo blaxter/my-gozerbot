@@ -1,0 +1,126 @@
+====
+ HG 
+====
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: gozerplugs .. see http://gozerbot.org/gozerplugs
+:license:  BSD
+:doc created at: Sun Jan  4 21:12:05 2009
+ 
+| 
+
+description
+-----------
+| 
+
+hg related information
+
+| 
+
+  only works on hg version of the bot 
+
+| 
+
+commands
+--------
+| 
+
+1) *hg-annotate (hg-blame)*
+
+    :description: annotate the changes of a file
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hg-annotate gozerbot/bot.py
+        <output> file not found
+
+
+2) *hg-changes*
+
+    :description: show changes in the current release (tip) or between two releases
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hg-changes tip
+        <output> tip - tip: mod doc/baseplugs/ALIAS, mod doc/baseplugs/ALL,
+        <output>  mod doc/baseplugs/AT, mod doc/baseplugs/CHANPERM,
+        <output>  mod doc/baseplugs/CHOICE, mod doc/baseplugs/CODE,
+        <output>  mod doc/baseplugs/CORE, mod doc/baseplugs/COUNT, mod
+        <output>  doc/baseplugs/FLEET, mod doc/baseplugs/GOOGLETALK,
+        <output>  mod doc/baseplugs/GREP, mod doc/baseplugs/IGNORE,
+        <output>  mod doc/baseplugs/INSTALL, mod doc/baseplugs/IRC,
+        <output>  mod doc/baseplugs/JABBER, mod doc/baseplugs/JOB, mod
+        <output>  doc/baseplugs/MISC, mod doc/baseplugs/NICKCAPTURE,
+        <output>  mod doc/baseplugs/NICKSERV, mod doc/baseplugs/NOT,
+         - output trunked -
+
+
+
+    ::
+
+        <user> !hg-changes 1900 tip
+        <output> 1900 - tip: mod .hgtags, mod README, mod bin/gozerbot,
+        <output>  add bin/gozerbot-init, mod bin/gozerbot-start, add
+        <output>  bin/gozerbot-udp, add bin/gozerbot-upgrade, mod ev/null,
+        <output>  mod ev/null, mod ev/null, mod ev/null, mod doc/FAQ,
+        <output>  mod ev/null, mod ev/null, mod ev/null, mod ev/null,
+        <output>  mod ev/null, mod ev/null, mod ev/null, mod ev/null,
+        <output>  mod ev/null, mod doc/THNX, mod ev/null, mod ev/null,
+        <output>  mod ev/null, mod ev/null, mod ev/null, add doc/baseplugs/ALIAS,
+        <output>  add doc/baseplugs/ALL, add doc/baseplugs/AT, add doc/baseplugs/CHANPERM,
+        <output>  add doc/baseplugs/CHOICE, add doc/baseplugs/CODE,
+         - output trunked -
+
+
+3) *hg-committers (committers)*
+
+    :description: shows hg committer statistics
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hg-committers
+        <output> top committers: bart@dunker.lan: 728, bart@bart-desktop:
+        <output>  671, bart@localhost.my.domain: 440, dunker@dunker-done:
+        <output>  263, dunker@laptop: 238, bart@dunker: 104, bart@82-217-121-99.telephony.multikabel.net:
+        <output>  58, wijnand@freecode.nl: 54, Bart Thate <bart@r8.cg.nu>:
+        <output>  44, sqrbass@localhost.nl.eu.org: 26, sqrbass@complex.shrine.net:
+        <output>  17, bart@desktop: 16, Antoine Beaupré <anarcat@koumbit.org>:
+        <output>  15, sqrbass@bus.idca.nl: 8, sqrbass@ryoko: 6, dunker@bart-laptop:
+        <output>  6, wildrover@rubik.cluenet.org: 5, sqrbass@r8.cg.nu:
+        <output>  3, bart@gozer.bot: 3, sqrbass@localhost: 2, bart@pyjbot.cg.nu:
+        <output>  2, Bart Thae  <bart@r8.cg.nu>: 2, wijnand@dasbier.spoofed.nl:
+         - output trunked -
+
+
+4) *hg-log*
+
+    :description: show the changelog for the repo, or for a file
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hg-log gozerplugs/plugs/core.py
+        <output> file not found
+
+

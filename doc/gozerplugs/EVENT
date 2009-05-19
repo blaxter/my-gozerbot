@@ -1,0 +1,156 @@
+=======
+ EVENT 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+manage events and who is joining them .. can paste events to topic
+
+| 
+
+  manage events 
+
+| 
+
+commands
+--------
+| 
+
+1) *event-add*
+
+    :description: add an event
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !event-add party bla
+        <output> event added
+
+
+2) *event-adduser*
+
+    :description: add nick to an event
+
+    :permissions: OPER .. EVENT
+
+    :examples:
+
+    ::
+
+        <user> !event-adduser 2 dunk
+        <output> can't add dunk to event 2
+
+
+3) *event-join*
+
+    :description: join an event
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !event-join 2
+        <output> can't add test to event 2
+
+
+4) *event-list*
+
+    :description: show all events
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !event-list
+        <output> 1) party bla
+
+
+5) *event-part*
+
+    :description: unsubscribe from an event
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !event-part 2
+        <output> can't remove test from event 2
+
+
+6) *event-remove*
+
+    :description: delete nick from an event
+
+    :permissions: EVENT .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !event-remove 3 dunker
+        <output> can't remove dunker from event 3
+
+
+7) *event-topic*
+
+    :description: put events into the topic
+
+    :permissions: EVENT .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !event-topic
+        <output> none
+8) *event-who*
+
+    :description: show who joined an event
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !event-who 2
+        <output> can't get data for event 2
+
+
+9) *event-del*
+
+    :description: delete event
+
+    :permissions: EVENT .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !event-del 2
+        <output> can't delete eventnr 2
+
+

@@ -1,0 +1,134 @@
+=======
+ TOPIC 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+manage the topic of a channel
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *topic-set*
+
+    :description: set channel topic
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-set Yooo
+        <output> none
+2) *topic*
+
+    :description: topic [<channel>] .. get topic
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic
+        <output> can't get topic data of channel #test
+
+
+
+    ::
+
+        <user> !topic #dunkbots
+        <output> can't get topic data of channel #dunkbots
+
+
+3) *topic-add*
+
+    :description: topic-add <txt> .. add a topic item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-add mekker
+        <output> can't get topic data
+
+
+4) *topic-del*
+
+    :description: topic-del <topicnr> .. delete topic item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-del 1
+        <output> can't get topic data
+
+
+5) *topic-listadd*
+
+    :description: topic-listadd <toicnr> <person> .. add user to topiclist
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-listadd 1 bart
+        <output> can't get topic data
+
+
+6) *topic-listdel*
+
+    :description: topic-listdel <topicnr> <person> .. delete  user from topiclist
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-listdel 1 bart
+        <output> can't get topic data
+
+
+7) *topic-move*
+
+    :description: topic-move <nrfrom> <nrto> .. move topic items
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !topic-move 3 1
+        <output> can't get topic data
+
+

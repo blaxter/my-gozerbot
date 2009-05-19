@@ -1,0 +1,64 @@
+=========
+ REVERSE 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Hans van Kranenburg <hans@knorrie.org>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:40 2009
+ 
+| 
+
+description
+-----------
+| 
+
+reverse string or list
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *reverse*
+
+    :description: reverse text or pipeline
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !reverse gozerbot
+        <output> tobrezog
+
+
+
+    ::
+
+        <user> !list | reverse
+        <output> yahoo .. wowwiki .. wisdom .. wikiquote .. wikipedia
+        <output>  .. whois .. webserver .. webplugs .. weather .. userstate
+        <output>  .. user .. url .. urban .. upgrade .. uniq .. underauth
+        <output>  .. umode .. udp .. twitter .. translate .. traclog
+        <output>  .. topic .. todo .. to .. tinyurl .. timer .. throttle
+        <output>  .. test .. tell .. tel .. tcp .. tail .. supylog ..
+        <output>  spell .. sort .. snarf .. size .. simplelog .. shoutcast
+        <output>  .. shop .. shakespear .. server .. serie .. seen ..
+        <output>  search .. rss .. reverse .. rest .. remind .. reload
+        <output>  .. register .. rblcheck .. quote .. projecttracker
+         - output trunked -
+
+

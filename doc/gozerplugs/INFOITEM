@@ -1,0 +1,99 @@
+==========
+ INFOITEM 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+also known as factoids .. info can be retrieved by keyword or searched
+
+| 
+
+  information items .. keyword/description pairs 
+
+| 
+
+commands
+--------
+| 
+
+1) *info-forget (forget)*
+
+    :description: forget <item> containing <txt>
+
+    :permissions: FORGET .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !info-forget dunk bla
+        <output> delete bla of dunk failed
+
+
+2) *info-sd (sl)*
+
+    :description: info-sd <txt> ..  search description of infoitems
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !info-sd http
+        <output> none found
+
+
+3) *info-si (si)*
+
+    :description: info-si <txt> ..  search the infoitems keys
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !info-si test
+        <output> none found
+
+
+4) *info-size*
+
+    :description: show number of infoitems
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !info-size
+        <output> we have 0 infoitems
+
+
+
+regular expressions
+-------------------
+| 
+
+1) ^(.+?)\s+=\s+(.+)$
+      <keyword> = <description> .. add information item 
+2) ^(.+)\?$
+      <keyword>? .. ask for information item description 
+3) ^\?(.+)$
+      <keyword>? .. ask for information item description 

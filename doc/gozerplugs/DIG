@@ -1,0 +1,48 @@
+=====
+ DIG 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: gozerplugs .. see http://gozerbot.org/gozerplugs
+:license: Public Domain
+:doc created at: Sun Jan  4 21:12:11 2009
+ 
+| 
+
+description
+-----------
+| 
+
+run a dig command
+
+| 
+
+  do the dig 
+
+| 
+
+commands
+--------
+| 
+
+1) *dig*
+
+    :description: dig <hostname> <querytype> .. show dig output
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !dig gozerbot.org A
+        <output> gozerbot.org.  1697 IN A 217.149.194.139 ==> ;; Query
+        <output>  time: 14 msec
+
+

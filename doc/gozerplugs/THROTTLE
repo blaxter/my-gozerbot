@@ -1,0 +1,101 @@
+==========
+ THROTTLE 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+throttle user commands per minute
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *throttle-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !throttle-cfg
+        <output> options: enable=1 .. version="GOZERBOT 0.9"
+
+
+2) *throttle-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !throttle-cfgsave
+        <output> config saved
+
+
+3) *throttle-get*
+
+    :description: get commands per minute of <nick>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !throttle-get dunker
+        <output> none
+4) *throttle-list*
+5) *throttle-remove*
+
+    :description: remove throttle from <nick>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !throttle-remove dunker
+        <output> none
+6) *throttle-set*
+
+    :description: set allowed <cpm> commands per minute for <nick>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !throttle-set dunker 10
+        <output> /home/dunker/gozerbot/0.9/release/doc/0.9/gozerbot/runner.py:52
+        <output>  handle | /home/dunker/gozerbot/0.9/release/doc/0.9/gozerplugs/throttle.py:84
+        <output>  handle_throttleset | <type 'exceptions.TypeError'>:
+        <output>  argument of type 'NoneType' is not iterable
+
+

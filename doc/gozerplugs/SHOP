@@ -1,0 +1,157 @@
+======
+ SHOP 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+ maintain shopping lists per user
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *shop*
+
+    :description: shop [<item>] .. show shop items or add a shop item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !shop
+        <output> nothing to shop ;]
+
+
+
+    ::
+
+        <user> !shop bread
+        <output> shop item added
+
+
+2) *got*
+
+    :description: got <listofnrs> .. remove item <listofnrs> from shop list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !got 3
+        <output> 0 shop item(s) deleted
+
+
+
+    ::
+
+        <user> !got 1 6 8
+        <output> 0 shop item(s) deleted
+
+
+3) *got-chan*
+
+    :description: got-chan <listofnrs> .. remove listofnrs from channel shop list
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !got-chan 3
+        <output> nothing to shop
+
+
+
+    ::
+
+        <user> !got-chan 1 6 8
+        <output> nothing to shop
+
+
+4) *shop-add*
+
+    :description: shop-add <username> <item> .. add shop item of someone else
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !shop-add test milk
+        <output> test does not share shopping list with test
+
+
+5) *shop-chan*
+
+    :description: shop-chan [<item>] .. show channel shop list or add <item>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !shop-chan
+        <output> nothing to shop ;]
+
+
+
+    ::
+
+        <user> !shop-chan milk
+        <output> shop item added
+
+
+6) *shop-del*
+
+    :description: shop-del <username> <listofnrs> .. delete shop item of someone else
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !shop-del test 2 4 5
+        <output> test does not share shopping list with test
+
+
+7) *shop-get*
+
+    :description: shop-get <name> .. get shop items of someone else
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !shop-get test
+        <output> test does not share shopping list with test
+
+

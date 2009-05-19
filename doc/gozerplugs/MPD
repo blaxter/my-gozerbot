@@ -1,0 +1,122 @@
+=====
+ MPD 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+music player daemon control
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *mpd-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !mpd-cfg
+        <output> options: server-host="127.0.0.1" .. server-pass=""
+        <output>  .. server-port=6600 .. socket-timeout=15 .. song-status="now
+        <output>  playing: %(artist)s - %(title)s on "%(album)s" (duration:
+        <output>  %(time)s)" .. version="GOZERBOT 0.9" .. watcher-enabled=0
+        <output>  .. watcher-interval=10
+
+
+2) *mpd-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !mpd-cfgsave
+        <output> config saved
+
+
+3) *mpd-find (mpd-search)*
+
+    :description: search for a song
+
+    :permissions: MPD
+
+    :examples:
+
+    ::
+
+        <user> !mpd-find title love
+        <output> none
+4) *mpd-jump (mpd-playid)*
+
+    :description: jump to the specified playlist id
+
+    :permissions: MPD
+
+    :examples:
+
+    ::
+
+        <user> !mpd-jump 666
+        <output> none
+5) *mpd-next*
+6) *mpd-np (np)*
+7) *mpd-pause*
+8) *mpd-play*
+9) *mpd-prev*
+10) *mpd-queue*
+
+    :description: add a song to the playlist
+
+    :permissions: MPD
+
+    :examples:
+
+    ::
+
+        <user> !mpd-queue mp3/jungle/roni size/roni size-brown paper bag.mp3
+        <output> none
+11) *mpd-stats*
+
+    :description: show statistics
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !mpd-stats
+        <output> Failed to connect to server: (111, 'Connection refused')
+
+
+12) *mpd-stop*
+13) *mpd-watch-list*
+14) *mpd-watch-start (mpd-watch)*
+15) *mpd-watch-stop (mpd-stfu)*

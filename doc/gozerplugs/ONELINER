@@ -1,0 +1,46 @@
+==========
+ ONELINER 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+display a oneliner
+
+| 
+
+  uses the random lib 
+
+| 
+
+commands
+--------
+| 
+
+1) *oneliner*
+
+    :description: show oneliner
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !oneliner
+        <output> If ignorance is bliss, you must be orgasmic.
+
+

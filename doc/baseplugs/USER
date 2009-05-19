@@ -1,0 +1,527 @@
+======
+ USER 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:44 2009
+ 
+| 
+
+description
+-----------
+| 
+
+manage users
+
+| 
+
+  users related commands 
+
+| 
+
+commands
+--------
+| 
+
+1) *user-add*
+
+    :description: user-add <name> <userhost> .. add <name> with <userhost> to the bot
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-add dunker bart@localhost
+        <output> dunker added to user database
+
+
+2) *user-addperm (setperms)*
+
+    :description: user-addperm <name> <perm> .. add permissions to user <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-addperm dunker rss
+        <output> RSS perm added
+
+
+3) *user-addpermall*
+
+    :description: user-addpermall <perm> .. add <permission> to all users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !addpermsall USER
+        <output> none
+4) *user-addpermit*
+
+    :description: user-addpermit <nick> <what> .. permit nick access to <what> .. use setperms to add permissions
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-addpermit dunker todo
+        <output> dunker is already allowed to do todo
+
+
+5) *user-addstatus (setstatus)*
+
+    :description: user-addstatus <name> <status>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-addstatus dunker #dunkbots
+        <output> #DUNKBOTS status added
+
+
+6) *user-adduserhost (adduserhost)*
+
+    :description: user-adduserhost <name> <userhost>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-adduserhost dunker bart@%.a2000.nl
+        <output> userhost added
+
+
+7) *user-allperm*
+
+    :description: user-allperm <perm> .. get users with <perm> permission
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-allperm rss
+        <output> dunker
+
+
+8) *user-allstatus*
+
+    :description: user-allstatus <status> .. get all users with <status> status
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-allstatus #dunkbots
+        <output> dunker
+
+
+9) *user-check (check)*
+
+    :description: user-check <nick>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-check dunker
+        <output> userrecord of dunker = userhosts: [u'bart@gozerbot.org',
+        <output>  u'bart@%.a2000.nl'] perms: [u'USER', u'RSS'] email:
+        <output>  bart@gozerbot.org permits: [] status: [u'#DUNKBOTS']
+        <output>  birthday: None
+
+
+10) *user-del (delete)*
+
+    :description: user-del <name> .. delete user with <username>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-del dunker
+        <output> dunker deleted
+
+
+11) *user-delemail (delemail)*
+
+    :description: reset email
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-delemail
+        <output> email removed
+
+
+12) *user-delperm*
+13) *user-delpermall*
+
+    :description: user-delpermall <perm> .. delete <permission> from all users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !delpermsall BLA
+        <output> none
+14) *user-delpermit*
+
+    :description: user-delpermit <name> <permit>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-delpermit dunker todo
+        <output> can't find registered name of dunker
+
+
+15) *user-delstatus (delstatus)*
+
+    :description: user-delstatus <name> <status>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-delstatus dunker #dunkbots
+        <output> can't find user dunker
+
+
+16) *user-deluserhost (deluserhosts)*
+
+    :description: user-deluserhost <name> <userhost> .. delete from usershosts of <name> userhost <userhost>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-deluserhost dunker bart1@bla.a2000.nl
+        <output> can't find user dunker
+
+
+17) *user-email (email)*
+
+    :description: get email
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-email
+        <output> no email set
+
+
+18) *user-getemail (getemail)*
+
+    :description: user-getemail <name> .. get email from user <name>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-getemail dunker
+        <output> can't find user dunker
+
+
+19) *user-getname (gn)*
+
+    :description: user-getname <nick> .. get the name of <nick>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-getname dunker
+        <output> can't find user for bart@gozerbot.org
+
+
+20) *user-getperms (getperms)*
+
+    :description: user-getperms <name> .. get permissions of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-getperms dunker
+        <output> can't find user dunker
+
+
+21) *user-getstatus (getstatus)*
+
+    :description: user-getstatus <name> .. get status of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-getstatus dunker
+        <output> can't find user dunker
+
+
+22) *user-getuserhosts (getuserhosts)*
+
+    :description: user-getuserhosts <name> .. get userhosts of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !getuserhosts dunker
+        <output> can't find user dunker
+
+
+23) *user-match (match)*
+
+    :description: user-match <userhost>
+
+    :permissions: USER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-match test@test
+        <output> userrecord of test = userhosts: [u'test@test'] perms:
+        <output>  [u'OPER', u'USER', u'QUOTE', u'MAIL'] email: None
+        <output>  permits: [u'dunker todo'] status: [] birthday: None
+
+
+24) *user-meet (meet)*
+
+    :description: user-meet <nick> .. introduce <nick> to the bot
+
+    :permissions: OPER .. MEET
+
+    :examples:
+
+    ::
+
+        <user> !user-meet dunker
+        <output> dunker added to user database
+
+
+25) *user-merge (merge)*
+
+    :description: user-merge <name> <nick> .. merge record with <name> with userhost from <nick>
+
+    :permissions: OPER .. MEET
+
+    :examples:
+
+    ::
+
+        <user> !merge bart dunker
+        <output> we have no user bart
+
+
+26) *user-name (name)*
+
+    :description: show name of user giving the commands
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-name
+        <output> your name is test
+
+
+27) *user-names (names)*
+
+    :description: show names of registered users
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-names
+        <output> test .. laptop .. owner .. root .. dunker
+
+
+28) *user-permit (permit)*
+
+    :description: show permit of user giving the command
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-permit
+        <output> dunker todo
+
+
+29) *user-perms (perms)*
+
+    :description: get permissions
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-perms
+        <output> OPER .. USER .. QUOTE .. MAIL
+
+
+30) *user-scan (us)*
+
+    :description: user-scan <txt> .. search database for matching usernames
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-scan dunk
+        <output> dunker
+
+
+31) *user-search*
+
+    :description: search users userhosts
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-search gozerbot
+        <output> (dunker) bart@gozerbot.org
+
+
+32) *user-setemail (setemail)*
+
+    :description: user-setemail <name> <email>.. set email of user <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-setemail dunker bart@gozerbot.org
+        <output> email set
+
+
+33) *user-show*
+
+    :description: user-show <name> .. show data of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !user-show dunker
+        <output> userrecord of dunker = userhosts: [u'bart@gozerbot.org']
+        <output>  perms: [u'USER'] email: bart@gozerbot.org permits:
+        <output>  [] status: [] birthday: None
+
+
+34) *user-status (status)*
+
+    :description: get status
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-status
+        <output> you have no status set
+
+
+35) *user-userhosts (userhosts)*
+
+    :description: get userhosts
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-userhosts
+        <output> test@test
+
+
+36) *user-whoami (whoami)*
+
+    :description: get your username
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !user-whoami
+        <output> test
+
+

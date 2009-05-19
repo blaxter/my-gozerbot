@@ -1,0 +1,43 @@
+========
+ SEARCH 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+search all plugins that provide a search() function
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *search*
+
+    :description: search all bot data for <item>
+
+    :permissions: USER .. CLOUD .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !search gozer
+        <output> none

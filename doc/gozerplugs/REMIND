@@ -1,0 +1,46 @@
+========
+ REMIND 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+check if user says something if so do /msg
+
+| 
+
+  remind people .. say txt when somebody gets active 
+
+| 
+
+commands
+--------
+| 
+
+1) *remind*
+
+    :description: remind <nick> <txt>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !remind dunker check the bot !
+        <output> remind for dunker added
+
+

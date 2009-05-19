@@ -1,0 +1,60 @@
+===========
+ AUTOVOICE 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+enable auto voicing of people join .. commands work for the channels the commands are given in
+
+| 
+
+  do voice on join 
+
+| 
+
+commands
+--------
+| 
+
+1) *autovoice-off*
+
+    :description: disable autovoice on channel in which the command is given
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !autovoice-off
+        <output> autovoice disabled on #test
+
+
+2) *autovoice-on*
+
+    :description: enable autovoice on channel in which the command is given
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !autovoice-on
+        <output> autovoice enabled on #test
+
+

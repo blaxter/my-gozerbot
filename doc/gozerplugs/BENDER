@@ -1,0 +1,47 @@
+========
+ BENDER 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+display a bender quote
+
+| 
+
+  uses the random lib 
+
+| 
+
+commands
+--------
+| 
+
+1) *bender*
+
+    :description: show a bender quote
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !bender
+        <output> All I know is, this gold says it was the best mission
+        <output>  ever.
+
+

@@ -1,0 +1,60 @@
+===========
+ TRANSLATE 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+translate between languages
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *tr*
+
+    :description: translate between two languages
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !tr nl>en het is mooi weer vandaag
+        <output> it is well again today
+
+
+2) *translate*
+
+    :description: translate between languages
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !translate English Dutch how do you do
+        <output> Hoe zal ik doen u doet
+
+
+3) *translate-lang*

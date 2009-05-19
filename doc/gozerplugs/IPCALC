@@ -1,0 +1,48 @@
+========
+ IPCALC 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+ip calculator
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *ipcalc*
+
+    :description: ip calculator
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ipcalc 127.0.0.1/12
+        <output> version: 4, address: 127.0.0.1, network size: 12, network
+        <output>  address: 127.0.0.0, netmask: 255.240.0.0, first host
+        <output>  in network: 127.0.0.1, last host in network: 127.15.255.254,
+        <output>  network info: CLASS A
+
+

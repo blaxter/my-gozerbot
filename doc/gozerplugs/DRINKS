@@ -1,0 +1,67 @@
+========
+ DRINKS 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+serve coffee/tea or beer
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *beer*
+
+    :description: get a beer
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !beer
+        <output> none
+2) *coffee*
+
+    :description: get a coffee quote
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !coffee
+        <output> none
+3) *tea*
+
+    :description: get an tea
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !tea
+        <output> none

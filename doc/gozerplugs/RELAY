@@ -1,0 +1,81 @@
+=======
+ RELAY 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+relay between fleet bots or channels
+
+| 
+
+ 
+  the bot can relay between different bots both IRC and Jabber ones.
+  relay uses the following format.
+ 
+  <botname> <channel> <botname> <channel>
+ 
+  <------ from -----> <------- to ------>
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *relay-add*
+
+    :description: relay-add <botname> <channel> <botname> <channel> .. add bot/channel to relay
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !relay-add main #dunkbots test #dunkbots
+        <output> relay added
+
+
+2) *relay-list*
+
+    :description: list the relays
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !relay-list
+        <output> ["main", "#dunkbots"] => [test,#dunkbots]
+
+
+3) *relay-del*
+
+    :description: relay-del <botname> <channel> <botname> <channel> .. delete bot/channel from relay
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !relay-del main #dunkbots test #dunkbots
+        <output> relay deleted
+
+

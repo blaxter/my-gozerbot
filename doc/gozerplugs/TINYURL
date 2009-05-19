@@ -1,0 +1,46 @@
+=========
+ TINYURL 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+ 
+| 
+
+description
+-----------
+| 
+
+the tinyurl url provides a tiny url for the url provided as argument or the last url in the log
+
+| 
+
+  tinyurl.com feeder 
+
+| 
+
+commands
+--------
+| 
+
+1) *tinyurl (tu)*
+
+    :description: show a tinyurl
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !tinyurl http://gozerbot.org
+        <output> http://tinyurl.com/ywxm6e .. http://preview.tinyurl.com/ywxm6e
+
+

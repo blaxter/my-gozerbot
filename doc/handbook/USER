@@ -1,0 +1,149 @@
+====
+User
+====
+
+__copyright__ = 'this file is in the public domain'
+
+
+user related commands
+=====================
+
+user records
+~~~~~~~~~~~~
+::
+
+  class User(object):
+  
+      """ repesents a user """
+  
+      def __init__(self, name, userhosts, perms):
+          self.name = str(name)
+          self.userhosts = list(userhosts)
+          self.perms = list(perms)
+          self.email = ""
+          self.permit = []
+          self.status = []
+          self.passwd = ""
+          self.allowed = []
+          self.notallowed = []
+          self.tempuserhosts = []
+          self.userdata = {}
+
+every user has a name and two lists of userhosts and permissions. email can
+be set and status can be used for other things than permissions for example
+auto-opping is done by setting the status of a user to the channelname.
+the permit list is used to allow other users access.
+passwd, allowed, notallowed, tempuserhosts and userdata are not used at the
+moment. the database variant has separate tables for userhosts, perms,
+email, permits and status.
+
+get help on the user plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help user
+  < gozerbot> plugin description: manage users
+  < gozerbot> commands: user-add .. user-addperm (addperms) .. user-addpermit
+              (addpermit) .. user-addstatus (addstatus) .. user-adduserhost
+              (adduserhost) .. user-allperm .. user-allstatus .. user-check
+              (check) .. user-del (delete) .. user-delemail (delemail) ..
+              user-delperm .. user-delstatus (delstatus) .. user-deluserhost
+              (deluserhosts) .. user-deny (deny) .. user-email (email) ..
+              user-getemail (+2)
+  < dunk> !more
+  < gozerbot>  (getemail) .. user-getname (gn) .. user-getperms (getperms) ..
+              user-getstatus (getstatus) .. user-getuserhosts (getuserhosts) ..
+              user-match (match) .. user-match (match) .. user-meet (meet) ..
+              user-merge (merge) .. user-name (name) .. user-names (names) ..
+              user-permit (permit) .. user-perms (perms) .. user-scan (us) ..
+              user-search .. user-setemail (setemail) .. user-show .. (+1)
+  < dunk> !more
+  < gozerbot>  user-status (status) .. user-userhosts (userhosts)
+
+add a new user to the database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+use a nick as argument. username is set to nickname
+::
+
+  < dunk> !meet dunker
+  < gozerbot> dunker added to user database
+
+add a new user to the database using own provided name and userhost
+::
+
+  < dunk> !user-add dunker bart@localhost
+  < gozerbot> dunker added to user database
+
+delete an user
+~~~~~~~~~~~~~~
+::
+  
+  < dunk> !delete dunk
+  < gozerbot> dunk deleted
+
+to see if there is already a user in the database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-scan dunk
+  < gozerbot> dunker
+
+to add the userhost of a nick to an already available user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !merge dunker bart
+  < gozerbot> bart merged
+
+get the permission of a user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-getperms owner
+  < gozerbot> USER .. ADMIN .. MAIL .. RSS .. VOTE .. FORGET .. ALIAS .. OPER
+              .. QUOTE .. SENDRAW .. SAY
+
+add a permission to an user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-addperm dunker OPER
+  < gozerbot> OPER perm added
+
+delete a permission from an user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-delperm dunker OPER
+  < gozerbot> OPER perm removed
+
+the same get/set/delete commands are there for userhosts, permit and status
+email, passwd can be set and unset
+
+permit an other user to edit my shop list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+allow is an alias to user-addpermit
+::
+
+  < dunk> !allow dunk shop
+  < gozerbot> permit added
+
+remove a permit
+~~~~~~~~~~~~~~~
+
+deny is an alias to user-delpermit
+::
+
+  < dunk> !deny dunk shop
+  < gozerbot> shop denied
+
+get shop list of user if its allowed by that user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !shop-get dunk
+  < gozerbot> nothing to shop ;]
+
+same can be done with todo lists

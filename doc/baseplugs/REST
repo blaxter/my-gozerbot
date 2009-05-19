@@ -1,0 +1,47 @@
+======
+ REST 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  BSD
+:doc created at: Sun Jan  4 21:04:05 2009
+ 
+| 
+
+description
+-----------
+| 
+
+show rest of the output in /msg
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *rest*
+
+    :description: show the rest of output cache data
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !rest
+        <output> no more data available for test
+
+

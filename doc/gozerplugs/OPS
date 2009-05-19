@@ -1,0 +1,169 @@
+=====
+ OPS 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+op with command or op on join
+
+| 
+
+  for op to work for a user the user must have the channel name in his/hers
+  status .. use !user-addstatus <username> #channel
+  normally the bot doesnt op nicks that join after a split to prevent floods, 
+  this can be disabled by using ops-cfg oponsplit 1
+ 
+
+| 
+
+commands
+--------
+| 
+
+1) *op*
+
+    :description: op [<nick>] .. give ops to <nick> or op the person giving the command
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !op
+        <output> i'm not op in #test
+
+
+
+    ::
+
+        <user> !op dunker
+        <output> i'm not op in #test
+
+
+2) *ops-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ops-cfg
+        <output> options: oponsplit=0 .. version="GOZERBOT 0.9"
+
+
+3) *ops-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ops-cfgsave
+        <output> config saved
+
+
+4) *ops-disable*
+
+    :description: ops-disable [<channel>] .. disable opping in provided channel or the channel command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ops-disable
+        <output> opping in #test disabled
+
+
+
+    ::
+
+        <user> !ops-disable #dunkbots
+        <output> opping in #dunkbots disabled
+
+
+5) *ops-enable*
+
+    :description: ops-enable [<channel>] .. enable opping in provided channel or the channel command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ops-enable
+        <output> opping in #test is enabled
+
+
+
+    ::
+
+        <user> !ops-enable #dunkbots
+        <output> opping in #dunkbots is enabled
+
+
+6) *ops-list*
+
+    :description: list in which channels opping is disabled
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ops-list
+        <output> opping is disabled in []
+
+
+7) *splitted*
+
+    :description: show whos on the splitted list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !splitted
+        <output> []
+
+
+8) *splitted-clear*
+
+    :description: clear the splitted list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !splitted-clear
+        <output> done
+
+

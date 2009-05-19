@@ -1,0 +1,76 @@
+======
+ MASH 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+query searchmash
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *mash*
+
+    :description: query searchmash
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !mash gozerbot
+        <output> can't make results of 
+
+<html><head>
+<meta http-equiv="content-type"
+        <output>  content="text/html;charset=utf-8">
+<title>404 Not
+        <output>  Found</title>
+<style><!--
+body {font-family: arial,sans-serif}
+div.nav
+        <output>  {margin-top: 1ex}
+div.nav A {font-size: 10pt; font-family:
+        <output>  arial,sans-serif}
+span.nav {font-size: 10pt; font-family:
+        <output>  arial,sans-serif; font-weight: bold}
+div.nav A,span.big
+        <output>  {font-size: 12pt; color: #0000cc}
+div.nav A {font-size:
+        <output>  10pt; color: black}
+A.l:link {color: #6f6f6f}
+A.u:link
+        <output>  {color: green}
+//--></style>
+<script><!--
+var rc=404;
+//-->
+</script>
+</head>
+<body
+        <output>  text=#000000 bgcolor=#ffffff>
+<table border=0 cellpadding=2
+         - output trunked -
+
+

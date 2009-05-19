@@ -1,0 +1,108 @@
+# README
+#
+#
+
+welcome to GOZERBOT ;] see http://gozerbot.org
+
+0.9 Requirements 
+
+    * a shell
+    * python 2.5
+    * setuptools
+    * gnupg
+    * simplejson
+    * sqlalchemy
+    * xmpppy
+
+
+install:
+
+    !! make a separate user and group for the bot !!
+
+    (local)
+
+    * wget http://gozerbot.org/gozerbot-nest
+    * chmod +x gozerbot-nest
+    * ./gozerbot-nest
+
+    (global)
+
+    * run "easy_install gozerbot gozerplugs"
+
+config:
+
+    * run gozerbot-init
+    * edit gozerdata/mainconfig and gozerdata/fleet/default/config
+
+start the bot:
+
+    * gozerbot-start is for bots running from ~/.gozerbot
+    * otherwise use the gozerbot program .. gozerbot (global), ./gozerbot
+      (nest)  or ./bin/gozerbot (mercurial)
+    * if you want to run the bot as a daemon do "gozerbot >> log 2>&1 &"
+
+next:
+
+    * on first startup the bot doesn't join any channels, you will have to
+      /msg thebot !join #channel .. the bot wil remember channels it has joined
+    * you can use the "meet <nick>" command to add other users to the bot
+    * if you installed the gozerplugs package, the plugins will not be loaded
+      on default. use !reload <plugin> to enable a plugin. see the !available
+      command to see what plugins can be reloaded
+    * when using commands in a /msg use --chan <channel> to let the command
+      operate on a channel .. default channel in a /msg is the users nick
+    
+plugin configuration:
+
+    * plugin config can be done with the <plugname>-cfg command
+      usage:
+        !plug-cfg                   ->      shows list of all config
+        !plug-cfg key value         ->      sets value to key
+        !plug-cfg key               ->      shows list of key
+        !plug-cfg key add value     ->      adds value to list
+        !plug-cfg key remove value  ->      removes value from list
+        !plug-cfg key clear         ->      clears entire list
+        !plug-cfgsave               ->      force save configuration to disk
+
+notes:
+
+  - we are on #dunkbots IRCnet
+
+  - MAKE REGULAR BACKUPS OF YOUR BOT DIRECTORY
+
+  - see http://gozerbot.org/newsite/docs/handbook for the bot's documentation
+
+database support:
+
+  - gozerbot now uses sqlalchemy which will created the tables needed
+  - sqlite3 is now default
+  - for mysql support:
+
+  ==> since we use utf-8 now mysql version 5 is required for non ascii users
+  
+  1) create the bot database in mysql:
+     CREATE DATABASE gb_db;
+  2) once you've done that add mysql access rules for the bot user:
+     GRANT ALL PRIVILEGES ON gb_db.* TO user@host IDENTIFIED by 'pass';
+     FLUSH PRIVILEGES;
+  3) edit the gozerdata/mainconfig file to set dbtype to 'mysql' and dbname
+     to 'gb_db'
+
+upgrading from 0.8:
+
+- run gozerbot-upgrade <0.8botdir> <0.9botdir> .. 0.7 upgrading is not
+  supported yet
+- run the plug-upgrade command to upgrade the plugins
+
+links:
+
+  main site - http://gozerbot.org
+  blog - http://blog.gozerbot.org
+  plugins - http://plugins.gozerbot.org
+  docs - http://gozerbot.org/newsite/docs/
+  development - http://dev.gozerbot.org
+
+LAST NOTE:
+
+check http://blog.gozerbot.org for security "need to upgrade" notices.
+put a rss watcher on it ;] 

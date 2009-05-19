@@ -1,0 +1,122 @@
+======
+ MISC 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:17 2009
+ 
+| 
+
+description
+-----------
+| 
+
+miscellaneous commands
+
+| 
+
+  misc commands 
+
+| 
+
+commands
+--------
+| 
+
+1) *timezone*
+
+    :description: set current timezone
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !timezone +1
+        <output> timezone set to 1
+
+
+2) *time (t)*
+
+    :description: show current time (of a user)
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !time test
+        <output> Sun Jan  4 21:02:17 2009
+
+
+3) *ps*
+
+    :description: show ps line of the bot
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !ps
+        <output> cpu=59.0 mem=0.9 vsz=130992 rss=36000 stat=Sl+ started=21:02
+        <output>  time=0:01 threads=11
+
+
+4) *response*
+
+    :description: response test .. see if we can receive a response
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !response
+        <output> say something so i can see if i can get a response
+        <output>  from you .. can't get a response
+
+
+5) *source (about)*
+
+    :description: show source url
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !source
+        <output> see http://gozerbot.org
+
+
+6) *test*
+
+    :description: give test response
+
+    :permissions: USER .. WEB .. JCOLL .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !test
+        <output> cmnd=PRIVMSG prefix= postfix= arguments=[] nick=test
+        <output>  user= userhost=test@test channel=#test txt='test '
+        <output>  command=test args=[] rest= speed=5 options={'--filter':
+        <output>  '', '--t': 'bla', '--speed': '0'}
+
+

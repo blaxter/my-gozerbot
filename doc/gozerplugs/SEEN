@@ -1,0 +1,73 @@
+======
+ SEEN 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+remember what people said for the last time
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *seen*
+
+    :description: show last spoken txt of <nikc>
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !seen dunker
+        <output> no logs for dunker
+
+
+2) *seen-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !seen-cfg
+        <output> options: tz="+0100" .. version="GOZERBOT 0.9"
+
+
+3) *seen-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !seen-cfgsave
+        <output> config saved
+
+

@@ -1,0 +1,46 @@
+======
+ GRAB 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+grab the last quote of an user
+
+| 
+
+  quotes grab plugin 
+
+| 
+
+commands
+--------
+| 
+
+1) *quote-grab (grab)*
+
+    :description: quote-grab <user> .. add quote
+
+    :permissions: USER .. QUOTEADD
+
+    :examples:
+
+    ::
+
+        <user> !quote-grab mekker
+        <output> nothing said by mekker recently
+
+

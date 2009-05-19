@@ -1,0 +1,255 @@
+=====
+ LOG 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+logs related commands
+
+| 
+
+  logging 
+
+| 
+
+commands
+--------
+| 
+
+1) *log-on*
+
+    :description: enable logging of the channel in which the command was given
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !log-on
+        <output> logging enabled in #test
+
+
+2) *active (a)*
+
+    :description: active [<minutesback>] .. show who has been active in the last 15 or <minutesback> minutes
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !active
+        <output> nobody active
+
+
+
+    ::
+
+        <user> !active 600
+        <output> nobody active
+
+
+3) *dayline (dl)*
+
+    :description: show nr of lines spoken in last day
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !dl
+        <output> - - - - - - - - - - - - - - - - - - - - - - - - - 
+        <output>  (nr lines per hour for the last day .. most recent
+        <output>  hour first)
+
+
+4) *line (l)*
+
+    :description: show activity for the last hour
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !line
+        <output> - - - - - - - - - - - - - - - - - - - - - - - - - -
+        <output>  - - - - - - - - - - - - - - - - - - - - - - - - -
+        <output>  - - - - - - - - - - (number of lines per minute for
+        <output>  the last hour .. most recent minute first)
+
+
+5) *log-back (back)*
+
+    :description: log-back [<nrlinesback>] <txt> .. search backwards in log file of channel
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !log-back http
+        <output> nothing found
+
+
+
+    ::
+
+        <user> !log-back 1 http
+        <output> nothing found
+
+
+6) *log-bback (bback)*
+7) *log-last (last)*
+
+    :description: log-last [<nr>] [<nick>] [<txt>] .. show lastlines of channel or user
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !log-last dunker
+        <output> no result found
+
+
+
+    ::
+
+        <user> !log-last 5 dunker
+        <output> no result found
+
+
+
+    ::
+
+        <user> !log-last dunker http
+        <output> no result found
+
+
+
+    ::
+
+        <user> !log-last 5 dunker http
+        <output> no result found
+
+
+8) *log-len (log-size)*
+
+    :description: show size of log file of the channel the command was given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !log-len
+        <output> 0
+
+
+9) *log-list*
+
+    :description: show list of current logged channels
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !log-list
+        <output> ['#test']
+
+
+10) *log-search*
+
+    :description: log-search [<nrtimes>] <txt> .. search the log from the beginning
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !log-search http
+        <output> nothing found
+
+
+
+    ::
+
+        <user> !log-search 10 http
+        <output> nothing found
+
+
+11) *log-time*
+
+    :description: show log since given time
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !log-time 21:00
+        <output> no data found
+
+
+12) *mono*
+
+    :description: mono [<nick>] .. show nr lines of monologue
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !mono
+        <output> test is not making a monologue
+
+
+
+    ::
+
+        <user> !mono dunker
+        <output> dunker is not making a monologue
+
+
+13) *log-off*
+
+    :description: disable logging of the channel in which the command was given
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !log-off
+        <output> logging disabled in #test
+
+

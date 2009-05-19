@@ -1,0 +1,57 @@
+===========
+ WIKIQUOTE 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+fetch a wikipedia quote
+
+| 
+
+  query wikiquote 
+
+| 
+
+commands
+--------
+| 
+
+1) *wikiquote (wquote)*
+
+    :description: wikiquote ["-" <countrycode>] <what> .. search wikiquote for <what>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !wikiquote george bush
+        <output> George W. Bush - George Walker Bush, 43rd President
+        <output>  of the United States (2001–2009)
+
+
+
+    ::
+
+        <user> !wikiquote -nl Balkenende
+        <output> Dit zei premier Balkenende in een interview met de
+        <output>  Volkskrant. Volgens de premier is er in Nederland
+        <output>  teveel pessimisme onder de mensen en zijn er teveel
+        <output>  opgeblazen tegenstellingen.
+
+

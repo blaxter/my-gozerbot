@@ -1,0 +1,46 @@
+=======
+ SERIE 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+tvrage.com serie lookup
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *serie*
+
+    :description: search for new episodes
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !serie neighbours
+        <output> genre: Drama | Soaps, last ep: 25x05 (aired Jan/23/2009),
+        <output>  runtime: 30 Minutes, status: Returning Series
+
+

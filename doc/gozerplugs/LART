@@ -1,0 +1,74 @@
+======
+ LART 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+do the lart
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *lart*
+
+    :description: echo a lart message
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !lart dunker
+        <output> lart list is empty .. use lart-add to add entries ..
+        <output>  use "<who>" as a nick holder
+
+
+2) *lart-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !lart-cfg
+        <output> options: lartlist=[] .. version="GOZERBOT 0.9"
+
+
+3) *lart-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !lart-cfgsave
+        <output> config saved
+
+

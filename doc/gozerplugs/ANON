@@ -1,0 +1,88 @@
+======
+ ANON 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  this file is in the public domain
+ 
+| 
+
+description
+-----------
+| 
+
+allow registering of anon users on JOIN
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *anon-enable*
+
+    :description: enable anon register
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !anon-enable
+        <output> anon enabled on (gozerdata,#test)
+
+
+2) *anon-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !anon-cfg
+        <output> options: enable=['["gozerdata", "#test"]'] .. perms=['USER']
+        <output>  .. version="GOZERBOT 0.9"
+
+
+3) *anon-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !anon-cfgsave
+        <output> config saved
+
+
+4) *anon-disable*
+
+    :description: disable anon register
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !anon-disable
+        <output> anon disabled on (gozerdata,#test)
+
+

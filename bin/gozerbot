@@ -1,0 +1,255 @@
+#!/usr/bin/env python
+#
+#
+
+""" start the bot from standalone directory """
+
+__copyright__ = 'this file is in the public domain'
+
+import traceback
+
+def handle_exception():
+    """ schow exception traceback as a oneliner' """
+    exctype, excvalue, tb = sys.exc_info()
+    trace = traceback.extract_tb(tb)
+    result = ""
+    for i in trace:  
+        fname = i[0] 
+        linenr = i[1]
+        func = i[2]
+        result += "%s:%s %s | " % (fname, linenr, func)
+    #del trace
+    print "%s%s: %s" % (result, exctype, excvalue)
+
+import time
+
+try:
+    # check to see if the bot is not running as root
+    import sys, os, socket
+    if os.getuid() == 0:
+        print "don't run the bot as root"
+        os._exit(1)
+
+    # check to see if python version is 2.5 or higer
+    vi = sys.version_info
+    if vi[0] < 2 or (vi[0] == 2 and vi[1] < 5):
+        print "i need at least python version >= 2.5"
+        os._exit(1)
+
+    # sys path manipulation .. add eggs and gozerplugs/myplugs dirs
+    sys.path.insert(0, os.getcwd())
+    pdir1 = os.getcwd() + os.sep + 'gozerplugs'
+    pdir2 = os.getcwd() + os.sep + 'myplugs'
+    pdir3 = os.getcwd() + os.sep + 'gozernest'
+    # gozerplugs dir
+    if os.path.isdir(pdir1):
+        sys.path.insert(0, pdir1)
+    # myplugs dir
+    if os.path.isdir(pdir2):
+        sys.path.insert(0, pdir2)
+    # gozernest dir
+    if os.path.isdir(pdir3):
+        for f in os.listdir(pdir3):
+            if f.endswith('.egg'):
+                sys.path.insert(0, 'gozernest' + os.sep + f)
+    else:
+        # local dir
+        for f in os.listdir(os.getcwd()):
+            if f.endswith('.egg'):
+                sys.path.insert(0, f)
+
+    # pull in gozerplugs package if available
+    try:
+        from pkg_resources import require
+        from setuptools import find_packages
+        packages = find_packages()
+        require('gozerplugs>=0.9.0.12') 
+    except Exception, ex:
+        pass
+
+    # command line option parsing
+    from optparse import OptionParser
+    parser = OptionParser(usage='usage: %prog [options]', version='%prog 0.9.0.15')
+    parser.add_option('', '-r', type='string', default=False, dest='doresume', 
+                  metavar='PATH', 
+                  help="resume the bot from the folder specified")
+    parser.add_option('-t', '--type', type='string', default=False,
+dest='type', 
+                  help="set type of the bot (irc/jabber)")
+    parser.add_option('-o', '--owner', type='string', default=False,
+dest='owner', 
+                  help="owner of the bot")
+    parser.add_option('-s', '--server', type='string', default=False,
+dest='server', 
+                  help="server to connect to")
+    parser.add_option('-c', '--channel', type='string', default=False,
+dest='channel', 
+                  help="channel to join")
+    parser.add_option('-l', '--loglevel', type='string', default=False,
+dest='loglevel', 
+                  help="loglevel of the bot .. the lower the more it logs")
+    parser.add_option('-e', '--encoding', type='string', default=False,
+dest='encoding', 
+                  help="set default encoding of the bot")
+    parser.add_option('-p', '--pass', type='string', default=False,
+dest='password', 
+                  help="set password used to connect to the server")
+    parser.add_option('-u', '--user', type='string', default=False,
+dest='user', 
+                  help="set user used to connect to the server")
+    parser.add_option('-n', '--name', type='string', default=False,
+dest='name', 
+                  help="bot's name")
+    opts, args = parser.parse_args()
+    opts.args = args
+
+    # set default settings
+    reload(sys)
+    if opts.encoding:
+        sys.setdefaultencoding(opts.encoding)
+    else:
+        sys.setdefaultencoding('utf-8')
+    sys.setcheckinterval(50)
+    socket.setdefaulttimeout(30)
+
+    # write options to config file
+    from gozerbot.generic import enable_logging, rlog, cleanpyc
+    from gozerbot.datadir import makedirs, datadir
+    makedirs()
+    from gozerbot.config import config, mainconfigtxt
+    config.write_init(mainconfigtxt)
+    if opts.owner and opts.owner not in config['owner']:
+        config['owner'].append(opts.owner)
+        config.save()
+    if opts.loglevel:
+        try:
+            config['loglevel'] = int(opts.loglevel)
+            config.save()
+        except:
+            print "loglevel needs to be an integer .. the lower the more the bot logs"
+    config.load()
+    if config['loglist']:
+        enable_logging(config['loglevel'], config['loglist'])
+    else:
+        enable_logging(config['loglevel'])
+    if not config['owner']:
+        print "owner is not set in %s\n" % os.getcwd() + os.sep + config.cfile
+        sys.stdout.flush()
+        os._exit(1)
+    if not os.path.isfile(datadir + os.sep + 'VERSION'):
+        f = open(datadir + os.sep + 'VERSION', 'w')
+        f.write(config['version'])
+        f.close()
+    else:
+        version = open(datadir + os.sep + 'VERSION', 'r').read().strip()
+        if version != config['version']:
+             rlog(10, 'GOZERBOT', 'datadir version %s differs from bot version \
+%s' % (version, config['version']))
+    rlog(10, 'GOZERBOT', 'starting %s' % config['version'])
+
+    # initialize the database
+    from gozerbot.database.alchemy import startmaindb
+    startmaindb()
+    rlog(5, 'gozerbot', 'default encoding is %s' % sys.getdefaultencoding())
+    rlog(10, 'gozerbot', 'loglevel is %s' % config['loglevel'])
+
+    # basic bot imports
+    from gozerbot.generic import rlog, checkpermissions
+    from gozerbot.irc.bot import Bot
+    from gozerbot.fleet import fleet
+    from gozerbot.plugins import plugins
+    from gozerbot.eventhandler import mainhandler
+    from gozerbot.users import users
+    from gozerbot.threads.thr import start_new_thread
+    from gozerbot.partyline import partyline
+    from gozerbot.exit import globalshutdown
+    from gozerbot.periodical import periodical
+    import time, signal, gc, types, asyncore
+
+    # enable garbage collection
+    gc.enable()
+
+    # provide sigterm support
+    def dostop(a, b):
+        """ sig handler """
+        globalshutdown()
+
+    signal.signal(signal.SIGTERM, dostop)
+
+    # set umask of gozerdata dir
+    umask = config['umask']
+    if not umask:
+        checkpermissions('gozerdata', 0700)
+    else:
+        checkpermissions('gozerdata', umask)
+
+    # write pid to pidfile
+    k = open('gozerbot.pid','w')
+    k.write(str(os.getpid()))
+    k.close()
+
+    # start periodical loop
+    periodical.start()
+
+    # register plugins
+    start_new_thread(plugins.regplugins, ())
+    
+    # create the bot on the fleet
+    if opts.name:
+        bot = fleet.makebot(opts.name)
+    else:
+        bot = fleet.makebot('default')
+    if not bot:
+        rlog(100, 'GOZERBOT', "can't create bot")
+        os._exit(1)
+    if opts.type:
+        bot.cfg['type'] = opts.type
+        bot.cfg.save()
+        bot.type = opts.type
+    if opts.password:
+        bot.cfg['password'] = opts.password
+        bot.cfg.save()
+        bot.password = opts.password
+    if opts.server:
+        bot.cfg['server'] = opts.server
+        bot.cfg.save()
+        bot.server = opts.server
+    if opts.user:
+        bot.cfg['user'] = opts.user
+        bot.cfg.save()
+        bot.server = opts.server
+    if opts.channel and not opts.channel in bot.state['joinedchannels']:
+        bot.state['joinedchannels'].append(opts.channel)
+        bot.state.save()
+
+    # resume the bot or start the fleet
+    if opts.doresume and os.path.isfile(opts.doresume):
+        fleet.resume(opts.doresume)
+        fleet.startok.wait()
+        partyline.resume(opts.doresume)
+        os.unlink(opts.doresume) # bye
+    else:
+        if not opts.name:
+            fleet.start()
+        else:
+            fleet.addbot(bot)
+            start_new_thread(bot.connectwithjoin, (bot, ))
+
+except Exception, ex:
+        handle_exception()
+        time.sleep(2)
+        os._exit(1)
+
+# basic loop
+while 1:
+    try:
+        asyncore.poll(timeout=0.01)
+        time.sleep(0.01)
+        mainhandler.handle_one()
+    except KeyboardInterrupt:
+        globalshutdown()
+        os._exit(0)
+    except Exception, ex:
+        handle_exception()
+        globalshutdown()
+        os._exit(1)

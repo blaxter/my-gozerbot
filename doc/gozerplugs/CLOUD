@@ -1,0 +1,351 @@
+=======
+ CLOUD 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+cloud network
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *cloud-enable*
+
+    :description: enable the gozerbot cloud
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-enable
+        <output> enabling the cloud .. done
+
+
+2) *cloud-startserver*
+
+    :description: start the cloudserver
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-startserver
+        <output> server thread started
+
+
+3) *cloud-boot*
+
+    :description: sync cloud nodes list with provided host
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-boot
+        <output> no new nodes added from http://gozerbot.org:10101
+
+
+
+    ::
+
+        <user> !cloud-boot http://gozerbot.org:10101
+        <output> no new nodes added from http://gozerbot.org:10101
+
+
+4) *cloud-joinall*
+
+    :description: join all nodes
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-joinall
+        <output> join requests sent
+
+
+5) *cloud-add*
+
+    :description: cloud-add <name> <url> .. add a node to cache and persist it
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-add gozerbot.org http://gozerbot.org:10101
+        <output> gozerbot.org added
+
+
+6) *cloud-allow*
+
+    :description: allow execution of a server mountpoint
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-allow auth
+        <output> auth allowed
+
+
+7) *cloud-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-cfg
+        <output> options: booturl="http://gozerbot.org:10101/" .. disable=[]
+        <output>  .. enable=1 .. host="127.0.1.1" .. name="laptop" ..
+        <output>  port=10101 .. servermode=1 .. version="GOZERBOT 0.9"
+        <output>  .. wait=5
+
+
+8) *cloud-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-cfgsave
+        <output> config saved
+
+
+9) *cloud-disallow*
+
+    :description: disallow execution of a server mountpoint
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-disallow auth
+        <output> auth disallowed
+
+
+10) *cloud-fullboot*
+
+    :description: do a boot on every node in the cloud node list
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-boot
+        <output> no new nodes added from http://gozerbot.org:10101
+
+
+11) *cloud-getnode*
+
+    :description: cloud-getnode <name> .. get node of <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-getnode gozerbot.org
+        <output> name=gozerbot.org url=<http://217.149.194.139:10101/>
+        <output>  seen=1233837415.49
+
+
+12) *cloud-join*
+
+    :description: join node with <name>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-join gozerbot.org
+        <output> join reqeust sent to http://217.149.194.139:10101/
+
+
+13) *cloud-list*
+
+    :description: list nodes cache
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-list
+        <output> name=gozerbot.org url=<http://217.149.194.139:10101/>
+        <output>  seen=1233837415.49 .. name=laptop url=<http://127.0.1.1:10101/>
+        <output>  seen=1233837367.81
+
+
+14) *cloud-meet*
+
+    :description: cloud-meet <nodename>
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-meet gozerbot.org
+        <output> can't determine host of gozerbot.org
+
+
+15) *cloud-names*
+
+    :description: show all node names
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-names
+        <output> laptop .. gozerbot.org
+
+
+16) *cloud-ping*
+
+    :description: ping a cloud node
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-ping gozerbot.org
+        <output> none
+17) *cloud-remove*
+
+    :description: remove node with <name> from the cloud
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-remove gozerbot.org
+        <output> gozerbot.org node removed
+
+
+18) *cloud-sync*
+
+    :description: cloud-sync <url> .. sync with provided node
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-sync http://gozerbot.org:10101
+        <output> 0 nodes synced
+
+
+19) *dispatch (d)*
+
+    :description: dispatch [-d] [-e] [--w <seconds to wait>] [--node <nodename>] <cmnd> .. execute <cmnd> in the cloud
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !dispatch version
+
+    ::
+
+        <user> !dispatch -d version
+        <output> dispatching "version" onto 3 nodes - wait (4)
+
+
+
+    ::
+
+        <user> !dispatch -e version
+
+    ::
+
+        <user> !dispatch --w 10 version
+        <output> dispatching "version" onto 3 nodes - wait (10)
+
+
+20) *cloud-disable*
+
+    :description: disable the gozerbot cloud
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-disable
+        <output> cloud disabled
+
+
+21) *cloud-stopserver*
+
+    :description: stop the cloud server
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cloud-stopserver
+        <output> server disabled
+
+

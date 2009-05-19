@@ -1,0 +1,52 @@
+======
+ SIZE 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:02:41 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the size command shows the sizes of plugins that provide a size() plugin command and the sizes of some basic structures
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *size*
+
+    :description: show sizes of various data structures
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !size
+        <output> fleet: 1 .. users: 5 .. cmnds: 587 .. callbacks: 12
+        <output>  .. rebefore: 9 .. reafter: 2 .. aliases: 130 .. examples:
+        <output>  549 .. shop: 2 .. twitter: 0 .. infoitem: 0 .. todo:
+        <output>  9 .. job: 11 .. markov: 0 .. cloud: 2 .. lists: 12
+        <output>  .. rss: 1 .. seen: 3 .. quote: 1 .. projecttracker:
+        <output>  4 .. url: 0 .. alarm: 6 .. karma: 0
+
+

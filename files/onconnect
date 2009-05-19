@@ -1,0 +1,7 @@
+# scripts/onconnect
+#
+# copy this file to the onconnect-botname file in the bot dir
+
+__copyright__ = 'this file is in the public domain'
+
+self.privmsg('NickServ', 'identify pass')

@@ -1,0 +1,18 @@
+#!/bin/sh
+if [ $1 ]
+then
+  DATADIR=$1
+else
+  DATADIR="$HOME/.gozerbot"
+fi
+if [ -e $DATADIR ]
+then
+  cd $DATADIR
+else
+  echo "no $DATADIR directory found"
+  exit 1
+fi
+if [ -e gozerbot.pid ]
+then kill -s TERM `cat gozerbot.pid`
+else echo "no pid file in $DATADIR directory"
+fi

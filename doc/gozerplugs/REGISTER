@@ -1,0 +1,102 @@
+==========
+ REGISTER 
+==========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license:  this file is in the public domain
+ 
+| 
+
+description
+-----------
+| 
+
+allow registering of anon users
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *register-enable*
+
+    :description: enable register command
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !register-enable
+        <output> register enabled
+
+
+2) *register*
+
+    :description: register yourself to the bot .. this only works in jabber
+
+    :permissions: ANY
+
+    :examples:
+
+    ::
+
+        <user> !register dunker
+        <output> we already have a user with userhost test@test
+
+
+3) *register-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !register-cfg
+        <output> options: enable=1 .. perms=['USER'] .. version="GOZERBOT
+        <output>  0.9"
+
+
+4) *register-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !register-cfgsave
+        <output> config saved
+
+
+5) *register-disable*
+
+    :description: disable register command
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !register-disable
+        <output> register disabled
+
+

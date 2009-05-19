@@ -1,0 +1,179 @@
+====
+Oper
+====
+
+__copyright__ = 'this file is in the public domain'
+
+the OPER permission is mainly used for maintaining the bot.
+upon start the bot wil check for a user with the owneruserhost field taken
+from the config file, if not available this account will be made with
+USER and OPER permissions on.
+
+joining a channel
+~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help join
+  < gozerbot> command description of join: join <channel> [password] .. alias:
+              None .. examples: 1) join #dunkbots 2) join #dunkbots mekker
+  <dunk> !join #dunkbots
+
+optional channel password can be given
+
+parting a channel
+~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help part
+  < gozerbot> command description of part: part [<channel>] .. alias: None ..
+              examples: 1) part 2) part #dunkbots
+  <dunk> !part
+
+without a channel argument given this will part the channel in which the 
+command is given.
+
+show running threads
+~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !running
+  < gozerbot> Alarms.check = 1 Bot.readloop = 1 handle_running = 1 MainThread =
+              1 Commandhandler.handleloop = 1 Udplistener.listen = 1 backup = 1
+              Activechecker.checker = 1
+
+quiting the bot
+~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help quit
+  < gozerbot> command description of quit: quit the bot .. alias: None ..
+              examples: quit
+  < dunk> !quit
+
+rebooting the bot
+~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help reboot
+  < gozerbot> command description of reboot: restart the bot .. alias: None ..
+              examples: reboot
+  <dunk> !reboot
+
+reloading a plugin
+~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !reload cloud
+  < gozerbot> cloud reloaded
+
+upgrading
+~~~~~~~~~
+
+-only for mercurial bots-
+
+plugins can be reloading without rebooting the bot. core bot modules require
+a reboot though. the upgrade commands detects if the bot needs to reboot or
+that reloading of plugins is enough
+::
+
+  < dunk> !upgrade
+  < gozerbot> no changes
+
+when you want to add new users to the database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  <dunk> !meet dunker
+  <gozerbot> dunker added to user database
+
+deleting a user
+~~~~~~~~~~~~~~~
+::
+
+  <dunk> !delete dunker
+  <gozerbot> dunker deleted
+
+to see if there is already a record in the database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+us stands for "user scan"
+::
+
+  <dunk> !us dunker
+  <gozerbot> dunker
+
+merging a user
+~~~~~~~~~~~~~~
+
+knowing the name of a user allows you to merge the userhost of somebody on the channel using the nick
+::
+
+  <dunk> !merge dunker dunk
+  <gozerbot> ok
+
+show the users of the bot
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+names is an alias for user-names
+::
+
+  <dunk> !names
+  < gozerbot> owner .. bruutipv6 .. lotjuh .. koor .. laagje .. mr-trev ..
+              bsod .. aim_ .. michiel .. freakie .. iceman_x .. rainman ..
+              antarez .. cybercobra .. finalx .. stonex .. rmeist .. markdark
+              .. jejfafke .. giagio .. maky` .. sphynx .. cmdr_sm .. snore ..
+              kgb_ .. synto .. madeddie .. shortguy .. speeksel .. a-v-s ..
+              rexodus .. borretje .. bart__ .. qqa .. gozerbot .. timmer .. (+2)
+
+getting the userhosts of an user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-getuserhosts dunker
+  < gozerbot> bart@127.0.0.1 .. bart@localhost
+
+adding userhosts to an existing user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !user-adduserhost dunker dunker@localhost
+  < gozerbot> userhost added
+
+get help about the user plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help user
+  < gozerbot> plugin description: manage users
+  < gozerbot> commands: user-add .. user-addperm (addperms) .. user-addpermit
+              (addpermit) .. user-addstatus (addstatus) .. user-adduserhost
+              (adduserhost) .. user-allperm .. user-allstatus .. user-check
+              (check) .. user-del (delete) .. user-delemail (delemail) ..
+              user-delperm .. user-delstatus (delstatus) .. user-deluserhost
+              (deluserhosts) .. user-deny (deny) .. user-email (email) ..
+              user-getemail (+2)
+
+getting/setting the control character of a channel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+  < dunk> !help cc
+  < gozerbot> command description of cc: set control char of channel or show
+              control char of channel .. alias: None .. examples: 1) cc # 2) cc
+
+get an alias
+~~~~~~~~~~~~
+::
+
+  < dunk> !alias-get tt
+  < gozerbot> todo-time
+
+set an alias
+~~~~~~~~~~~~
+::
+
+  < dunk> !alias knmi rss-get knmi
+  < gozerbot> alias added
+
+this aliases the first argument to the rest in this case knmi is aliased to
+rss-get knmi .. arguments after the alias are passed on

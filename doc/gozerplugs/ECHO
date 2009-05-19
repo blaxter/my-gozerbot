@@ -1,0 +1,44 @@
+======
+ ECHO 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+simply write back what you tell it
+
+| 
+
+  simple echo command 
+
+| 
+
+commands
+--------
+| 
+
+1) *echo*
+
+    :description: echo Hello World!
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !echo
+        <output> none

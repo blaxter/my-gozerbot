@@ -1,0 +1,8 @@
+import sys; sys.__plen = len(sys.path)
+./SQLAlchemy-0.5.3-py2.6.egg
+./xmpppy-0.5.0rc1-py2.6.egg
+./pydns-2.3.3-py2.6.egg
+./feedparser-4.1-py2.6.egg
+./pytz-2009g-py2.6.egg
+./simplejson-2.0.9-py2.6.egg
+import sys; new=sys.path[sys.__plen:]; del sys.path[sys.__plen:]; p=getattr(sys,'__egginsert',0); sys.path[p:p]=new; sys.__egginsert = p+len(new)

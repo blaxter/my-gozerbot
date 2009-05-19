@@ -1,0 +1,64 @@
+=====
+ TCP 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+run the tcp listen thread
+
+| 
+
+  allow incoming tcp connection for messaging 
+
+| 
+
+commands
+--------
+| 
+
+1) *tcp-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !tcp-cfg
+        <output> options: tcp=1 .. tcpallow=['127.0.0.1'] .. tcpallowednicks=['#gozerbot',
+        <output>  'dunker'] .. tcpbot="default" .. tcphost="localhost"
+        <output>  .. tcpipv6=0 .. tcpmasks=['192.168*'] .. tcpparty=0
+        <output>  .. tcpport=5500 .. tcpsleep=0 .. tcpstrip=1 .. tdpdblog=0
+        <output>  .. version="GOZERBOT 0.9"
+
+
+2) *tcp-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !tcp-cfgsave
+        <output> config saved
+
+

@@ -1,0 +1,47 @@
+===
+FAQ
+===
+
+__copyright__ = 'this file is in the public domain'
+
+1) when i install the bot and try to make it join a channel it says userhost denied. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+   your client's userhost and the owneruserhost entry in the config file
+   don't match. use the userhost in the denied message as your owneruserhost
+
+2) i want to change a permission of a command.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   sometimes you want to give a different permission to a command. instead of
+   changing the code, you can add the new permission to a file called 
+   'permoverload' .. see files/permoverload for an example. 
+   permission is assigned to the function name of function handling the 
+   command. you can use the code-funcnames command to see what function names
+   live in a  plugin. the permoverload file needs to be placed in the
+   gozerdata dir.
+
+   NEW:
+
+   instead of using the permoverload file one can use the "chanperm" command
+   to set the permission of a channel .. see the "whatperms" command what
+   permission are available .. note that not all permission can be used as some
+   commands can not be used anonymously. examples of permissions to use are
+   ANONKARMA and ANONQUOTE
+
+   EVEN NEWER:
+
+   commands can now be allowed for anon users with the all-add command.
+   example: all-add version
+
+3) the bot doesn't connect to the server.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   set loglevel to 0 so you can see what messages the server is sending back.
+
+4) i want to let the bot give auto-op.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   add the channel name to the status of a user .. setstatus <username>
+   <channel> .. use getname <nick> to get a username of a user.
+

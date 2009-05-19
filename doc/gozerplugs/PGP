@@ -1,0 +1,77 @@
+=====
+ PGP 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Wijnand 'tehmaze' Modderman - http://tehmaze.com
+:contact: IRCNET/#dunkbots
+:distribution: gozerplugs .. see http://gozerbot.org/gozerplugs
+:license:  BSD
+:doc created at: Sun Jan  4 21:16:07 2009
+ 
+| 
+
+description
+-----------
+| 
+
+pgp utilities
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *pgp-fingerprint*
+
+    :description: shows the fingerprint information of a key id
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !pgp-fingerprint C5C9C2B2
+        <output> 1024 bits DSA key, created 2007-05-17, fingerprint
+        <output>  5290D844CF600B6CA6AFF8952D6D437CC5C9C2B2, user ids:
+        <output>  Bart Thate <bart@gozerbot.org>
+
+
+2) *pgp-list*
+
+    :description: show list of registered pgp keys
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !pgp-list
+        <output> installed public keys: C5181C13 .. C5C9C2B2 .. F9EBC3D8
+        <output>  .. FF91E0BD
+
+
+3) *pgp-remove*
+
+    :description: remove a regitered pgp key
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !pgp-remove F9EBC3D8
+        <output> ok
+
+

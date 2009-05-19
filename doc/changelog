@@ -1,0 +1,5687 @@
+
+0.9.0.4
+~~~~~~~
+
+
+2834 Feb 22 20:37:50 2009 .. Added tag 0.9.0.4 for changeset 3a6f50da3288
+
+2833 Feb 22 14:43:02 2009 .. use config['loadlist']
+
+2832 Feb 22 14:12:07 2009 .. dont limit QueuePool
+
+2831 Feb 22 08:20:19 2009 .. add pool_recycle to create_engine()
+
+2830 Feb 21 22:29:55 2009 .. remove ez_setup.py
+
+
+0.9.0.3
+~~~~~~~
+
+
+2829 Feb 21 22:11:38 2009 .. Added tag 0.9.0.3 for changeset 3af6412df920
+
+2828 Feb 21 21:49:56 2009 .. its 0.9.0.3 now
+
+2827 Feb 21 03:31:53 2009 .. remove debug print
+
+2826 Feb 21 01:33:37 2009 .. silence dispatchtest() allowed calls
+
+2825 Feb 21 01:24:19 2009 .. try charset=utf8&use_unicode=0  in connect string
+
+2824 Feb 21 00:51:03 2009 .. set assert_unicode to 'warn'
+
+2823 Feb 20 23:49:24 2009 .. fix utf-8 handling by using convert_unicode .. thnx to snore
+
+2822 Feb 20 22:07:33 2009 .. allow custom config to be passed to uri detector
+
+2821 Feb 20 20:24:07 2009 .. log more .. use subtransactions=True in getuser()
+
+2820 Feb 20 12:28:15 2009 .. update UPGRADE doc
+
+2819 Feb 19 23:51:55 2009 .. update changelog
+
+
+0.9.0.2
+~~~~~~~
+
+
+2818 Feb 19 23:51:13 2009 .. Added tag 0.9.0.2 for changeset cda83e51e6b5
+
+2817 Feb 19 23:38:25 2009 .. prepare for 0.9.0.2
+
+2816 Feb 19 23:20:20 2009 .. mention plug-upgrade
+
+2815 Feb 19 23:00:11 2009 .. set module to gozerplugs if we can detect it
+
+2814 Feb 19 22:19:00 2009 .. add plug-upgrade command to the core plugin
+
+2813 Feb 19 21:24:25 2009 .. use the global bindhost if local is not provided
+
+2812 Feb 19 21:22:16 2009 .. don't forget bindhost
+
+2811 Feb 19 21:18:38 2009 .. if udpseed is not provided put it at ""
+
+2810 Feb 19 21:13:37 2009 .. set udpbot entry in udp config file
+
+2809 Feb 19 20:53:32 2009 .. sleep a bit before upgrading the database
+
+2808 Feb 19 20:43:15 2009 .. print exception if startmaindb doesnt work
+
+2807 Feb 19 20:11:22 2009 .. load config file before upgrading the database
+
+2806 Feb 19 18:49:20 2009 .. fix
+
+2805 Feb 19 13:20:35 2009 .. fix user-show, user-check, user-match
+
+2804 Feb 18 21:02:58 2009 .. update changelog
+
+
+0.9.0.1
+~~~~~~~
+
+
+2803 Feb 18 21:01:33 2009 .. Added tag 0.9.0.1 for changeset 00c50ac6141e
+
+2802 Feb 18 21:01:03 2009 .. enter 0.9.0.1
+
+2801 Feb 18 20:59:34 2009 .. use os.getcwd()
+
+2800 Feb 18 18:46:39 2009 .. fix chardet exception
+
+2799 Feb 17 18:31:23 2009 .. tune tests
+
+2798 Feb 17 09:49:56 2009 .. fix tests
+
+2797 Feb 16 17:56:37 2009 .. implement tests module
+
+2796 Feb 14 23:12:41 2009 .. add gozerbot/tests .. upgrade alchemy.py
+
+2795 Feb 12 08:36:11 2009 .. refactor the dbstart() function
+
+2794 Feb 11 11:21:15 2009 .. do the callback dance after check for topic is done
+
+2793 Feb 09 20:44:54 2009 .. remove infoitem table definition from alchemy module
+
+2792 Feb 09 20:15:17 2009 .. remove debug print
+
+2791 Feb 09 20:14:57 2009 .. check for function names in bot.state['allowed']
+
+2790 Feb 09 19:01:00 2009 .. put current dir in front on sys.path
+
+2789 Feb 08 14:31:40 2009 .. move splitted attribute into botbase
+
+2788 Feb 07 08:56:41 2009 .. extract dbtype from dburi and set config var accordingly
+
+2787 Feb 05 15:49:39 2009 .. update changelog
+
+2786 Feb 05 13:56:41 2009 .. do the gendoc.py
+
+2785 Feb 05 12:57:57 2009 .. README = doc/handbool/INSTALL
+
+2784 Feb 05 12:55:27 2009 .. remove
+
+2783 Feb 05 12:51:02 2009 .. remove
+
+2782 Feb 05 12:45:46 2009 .. update the README for gozerbot-install
+
+2781 Feb 04 13:02:53 2009 .. add -l option to list available plugins
+
+2780 Feb 04 12:09:18 2009 .. fix rest plugin
+
+2779 Feb 04 07:15:39 2009 .. make default botdir "."
+
+2778 Feb 03 20:37:23 2009 .. add gozerbot-install .. used to install remote plugins
+
+2777 Feb 03 02:05:17 2009 .. add upgrading of plugins to gozerbot-upgrade
+
+2776 Feb 02 23:30:30 2009 .. remove execfile() call .. implement dosed in python
+
+2775 Feb 02 22:29:29 2009 .. remove popen stuff
+
+2774 Feb 02 22:22:18 2009 .. remove remote installing since it depends on popened gpg
+
+2773 Feb 02 22:20:01 2009 .. remove more popen stuff
+
+2772 Feb 02 22:14:15 2009 .. prep for 0.9
+
+2771 Feb 02 21:57:59 2009 .. remove ps command
+
+2770 Feb 02 21:56:01 2009 .. remove popen
+
+2769 Feb 02 13:01:20 2009 .. use gozerdata/old/ dir for old data
+
+2768 Jan 30 20:22:15 2009 .. try converting config vars to int first
+
+2767 Jan 30 00:43:11 2009 .. use perl instead of sed
+
+2766 Jan 30 00:27:30 2009 .. use ".bak"
+
+2765 Jan 30 00:27:16 2009 .. use "-i bak" in sed
+
+2764 Jan 29 23:31:43 2009 .. don't forget ssl config var
+
+2763 Jan 29 23:30:18 2009 .. make port config vars integers
+
+2762 Jan 29 22:57:15 2009 .. set jabber server properly
+
+2761 Jan 27 23:36:42 2009 .. remove self.connecting check in reconnect
+
+2760 Jan 27 23:24:21 2009 .. remove connecting code
+
+2759 Jan 27 23:17:41 2009 .. set bot.stopped to 0 when connecting
+
+2758 Jan 25 13:59:15 2009 .. differenctiatie between mysql and non mysql database in dbupgrade()
+
+2757 Jan 25 13:51:39 2009 .. fix upgrade
+
+2756 Jan 25 12:50:17 2009 .. properly report sed errors .. skip directories while doing the sed
+
+2755 Jan 25 12:33:36 2009 .. first try sed -i for linux sed then try sed -i '' for bsd sed
+
+2754 Jan 25 12:09:46 2009 .. if bot is ssl enabled do a connectwithjoin() on reboot
+
+2753 Jan 25 12:02:21 2009 .. start saymonitor on reboot
+
+2752 Jan 25 02:11:34 2009 .. fixor
+
+2751 Jan 25 02:09:37 2009 .. always run dbupgrade()
+
+2750 Jan 25 01:59:05 2009 .. use db/main.db as the main database
+
+2749 Jan 24 21:37:40 2009 .. sleep a bit in mainloop
+
+2748 Jan 24 21:13:21 2009 .. do a asyncore.poll() in the main loop
+
+2747 Jan 20 01:45:36 2009 .. make database upgrading work
+
+2746 Jan 20 01:18:21 2009 .. put in some debug info
+
+2745 Jan 20 01:11:27 2009 .. once more use fleetcfg
+
+2744 Jan 20 01:07:55 2009 .. start database when trying to upgrade it
+
+2743 Jan 20 01:04:46 2009 .. remove self argument from dbupgrade()
+
+2742 Jan 20 01:02:04 2009 .. more fleetcfg
+
+2741 Jan 20 00:58:29 2009 .. use fleetcfg
+
+2740 Jan 20 00:53:17 2009 .. use plugcfg so we dont use the wrong config file
+
+2739 Jan 20 00:45:18 2009 .. add dbupgrade()
+
+2738 Jan 20 00:02:24 2009 .. get rid of the autoload stuff it runs at compile time which doesnt work for
+
+2737 Jan 19 23:46:42 2009 .. check if the config['dbenable'] key is available if not set newcfg's dbtype
+
+2736 Jan 19 23:36:12 2009 .. fix setting of dbtype
+
+2735 Jan 19 22:41:06 2009 .. fix make_owner .. alays start the database if config['nodb'] is not set
+
+2734 Jan 17 22:07:11 2009 .. fix adding of missing email.order entry
+
+2733 Jan 17 21:36:56 2009 .. report exception if adding of email.order column fails
+
+2732 Jan 17 21:29:19 2009 .. add order entry to email table
+
+2731 Jan 17 21:02:07 2009 .. check if userhost is already in db
+
+2730 Jan 17 20:53:07 2009 .. update the user table with entries in userhost tables
+
+2729 Jan 17 19:15:32 2009 .. explicitly provide a zero-width extension so bsd sed works ok
+
+2728 Jan 17 18:50:49 2009 .. don't blurb the config file that failed .. it makes output unreadable
+
+2727 Jan 17 18:49:18 2009 .. if dbtype is not provided in oldcfg assume 'mysql'
+
+2726 Jan 17 18:13:12 2009 .. don.t use trailing .
+
+2725 Jan 17 18:03:37 2009 .. do a sed on gozerbot.persistconfig -> gozerbot.compat.persistconfig
+
+2724 Jan 14 00:00:49 2009 .. skip copying old sqlite database
+
+2723 Jan 13 22:37:30 2009 .. put logging of threadloop start at loglevel 0
+
+2722 Jan 13 22:24:57 2009 .. log fetching urls with rlog()
+
+2721 Jan 13 07:50:09 2009 .. fix setting Jabbermsg.userhost on conferences where jid is provided
+
+2720 Jan 12 23:48:25 2009 .. fix reboot on jabber bots .. log incomming jabber data on loglevel 5
+
+2719 Jan 05 14:31:25 2009 .. correctly add owneruserhost in list case
+
+2718 Jan 04 21:33:13 2009 .. readd gozerplugs docs
+
+2717 Jan 04 21:02:07 2009 .. clean up gozerplugs docs so we can reseed them .. upgrade baseplugs docs
+
+2716 Jan 04 20:22:18 2009 .. remove __INIT__ from base docs .. add plughelp to udnerauth plugin
+
+2715 Jan 04 20:16:56 2009 .. add baseplugs docs
+
+2714 Jan 04 19:41:42 2009 .. move plugins docs to doc/gozerplugs
+
+2713 Jan 04 18:53:59 2009 .. fix PersistConfig.remove() .. remove debug print
+
+2712 Jan 04 14:32:53 2009 .. make gendoc.py work
+
+2711 Jan 03 23:12:12 2009 .. make note about config file format is now in json
+
+2710 Jan 02 22:11:41 2009 .. update changelog
+
+
+0.9-RC3
+~~~~~~~
+
+
+2709 Jan 02 22:11:23 2009 .. Added tag 0.9-RC3 for changeset 4d7c512ed185
+
+2708 Dec 30 23:22:19 2008 .. check if plugin datadir exists if not create it
+
+2707 Dec 30 23:05:19 2008 .. do a stdout.flush() on the error that no main owner is set
+
+2706 Dec 30 22:45:29 2008 .. fix typo
+
+2705 Dec 30 22:44:36 2008 .. also use global config owner in make_user
+
+2704 Dec 30 22:40:07 2008 .. set dbtype to sqlite if db is not enabled in old config
+
+2703 Dec 30 22:34:14 2008 .. its cfg['dbenable'] (cfg is old config file)
+
+2702 Dec 30 22:32:14 2008 .. rmeove bartholo@localhost from owner list
+
+2701 Dec 30 22:23:52 2008 .. use nodb config option
+
+2700 Dec 30 22:08:32 2008 .. add note about upgrading
+
+2699 Dec 30 21:54:09 2008 .. update README
+
+2698 Dec 28 23:30:40 2008 .. don't always complain about not compatible datadirs
+
+2697 Dec 28 23:21:39 2008 .. set default of owner to empty list and bail out if its not set .. mention
+
+2696 Dec 28 10:12:34 2008 .. fix typo
+
+2695 Dec 27 19:47:16 2008 .. fix rlog
+
+2694 Dec 27 18:20:10 2008 .. use dbenable config var its more clear
+
+2693 Dec 26 23:54:07 2008 .. set dbenable to 1
+
+2692 Dec 26 23:48:04 2008 .. always set db config vars
+
+2691 Dec 25 09:13:47 2008 .. update README
+
+2690 Dec 25 08:35:34 2008 .. make help txt more clear
+
+2689 Dec 24 14:09:57 2008 .. put gozerbot.org/gozerplugs first in installlist
+
+2688 Dec 21 01:26:50 2008 .. add uniq plugin
+
+2687 Dec 20 05:41:26 2008 .. its RC2
+
+2686 Dec 20 05:40:38 2008 .. use uniqlist on install-list result
+
+2685 Dec 20 04:49:25 2008 .. make gozerbot-udp use a config file
+
+2684 Dec 19 14:31:45 2008 .. fixes and re-enable the powernick plugin
+
+2683 Dec 17 15:34:56 2008 .. make most of the fleet commands threaded
+
+2682 Dec 17 15:31:06 2008 .. remove debug print
+
+2681 Dec 17 05:30:00 2008 .. don't copy over mainconfig file
+
+2680 Dec 17 04:24:59 2008 .. make stripident config global
+
+2679 Dec 15 12:56:47 2008 .. update plug sites
+
+2678 Dec 15 12:29:18 2008 .. add maze's plugin site
+
+2677 Dec 15 02:09:38 2008 .. update gozerbot-upgrade
+
+2676 Dec 14 23:53:14 2008 .. copy over database files if they exist
+
+2675 Dec 14 23:28:19 2008 .. check if converted config file is a PersistConfig
+
+2674 Dec 11 11:39:58 2008 .. this is RC1
+
+
+0.9-RC1
+~~~~~~~
+
+
+2673 Dec 11 11:39:47 2008 .. Added tag 0.9-RC1 for changeset d9ae4103ec95
+
+2672 Dec 09 21:25:42 2008 .. remove powernick plugin from core
+
+2671 Dec 09 20:57:38 2008 .. determine botname from config path if not provided in config file
+
+2670 Dec 09 00:55:01 2008 .. use Irc.sock instead of Irc.oldsock in Irc._resume
+
+2669 Dec 08 23:33:09 2008 .. needs to be a list
+
+2668 Dec 08 23:28:08 2008 .. provide a default to plugins.plugdeny.init()
+
+2667 Dec 08 23:16:04 2008 .. fix rebooting
+
+2666 Dec 08 22:52:03 2008 .. properly log errors in Persist.init()
+
+2665 Dec 08 22:47:54 2008 .. development is 0.9-RC1 now
+
+2664 Dec 08 01:52:54 2008 .. remove references to old 'myplugs' directory
+
+2663 Dec 08 01:00:29 2008 .. forget a dot
+
+2662 Dec 08 00:56:34 2008 .. set bot.cfg['name'] and bot.name depending on the fleet bot dir name
+
+2661 Dec 08 00:53:55 2008 .. remove name from fleet bot config .. the dir name is used for the name now
+
+2660 Dec 08 00:16:54 2008 .. make unloading persistent .. fix
+
+2659 Dec 07 22:03:31 2008 .. remove ANON from core plugins
+
+2658 Dec 07 12:29:19 2008 .. explicitly start runners in botbase
+
+2657 Dec 07 08:35:28 2008 .. add karma to the compat .. add nowrunning and callbacks debug commands
+
+2656 Dec 07 08:07:01 2008 .. add nowrunning
+
+2655 Dec 06 20:42:18 2008 .. use config['jsonusers'] and config['dbnoalchemy']
+
+2654 Dec 06 20:19:11 2008 .. make 0.9-BETA3
+
+
+0.9-BETA3
+~~~~~~~~~
+
+
+2653 Dec 06 20:18:58 2008 .. Added tag 0.9-BETA3 for changeset 99f5fa3a253c
+
+2652 Dec 06 20:05:24 2008 .. use once central Runner cleaner
+
+2651 Dec 06 17:35:00 2008 .. fixes + nits
+
+2650 Dec 06 02:29:50 2008 .. keep the minutely runners cleanup
+
+2649 Dec 06 02:09:33 2008 .. do a cleanup sweep when adding a new runner
+
+2648 Dec 06 01:04:43 2008 .. add bot to fleet after resuming
+
+2647 Dec 06 00:56:57 2008 .. fix json users
+
+2646 Dec 06 00:21:28 2008 .. fix indents
+
+2645 Dec 05 22:56:19 2008 .. add cache module
+
+2644 Dec 05 22:53:50 2008 .. add jsonusers module .. reintroduce (again) config['dbenable']
+
+2643 Dec 05 20:21:48 2008 .. persist aliases
+
+2642 Dec 05 08:40:39 2008 .. make rss old persist convertable
+
+2641 Dec 05 01:48:17 2008 .. restore oldloglevel
+
+2640 Dec 05 01:26:17 2008 .. properly set config setting name
+
+2639 Dec 05 01:18:46 2008 .. properly upgrade config files
+
+2638 Dec 04 23:42:02 2008 .. make use gozerbot-upgrade update the users.db
+
+2637 Dec 04 19:01:59 2008 .. make Db() connect to the database by default
+
+2636 Dec 04 16:30:13 2008 .. tis bot.cfg
+
+2635 Dec 04 16:23:08 2008 .. reintroduce stripident
+
+2634 Dec 04 14:43:37 2008 .. adapt compat todo
+
+2633 Dec 04 12:49:28 2008 .. log runner starts at loglevel 9 .. show databasename in Db.connect()
+
+2632 Dec 03 19:08:25 2008 .. make google talk work with other google xmpp servers
+
+2631 Dec 03 18:50:32 2008 .. import xmpp module when its needed
+
+2630 Dec 03 18:48:59 2008 .. there is no more jabberenable
+
+2629 Dec 03 16:35:43 2008 .. make mysql work
+
+2628 Dec 03 15:06:32 2008 .. use usr/bin/env python2.5
+
+2627 Dec 03 11:25:03 2008 .. fix .. don't return before committing
+
+2626 Dec 03 11:18:54 2008 .. fix breakage .. fix jabber connect
+
+2625 Dec 03 02:21:24 2008 .. stress test sqlalchemy
+
+2624 Dec 02 22:40:47 2008 .. fix
+
+2623 Dec 02 01:22:09 2008 .. support upgrade path
+
+2622 Dec 01 22:55:18 2008 .. fix
+
+2621 Dec 01 22:13:34 2008 .. copy sedded gozerdata files over
+
+2620 Dec 01 20:27:46 2008 .. make gozerbot-upgrade doe the core bot stuff (users)
+
+2619 Dec 01 19:34:04 2008 .. make gozerbot-upgrade pass
+
+2618 Dec 01 19:31:35 2008 .. add persistconfig to compat. make upgrade path "need to write to disk first" free
+
+2617 Dec 01 01:43:42 2008 .. its "mainconfig" now
+
+2616 Dec 01 00:42:27 2008 .. make setup use setuptools
+
+2615 Nov 30 23:06:54 2008 .. fix
+
+2614 Nov 30 23:03:53 2008 .. remove config['dbplugs'] .. we need to learn to depend on third party
+
+2613 Nov 30 22:43:02 2008 .. remove django .. django stuff will go into its own plugin
+
+2612 Nov 30 20:45:41 2008 .. remove backup plugin
+
+2611 Nov 30 20:13:34 2008 .. add pickle persist to compat
+
+2610 Nov 30 19:35:16 2008 .. remove addon module .. third party code should be on bot dir level so import
+
+2609 Nov 30 19:08:17 2008 .. remove tests these will be done in the gozerplugs/test.py plugin
+
+2608 Nov 30 18:17:56 2008 .. show database type in version
+
+2607 Nov 30 11:54:07 2008 .. re-enable the config['dbenable'] option
+
+2606 Nov 30 11:02:40 2008 .. make users module use json to persist
+
+2605 Nov 29 23:50:47 2008 .. add lazydict to the bunch
+
+2604 Nov 29 00:14:56 2008 .. let Persist class use json to serialize its data instead of pickle
+
+2603 Nov 28 20:38:39 2008 .. run the bastard
+
+2602 Nov 28 15:57:59 2008 .. add django to the bunch
+
+2601 Nov 27 13:40:24 2008 .. re-add db.py
+
+2600 Nov 27 13:28:07 2008 .. re-add users
+
+2599 Nov 27 11:07:14 2008 .. add sqlalchemy to the bunch
+
+2598 Nov 27 10:43:30 2008 .. re-enable sqlalchemy
+
+2597 Nov 26 19:33:29 2008 .. sleep 10 sec before giving the fleet enabled signal
+
+2596 Nov 26 18:53:06 2008 .. implement Irc.connectlock so its bot local instead of global
+
+2595 Nov 26 18:28:37 2008 .. sleep a bit after connect
+
+2594 Nov 26 18:20:09 2008 .. skip bad socket errors
+
+2593 Nov 26 18:10:49 2008 .. remove stripident stuff .. parse config files better in gozerbot-upgrade
+
+2592 Nov 26 17:28:43 2008 .. don't access users database when importing .. the database is not yet
+
+2591 Nov 26 17:25:47 2008 .. skip over .db files when doing the sed
+
+2589 Nov 26 17:18:18 2008 .. use on global users database
+
+2588 Nov 26 16:53:54 2008 .. renable stripident config var
+
+2587 Nov 26 16:30:31 2008 .. copy over channels and userhosts files
+
+2586 Nov 26 16:19:39 2008 .. log failed ownercheck
+
+2585 Nov 26 15:53:20 2008 .. its BETA2
+
+2584 Nov 26 08:31:41 2008 .. update gozerbot-upgrade
+
+2583 Nov 25 22:29:21 2008 .. another step in gozerbot-upgrade fase
+
+2582 Nov 25 20:18:28 2008 .. fix gozerbot-init
+
+2581 Nov 25 03:53:21 2008 .. need sleep
+
+2580 Nov 25 00:13:24 2008 .. fix setup.py .. copy config files in gozerbot-upgrade
+
+2579 Nov 24 23:30:36 2008 .. update to new gozerbot.threads and gozerbot.database packages
+
+2578 Nov 24 23:19:47 2008 .. move db.py into the database package
+
+2577 Nov 24 23:18:34 2008 .. adjust to new threads package
+
+2576 Nov 24 23:02:47 2008 .. add datasbase sub package .. move threads modules over to threads package
+
+2575 Nov 24 22:59:27 2008 .. add threads sub package
+
+2574 Nov 24 22:13:51 2008 .. give warning when botname is not the same as fleet dir name
+
+2573 Nov 24 20:20:37 2008 .. make gozerbot-upgrade work
+
+2572 Nov 24 11:09:27 2008 .. give basic config file the name 'mainconfig' .. fix version detection in
+
+2571 Nov 24 05:54:07 2008 .. use gozerdata/plugs/{plugname}
+
+2570 Nov 23 12:35:16 2008 .. use bot.cfg['nick']
+
+2569 Nov 23 12:33:36 2008 .. make long running commands threaded
+
+2568 Nov 23 12:20:03 2008 .. don't use cfg in base plugins
+
+2567 Nov 23 11:44:00 2008 .. make gozerdata/users/{username} directory when adding a user
+
+2566 Nov 23 11:30:17 2008 .. use gozerdata/users for UserState
+
+2565 Nov 23 11:17:32 2008 .. add PlugPersist
+
+2564 Nov 23 10:35:22 2008 .. fix persistconfig .. use gozerdata/plugs/{plugname} to store plug data
+
+2563 Nov 23 01:54:26 2008 .. reshuffle bin progs .. add gozerbot-udp
+
+2562 Nov 23 00:11:35 2008 .. remove upgrade0.6 and upgrade0.8.2 .. rename gozerinit to gozerbot-init ..
+
+2561 Nov 22 23:18:53 2008 .. check if fleet bot is enabled .. log dispatching of command on loglevel 10
+
+2560 Nov 22 22:38:27 2008 .. make jabber work again .. add a jabber bot example
+
+2559 Nov 22 12:16:53 2008 .. pass test-plugs
+
+2558 Nov 22 11:48:46 2008 .. make jabber work
+
+2557 Nov 22 03:14:47 2008 .. update README
+
+2556 Nov 22 02:58:51 2008 .. call the default bot well .. 'default' !! .. fix gozerinit
+
+2555 Nov 22 02:36:36 2008 .. fix
+
+2554 Nov 22 02:22:07 2008 .. massage config file saving ... use json dumps
+
+2553 Nov 22 00:31:08 2008 .. switch over to using normal config files for persistconfig
+
+2552 Nov 21 22:36:32 2008 .. check if bot exists before adding it to the fleet
+
+2551 Nov 21 21:46:51 2008 .. fix fleet in case of empty config file
+
+2550 Nov 21 10:17:52 2008 .. add forgotten users.py
+
+2549 Nov 21 09:13:13 2008 .. add inittxt parameter to Config.__init__()
+
+2548 Nov 21 08:35:13 2008 .. move users over to dbusers
+
+2547 Nov 21 08:20:52 2008 .. remove dbplugs package
+
+2546 Nov 21 00:39:32 2008 .. make a Periodical.start()
+
+2545 Nov 21 00:18:47 2008 .. fix fleet
+
+2544 Nov 20 23:40:10 2008 .. fix gozerimport by using the imp module
+
+2543 Nov 20 20:21:22 2008 .. almost !test-plugs exception free
+
+2542 Nov 20 16:22:49 2008 .. sedding towards 0.9
+
+2541 Nov 20 15:26:39 2008 .. clean startup stage completed
+
+2540 Nov 20 14:09:50 2008 .. fix imports
+
+2539 Nov 20 11:37:56 2008 .. show proper version string
+
+2538 Nov 20 11:31:28 2008 .. remove debug print
+
+2537 Nov 20 11:30:44 2008 .. move over to gozerdata/fleet for bot state/config
+
+2536 Nov 19 20:21:59 2008 .. remove pid file on exit
+
+2535 Nov 19 20:10:55 2008 .. don't touch gozerdata in core plugins
+
+2534 Nov 19 20:05:13 2008 .. use gozer_import
+
+2533 Nov 19 19:52:51 2008 .. remove tables dir
+
+2532 Nov 19 19:50:08 2008 .. remove gozerplugs from core distribution
+
+2531 Nov 19 19:37:52 2008 .. update setup.py .. user gozerplugs dir instead of myplugs
+
+2530 Nov 19 18:59:38 2008 .. move over files from gozerplugs/plugs and dbplugs into gozerbot package ..
+
+2529 Nov 19 17:36:14 2008 .. skip 0.8.2 go strait to 0.9
+
+2528 Nov 19 15:50:33 2008 .. use sed -i
+
+2527 Nov 19 11:01:13 2008 .. add UPGRADE notice to bin/gozerbot if VERSION file is not in gozerdata dir
+
+2526 Nov 19 10:40:51 2008 .. remote dependancy on throttle plugin
+
+2525 Nov 19 10:24:35 2008 .. use gozerbot.utils.fileutils
+
+2524 Nov 18 22:37:06 2008 .. add bin/gozerupgrade
+
+2523 Nov 18 06:31:29 2008 .. cleanup
+
+2522 Nov 18 05:50:30 2008 .. fix fleet imports .. add domsg() to BotBase class
+
+2521 Nov 18 05:28:48 2008 .. fileutils in is the gozerbot.utils package now
+
+2520 Nov 18 05:25:24 2008 .. fix imports
+
+2519 Nov 18 05:18:52 2008 .. update setup.py
+
+2518 Nov 18 05:15:58 2008 .. remove runbot .. we are supposed to use bin/gozerbot now
+
+2517 Nov 18 04:52:29 2008 .. go to BETA3
+
+2516 Nov 18 04:47:55 2008 .. move most of contrib packages into upperlevel dir
+
+2515 Nov 18 04:25:36 2008 .. fix rebooting .. fix plugnames registration
+
+2514 Nov 18 03:48:48 2008 .. use local import in gozerbot package .. add persist package
+
+2513 Nov 18 02:47:04 2008 .. move textutils module to utils package
+
+2512 Nov 18 02:45:00 2008 .. change logging format
+
+2511 Nov 18 02:42:23 2008 .. remove backup files
+
+2510 Nov 18 02:41:56 2008 .. add utils
+
+2509 Nov 18 02:33:57 2008 .. move jabber and irc components into there own package
+
+2507 Nov 17 17:14:51 2008 .. Notice works in silent mode
+
+2506 Nov 17 18:00:33 2008 .. fix no cc in /msg on jabber .. thnx knorrie
+
+2505 Nov 17 17:17:21 2008 .. nits
+
+2504 Nov 17 16:45:56 2008 .. import wildrovers notice changes
+
+2503 Nov 14 02:36:44 2008 .. Notices work with !more now
+
+2502 Nov 13 11:13:20 2008 .. Fixed a self-created bug in ircevent.py
+
+2501 Nov 13 10:08:50 2008 .. Silent replies are also notices now
+
+2500 Nov 13 09:50:50 2008 .. Bot can now send NOTICE instead of PrivMSG
+
+2499 Nov 17 15:31:29 2008 .. its eventbase.orig
+
+2498 Nov 17 15:18:23 2008 .. introduce eventbase
+
+2497 Nov 17 09:35:26 2008 .. add eventbase module
+
+2496 Nov 16 11:16:22 2008 .. add Jabberiq to the mix
+
+2495 Nov 16 01:16:22 2008 .. fix
+
+2494 Nov 16 00:18:58 2008 .. fix
+
+2493 Nov 16 00:15:04 2008 .. don't forget jabber
+
+2492 Nov 16 00:05:01 2008 .. add noallowcc config var and make default /msg without command character
+
+2491 Nov 14 08:52:14 2008 .. update README
+
+2490 Nov 10 17:53:45 2008 .. fix directory reloading in Plugins.reload()
+
+2489 Nov 10 15:33:26 2008 .. unbreak install-update
+
+2488 Nov 10 15:19:54 2008 .. define plugdata variable
+
+2487 Nov 10 15:15:03 2008 .. use the installer object instead of the class
+
+2486 Nov 10 15:12:43 2008 .. import handle_exception
+
+2485 Nov 10 15:09:23 2008 .. add handle_excpetion() to install-update
+
+2484 Nov 09 21:04:58 2008 .. remove birthday from user-check data
+
+2483 Nov 09 11:42:39 2008 .. don't show birthday in user-show, the birthday data is in its own plugin now
+
+2482 Nov 09 11:34:40 2008 .. use a signal queue instead of busy waiting in Irc._outputloop()
+
+2481 Nov 08 11:09:39 2008 .. remove debug print
+
+2480 Nov 08 11:07:57 2008 .. forgot to remove debug comment
+
+2479 Nov 08 11:06:36 2008 .. fix reconnect
+
+2478 Nov 07 15:42:12 2008 .. don't forget dbplugs/user.py
+
+2477 Nov 07 15:36:32 2008 .. make merge take one argument being both nick and name
+
+2476 Nov 07 15:13:20 2008 .. have a single entry for sending txt to the server aka Irc._raw()
+
+2475 Nov 07 14:27:43 2008 .. don't register plugins threaded instead go by them one by one
+
+2474 Nov 07 13:41:39 2008 .. only clean plugin's .pyc file if plugin is being reloaded
+
+
+0.8.2-BETA2
+~~~~~~~~~~~
+
+
+2473 Oct 21 14:07:02 2008 .. Added tag 0.8.2-BETA2 for changeset 8d1e62131e7a
+
+2472 Oct 21 13:42:05 2008 .. this is the 0.8.2-BETA2
+
+2471 Oct 21 03:53:54 2008 .. typo
+
+2470 Oct 21 03:53:19 2008 .. set dbname properly
+
+2469 Oct 21 03:44:27 2008 .. check if gozerbot is already running from a database
+
+2468 Oct 21 03:40:15 2008 .. set sqlite3 config var
+
+2467 Oct 21 03:35:15 2008 .. create userdb
+
+2466 Oct 21 03:32:48 2008 .. make picklestosqlite.py use dbtype='sqlite'
+
+2465 Oct 20 08:09:46 2008 .. use ievent.channel.lower()
+
+2464 Oct 19 18:57:11 2008 .. use ievent.channel.lower()
+
+2463 Oct 19 15:09:04 2008 .. fix jabbermonitor
+
+2462 Oct 17 14:26:48 2008 .. fix __depend__ parsing
+
+2461 Oct 17 11:22:50 2008 .. check for defaultcc
+
+2460 Oct 17 11:17:57 2008 .. allow dafaultcc in /msg
+
+2459 Oct 17 10:26:16 2008 .. make not when changing the config file
+
+2458 Oct 14 21:35:57 2008 .. make apro search aliases as well .. add private parameter to Ircevent.reply()
+
+2457 Oct 14 20:07:49 2008 .. add private flag to Jabbermsg.reply()
+
+2456 Oct 14 15:25:04 2008 .. disable roster request
+
+2455 Oct 14 09:24:49 2008 .. show proper reload list in install-plug
+
+2454 Oct 14 09:08:37 2008 .. fix dependancy loading .. lock jabbermsg.reply()
+
+2453 Oct 13 13:15:18 2008 .. nits
+
+2452 Oct 12 20:45:04 2008 .. add http://gozerplugs.blinkenlights.nl/ to the gozerbot plugins server club
+
+2451 Oct 12 10:54:32 2008 .. save config file if we set sqlite3 option to 0
+
+2450 Oct 12 10:17:46 2008 .. speed up response after joining
+
+2449 Oct 12 00:02:34 2008 .. dont call plugins init() in a thread
+
+2448 Oct 10 00:26:01 2008 .. log saving of persist data .. only do commands with cc == '!' in /msg
+
+2447 Oct 09 22:36:17 2008 .. remove savelist support instead do plug.save()
+
+2446 Oct 07 17:12:51 2008 .. fix storing channel password
+
+2445 Oct 07 13:21:46 2008 .. require a cc in jabber private chat
+
+2444 Oct 07 13:15:24 2008 .. set Jabbermsg.msg properly
+
+2443 Oct 06 01:43:32 2008 .. remove backup files
+
+2442 Oct 06 01:42:50 2008 .. add pytz .. add Bd.addcolumns()
+
+2441 Oct 04 13:11:38 2008 .. delay WHO
+
+2440 Oct 04 12:47:09 2008 .. lower the speed on WHO WHOIS and NAMES
+
+2439 Oct 03 03:18:50 2008 .. determine pickklemode switch on startup
+
+2438 Oct 03 02:06:09 2008 .. more dodo .. getting too tired
+
+2437 Oct 03 01:50:47 2008 .. do the dodo
+
+2436 Oct 03 01:43:10 2008 .. dont forget the gozerbot program
+
+2435 Oct 03 01:42:47 2008 .. add a config['sqlite3'] knob to enable/disable sqlite3 default .. 2.4 compat
+
+2434 Oct 03 00:20:56 2008 .. 2.4 compat
+
+2433 Oct 02 23:56:52 2008 .. make 2.4 still available
+
+2432 Oct 02 23:25:51 2008 .. remove prints
+
+2431 Oct 02 23:15:06 2008 .. commit sqlite connection before closing it
+
+2430 Oct 02 21:29:10 2008 .. if its NOT
+
+2429 Oct 02 21:27:22 2008 .. only make database if dbtype is sqlite
+
+2427 Oct 02 20:59:41 2008 .. add force_import
+
+2426 Oct 02 20:48:58 2008 .. properly reload plugins
+
+2425 Oct 02 19:43:38 2008 .. makeuserdb
+
+2424 Oct 02 19:42:45 2008 .. its makeuserdb()
+
+2423 Oct 02 19:19:02 2008 .. update setup.py
+
+2422 Oct 02 19:17:49 2008 .. add pickletosqlite
+
+2421 Oct 02 18:59:42 2008 .. its python2.5
+
+2420 Oct 02 18:55:57 2008 .. gozerbot now requires python2.5
+
+2419 Oct 02 18:52:20 2008 .. create sqlite databases on startup
+
+2418 Oct 01 23:42:47 2008 .. call it auto_register
+
+2417 Oct 01 23:21:22 2008 .. add a anon_allow config knob that when enabled register any unknown user
+
+2416 Oct 01 08:55:19 2008 .. fix import
+
+2415 Oct 01 08:49:03 2008 .. update to simplejson-2.0.1
+
+2414 Sep 30 19:44:05 2008 .. don't import a plugin and also reload it
+
+2413 Sep 30 18:25:35 2008 .. lock Callbacks.add()
+
+2412 Sep 27 11:15:48 2008 .. remove web plugins .. the are moved into the webserver plugin
+
+2411 Sep 27 02:02:39 2008 .. more reconnect stuff
+
+2410 Sep 26 09:13:27 2008 .. improve reconnect
+
+2409 Sep 25 04:36:08 2008 .. move most of the docs to the handbook
+
+2408 Sep 25 01:35:24 2008 .. remove note about install-defaultplugs
+
+2407 Sep 25 01:29:17 2008 .. put a lock around Irc.reconnect()
+
+2406 Sep 23 21:19:43 2008 .. remove old 0.6 "data.new" datadir compat stuff .. lower loglevels
+
+2405 Sep 22 14:03:56 2008 .. don't lowercase ievent.channel
+
+2404 Sep 22 07:45:38 2008 .. make time command case insensitive
+
+2403 Sep 20 22:59:21 2008 .. properly close proces in gethgrev and getsvnrev functions
+
+2402 Sep 19 12:52:53 2008 .. make fleet bots nick case sensitive
+
+2401 Sep 16 20:56:53 2008 .. add gozerbot.contrib.simplejson entry
+
+2400 Sep 16 19:45:42 2008 .. show exceptiontrace if reloading of a plugin doesnt work
+
+2399 Sep 16 11:12:29 2008 .. update changelog
+
+
+0.8.2-BETA
+~~~~~~~~~~
+
+
+2398 Sep 16 11:11:26 2008 .. Added tag 0.8.2-BETA for changeset cc8257c73962
+
+2397 Sep 16 01:59:31 2008 .. remove remaining pugtests
+
+2396 Sep 16 01:54:36 2008 .. update setup.py
+
+2395 Sep 16 01:44:44 2008 .. remove plugtests since most of the plugins dont live here anymore
+
+2394 Sep 15 23:13:38 2008 .. add -d debug option .. use bot._raw to send NICKS .. set ircevent.bot in
+
+2393 Sep 15 20:50:20 2008 .. log failed preconditions
+
+2392 Sep 15 20:23:20 2008 .. log running thread on loglevel 9
+
+2391 Sep 15 15:07:50 2008 .. log running of botcommand thread
+
+2390 Sep 15 11:04:39 2008 .. add traclog doc
+
+2389 Sep 15 02:53:44 2008 .. final docs commit
+
+2388 Sep 15 02:00:14 2008 .. more more more docs
+
+2387 Sep 15 00:21:29 2008 .. add more docs
+
+2386 Sep 14 23:01:07 2008 .. remove cloud code from core .. add more documentation
+
+2385 Sep 14 22:03:13 2008 .. last part of core plugins docs
+
+2384 Sep 14 21:53:52 2008 .. more docs .. don't reply if a options is not known
+
+2383 Sep 14 20:38:22 2008 .. more docs
+
+2382 Sep 14 20:22:16 2008 .. update gendoc
+
+2381 Sep 14 20:19:27 2008 .. update docs
+
+2380 Sep 14 12:29:31 2008 .. use myplugs.webserver
+
+2379 Sep 14 10:45:06 2008 .. make not of !install-defaultplugs
+
+2378 Sep 14 09:41:30 2008 .. fix timezone
+
+2377 Sep 13 21:55:52 2008 .. print out load when config file saving or loading fails
+
+2376 Sep 13 12:50:50 2008 .. fix
+
+2375 Sep 13 08:39:45 2008 .. just do the nick changes don't check if it succeeded
+
+2374 Sep 13 08:38:44 2008 .. write out config changes to the config file instead of pickling it
+
+2373 Sep 13 07:40:29 2008 .. add udp to install-defaultplugs
+
+2372 Sep 12 23:36:13 2008 .. diable optimalisation for it borks on some platforms
+
+2371 Sep 11 11:21:44 2008 .. add popcon to the default install
+
+2370 Sep 11 09:46:20 2008 .. fix reporting of plugins that we cant reload
+
+2369 Sep 10 07:59:12 2008 .. use http://gozerbot.org/plugs0.8.2
+
+2368 Sep 10 06:39:34 2008 .. log installed plugins
+
+2367 Sep 10 06:36:51 2008 .. properly report install-plug errors
+
+2366 Sep 09 19:53:01 2008 .. add nickserv plugin to the core
+
+2365 Sep 09 19:44:28 2008 .. fix
+
+2364 Sep 09 19:38:54 2008 .. don't check return value of donick()
+
+2363 Sep 09 19:21:04 2008 .. report missing plugins
+
+2362 Sep 09 18:59:00 2008 .. fix error reporting
+
+2361 Sep 09 17:55:01 2008 .. reload/install temp fix
+
+2360 Sep 09 12:49:29 2008 .. try to prevent depenancy looping .. limit install recursion depth to 20
+
+2359 Sep 08 23:39:56 2008 .. update web plugins
+
+2358 Sep 08 18:26:25 2008 .. fix reload
+
+2357 Sep 08 17:21:51 2008 .. fix jabber callbacks
+
+2356 Sep 08 16:51:22 2008 .. make install-plug less verbose
+
+2355 Sep 08 16:27:07 2008 .. clean .pyc files on startup
+
+2354 Sep 08 14:57:29 2008 .. add snarf and dns plugins to install-defaultplugs
+
+2353 Sep 08 13:14:12 2008 .. fix
+
+2352 Sep 08 13:07:21 2008 .. fix trbs plugin server url
+
+2351 Sep 08 12:43:57 2008 .. add http://plugs.trbs.net to the plugin server list
+
+2350 Sep 07 22:43:20 2008 .. add seen and url to the defaultplugs target
+
+2349 Sep 07 22:18:15 2008 .. add cleanpyc command
+
+2348 Sep 07 19:51:56 2008 .. check for myplugs plugins when determining the plugin filename
+
+2347 Sep 07 16:28:33 2008 .. fix dependancy reloading/installing
+
+2346 Sep 07 15:27:40 2008 .. first attempt at dependancy support (includes automatic download)
+
+2345 Sep 07 02:15:48 2008 .. don't forget the gozerbot bin
+
+2344 Sep 07 02:03:10 2008 .. add code to upgrade pre 0.8.2 gozerdata dirs
+
+2343 Sep 06 23:17:56 2008 .. update defaultplugs install target
+
+2342 Sep 06 22:12:50 2008 .. add install-defaultplugs alias
+
+2341 Sep 06 20:33:25 2008 .. enter 0.8.2-BETA
+
+2340 Sep 06 20:24:24 2008 .. remove infoitem
+
+2339 Sep 06 17:53:32 2008 .. make install-plug work with multiple plugins
+
+2338 Sep 06 16:23:58 2008 .. remove non core plugins
+
+2337 Sep 06 15:56:40 2008 .. remove debug print
+
+2336 Sep 06 15:13:51 2008 .. make search work correctly for infoitems
+
+2335 Sep 06 12:21:43 2008 .. more broken pipe ignoring
+
+2334 Sep 06 11:55:02 2008 .. ignore broken pipe error
+
+2333 Sep 05 20:38:26 2008 .. return no result
+
+2332 Sep 05 19:54:26 2008 .. use 1 or 0 to indicated servermode
+
+2331 Sep 05 19:47:32 2008 .. make cloud plugin pass gendoc properly
+
+2330 Sep 05 04:06:00 2008 .. fix booturl config var default
+
+2329 Sep 05 00:39:36 2008 .. allow search for WEB permissions
+
+2328 Sep 04 19:44:52 2008 .. adjust sleep time to take less cpu time
+
+2327 Sep 04 16:58:08 2008 .. make reconnect command threaded
+
+2326 Sep 04 02:23:18 2008 .. put at loglevel -10
+
+2325 Sep 04 02:15:11 2008 .. update jabbermsg.reply()
+
+2324 Sep 04 01:37:00 2008 .. let redispatcher use the runner
+
+2323 Sep 04 01:32:30 2008 .. add search function to karma plugin .. fix redispatcher
+
+2322 Sep 04 00:59:17 2008 .. add search function to url plugin
+
+2321 Sep 03 23:45:01 2008 .. add plugin search function to infoitem
+
+2320 Sep 03 23:04:09 2008 .. silence bad file desciptor errors .. allow search command on cloud
+
+2319 Sep 03 15:33:28 2008 .. fix thnx vex
+
+2318 Sep 03 15:00:49 2008 .. reenabled "true" threading
+
+2317 Sep 03 14:39:42 2008 .. mooooooooooorre core work
+
+2316 Sep 02 20:38:15 2008 .. more core stuff
+
+2315 Sep 02 13:17:45 2008 .. another core part .. fix reconnect code
+
+2314 Sep 02 01:29:15 2008 .. make dispatch "real" threaded
+
+2313 Sep 02 01:18:37 2008 .. fix ievent.options
+
+2312 Sep 02 00:06:47 2008 .. add CommandRunner to the bunch
+
+2311 Sep 01 22:43:00 2008 .. core revamp part nogwat
+
+2310 Sep 01 13:21:23 2008 .. nits
+
+2309 Sep 01 12:57:11 2008 .. core part 4
+
+2308 Aug 31 22:13:29 2008 .. core revamp part 3
+
+2307 Aug 31 20:13:49 2008 .. make dcctest.py pass ok
+
+2306 Aug 31 19:25:59 2008 .. copy over runbot
+
+2305 Aug 31 19:25:22 2008 .. update stuff to prevent deadlock .. thats what you get when messing with core
+
+2304 Aug 31 18:02:59 2008 .. revamp runner module
+
+2303 Aug 31 09:59:41 2008 .. reorder boot sequence
+
+2302 Aug 31 09:48:24 2008 .. catch urllib2.URLError
+
+2301 Aug 30 23:04:21 2008 .. sleep a bit
+
+2300 Aug 30 22:11:36 2008 .. fix url-searchall .. log socket errors in RestServer
+
+2299 Aug 30 20:46:44 2008 .. fix
+
+2298 Aug 30 14:29:54 2008 .. use ievent.jabber in splitpipes() to determine if jabber is involved
+
+2297 Aug 28 17:19:32 2008 .. don't lock trydispatch
+
+2296 Aug 28 16:02:35 2008 .. add gozernet/+addrecord POST
+
+2295 Aug 28 14:48:33 2008 .. make urlcb threaded
+
+2294 Aug 28 01:30:34 2008 .. add cloud-joinall
+
+2293 Aug 28 01:04:29 2008 .. add fromm argument to ievent.reply allowing !more to work
+
+2292 Aug 28 00:57:07 2008 .. properly set channel .. add . and / aliases
+
+2291 Aug 28 00:43:03 2008 .. pass over channel to dispatch POST
+
+2290 Aug 27 23:48:30 2008 .. fix cloud-join
+
+2289 Aug 27 23:23:14 2008 .. only do single connect .. show proper nodename in join log
+
+2288 Aug 27 23:03:29 2008 .. add debug log
+
+2287 Aug 27 22:18:24 2008 .. use server_address to prevent looping
+
+2286 Aug 27 22:10:15 2008 .. fix
+
+2285 Aug 27 22:08:55 2008 .. fix
+
+2284 Aug 27 22:03:03 2008 .. fix
+
+2283 Aug 27 22:01:41 2008 .. add a bunch of CLOUD permissions
+
+2282 Aug 27 19:15:57 2008 .. fix
+
+2281 Aug 27 18:37:14 2008 .. fix fullboot
+
+2280 Aug 27 18:35:15 2008 .. fix
+
+2279 Aug 27 18:33:40 2008 .. join peer on join
+
+2278 Aug 27 18:18:10 2008 .. wait 5 seconds for command to complete
+
+2277 Aug 27 15:36:39 2008 .. fix
+
+2276 Aug 27 15:19:37 2008 .. add cloud-meet .. set default permission to CLOUD
+
+2275 Aug 27 14:58:25 2008 .. fixje
+
+2274 Aug 27 14:39:38 2008 .. use name instead on ipnr
+
+2273 Aug 27 14:29:24 2008 .. fix
+
+2272 Aug 27 14:08:37 2008 .. fix cloud-join
+
+2271 Aug 27 13:55:52 2008 .. fix cloud-boot
+
+2270 Aug 27 06:58:42 2008 .. use aggregate.ouput()
+
+2269 Aug 27 06:37:31 2008 .. use a while 1 to keep asyncore.loop() running
+
+2268 Aug 27 06:11:45 2008 .. use gozernet/ping instead of gozernet/+ping
+
+2267 Aug 27 05:53:08 2008 .. move asyncore.loop into RestClientAsync
+
+2266 Aug 27 04:33:08 2008 .. clean up
+
+2265 Aug 27 03:45:46 2008 .. its WEB permission
+
+2264 Aug 27 03:35:55 2008 .. properly join
+
+2263 Aug 27 03:03:59 2008 .. add dispatch to the cloud
+
+2262 Aug 27 01:48:08 2008 .. add gozernet/infoitem/+searchdescr to the cloud
+
+2261 Aug 27 00:58:23 2008 .. enable cloud server on default
+
+2260 Aug 27 00:54:08 2008 .. fix
+
+2259 Aug 27 00:32:47 2008 .. enable join
+
+2258 Aug 26 23:54:03 2008 .. gozernet part 2
+
+2257 Aug 26 20:14:10 2008 .. nit
+
+2256 Aug 26 20:03:11 2008 .. gozernet fix
+
+2255 Aug 26 19:27:43 2008 .. add servermode config knob to enable/disable cloud server
+
+2254 Aug 26 17:37:16 2008 .. improve logging .. gozernet backup
+
+2253 Aug 26 00:44:16 2008 .. add gozernet infrastructure part 1
+
+2252 Aug 24 09:48:25 2008 .. make output of dicts work properly
+
+2251 Aug 23 23:56:23 2008 .. make binding of hosts better .. patch thnx to maze
+
+2250 Aug 21 23:39:54 2008 .. add errno 35 resource temp unavail. to work on fbsd
+
+2249 Aug 21 23:36:22 2008 .. lock handling methods
+
+2248 Aug 21 23:25:09 2008 .. add RestClientAsync
+
+2247 Aug 21 23:09:00 2008 .. implement filter option to ievent.reply() and jabbermsg.reply()
+
+2246 Aug 21 21:33:51 2008 .. run plugin's init() in its own thread
+
+2245 Aug 21 16:05:06 2008 .. log exception with rlog()
+
+2244 Aug 21 01:57:48 2008 .. allow OPER users to install remote plugins
+
+2243 Aug 21 01:37:06 2008 .. add callbacks to RestClient
+
+2242 Aug 19 11:24:11 2008 .. restrict ownercheck to config values
+
+2241 Aug 17 13:33:12 2008 .. don't write page if there is nothing to be send
+
+2240 Aug 15 22:44:59 2008 .. add async RestServer
+
+2239 Aug 15 19:58:47 2008 .. really fix channel mode issues
+
+2238 Aug 15 19:38:41 2008 .. fix topic-add when topic is not "t"
+
+2237 Aug 14 11:15:05 2008 .. show user-agent in RestServer log
+
+2236 Aug 14 10:24:21 2008 .. log length of send data in RestServer
+
+2235 Aug 13 01:08:41 2008 .. skip non python module dirs .. add RestClient.delete()
+
+2234 Aug 12 00:38:08 2008 .. fix exceptionmsg
+
+2233 Aug 11 23:08:20 2008 .. fix handle_exception
+
+2232 Aug 11 21:13:04 2008 .. pass on server argument to RestServer callbacks
+
+2231 Aug 11 00:21:24 2008 .. do proper error status returning
+
+2230 Aug 10 23:43:30 2008 .. add post() method to RestClient
+
+2229 Aug 10 23:36:07 2008 .. add test_rest_server .. put timeouts in start() and shutdown()
+
+2228 Aug 10 12:04:53 2008 .. remove debug print
+
+2227 Aug 10 12:03:11 2008 .. fix slqite UPDATE result
+
+2226 Aug 09 14:20:32 2008 .. switch back to threaded RestServer.
+
+2225 Aug 09 13:49:40 2008 .. make RestServer use async dispatcher
+
+2224 Aug 09 13:24:02 2008 .. make client host/port/path parsing work on python 2.4
+
+2223 Aug 07 01:08:32 2008 .. move over to async dispatcher ... properly parse url
+
+2222 Jul 31 22:21:25 2008 .. add powernick-del .. make snarfs callbacks threaded
+
+2221 Jul 30 00:18:07 2008 .. add powernick plugin
+
+2220 Jul 28 13:51:33 2008 .. make jabberbot.connect() use 8 paramaters to be compatible with
+
+2219 Jul 25 20:55:47 2008 .. fix delete url
+
+2218 Jul 23 13:42:44 2008 .. return list of results
+
+2217 Jul 20 21:06:48 2008 .. add str(quote) .. dump ALL exceptions in REST callback code
+
+2216 Jul 19 15:24:58 2008 .. use geturl4 .. make rest client catch exceptions
+
+2215 Jul 18 09:20:40 2008 .. we use keyfile and certfile arguments instead of pemfile now
+
+2214 Jul 18 02:02:38 2008 .. fix rlog() in rest/server.py
+
+2213 Jul 18 01:07:58 2008 .. properly dispatch on splitted url .. make sure list of list is printed well
+
+2212 Jul 17 19:28:43 2008 .. fix
+
+2211 Jul 16 08:25:07 2008 .. prepare for bork
+
+2210 Jul 16 01:47:18 2008 .. add test cert making scripts
+
+2209 Jul 16 01:45:11 2008 .. backup in progress of SSL auth debugging
+
+2208 Jul 14 23:26:11 2008 .. typo
+
+2207 Jul 14 23:18:27 2008 .. more SSL REST server stuff
+
+2206 Jul 14 22:40:18 2008 .. make rest server SSL compatible
+
+2205 Jul 13 22:34:54 2008 .. revamp
+
+2204 Jul 13 09:42:53 2008 .. add RestResult class that can return http error codes .. return 400 errorcode
+
+2203 Jul 12 23:32:23 2008 .. add gozerbot.rest module
+
+2202 Jul 11 06:52:55 2008 .. use new DELETE from webserver .. use http://host/timedb/tickets for add/del/get
+
+2201 Jul 11 04:13:50 2008 .. convert list elements using unicode() before joining them
+
+2200 Jul 11 01:41:19 2008 .. move getpostdata function into generic.py
+
+2199 Jul 09 04:56:02 2008 .. make webserver more REST capable .. allow proper url dispatching
+
+2198 Jul 08 09:34:42 2008 .. add ssl config option to config file .. add do_POST handling to webserver
+
+2197 Jul 05 05:48:25 2008 .. add callbacks unittest
+
+2196 Jul 02 23:41:34 2008 .. remove tests of plugins that were removed .. let sqlite3 db code pass tests
+
+2195 Jul 02 23:23:57 2008 .. fix gozerbot.db in the sqlite3 case
+
+2194 Jun 30 05:04:01 2008 .. let register plugin use throttle
+
+2193 Jun 30 04:29:57 2008 .. show cpm level in throttle-get
+
+2192 Jun 30 04:23:35 2008 .. make anon plugin use throttle .. make throttle work
+
+2191 Jun 30 03:29:40 2008 .. add throttle plugin
+
+2190 Jun 30 01:07:05 2008 .. add anon and register plugins .. add whatcommands command
+
+2189 Jun 26 12:03:48 2008 .. add rss-seturl
+
+2188 Jun 25 23:25:13 2008 .. don't forget to unload sub plugins
+
+2187 Jun 25 23:15:57 2008 .. plugins API change .. init.py should contain a __plugs__ attribute
+
+2186 Jun 25 21:01:47 2008 .. fix reload error
+
+2185 Jun 24 00:47:22 2008 .. allow fleet bots in connecting state be deleted
+
+2184 Jun 22 10:34:24 2008 .. also add a --port options to fleet-addjabber
+
+2183 Jun 22 10:32:36 2008 .. add optionset list to ircevent so we can test which options are set.
+
+2182 Jun 19 13:01:22 2008 .. fix rss-markup
+
+2181 Jun 12 22:01:33 2008 .. add sort thnx to maze
+
+2180 Jun 11 02:25:05 2008 .. move makeargrest into generic.py .. after making options use makeargrest
+
+2179 Jun 11 00:11:15 2008 .. this is 0.8.2 DEV
+
+2178 Jun 10 12:50:40 2008 .. add type to Jabberbot.say()
+
+2177 Jun 07 22:31:13 2008 .. enable reload of directory plugins after reboot
+
+2176 Jun 07 22:24:21 2008 .. add bot.userwait to PM
+
+2175 Jun 07 21:49:35 2008 .. fix plugin as a directory (myplugs)
+
+2174 Jun 05 07:41:03 2008 .. enable reload on tar plugins
+
+2173 Jun 05 06:00:16 2008 .. always import the plugin on reload
+
+2172 Jun 05 05:31:37 2008 .. allow directories in myplugs dir, fixes tar plugins
+
+2171 Jun 03 12:55:39 2008 .. log feedparser bozo_exception on loglevel 1
+
+2170 Jun 01 21:30:43 2008 .. if an error comes back log full message
+
+2169 Jun 01 20:17:24 2008 .. don't start udp and tcp threads if they are not enabled
+
+2168 May 31 12:59:11 2008 .. also log which feed the bozo_exception is from
+
+2167 May 31 12:24:03 2008 .. just log feedparser's bogo_exceptions
+
+2166 May 27 22:54:35 2008 .. put old doc/UDP in docstring
+
+2165 May 27 21:41:36 2008 .. don't ignore callbacks .. other plugins might need it
+
+2164 May 27 21:26:33 2008 .. put collective join message at level 1
+
+2163 May 27 21:21:22 2008 .. test if PRIVMSG callbacks should be ignored
+
+2162 May 26 15:19:42 2008 .. plugin docs last step
+
+2161 May 24 13:48:46 2008 .. plugin docs step 5
+
+2160 May 23 23:44:19 2008 .. check for ignore in infoitem callback
+
+2159 May 23 23:15:12 2008 .. plugin docs step 4
+
+2158 May 23 22:13:50 2008 .. plugin docs step 3
+
+2157 May 23 12:09:36 2008 .. plugin docs step 2
+
+2156 May 22 20:36:56 2008 .. plugin docs step 1
+
+2155 May 21 23:30:51 2008 .. cleanup basic plugins
+
+2154 May 20 09:15:33 2008 .. remove extra uuid import
+
+2153 May 20 09:01:23 2008 .. fix !chat
+
+2152 May 19 12:36:14 2008 .. add missing return
+
+2151 May 17 22:48:11 2008 .. fix ievent.reply() dict handling
+
+2150 May 17 20:15:24 2008 .. use __doc__
+
+2149 May 17 19:43:08 2008 .. remove bunch of docs that are already in the plugin docs
+
+2148 May 17 19:37:27 2008 .. update docs
+
+2147 May 16 09:42:20 2008 .. check if provided timezone is an integer
+
+2146 May 15 12:46:39 2008 .. its "enable loadlist"
+
+2145 May 15 08:45:42 2008 .. karma doesnt work in reafter due to alias matching
+
+2144 May 14 18:45:45 2008 .. quotes.random() can return a list now in the database case
+
+2143 May 13 04:36:37 2008 .. check if feed exists
+
+2142 May 13 04:29:19 2008 .. make ssl parameter optional
+
+2141 May 12 22:16:23 2008 .. we use the list command to show available plugins now
+
+2140 May 12 10:35:50 2008 .. extend test_rss
+
+2139 May 11 22:01:42 2008 .. Bot() constructor now takes botname, owner arguments
+
+2138 May 11 21:57:25 2008 .. add test_rss.py
+
+2137 May 10 04:35:52 2008 .. signal bogus_exception
+
+2136 May 06 23:21:48 2008 .. fix
+
+2135 May 05 23:29:57 2008 .. fix additem in the jabber case
+
+2134 May 05 11:41:53 2008 .. move karma RE to reafter
+
+2133 May 04 10:12:40 2008 .. make collective work with python 2.4 (uuid is not avaiable there)
+
+2132 May 03 15:23:26 2008 .. fix plugins loading
+
+2131 May 03 14:36:22 2008 .. persist added node
+
+2130 May 03 10:03:32 2008 .. don't use reload() in regplugin()
+
+2129 May 02 04:55:26 2008 .. fix remove
+
+2128 May 02 04:44:32 2008 .. make regplugin use reload so  __depend__ is honoured .. do ping in join code
+
+2127 May 02 02:29:24 2008 .. implement __depend__
+
+2126 May 01 20:35:29 2008 .. fix time
+
+2125 May 01 18:29:46 2008 .. improve logging
+
+2124 May 01 18:15:52 2008 .. don't do reverse ping in join
+
+2123 May 01 18:04:23 2008 .. fix join
+
+2122 May 01 17:58:15 2008 .. webserver API change
+
+2121 Apr 29 18:38:50 2008 .. fix nodesxml
+
+2120 Apr 29 17:32:41 2008 .. fix web join module
+
+2119 Apr 29 17:01:19 2008 .. add join web plugin
+
+2118 Apr 29 07:03:20 2008 .. remove more debug prints
+
+2117 Apr 29 06:25:46 2008 .. remove debug print .. wrap webserver.do() calls in a try except
+
+2116 Apr 28 21:20:53 2008 .. fix coll-names and coll-list
+
+2115 Apr 28 21:09:58 2008 .. fix plugins registration .. more collective fixing
+
+2114 Apr 28 20:27:00 2008 .. fix typo
+
+2113 Apr 28 20:21:40 2008 .. don't break if shutdown doesnt work
+
+2112 Apr 28 20:07:32 2008 .. make collective work
+
+2111 Apr 27 23:45:21 2008 .. pause
+
+2110 Apr 27 10:14:30 2008 .. fix seperator
+
+2109 Apr 27 10:08:17 2008 .. reconnect on send error
+
+2108 Apr 27 09:07:51 2008 .. fix format error
+
+2107 Apr 27 00:14:14 2008 .. add markup entries
+
+2106 Apr 24 21:48:37 2008 .. fix last remaining Bot()
+
+2105 Apr 24 21:23:02 2008 .. fix fleet some more
+
+2104 Apr 24 20:59:58 2008 .. fix addirc
+
+2103 Apr 24 14:13:55 2008 .. add jabberoutsleep config var
+
+2102 Apr 23 16:22:04 2008 .. fix userstate-get
+
+2101 Apr 23 11:01:28 2008 .. move checkowner() into BotBase
+
+2100 Apr 23 10:44:25 2008 .. add a BotBase base class
+
+2099 Apr 22 10:54:59 2008 .. add userstate-del
+
+2098 Apr 21 20:10:07 2008 .. fix timezone question
+
+2097 Apr 20 03:30:23 2008 .. fix timezone stuff thnx to jink
+
+2096 Apr 20 02:08:10 2008 .. don't make the loadlist default instead offer a loadlist config var
+
+2095 Apr 20 00:12:05 2008 .. add alias and nickserv to the loadlist
+
+2094 Apr 19 10:06:05 2008 .. don't broadcast "rebooting done" on partylist
+
+2093 Apr 19 10:00:45 2008 .. make loadlist default .. use updated field in rss item to determine if item
+
+2092 Apr 18 16:17:40 2008 .. set daemon flag on thread so bot also exits in the interactive interpreter
+
+2091 Apr 17 11:11:36 2008 .. fix rss itemslists
+
+2090 Apr 16 14:14:06 2008 .. fix rss-scan to show feedparser entries .. fix displaying of non string
+
+2089 Apr 16 09:23:23 2008 .. sort available list
+
+2088 Apr 15 23:49:43 2008 .. catch temporarily unavailable exceptions
+
+2087 Apr 15 05:47:04 2008 .. remove debug handle_exception()
+
+2086 Apr 15 05:41:59 2008 .. improve ssl reconnect and shutdown code
+
+2085 Apr 15 04:40:07 2008 .. make handle_433 (nick already used) use Irc._raw() since we might not be
+
+2084 Apr 14 13:30:21 2008 .. fix userstate
+
+2083 Apr 13 17:02:45 2008 .. add userstate plugin
+
+2082 Apr 10 18:01:20 2008 .. suppres jabber commands from relay output
+
+2081 Apr 10 15:53:17 2008 .. make jabber -> irc relay work in the gmail.com case
+
+2080 Apr 10 12:46:03 2008 .. set From field properly
+
+2079 Apr 10 12:22:22 2008 .. fix gtalk
+
+2078 Apr 10 03:43:44 2008 .. fix undernet
+
+2077 Apr 10 03:22:39 2008 .. let underauth.py use _raw() since its used before connected is set
+
+2076 Apr 10 03:16:00 2008 .. implement _raw()
+
+2075 Apr 09 16:17:32 2008 .. add speed argument to jabberbot.say()
+
+2074 Apr 09 14:41:15 2008 .. add allowed attribute to jabberbot
+
+2073 Apr 09 00:35:52 2008 .. remove channel from joinedchannels list if we were kicked
+
+2072 Apr 09 00:07:24 2008 .. adjust !source command
+
+2071 Apr 08 21:32:21 2008 .. fix rss-del
+
+2070 Apr 08 12:35:34 2008 .. add BeautifulSoup to contrib
+
+2069 Apr 08 11:38:22 2008 .. fix redispatcher
+
+2068 Apr 08 10:29:20 2008 .. send password over straight socket
+
+2067 Apr 08 00:12:04 2008 .. make all-add and all-del
+
+2066 Apr 08 00:07:07 2008 .. add infrastructure to allow commands to all clients .. add plugin to maintain
+
+2065 Apr 07 23:17:13 2008 .. unignore a previous 401 ignored nick if it joins the channel or send a /msg
+
+2064 Apr 07 10:00:09 2008 .. check if  there are items in itemslist
+
+2063 Apr 06 12:16:57 2008 .. use a os._exit(1) if startup fails
+
+2062 Apr 06 11:54:31 2008 .. do an explicit os._exit(0) so gozerinit exits on freebsd
+
+2061 Apr 06 07:36:54 2008 .. set connected flaf on resume
+
+2060 Apr 06 07:31:03 2008 .. save config if nick is changed on the main bot
+
+2059 Apr 06 07:22:07 2008 .. limit nick to 16 characters
+
+2058 Apr 06 06:49:39 2008 .. fix popcon by importing getversion()
+
+2057 Apr 04 14:55:03 2008 .. introduce a getversion()
+
+2056 Apr 01 09:27:06 2008 .. remove "rebooting" message from reboot_statefull()
+
+2055 Mar 31 19:45:46 2008 .. don't forget jsondispatch web plugin
+
+2054 Mar 31 19:43:22 2008 .. add json to the contrib .. make webserver json enabled .. let collective use
+
+2053 Mar 31 16:34:12 2008 .. use agent argument in feedparser.parse()
+
+2052 Mar 31 14:58:05 2008 .. move over to feedparser
+
+2051 Mar 29 16:54:26 2008 .. don't broadcast "rebooting" just say it in the channel the command wat given
+
+2050 Mar 28 15:45:36 2008 .. make plugtests pass
+
+2049 Mar 28 07:20:14 2008 .. fix setprio and settime in the database case
+
+2048 Mar 27 09:40:02 2008 .. show revision we upgraded to
+
+2047 Mar 27 08:28:53 2008 .. broadcast "rebooting" properly
+
+2046 Mar 26 22:44:43 2008 .. use the right target in case of a /msg
+
+2045 Mar 26 10:56:33 2008 .. remove fromm field in jabberbot.say() / jabbermsg.reply() so jid is always
+
+2044 Mar 26 10:03:22 2008 .. implement multiple outqueues so we can make the speed argument on bot.say()
+
+2043 Mar 25 20:48:07 2008 .. check if feed exists
+
+2042 Mar 25 20:01:29 2008 .. add remove() to Pdol
+
+2041 Mar 25 19:23:12 2008 .. add rss-search
+
+2040 Mar 25 18:43:48 2008 .. check if item exists in Pdol.adduniq() if not init it
+
+2039 Mar 25 17:50:23 2008 .. start bot.broadcast() in its own thread
+
+2038 Mar 25 17:24:04 2008 .. fix more rss
+
+2037 Mar 25 07:58:00 2008 .. seperate out the itemslists into its own pickle
+
+2036 Mar 25 06:13:45 2008 .. if link is not available check for "feedburner:origLink"
+
+2035 Mar 24 21:11:27 2008 .. use bold
+
+2034 Mar 24 20:15:15 2008 .. only show titles in rss-all
+
+2033 Mar 24 19:56:40 2008 .. fix search .. only search in title fields
+
+2032 Mar 24 19:49:24 2008 .. fix feed not avaiable
+
+2031 Mar 24 19:45:32 2008 .. add descriptions .. add the rss-all command
+
+2030 Mar 24 19:14:23 2008 .. add rss-link and rss-description commands
+
+2029 Mar 23 19:04:30 2008 .. add ssl argument to irc.reconnect()
+
+2028 Mar 23 18:35:56 2008 .. fix rss
+
+2027 Mar 23 08:04:43 2008 .. fix rss.delete()
+
+2026 Mar 23 07:54:31 2008 .. don't give a response if no updates are available
+
+2025 Mar 23 07:16:02 2008 .. init itemlists from rssitem.itemslist if user/channel itemslist doesnt exist
+
+2024 Mar 23 06:44:33 2008 .. start reboot done notification in its own thread so the bot is available
+
+2023 Mar 23 06:32:41 2008 .. only report exceptions that occur in shutdown() .. don't bail out so the
+
+2022 Mar 23 06:25:33 2008 .. only show the differnences in a feed update
+
+2021 Mar 23 06:12:38 2008 .. log per (bot.name, channel)
+
+2020 Mar 23 05:38:13 2008 .. skip itemslists
+
+2019 Mar 23 05:32:25 2008 .. make the itemslist per user/channel feed
+
+2018 Mar 23 03:32:53 2008 .. remove rebooting done notice
+
+2017 Mar 23 03:13:03 2008 .. use broadcast to alert users of a reboot
+
+2016 Mar 23 03:00:58 2008 .. use globalshutdown in !quit command
+
+2015 Mar 23 02:55:45 2008 .. add ns-send command .. use this to send string to nickserv
+
+2014 Mar 23 02:25:51 2008 .. send confirmation of reminder
+
+2013 Mar 23 02:12:19 2008 .. check for addon not allowed exceptions
+
+2012 Mar 23 01:45:08 2008 .. really fix gpg exceptions if gpg is not installed
+
+2011 Mar 23 01:27:34 2008 .. silence exceptions if gpg is not installed
+
+2010 Mar 23 01:11:47 2008 .. forward fleet exceptions to the user
+
+2009 Mar 23 00:55:05 2008 .. fix rss-stop
+
+2008 Mar 23 00:44:15 2008 .. add broadcast command
+
+2007 Mar 22 15:47:48 2008 .. make rss-stop/start use the channel name instead of the users nick
+
+2006 Mar 22 12:54:40 2008 .. the ssl bot attribute might not exist in fleet entries
+
+2005 Mar 22 08:14:45 2008 .. make rss-watch/stopwatch work properly
+
+2004 Mar 22 08:01:22 2008 .. it's watcher.sync(name)
+
+2003 Mar 22 07:59:36 2008 .. update bin/gozerbot
+
+2002 Mar 22 07:57:22 2008 .. make reboot of ssl bots reconnect instead of resume
+
+2001 Mar 22 00:25:54 2008 .. rstrip txt before sending it over the wire .. this fixes inspircd
+
+2000 Mar 22 00:21:57 2008 .. fix ssl support
+
+1999 Mar 21 22:04:13 2008 .. gozerbot ssl step 1
+
+1998 Mar 19 22:00:05 2008 .. use defaultcc also when the bot is invited into a channel
+
+1997 Mar 18 22:59:05 2008 .. try to make tcp.py stable .. remove sleep in readloop
+
+1996 Mar 18 22:04:14 2008 .. if config['allowedchars'] was not defined the default \n and \t were not
+
+1995 Mar 17 09:30:08 2008 .. fix reboot
+
+1994 Mar 17 08:48:25 2008 .. use optparse instead op getopt
+
+1993 Mar 17 08:40:07 2008 .. use one logfile per day
+
+1992 Mar 16 14:15:18 2008 .. don't put input in a list, directly forward them to the bot
+
+1991 Mar 16 09:41:01 2008 .. were using startrev as first response message
+
+1990 Mar 16 09:39:50 2008 .. default disable the tcp plugin
+
+1989 Mar 15 22:47:11 2008 .. add totcp.py
+
+1988 Mar 15 12:29:42 2008 .. fix "cannot join channel" feedback, the waiter was not checking the
+
+1987 Mar 15 11:50:26 2008 .. check if connecting host is allowed before starting a handle thread
+
+1986 Mar 15 08:33:57 2008 .. test if there is an item to karma
+
+1985 Mar 14 00:22:15 2008 .. improve reconnect code
+
+1984 Mar 13 23:35:24 2008 .. add tcp entry to config init
+
+1983 Mar 13 23:14:20 2008 .. first attempt at a tcp based message passing (like udp but now tcp is used)
+
+1982 Mar 13 02:18:33 2008 .. given earlier feedback that the bot is upgrading
+
+1981 Mar 13 02:13:41 2008 .. resync rss feed on itemslist change
+
+1980 Mar 12 13:15:01 2008 .. allow !more <rssname>
+
+1979 Mar 10 23:23:49 2008 .. add 432 erroneous nick handler
+
+1978 Mar 10 08:06:30 2008 .. don't forget bin/gozerbot
+
+1977 Mar 10 08:06:10 2008 .. silence most of the logging
+
+1976 Mar 09 11:09:40 2008 .. silence monitor cannot find bot's userhost exception on startup
+
+1975 Mar 09 01:48:54 2008 .. make addon.setup() use os._exit() after fork
+
+1974 Mar 06 13:56:51 2008 .. remove Jabberbot and jcoll plugin dependancy
+
+1973 Mar 06 08:19:57 2008 .. add FreeBSD man page
+
+1972 Mar 05 08:38:03 2008 .. make the bot work if no xmpp is installed
+
+1971 Mar 05 08:05:47 2008 .. update setup.py info
+
+1970 Mar 05 07:08:02 2008 .. make setup.py work with python 2.5
+
+1969 Mar 04 21:46:57 2008 .. add ThreadLoop class to add start/stoppable threads
+
+1968 Mar 03 20:51:47 2008 .. remove exception printing in main loop .. instead just use rlog to report it
+
+1967 Mar 03 20:45:10 2008 .. addapt jabbermonitor to passon Jabbermsg/Jabberpresence objects to
+
+1966 Feb 29 22:49:01 2008 .. make sure monitor loop is only started once
+
+1965 Feb 29 22:34:55 2008 .. make monitor use queues
+
+1964 Feb 29 20:56:40 2008 .. short log Non-recoverable failure in name resolution exceptions
+
+1963 Feb 29 20:54:46 2008 .. give proper reply if we can't detect content type
+
+1962 Feb 29 12:37:32 2008 .. make outmonitor pass (bot, ircevent) to the callbacks so we can properly log
+
+1961 Feb 29 10:06:22 2008 .. simplify Ircevent.parse() .. add simplelog plugin
+
+1960 Feb 28 17:03:52 2008 .. add test_addon .. change rss output format
+
+1959 Feb 27 14:47:58 2008 .. permoverload file lives in the gozerdata directory now
+
+1958 Feb 27 14:43:18 2008 .. fix missing var
+
+1957 Feb 27 13:16:53 2008 .. add test_addon .. make decoding switch in geturl2
+
+1956 Feb 26 23:09:44 2008 .. put decoding verbose at loglevel 5
+
+1955 Feb 26 20:59:31 2008 .. fix typo
+
+1954 Feb 26 20:54:14 2008 .. move tests over to plugtests so core tests can be in tests directory
+
+1953 Feb 26 18:37:51 2008 .. add encodig detection to geturl2 .. better error reporting in rss plug
+
+1952 Feb 26 07:42:01 2008 .. short log "no route to host" error
+
+1951 Feb 25 14:32:20 2008 .. make sure revisions are integers
+
+1950 Feb 25 14:09:06 2008 .. remove : from description txt
+
+1949 Feb 25 14:07:58 2008 .. make sure exceptions are handled properly
+
+1948 Feb 23 06:44:29 2008 .. fix
+
+1947 Feb 22 21:52:20 2008 .. move mercurial and subversion revision detection out of config and into the
+
+1946 Feb 22 21:34:51 2008 .. add gozerbot-merc to the scripts
+
+1945 Feb 22 21:20:46 2008 .. add gozerbot.contrib package
+
+1944 Feb 21 01:05:34 2008 .. sleep 2 seconds to allow quit message to be send
+
+1943 Feb 21 00:50:22 2008 .. remove old freebsd port
+
+1942 Feb 21 00:49:58 2008 .. make most of the methods hidden
+
+1941 Feb 20 23:24:49 2008 .. save bot state on KICK so we can remove channel from autojoin
+
+1940 Feb 20 19:38:04 2008 .. init control character properly
+
+1939 Feb 20 19:21:53 2008 .. make all threads close properly on reconnect
+
+1938 Feb 18 23:48:22 2008 .. remove sleep
+
+1937 Feb 18 21:05:25 2008 .. add rss-start and rss-stop
+
+1936 Feb 18 20:30:53 2008 .. catch ExpatError
+
+1935 Feb 18 18:56:19 2008 .. catch exceptions in startwatchers
+
+1934 Feb 18 10:00:20 2008 .. move permoverload file to the datadir
+
+1933 Feb 18 09:57:43 2008 .. add rss-start/rss-stop aliases that will add/remove a channel to the rssitem
+
+1932 Feb 17 23:22:04 2008 .. move to version 0.8.1
+
+1931 Feb 17 22:23:42 2008 .. allow \n
+
+1930 Feb 17 14:30:51 2008 .. remove debug print
+
+1929 Feb 17 14:29:07 2008 .. don't use strippedtxt on rss feed
+
+1928 Feb 17 14:07:30 2008 .. move more functions to there hidden variant .. let rss exceptions propagate
+
+1927 Feb 16 08:12:05 2008 .. move Bot.dccconnect() to Bot._dccconnect()
+
+1926 Feb 16 08:01:55 2008 .. move some functions to hidden ones
+
+1925 Feb 16 07:19:36 2008 .. make jabber reconnect work better
+
+1924 Feb 16 00:26:28 2008 .. forgot to copy runbot to bin/gozerbot
+
+1923 Feb 16 00:26:02 2008 .. fix jabberowner in the list when its a list
+
+1922 Feb 13 14:36:10 2008 .. fix udp once again
+
+1921 Feb 13 13:36:04 2008 .. remove diffdict from config creation .. when determining the channel of an
+
+1920 Feb 13 08:57:37 2008 .. fix udp
+
+1918 Feb 08 09:53:22 2008 .. add charset argument to reconnect code
+
+1917 Feb 10 14:54:48 2008 .. silence can't decode log messages a bit
+
+1916 Feb 10 14:36:45 2008 .. stop watcher if rss item gets deleted
+
+1915 Feb 07 12:00:24 2008 .. catch StreamError in jabber mainloop
+
+1914 Feb 06 13:34:14 2008 .. rename gozermerc script to gozerbot-merc
+
+1913 Feb 06 11:48:44 2008 .. remove fromenc() from geturl so we can use the raw data
+
+1912 Feb 06 04:23:27 2008 .. add gozermerc .. a utility to upgrade an exisiting bot to a mercurial
+
+1911 Feb 05 14:30:17 2008 .. update changelog
+
+
+0.8-BETA
+~~~~~~~~
+
+
+1910 Feb 05 14:29:12 2008 .. Added tag 0.8-BETA for changeset 1b6df166e365
+
+1909 Feb 05 13:37:39 2008 .. add nickservpass and nickservtxt to the config file
+
+1908 Feb 05 08:06:58 2008 .. wrap underauth callback precondition in a try/except
+
+1907 Feb 04 13:45:33 2008 .. make sure config['nick'] is set when nick is set on jabbermain or main bot
+
+1906 Feb 04 13:13:55 2008 .. re-enable silent mode .. allow channel argument to the silent commandd ..
+
+1905 Feb 04 11:06:02 2008 .. make markov callbacks threaded
+
+1904 Feb 04 09:35:28 2008 .. make ns-auth use bot.name if no fleet name is provided
+
+1903 Feb 04 08:45:14 2008 .. mention item added to itemslist
+
+1902 Feb 04 08:40:12 2008 .. remove thread reference
+
+1901 Feb 04 08:06:52 2008 .. wrap gozerint code in a try/except
+
+1900 Feb 04 07:28:46 2008 .. remove contrib/nagios-udp .. it is moved to the files directory
+
+1899 Feb 03 18:10:50 2008 .. remove reference to postgres
+
+1898 Feb 03 17:38:26 2008 .. remove debug rlog
+
+1897 Feb 03 17:37:54 2008 .. remove dbplugs todo
+
+1896 Feb 03 17:37:12 2008 .. fix test_todo
+
+1895 Feb 03 11:13:17 2008 .. fix tests
+
+1894 Feb 03 11:06:34 2008 .. add test_todo
+
+1893 Feb 03 00:25:19 2008 .. remove speed reference
+
+1892 Feb 01 10:37:56 2008 .. add 2008 to the (c)
+
+1891 Feb 01 09:15:10 2008 .. add nolimiter to udp plugin
+
+1890 Jan 31 16:10:11 2008 .. make reconnect command work on jabber bots
+
+1889 Jan 31 14:03:25 2008 .. prevent dcc socket being added twice in case of reboot
+
+1888 Jan 31 11:47:07 2008 .. make note about postgres not being fully supported
+
+1887 Jan 31 11:43:51 2008 .. make tests work for mysql, sqlite and pickles .. postgres is not working
+
+1886 Jan 31 11:01:22 2008 .. fix tests .. add test_jabberbot
+
+1885 Jan 30 14:32:18 2008 .. fix karma test
+
+1884 Jan 30 14:00:15 2008 .. make postgres and sqlite work
+
+1883 Jan 27 12:01:27 2008 .. it's 0.8 BETA now
+
+1882 Jan 26 20:11:04 2008 .. allow colors in strippedtxt .. remove r8.cg.nu references
+
+1881 Jan 25 14:13:07 2008 .. its addonallow
+
+1880 Jan 25 14:09:33 2008 .. add allowaddon config default
+
+1879 Jan 25 13:11:51 2008 .. fix flow
+
+1878 Jan 25 12:35:32 2008 .. use config['owneruserhost'] and config['jabberowner'] in bot.ownercheck
+
+1877 Jan 23 10:03:17 2008 .. be more verbose
+
+1876 Jan 23 09:07:02 2008 .. catch import errors in main prog .. use output queue in udp plugin
+
+1875 Jan 19 12:08:21 2008 .. simplify dcc code
+
+1874 Jan 19 00:56:24 2008 .. stop output loop on bot.shutdown()
+
+1873 Jan 19 00:42:12 2008 .. check if config['allowedchars'] is defined
+
+1872 Jan 19 00:36:57 2008 .. allow /001 and /002 in strippedtxt
+
+1871 Jan 17 16:42:56 2008 .. lock commands methods
+
+1870 Jan 17 12:32:25 2008 .. lessen verbosity in case we can't decode data
+
+1869 Jan 17 12:20:55 2008 .. lower loglevel
+
+1868 Jan 17 12:03:03 2008 .. check if rssitem exists
+
+1867 Jan 16 14:46:51 2008 .. use copy.deepcopy in ircevent.copyin()
+
+1866 Jan 16 13:45:56 2008 .. make sure the data to be decoded is utf-8
+
+1865 Jan 11 14:22:22 2008 .. when stripping html convert decode data
+
+1864 Jan 11 08:45:46 2008 .. add scheduled checker to remove ignored users from ignorelist
+
+1863 Jan 10 19:09:36 2008 .. check for proper JobAt construction
+
+1862 Jan 10 18:47:24 2008 .. add at plugin .. remove datetime from periodical .. fix endless loop
+
+1861 Jan 10 09:42:09 2008 .. add missing returns
+
+1860 Jan 10 09:38:19 2008 .. add description to JobAt
+
+1859 Jan 07 07:58:28 2008 .. add underauth plugin
+
+1858 Jan 06 00:15:44 2008 .. define charset to utf-8 in mysql connect code .. remove ignoretime entry on
+
+1857 Jan 05 12:39:53 2008 .. rstrip data straight on input
+
+1856 Jan 05 12:21:40 2008 .. also log day month and year in rlog()
+
+1855 Dec 30 10:05:45 2007 .. fix encoding/decoding
+
+1854 Dec 29 19:11:15 2007 .. fix nick change command
+
+1853 Dec 25 18:44:24 2007 .. fix short exceptions
+
+1852 Dec 25 14:43:53 2007 .. decode data on input and encode data on output
+
+1851 Dec 16 23:51:35 2007 .. introduce a config['udpsleep'] which can be used to delay traffic to the
+
+1850 Dec 16 22:58:07 2007 .. increase default number of items search
+
+1849 Dec 16 07:44:48 2007 .. use a output queue in irc bot .. use for line in file in log plugin instead
+
+1848 Dec 16 06:26:42 2007 .. put logging of cached urls on loglevel 0
+
+1847 Dec 15 20:19:59 2007 .. silence AttributeError: 'unicode' object has no attribute 'getName' .. put
+
+1846 Dec 15 20:08:47 2007 .. remove test code
+
+1845 Dec 15 20:03:18 2007 .. wait longer for nick change
+
+1844 Dec 15 20:00:03 2007 .. wai
+
+1843 Dec 10 18:22:54 2007 .. use an output queue in the jabber bot
+
+1842 Dec 10 17:31:15 2007 .. use a queue to handle udp packets
+
+1841 Dec 09 21:26:04 2007 .. add oponsplit config option to ops plugin
+
+1840 Dec 09 14:16:24 2007 .. remove time delay from relay/join and instead delay the splitted removel in
+
+1839 Dec 09 13:50:37 2007 .. add a second delay in quit/part relay so we can detect splits
+
+1838 Dec 08 16:44:56 2007 .. fix pipeline with infoitems
+
+1837 Dec 08 16:04:36 2007 .. add test_job unittest
+
+1836 Dec 08 09:21:54 2007 .. fix test_irc
+
+1835 Dec 08 00:33:36 2007 .. reverse rss order
+
+1834 Dec 08 00:15:16 2007 .. limit received udp txt to 64000 chars
+
+1833 Dec 08 00:13:01 2007 .. don't limit data send
+
+1832 Dec 05 10:04:12 2007 .. add list of exceptions that don't need to print the whole stacktrace .. add
+
+1831 Dec 01 08:46:48 2007 .. fix mono command
+
+1830 Nov 30 22:39:38 2007 .. add INSTALL doc
+
+1829 Nov 23 13:24:14 2007 .. fix sendraw
+
+1828 Nov 14 16:19:22 2007 .. check if resultset is returned from database
+
+1827 Nov 12 16:00:50 2007 .. fix karma db iface
+
+1826 Nov 12 11:58:18 2007 .. fix infoitem in case of empty query
+
+1825 Oct 26 20:43:06 2007 .. fix question function in the database case
+
+1823 Oct 25 22:51:41 2007 .. small fixes to regexp in hgignore
+
+1822 Oct 24 21:04:10 2007 .. move gozerplugs/dbplugs/infoitems into gozerplugs/plugs/infoitem.py
+
+1821 Oct 22 07:58:52 2007 .. move db quote plug into standard quote plug .. add test
+
+1820 Oct 21 09:59:18 2007 .. move dbplugs/karma.py into plugs/karma.py .. add test
+
+1819 Oct 21 08:26:11 2007 .. fix string formatting bug
+
+1818 Oct 20 17:54:18 2007 .. added voice command
+
+1817 Oct 18 19:26:09 2007 .. import the seen plugin in the handler, and catch all possible errors there
+
+1816 Oct 18 19:10:35 2007 .. more whitespace change, check quotes availabiliy earlier
+
+1815 Oct 18 19:09:27 2007 .. use return to simplify code
+
+1814 Oct 18 16:18:55 2007 .. one more dirplug patch: guess properly the plugin name of directory plugins
+
+1813 Oct 18 15:36:12 2007 .. remove the debian plugin from the core distro
+
+1812 Oct 18 15:35:22 2007 .. dir patch part 2: allow directories in gozerplugs/plugs too
+
+1811 Oct 18 15:19:02 2007 .. add first stab at a port of the supybot debian plugin
+
+1810 Oct 18 20:57:45 2007 .. add grab plugin .. remove !foo is bar option
+
+1809 Oct 18 14:54:27 2007 .. fix typo in dir patch
+
+1808 Oct 18 14:52:41 2007 .. This patch does the following, in three nice chunks:
+
+1807 Oct 18 14:50:13 2007 .. "plugin as directory" patch
+
+1806 Oct 18 14:34:53 2007 .. whitespace fix
+
+1805 Oct 18 14:33:55 2007 .. handle missing argument properly
+
+1804 Oct 18 14:30:12 2007 .. reverse conditionnals to make the code more readable
+
+1803 Oct 18 14:29:16 2007 .. deal with quotes not being present
+
+1802 Oct 18 14:23:01 2007 .. move grab function to a seperate plugin
+
+1801 Oct 18 14:06:00 2007 .. add a grab command to the quote plugin
+
+1800 Oct 16 18:22:07 2007 .. add thnx note for snore's freebsd port work
+
+1799 Oct 16 14:49:15 2007 .. there is no !allow alias anymore
+
+1798 Oct 11 13:34:06 2007 .. skip ValueError exception in log loop
+
+1797 Oct 03 15:51:20 2007 .. use list() to copy ievent.arguments
+
+1796 Oct 03 01:49:02 2007 .. fix typo
+
+1795 Oct 03 01:27:26 2007 .. use 1 and 0 as return values of bot.ownercheck()
+
+1794 Oct 03 00:50:05 2007 .. properly create owner user from owneruserhost list/string
+
+1793 Oct 01 16:03:57 2007 .. don't return but use break in install-plug loop
+
+1792 Oct 01 05:39:58 2007 .. allow multiple plugins to be reloaded
+
+1791 Oct 01 05:35:46 2007 .. add plugin alias to available command
+
+1790 Oct 01 05:29:21 2007 .. implement owneruserhost as a list
+
+1789 Oct 01 04:40:23 2007 .. implement ircdisable config var
+
+1788 Oct 01 04:28:03 2007 .. allow multiple plugins used by install-plug
+
+1787 Oct 01 04:21:59 2007 .. properly fetch plug.README
+
+1786 Oct 01 04:07:53 2007 .. save idle data on shutdown
+
+1785 Oct 01 03:45:49 2007 .. mention JID in jabber relay
+
+1784 Oct 01 03:29:33 2007 .. fix log-back help
+
+1783 Sep 28 01:30:22 2007 .. remove restart plugin
+
+1782 Sep 27 01:13:08 2007 .. move contrib dir into the gozerbot package
+
+1781 Sep 27 00:37:14 2007 .. try hg tip to get the latest mercurial version
+
+1780 Sep 26 23:54:18 2007 .. it's UnicodeDecodeError
+
+1779 Sep 26 20:16:49 2007 .. properly mention plugname
+
+1778 Sep 26 20:14:07 2007 .. add missing plugin name
+
+1777 Sep 22 00:59:27 2007 .. add sendraw to the jabberbot
+
+1776 Sep 22 06:34:47 2007 .. don't break the loop on unicode errors
+
+1775 Sep 21 19:26:13 2007 .. remove debug print and \n to space conversion
+
+1774 Sep 21 19:25:26 2007 .. use faster string concat in strippedtxt()
+
+1773 Sep 21 19:00:59 2007 .. use 0 or 1 in jabberbot.stopped
+
+1772 Sep 20 19:41:53 2007 .. use todefenc in ircevent.copyin()
+
+1771 Sep 19 18:20:09 2007 .. unicode third try
+
+1770 Sep 19 15:54:00 2007 .. another unicode attempt
+
+1769 Sep 19 04:58:08 2007 .. reverse unicode hack
+
+1768 Sep 19 03:15:11 2007 .. move unicode adjustments
+
+1767 Sep 19 02:14:25 2007 .. init ircevent string attributes to unicode strings
+
+1766 Sep 15 21:26:09 2007 .. detect if bot can connect properly
+
+1765 Sep 03 07:03:48 2007 .. send max 500 chars
+
+1764 Aug 30 02:32:22 2007 .. it's DEV
+
+1762 Aug 24 01:33:40 2007 .. sort keys on alphabet while showing
+
+1761 Aug 24 21:08:04 2007 .. remove compat shim
+
+1760 Aug 23 17:34:57 2007 .. extended configuration parameter so they accept full array's as set arguments
+
+1750 Jul 23 16:34:30 2007 .. fix size command
+
+1746 Jul 16 13:13:23 2007 .. make gozerbot repo the 0.8 PREVIEW
+
+1745 Aug 20 00:25:37 2007 .. some ircserver put the channel in the txt section of a PART command .. adapt to this
+
+1744 Aug 19 23:47:58 2007 .. properly init joinedchannels list
+
+1743 Aug 19 05:03:48 2007 .. add missing import
+
+1742 Aug 19 05:02:40 2007 .. remove old compat channel stuff
+
+1741 Aug 16 02:59:44 2007 .. fix mono
+
+1740 Aug 16 02:56:09 2007 .. don't allow queues in remind command
+
+1739 Aug 15 04:55:27 2007 .. add bback command that search the bot responses in a channel
+
+1738 Aug 14 04:54:29 2007 .. use basename only in install-plug .. credits go to Aim and Eci
+
+1737 Aug 13 21:09:41 2007 .. fix collective
+
+1736 Aug 13 05:01:33 2007 .. sleep 2 seconds before rebooting
+
+1735 Aug 13 04:54:03 2007 .. add udpstrip config var to enable/disable using strippedtxt in udp
+
+1734 Aug 13 04:34:32 2007 .. use strippedtxt in geturl
+
+1733 Aug 12 22:27:51 2007 .. remove all chars < ord(32) in jabberstrip()
+
+1732 Aug 12 22:12:10 2007 .. remove debug print
+
+1731 Aug 12 22:05:59 2007 .. return 1 on bot.doresume()
+
+1730 Aug 12 21:50:21 2007 .. fix typo
+
+1729 Aug 12 21:48:29 2007 .. put new config var "allowedchars" in default config file
+
+1728 Aug 12 14:46:34 2007 .. adjust strippedtxt() so that only chars > ord(31) are allowed .. add config var
+
+1727 Aug 10 13:45:55 2007 .. run remind callback in a thread
+
+1726 Aug 08 23:28:41 2007 .. fix rss \n escaping bug
+
+1725 Aug 08 23:24:19 2007 .. fix typo
+
+1724 Aug 06 00:07:27 2007 .. make collective output grepable
+
+1723 Aug 05 12:58:34 2007 .. remove command check
+
+1722 Aug 05 00:53:34 2007 .. fix add command
+
+1721 Aug 01 23:01:49 2007 .. add missing handle_exception import
+
+1720 Aug 01 19:48:54 2007 .. fix event-remove example
+
+1719 Jul 31 18:23:44 2007 .. call bot.who() on resume
+
+1718 Jul 31 17:40:07 2007 .. update userchannels on nick change
+
+1717 Jul 31 05:54:47 2007 .. sleep 5 seconds before doing overload
+
+1716 Jul 30 06:40:38 2007 .. don't forget the command in opt parsing
+
+1715 Jul 29 23:11:51 2007 .. don't lower case fleet name
+
+1714 Jul 30 04:31:15 2007 .. fix tests
+
+1713 Jul 29 21:43:17 2007 .. add options functionality
+
+1712 Jul 28 21:08:35 2007 .. fix
+
+1711 Jul 27 00:16:55 2007 .. lock pdod
+
+1710 Jul 23 22:43:12 2007 .. remove limiter cruft
+
+1709 Jul 23 11:58:40 2007 .. added license information
+
+1708 Jul 23 11:57:48 2007 .. added seen plugin
+
+1707 Jul 23 11:42:00 2007 .. remove seen command from log plugin
+
+1706 Jul 23 11:36:15 2007 .. fix size
+
+1705 Jul 22 18:25:46 2007 .. wrap update in try except
+
+1704 Jul 22 18:24:05 2007 .. fix upgrade by properly releasing the 'up' lock
+
+1703 Jul 22 14:25:41 2007 .. add enable/disable to gcollect
+
+1702 Jul 22 10:27:59 2007 .. move mono to log plugin
+
+1701 Jul 22 00:35:25 2007 .. added textutils module
+
+1700 Jul 22 00:09:39 2007 .. put locks on commands.__setitem__/__delitem__
+
+1699 Jul 21 23:54:14 2007 .. don't start jabber fleet bots if jabber is not enabled
+
+1698 Jul 21 22:42:48 2007 .. enable password argument in jabberbot.join()
+
+1697 Jul 20 22:35:28 2007 .. use proper time in logs.fromtime() calls
+
+1696 Jul 20 22:30:50 2007 .. add debug plugin
+
+1695 Jul 20 22:26:52 2007 .. remove backlog from bot object .. add nr of ievents tracking to bot object
+
+1694 Jul 20 19:07:50 2007 .. load dbplugs in before normale plugins if database is enabled
+
+1693 Jul 20 14:24:07 2007 .. fixed bug #8
+
+1692 Jul 20 03:59:08 2007 .. fix nickcapture
+
+1691 Jul 20 02:29:14 2007 .. properly report errors
+
+1690 Jul 20 02:23:39 2007 .. start register of plugin in its own thread so it wont block
+
+1689 Jul 20 01:17:52 2007 .. remove limiter functionality
+
+1688 Jul 20 01:12:00 2007 .. implement loadlist
+
+1687 Jul 19 23:48:10 2007 .. check if url is already in cache
+
+1686 Jul 19 19:43:03 2007 .. put opchan status into bot.state
+
+1685 Jul 17 23:45:22 2007 .. add partyline argument to reboot
+
+1684 Jul 17 23:41:16 2007 .. set connectok in bot.resume()
+
+1683 Jul 17 22:56:28 2007 .. update bin/gozerbot
+
+1682 Jul 17 22:56:11 2007 .. make dcc connections resumable
+
+1681 Jul 17 17:26:16 2007 .. threadify relay
+
+1680 Jul 17 17:15:04 2007 .. fix running too long message
+
+1679 Jul 17 16:36:23 2007 .. add runner class so we can run the callbacks in 1 thread
+
+1678 Jul 16 21:06:56 2007 .. update gozerbot bin
+
+1676 Jul 16 20:54:56 2007 .. made jabber behave correctly on stateful reboots
+
+1675 Jul 16 20:59:36 2007 .. make reboot_statefull the default
+
+1674 Jul 16 19:40:23 2007 .. added restart (stateful reboot) plugin
+
+1673 Jul 16 19:38:54 2007 .. added reboots without irc socket disconnects
+
+1672 Jul 16 19:13:58 2007 .. add trbs and tehmaze to the THNX doc
+
+1671 Jul 16 14:42:54 2007 .. added signing to addon
+
+1670 Jul 16 13:12:47 2007 .. added addon installation
+
+1669 Jul 14 02:28:55 2007 .. strip /0 chars in jabberstrip()
+
+1668 Jul 14 02:11:21 2007 .. fix encrypted jabber udp
+
+1667 Jul 14 01:25:14 2007 .. fix gozerpopen
+
+1666 Jul 13 20:46:39 2007 .. fold error messages
+
+1665 Jul 13 20:38:48 2007 .. remove debug prints
+
+1664 Jul 13 20:37:20 2007 .. remove strippedtxt() from jabberstrip
+
+1663 Jul 13 20:34:28 2007 .. added tar support to install
+
+1662 Jul 12 19:21:13 2007 .. add -t option to toudp.py
+
+1661 Jul 12 18:22:38 2007 .. use strippedtxt in jabberstrip
+
+1660 Jul 12 10:59:45 2007 .. enable ipv6 in toudp.py .. remove debug print
+
+1659 Jul 12 10:56:44 2007 .. fix encrypted toudp.py
+
+1658 Jul 12 01:06:22 2007 .. implement udp ipv6 support
+
+1657 Jul 11 23:51:09 2007 .. do proper reporting when we can't fetch rss data
+
+1656 Jul 11 22:46:38 2007 .. fix url-size .. run gc.collect 3 times
+
+1655 Jul 09 22:42:56 2007 .. run backup every hour .. wrap function dispatching in periodical in a try except
+
+1654 Jul 09 20:47:58 2007 .. persist bot.userhosts caches
+
+1653 Jul 09 20:26:12 2007 .. convert collective to persiststate
+
+1652 Jul 09 18:11:51 2007 .. strip Outputhandler
+
+1651 Jul 09 09:15:28 2007 .. put collector msg on loglevel 1
+
+1650 Jul 08 18:26:45 2007 .. add whoami command
+
+1649 Jul 08 17:47:24 2007 .. make wait interval of gcollect persistant
+
+1648 Jul 08 17:30:54 2007 .. add gcollect plugin
+
+1647 Jul 07 23:31:01 2007 .. sleep some more
+
+1646 Jul 07 23:27:04 2007 .. remove more cruft
+
+1645 Jul 07 23:15:07 2007 .. re-enable saving on watch .. remove unneeded threads
+
+1644 Jul 07 21:51:05 2007 .. enable gc
+
+1643 Jul 07 21:45:35 2007 .. sleep a bit between launching of periodical events
+
+1642 Jul 07 01:40:35 2007 .. really move backup to its own plugin
+
+1641 Jul 07 01:12:04 2007 .. add size function to job and url plugins
+
+1640 Jul 07 00:17:33 2007 .. nits
+
+1639 Jul 07 00:04:50 2007 .. move backup into a plugin .. make sure periodical decorators have the proper group
+
+1638 Jul 06 23:08:38 2007 .. add job-groups
+
+1637 Jul 06 19:53:30 2007 .. remove try except
+
+1636 Jul 06 19:51:32 2007 .. catch socket timeout
+
+1635 Jul 06 18:35:59 2007 .. move backup over to periodical
+
+1634 Jul 06 18:17:06 2007 .. move alarm plugin over to periodical
+
+1633 Jul 06 17:44:59 2007 .. fix rss peek function
+
+1632 Jul 06 17:34:25 2007 .. place return on the right place in upgrade .. move checkone function to periodical in collective
+
+1631 Jul 06 15:58:54 2007 .. regrouped jobs
+
+1630 Jul 06 00:45:37 2007 .. wrap the upgrade commands in try except
+
+1629 Jul 06 00:35:01 2007 .. fix str + int exception
+
+1628 Jul 06 00:26:27 2007 .. store urls per bot and channel they occur on
+
+1627 Jul 06 00:10:03 2007 .. use findall to find multiple urls
+
+1625 Jul 06 00:02:39 2007 .. add searchable url list
+
+1624 Jul 05 23:19:24 2007 .. replace popen by subprocess
+
+1623 Jul 05 21:48:08 2007 .. make rss plugin use periodical
+
+1622 Jul 04 01:06:43 2007 .. update changelog
+
+
+0.7
+~~~
+
+
+1621 Jul 04 01:05:47 2007 .. Added tag 0.7 for changeset 607f4e531ead
+
+1620 Jul 04 01:04:03 2007 .. add plugins docs
+
+1619 Jul 03 00:36:16 2007 .. fixed bug #1
+
+1618 Jul 02 22:43:37 2007 .. put version at 0.7
+
+1617 Jul 02 22:32:32 2007 .. remove debug print
+
+1616 Jul 02 17:21:06 2007 .. add note about blog.gozerbot.org
+
+1615 Jul 02 10:39:56 2007 .. catch more exceptions in popcon plugin
+
+1614 Jul 02 09:51:09 2007 .. remove alert plugin
+
+1613 Jul 01 21:47:48 2007 .. give reply if we parted a channel
+
+1612 Jul 01 21:34:36 2007 .. use ievent.rest in part command
+
+1611 Jul 01 20:33:10 2007 .. use result list in jabbermsg.reply when queue is set
+
+1610 Jul 01 14:10:20 2007 .. set bot.nick when random nick is used
+
+1609 Jul 01 01:22:18 2007 .. update LICENSE to reflect the individual files copyright
+
+1608 Jun 30 00:44:28 2007 .. wrap try except around bot.sendraw
+
+1607 Jun 29 18:32:37 2007 .. shutdown socket before reconnect
+
+1606 Jun 29 18:19:24 2007 .. save nick changes on mainbot to config
+
+1605 Jun 29 17:50:18 2007 .. fix eventhandlers restarting .. shutdown bot on exit .. change fleet nick data
+
+1604 Jun 29 03:04:55 2007 .. give response if nick is properly set
+
+1603 Jun 29 02:58:45 2007 .. update changelog
+
+
+0.7-RC2
+~~~~~~~
+
+
+1602 Jun 29 02:57:58 2007 .. Added tag 0.7-RC2 for changeset 28023b8d3336
+
+1601 Jun 29 02:57:50 2007 .. move up to 0.7-RC2
+
+1600 Jun 29 01:55:23 2007 .. add links to README
+
+1599 Jun 29 01:28:56 2007 .. check changes in config['nick']
+
+1598 Jun 29 00:16:37 2007 .. make dcctest work
+
+1597 Jun 28 22:14:23 2007 .. make note that nick config var is only used when no nick is set .. otherwise
+
+1596 Jun 28 21:02:28 2007 .. moved job-at to at plugin, added some enhancements
+
+1595 Jun 28 02:59:11 2007 .. properly report if we joined a channel
+
+1594 Jun 28 01:53:02 2007 .. store nick in bot.state
+
+1593 Jun 28 00:18:10 2007 .. update UPGRADE doc
+
+1592 Jun 27 04:11:11 2007 .. don't do a sleep in udp messages to a jabber bot .. update doc/UDP
+
+1591 Jun 27 04:01:35 2007 .. update to 0.7-RC1
+
+
+0.7-RC1
+~~~~~~~
+
+
+1590 Jun 27 03:59:02 2007 .. Added tag 0.7-RC1 for changeset 070f61607e22
+
+1589 Jun 27 03:55:42 2007 .. add persiststate module
+
+1588 Jun 27 01:38:22 2007 .. check if bot can be found
+
+1587 Jun 26 21:40:51 2007 .. add __init__.py
+
+1586 Jun 26 21:30:09 2007 .. allow udp traffic to be encrypted
+
+1585 Jun 26 20:16:03 2007 .. cleanup README
+
+1584 Jun 26 19:03:26 2007 .. plugins doc work
+
+1583 Jun 25 22:44:14 2007 .. use proper name in license
+
+1582 Jun 25 18:47:47 2007 .. pyflake
+
+1581 Jun 25 15:46:21 2007 .. gendoc related stuff
+
+1580 Jun 22 15:55:59 2007 .. fix list output
+
+1579 Jun 22 15:51:27 2007 .. use decode() in todefenc
+
+1578 Jun 22 04:23:18 2007 .. tune gendoc
+
+1577 Jun 21 08:15:19 2007 .. remove trbs .deb site from source command now that we are in testing/unstable
+
+1576 Jun 20 22:48:14 2007 .. simplify infoitem's item added message
+
+1575 Jun 20 14:14:43 2007 .. update gendoc
+
+1572 Jun 18 18:06:20 2007 .. gendoc plugin documentation generator
+
+1569 Jun 19 01:07:49 2007 .. add server command thats show the server the bot is connected to
+
+1568 Jun 19 00:24:58 2007 .. add missing IndexError
+
+1567 Jun 18 19:51:13 2007 .. remove shutdown code from reconnect
+
+1566 Jun 18 11:34:21 2007 .. update bin/gozerbot
+
+1565 Jun 17 20:12:42 2007 .. add halt en exit aliases
+
+1564 Jun 17 18:00:39 2007 .. make sure that only users with OPER permission can merge with other OPER users
+
+1563 Jun 17 17:28:18 2007 .. let users with MEET permission also be able to merge users
+
+1562 Jun 17 17:18:47 2007 .. detect the presence of gpg in install-plug command
+
+1561 Jun 16 14:36:45 2007 .. make sure shop item number gets through grep as well
+
+1560 Jun 16 14:32:41 2007 .. use ievent.missing
+
+1559 Jun 16 14:29:29 2007 .. make commands command show commands of plugin instead of permission
+
+1558 Jun 16 12:19:25 2007 .. fix onjoinremove example im markov.py
+
+1557 Jun 16 08:57:51 2007 .. lock commands adding/removing
+
+1556 Jun 16 08:46:39 2007 .. add jabberstrip .. also strips chr(1) use in IRC ctcp
+
+1555 Jun 16 08:27:54 2007 .. catch Exception instead of just IOError
+
+1554 Jun 16 00:40:14 2007 .. add umask config var used for setting gozerdata dir permissions
+
+1553 Jun 16 00:21:12 2007 .. strip ievent.txt if its a command .. add an ievent.aliased and use this in ievent.reply .. make snarf plugin work in jabber
+
+1552 Jun 14 20:38:47 2007 .. exception can be TypeError too
+
+1551 Jun 14 20:29:21 2007 .. add infoitem test
+
+1550 Jun 14 17:22:00 2007 .. its KeyError not IndexError
+
+1549 Jun 14 08:44:40 2007 .. pylint last part
+
+1548 Jun 13 18:02:42 2007 .. check if gozerdata dir exists
+
+1547 Jun 13 17:58:33 2007 .. set bot.stopped=0 on reconnect
+
+1546 Jun 13 16:00:19 2007 .. plugins pylint part 2
+
+1545 Jun 13 09:26:25 2007 .. rename db.type to db.dbtype
+
+1544 Jun 12 20:46:54 2007 .. plugins pylint phase 1
+
+1543 Jun 12 13:09:33 2007 .. gozerbot package pylint scan
+
+1542 Jun 12 00:31:10 2007 .. move changepermissions into generic.py and make a option to disable it
+
+1541 Jun 12 00:00:39 2007 .. set umode of the gozerdata dir to 750
+
+1540 Jun 11 21:47:44 2007 .. remove deny and allow aliases .. use global declaration in popcon-enable
+
+1539 Jun 11 21:17:34 2007 .. implment first search plug function in db version
+
+1538 Jun 11 20:36:57 2007 .. add search plugin
+
+1537 Jun 11 20:36:30 2007 .. put checking of periodical at loglevel -1 .. first try at a bot global
+
+1535 Jun 10 20:31:12 2007 .. changed periodical implementation, changed popcon url
+
+1534 Jun 10 20:10:23 2007 .. remove debug print
+
+1533 Jun 10 15:52:16 2007 .. use try/except in bot.joinchannels
+
+1532 Jun 10 15:24:32 2007 .. added periodical job scheduler
+
+1531 Jun 10 13:45:14 2007 .. added popcon-url for direct url to your bot's entry
+
+1530 Jun 10 01:21:20 2007 .. added "popularity contest" plugin
+
+1529 Jun 10 00:27:31 2007 .. add denied attribute
+
+1528 Jun 10 00:18:49 2007 .. properly initialize parameters
+
+1527 Jun 10 00:15:25 2007 .. put ipv6 flag earlier on in fleet-addirc
+
+1526 Jun 09 23:45:20 2007 .. update bin/gozerbot
+
+1525 Jun 09 12:18:33 2007 .. add mainbotname config var .. add fleet.getmainbot() .. don't delete irc main bot if jabber is enabled later on
+
+1524 Jun 08 22:01:31 2007 .. check content-type in stead of file extension
+
+1523 Jun 08 21:10:42 2007 .. make note about adding udpdblog = 1 to config file
+
+1522 Jun 08 21:09:14 2007 .. implement a database udplogger
+
+1521 Jun 07 22:15:47 2007 .. update changelog
+
+
+0.7-BETA
+~~~~~~~~
+
+
+1520 Jun 07 21:41:22 2007 .. Added tag 0.7-BETA for changeset ceaee2af4471
+
+1519 Jun 07 21:41:07 2007 .. up version
+
+1518 Jun 07 15:40:11 2007 .. wait longer for mail input
+
+1517 Jun 03 18:03:19 2007 .. prevent collective to recurse
+
+1516 Jun 03 14:08:26 2007 .. only list a command once in help <plugin>
+
+1515 Jun 03 13:05:01 2007 .. added tinyurl and umode plugin, minor bugfix in nickserv identify command
+
+1514 Jun 03 09:38:23 2007 .. only install plug once
+
+1513 Jun 02 22:12:36 2007 .. sort install-list result
+
+1512 Jun 02 21:57:41 2007 .. make install-plug/list scan all available sites for plugins
+
+1511 Jun 02 19:16:51 2007 .. fix typo
+
+1510 Jun 02 18:30:46 2007 .. don't allow record nr 0 to be deleted from database todo
+
+1509 Jun 01 16:49:30 2007 .. remove tabs
+
+1508 Jun 01 16:39:22 2007 .. use bot.server in relay join message
+
+1507 Jun 01 15:06:27 2007 .. changed lag metering, now using PING in stead of ISON
+
+1506 Jun 01 11:05:48 2007 .. add missing time import
+
+1505 May 31 23:17:04 2007 .. delay lag loop until fleet is started
+
+1504 May 29 21:52:04 2007 .. do a better try at fleet-del
+
+1503 May 29 10:35:21 2007 .. added plugin for authentication through services
+
+1502 May 29 09:46:05 2007 .. fix ircevent.txt generation in pure CMND case (not starting with ':')
+
+1501 May 28 21:57:27 2007 .. add reverse plugin thnx to Knorrie
+
+1500 May 28 21:20:13 2007 .. add jidchange field to ircevent object
+
+1499 May 28 19:07:36 2007 .. set ircevent.txt properly in the non : cmnd case .. add log-time
+
+1498 May 28 11:05:59 2007 .. add maxitems argument to waitforqueue
+
+1497 May 26 21:11:08 2007 .. fix no result response in wikipedia plugin .. add more tests
+
+1496 May 26 11:02:02 2007 .. fix good/bad karma output
+
+1495 May 25 16:09:04 2007 .. skip non PRIVMSG ievent and usercommands in mono
+
+1494 May 24 23:00:16 2007 .. fix ievent.missing reply in /msg
+
+1493 May 23 11:39:04 2007 .. added hg-log
+
+1492 May 21 17:01:57 2007 .. fix url.README grabbing in install.py
+
+1491 May 20 23:14:27 2007 .. do proper exception reporting in install.py
+
+1490 May 20 17:45:10 2007 .. put udp allowed log message at loglevel 0
+
+1489 May 20 17:08:01 2007 .. add txt to update help indicating update does NOT reboot the bot
+
+1488 May 20 16:26:39 2007 .. add txt to loglevel help explaining that the lower loglevel is the more get logged
+
+1487 May 20 01:14:33 2007 .. don't allow queues in topic-set
+
+1486 May 20 00:12:12 2007 .. make changelog more ReST compatible
+
+1485 May 18 19:06:47 2007 .. show channel on which user is last seen
+
+1484 May 18 14:22:53 2007 .. check if gpg is installed
+
+1483 May 18 13:53:56 2007 .. make note of gnupg dependancy needed to install remote plugins
+
+1482 May 18 13:35:25 2007 .. remove md5 sum based install
+
+1481 May 18 13:02:59 2007 .. added pgp plugin and changed popen args from str to list
+
+1480 May 18 00:53:38 2007 .. reverted last change
+
+1479 May 18 00:51:56 2007 .. fixed error string
+
+1478 May 18 00:50:32 2007 .. fixed security leak
+
+1477 May 18 00:45:23 2007 .. removed debug code
+
+1476 May 18 00:40:50 2007 .. added pgp verification for plugin installs
+
+1475 May 17 23:35:57 2007 .. add mail-time which mails the log from a given time point
+
+1474 May 16 17:19:15 2007 .. remove extra space char in karma plugins
+
+1473 May 16 13:24:00 2007 .. up version
+
+1472 May 16 10:57:45 2007 .. added install-update
+
+1471 May 16 10:33:15 2007 .. add missing self
+
+1470 May 16 10:29:13 2007 .. fix typo and cleanup old code
+
+1469 May 16 10:22:49 2007 .. move pluglistreload into plugins module
+
+1468 May 16 09:24:17 2007 .. check if message is of correct size in upgrade command
+
+1467 May 16 09:15:24 2007 .. check for bot in callback
+
+1466 May 16 09:11:19 2007 .. remove debian dir
+
+1465 May 16 09:04:11 2007 .. fix missing handle_exception import .. fix jabber relay check
+
+1464 May 16 08:32:05 2007 .. update changelog
+
+
+0.6.4.2
+~~~~~~~
+
+
+1463 May 16 08:31:01 2007 .. Added tag 0.6.4.2 for changeset 16a0291a43ff
+
+1462 May 16 08:28:22 2007 .. unzip man page
+
+1461 May 16 01:19:42 2007 .. strip merges from changelog generation
+
+1460 May 16 01:15:33 2007 .. properly show missing argument in install-plug
+
+1459 May 16 01:03:30 2007 .. give chanperm response if chanperm is not set .. add exmaples entries
+
+1458 May 15 23:54:19 2007 .. move translate to plug site .. use lists in hg cmnd building
+
+1457 May 14 16:20:00 2007 .. check for txt argument
+
+1456 May 13 19:53:35 2007 .. add commit in allow description about setperms to add permissions
+
+1454 May 13 13:36:16 2007 .. fix "apro *"
+
+1453 May 13 10:57:17 2007 .. limit lenght of jabbermsg.reply to 2000 chars .. cleanup reconnect
+
+1452 May 13 00:26:57 2007 .. fix infoitem callbacks .. wrap handle_ievent in more try excepts
+
+1451 May 12 22:12:25 2007 .. make toascii use defaultencoding .. fix striphtml
+
+1450 May 12 21:49:24 2007 .. only do lag measuring on irc bots
+
+1449 May 12 20:10:33 2007 .. use toascii on string concat
+
+1448 May 11 19:23:49 2007 .. fixed user-agent string to reflect gozerbot
+
+1447 May 11 18:57:56 2007 .. added encoding detection
+
+1446 May 11 16:48:40 2007 .. add .info attribute with header information to geturl2() results
+
+1445 May 11 16:27:59 2007 .. added decoding of html entities
+
+1444 May 11 16:07:43 2007 .. add !infoitem callback
+
+1443 May 11 12:15:43 2007 .. fixed Japanese, Russian and Chinese
+
+1442 May 10 22:00:40 2007 .. added rest command
+
+1441 May 10 20:50:44 2007 .. use sort in commands output
+
+1440 May 10 19:47:53 2007 .. make commands list a little bit more clear
+
+1439 May 10 15:15:08 2007 .. fixed proper url parsing
+
+1438 May 10 11:03:32 2007 .. use result list so we can use grep etc.
+
+1436 May 10 10:39:16 2007 .. added dns and hexip commands
+
+1435 May 09 22:25:20 2007 .. Added signature for changeset 47324777e3b02e178d1ad67f1e303c2e223e34ab
+
+1434 May 09 23:19:56 2007 .. add date example to alarm command
+
+1433 May 09 23:11:22 2007 .. add rebefore override by using '!' as second control character
+
+1432 May 09 22:49:44 2007 .. add entry about auto-op
+
+1431 May 09 22:09:49 2007 .. added translate command
+
+1430 May 09 22:09:29 2007 .. added posturl() and useragent()
+
+1429 May 09 22:01:59 2007 .. provide better plugin description
+
+1428 May 09 21:57:49 2007 .. add entry about ANON permissions and chanperm
+
+1427 May 09 21:53:15 2007 .. sort rss-list
+
+1426 May 09 21:48:49 2007 .. add karma-whatup/down
+
+1425 May 09 21:19:17 2007 .. nit
+
+1424 May 09 21:18:24 2007 .. add install-sites command
+
+1423 May 09 21:08:38 2007 .. allow pluginserver argument to install-list
+
+1422 May 09 21:02:10 2007 .. restore ANONKARMA
+
+1419 May 09 19:59:51 2007 .. added hg-annotate command
+
+1418 May 09 19:48:38 2007 .. added HG version check
+
+1417 May 09 17:07:04 2007 .. fixed url regexp
+
+1416 May 09 19:48:13 2007 .. check if path attribute is available in HTTPRequest
+
+1415 May 09 19:33:48 2007 .. add ANONKARMA to dbplugs/karma.py
+
+1414 May 07 16:53:25 2007 .. added hg-changes command
+
+1413 May 06 22:38:00 2007 .. fix number of items txt
+
+1412 May 06 20:44:47 2007 .. add cchar function
+
+1411 May 06 17:27:26 2007 .. bugfix
+
+1410 May 06 16:07:02 2007 .. added plugin for hg related information
+
+1409 May 06 15:44:00 2007 .. add support for defaultcc
+
+1408 May 06 15:36:38 2007 .. added url title snarfer and -validator
+
+1407 May 06 15:28:34 2007 .. add defaultcc to jabberbot
+
+1406 May 06 15:15:52 2007 .. add default control character config var
+
+1405 May 06 12:31:49 2007 .. check if webserver is running
+
+1404 May 06 10:04:00 2007 .. add enable/disable webhandler .. add showplug option
+
+1403 May 06 02:54:48 2007 .. use <a href="/karma"> etc
+
+1402 May 06 02:40:55 2007 .. made webserver valid HTML 4.01
+
+1401 May 06 02:23:03 2007 .. added fix for lag check on connect time
+
+1400 May 06 02:16:22 2007 .. fixed on connect time lag check
+
+1399 May 06 02:06:45 2007 .. wait for fleet init
+
+1398 May 06 01:56:07 2007 .. add lag plugin thnx to tehmaze
+
+1397 May 05 10:12:55 2007 .. move 'quote' command back in place
+
+1396 May 03 20:22:38 2007 .. add tests .. don't lower the result in grep -i case
+
+1394 May 01 22:23:41 2007 .. move karna back to rebefore .. give timeout to plugload wait .. up version
+
+1393 Apr 30 14:40:49 2007 .. don't lower nick
+
+1392 Apr 30 12:20:50 2007 .. update changelog
+
+
+0.6.4.1
+~~~~~~~
+
+
+1391 Apr 30 12:17:38 2007 .. Added tag 0.6.4.1 for changeset fa897bc69814
+
+1390 Apr 29 22:32:41 2007 .. keep joined MUC list in relay .. remove jid from cache if user leaves MUC
+
+1389 Apr 28 23:50:51 2007 .. disable channel keepalive for now
+
+1388 Apr 28 20:56:08 2007 .. fix meet in jabber when bot is admin/owner .. don't relay privmsg in jabber
+
+1386 Apr 28 10:04:23 2007 .. detect JID without using a RE .. enable cycle in jabber bots
+
+1385 Apr 27 21:00:26 2007 .. allow tell command only in channels
+
+1384 Apr 27 13:56:32 2007 .. use self.me in presence.to test
+
+1382 Apr 27 13:39:26 2007 .. remove channel jids when leaving the channel .. set proper nick on jabberpresence
+
+1381 Apr 26 20:58:41 2007 .. properly set jabbermsg.nick
+
+1380 Apr 26 18:26:12 2007 .. enable true user JID being used if bot has admin affiliation
+
+1379 Apr 26 14:16:21 2007 .. add comment about the python-xmpp package on debian
+
+1378 Apr 26 11:25:05 2007 .. make sure test_fleet runs clean .. remove net tests from standard tests
+
+1377 Apr 26 10:41:31 2007 .. add tests .. add space to allowed chars in strippedtxt .. fix ircevent.missing
+
+1376 Apr 22 22:43:33 2007 .. pass on the ipv6 config var to connect()
+
+1375 Apr 22 17:04:02 2007 .. use channel not ievent.channel
+
+1374 Apr 22 16:50:30 2007 .. remove leftover :
+
+1373 Apr 19 22:22:51 2007 .. add webtest.py .. sleep less in webserver loop
+
+1372 Apr 19 21:58:38 2007 .. add net section to dotest.py
+
+1371 Apr 19 21:08:38 2007 .. don't remove nick from userchannels, the callbacks need it
+
+1370 Apr 19 17:37:23 2007 .. move database support text to end of README
+
+1369 Apr 18 16:44:00 2007 .. use q as quote command so that !quote <nr>++ works
+
+1368 Apr 17 13:01:13 2007 .. check if we are already watching a rssitem
+
+1367 Apr 17 09:32:42 2007 .. do flood protection
+
+1366 Apr 13 21:35:28 2007 .. prevent chanperms to be used in /msg
+
+1365 Apr 13 18:38:31 2007 .. added ANONKARMA and ANONQUOTE permissions for channel wide karma and quote permissions
+
+1364 Apr 12 01:13:15 2007 .. same for --
+
+1363 Apr 12 00:24:28 2007 .. move karma ++ commands before infoitem's question
+
+1362 Apr 11 23:57:21 2007 .. up version
+
+1361 Apr 11 23:56:55 2007 .. we support different databases .. say so in the config file
+
+1360 Apr 11 08:48:07 2007 .. sleep less in log loop
+
+1359 Apr 11 00:19:42 2007 .. prevent wiki from slurping 100% cpu .. a re is borked .. remove it for now
+
+1358 Apr 10 13:09:26 2007 .. sleep less in log loop
+
+1357 Apr 10 11:17:12 2007 .. add makechangelog
+
+1356 Apr 10 08:10:31 2007 .. add doc/changelog
+
+
+0.6.4
+~~~~~
+
+
+1355 Apr 10 07:33:38 2007 .. Added tag 0.6.4 for changeset 1c4a50fc6aa5
+
+1354 Apr 10 07:23:11 2007 .. bump version number
+
+1353 Apr 09 22:03:32 2007 .. check if item is already in rss list
+
+1352 Apr 09 21:14:30 2007 .. add dots
+
+1351 Apr 09 21:05:23 2007 .. fix rss-itemslist
+
+1350 Apr 08 00:41:58 2007 .. improved detecting nickname for response
+
+1348 Apr 07 19:15:57 2007 .. new debian package
+
+
+0.6.3.7
+~~~~~~~
+
+
+1347 Apr 07 16:29:38 2007 .. Added tag 0.6.3.7 for changeset c3a3940d9b6a
+
+1346 Apr 07 13:14:59 2007 .. fix && deadlock
+
+1345 Apr 06 21:57:38 2007 .. fix output string
+
+1344 Apr 06 01:14:15 2007 .. fix rss-get output
+
+1343 Apr 06 00:31:13 2007 .. new incremental release to fix jabber
+
+1342 Apr 06 00:21:18 2007 .. up version
+
+1341 Apr 06 00:20:51 2007 .. fix list replying in jabber
+
+1340 Apr 05 01:25:23 2007 .. new debian package
+
+1339 Apr 05 00:57:58 2007 .. check if arguments for send exist
+
+1338 Apr 05 00:50:09 2007 .. check if arguments of send exist
+
+1337 Apr 05 00:35:05 2007 .. fix strippedtxt
+
+1336 Apr 05 00:22:59 2007 .. use strippedtxt
+
+1335 Apr 05 00:11:08 2007 .. add toascii to todcc
+
+1334 Apr 04 23:40:39 2007 .. strip \n from udp txt
+
+1333 Apr 03 17:21:58 2007 .. more fix
+
+1332 Apr 03 17:19:49 2007 .. fix
+
+1331 Apr 03 16:45:55 2007 .. revert :exec stuff .. don't know how to prevent loop
+
+1330 Apr 03 16:44:48 2007 .. revert test
+
+1329 Apr 03 16:01:01 2007 .. add :exec capabiltiy to the bot .. this allow one to trigger commands upon a given infoitem question
+
+1328 Apr 03 11:50:00 2007 .. make active work in jabber
+
+1327 Apr 02 21:25:39 2007 .. fix !channels bug
+
+1326 Apr 02 21:19:32 2007 .. add channel option to active command
+
+1325 Apr 01 00:18:32 2007 .. beatify reponses .. make sure test_user is clean
+
+1324 Mar 31 22:11:13 2007 .. add some description txt
+
+1323 Mar 31 21:00:42 2007 .. allow a seperator to be passed on to ievent.reply
+
+1322 Mar 31 17:39:18 2007 .. lock on plugins.trydispatch .. add time.sleeps .. fix loop in dbquote when
+
+1321 Mar 30 02:07:07 2007 .. remove cmnd catchall
+
+1320 Mar 30 01:43:34 2007 .. remove debug print
+
+1319 Mar 30 01:18:33 2007 .. fix
+
+1318 Mar 30 01:15:12 2007 .. enable question to be asked by doing !item
+
+1317 Mar 30 00:42:08 2007 .. fix
+
+1316 Mar 30 00:38:31 2007 .. update markov .. instead of generating 1 response make 20 responses and choose from that .. add channel to learnlist when enabled .. remove silent option
+
+1315 Mar 29 22:42:54 2007 .. add event-adduser .. with this opers can add nicks to events
+
+1314 Mar 29 22:38:17 2007 .. it's knowN
+
+1313 Mar 29 22:37:30 2007 .. make clear its owneruserhost permission thats needed
+
+1312 Mar 28 12:43:18 2007 .. order on indx ASC
+
+1311 Mar 28 05:59:09 2007 .. up version
+
+1310 Mar 27 22:36:15 2007 .. its files/pickletodb.py
+
+1308 Mar 27 22:20:04 2007 .. fixed debian/control
+
+1306 Mar 27 22:18:30 2007 .. its files/pickletodb.py
+
+1305 Mar 27 15:12:13 2007 .. use "" around instructions in !source
+
+1304 Mar 27 15:05:38 2007 .. properly check if rss feed is already being watched
+
+1303 Mar 27 01:15:21 2007 .. allow list of permissions for cmnds.list() .. default !commands to the users permissions
+
+1302 Mar 27 00:57:50 2007 .. set the speed of chanperm allowed commands to 1
+
+1301 Mar 27 00:38:41 2007 .. return ANON perm if user doesn't exist
+
+1300 Mar 27 00:27:13 2007 .. more ANON permissions added
+
+1299 Mar 26 22:45:04 2007 .. add permoverload example
+
+1298 Mar 26 21:44:09 2007 .. send generic unavailable presence
+
+1297 Mar 26 21:31:49 2007 .. send unavailable presence to channels when exiting
+
+1296 Mar 26 21:26:10 2007 .. over to test
+
+1295 Mar 26 20:10:37 2007 .. add ANON permission to commands .. those are read only .. add whatperms
+
+1294 Mar 26 18:16:56 2007 .. add printo to alarmitem so we can use the nick in the txt message
+
+1293 Mar 25 22:57:13 2007 .. install files/postgres_db
+
+1292 Mar 25 21:54:01 2007 .. add tell .. enable action on jabber bots
+
+1291 Mar 24 22:16:56 2007 .. change r8.cg.nu to gozerbot.org in config file .. add comment about the debian package in !source
+
+1290 Mar 24 16:26:25 2007 .. use chr() in stripbold
+
+1289 Mar 24 16:23:49 2007 .. use stripbold in jabbermsg.reply()
+
+1288 Mar 24 14:27:15 2007 .. use ievent.stripped in owner check
+
+1287 Mar 24 12:33:43 2007 .. make rss-get USER perm
+
+1286 Mar 24 12:29:07 2007 .. make dbplugs/user.py pass the unittest
+
+1285 Mar 24 06:31:57 2007 .. allow remind in jabber
+
+1284 Mar 23 23:52:22 2007 .. add nick, command parsing to jabberbot
+
+1283 Mar 23 20:06:11 2007 .. make !source point to gozerbot.org .. add about alias
+
+1282 Mar 23 19:35:15 2007 .. don't forget dbplugs/karma.py
+
+1281 Mar 23 19:33:17 2007 .. move karma to reafter
+
+1280 Mar 22 22:56:05 2007 .. add note about direct messaging the bot for owner access
+
+1279 Mar 22 14:51:14 2007 .. also use node.CDATA_SECTION_NODE nodes
+
+1278 Mar 22 14:28:32 2007 .. fix typo .. add entry about using a irc bot in the fleet
+
+1277 Mar 22 14:00:36 2007 .. make note about utf-8 and the need for mysql5
+
+1276 Mar 21 20:50:46 2007 .. finish test_user
+
+1275 Mar 21 01:18:35 2007 .. up version
+
+
+0.6.3.3
+~~~~~~~
+
+
+1274 Mar 21 01:17:58 2007 .. Added tag 0.6.3.3 for changeset 2750d16410bf
+
+1273 Mar 20 00:04:52 2007 .. switch back to ievent.userhost
+
+1272 Mar 19 23:50:06 2007 .. put verbose on loglevel 2
+
+1271 Mar 19 23:42:35 2007 .. use globalshutdown .. use stripped(userhost) to check for jabber users
+
+1270 Mar 19 23:20:45 2007 .. use ievent.stripped in user plugin so jabber works
+
+1269 Mar 19 23:09:09 2007 .. over to test
+
+1268 Mar 19 20:24:48 2007 .. more user tests
+
+1267 Mar 19 19:36:15 2007 .. add more user tests
+
+1266 Mar 18 15:32:57 2007 .. add userhost to join relay
+
+1265 Mar 18 14:01:32 2007 .. add comment to show that config passwd entry is for the ircd
+
+1264 Mar 17 22:25:42 2007 .. add test_user first part
+
+1263 Mar 17 12:25:35 2007 .. remove bogus replies .. add missing returns
+
+1262 Mar 16 18:01:14 2007 .. remove double reply .. add nritems to output
+
+1261 Mar 16 11:49:13 2007 .. add result (list) parameter to ircevent.reply .. fix || in collective
+
+1260 Mar 15 10:13:48 2007 .. don't show exception in readloop
+
+1259 Mar 15 00:23:22 2007 .. do the channel check also in dispatchtest
+
+1258 Mar 15 00:08:40 2007 .. first check if command whould dispatch
+
+1257 Mar 14 23:53:20 2007 .. implement wait argument to coll/coll-exec .. max wait 60 seconds in
+
+1256 Mar 14 22:37:09 2007 .. prevent multiple connects
+
+1255 Mar 14 09:10:08 2007 .. strip txt after removing channel txt
+
+1254 Mar 14 09:06:08 2007 .. remove channel check
+
+1253 Mar 14 08:25:17 2007 .. sleep even more less
+
+1252 Mar 14 08:18:21 2007 .. sleep less
+
+1251 Mar 14 07:46:01 2007 .. up version
+
+1250 Mar 14 07:41:29 2007 .. incase of nooutput re-put go marker
+
+1249 Mar 12 21:13:30 2007 .. streamline log-last
+
+1248 Mar 10 17:53:51 2007 .. allow callbacks to be sorted
+
+1247 Mar 10 17:30:26 2007 .. don't show join/quit if user is splitted
+
+1246 Mar 09 23:57:26 2007 .. make pickletodb datasbase type independant
+
+1245 Mar 09 23:39:36 2007 .. add entry about postgres
+
+1244 Mar 09 22:12:23 2007 .. add web-cfg alias
+
+1243 Mar 09 21:01:19 2007 .. up version
+
+1242 Mar 09 19:08:06 2007 .. fix nooutput
+
+1241 Mar 09 08:20:51 2007 .. faster syncnode
+
+1240 Mar 09 08:10:16 2007 .. ignore before locking
+
+1239 Mar 09 07:55:28 2007 .. save alias
+
+
+0.6.3.1
+~~~~~~~
+
+
+1238 Mar 09 06:45:55 2007 .. Added tag 0.6.3.1 for changeset 3b9a073a9fdd53ecf97c7af0ca86076f8731e074
+
+1237 Mar 09 06:22:56 2007 .. up version
+
+1236 Mar 08 23:09:30 2007 .. add __init__
+
+1235 Mar 08 22:42:54 2007 .. fix lists-del
+
+1234 Mar 08 22:04:39 2007 .. add persistconfig test
+
+1233 Mar 08 21:57:32 2007 .. fixt unicode errors; all unicode strings are forced to non-unicode strings
+
+1232 Mar 08 21:56:26 2007 .. added data.new to ignore
+
+1231 Mar 08 19:50:18 2007 .. add persistconfig test
+
+1230 Mar 08 13:52:45 2007 .. check if user is None
+
+1229 Mar 08 13:26:41 2007 .. also redirect on lower case
+
+1228 Mar 07 23:31:32 2007 .. gozerbot deb still needs to be made
+
+1226 Mar 07 23:29:43 2007 .. up version
+
+
+0.6.3
+~~~~~
+
+
+1225 Mar 07 23:29:04 2007 .. Added tag 0.6.3 for changeset ec9a0dd609ba7fe49befee2514c6e9ceeaa6acd0
+
+1224 Mar 07 16:50:19 2007 .. strip images txt
+
+1223 Mar 07 16:34:25 2007 .. return on empty txt
+
+1222 Mar 07 16:08:33 2007 .. properly redirect
+
+1221 Mar 07 09:24:29 2007 .. streamline makersslist
+
+1220 Mar 06 21:31:17 2007 .. remove debug print
+
+1219 Mar 06 21:09:06 2007 .. remove old stuff
+
+1218 Mar 06 21:07:21 2007 .. finetune rss-scan
+
+1217 Mar 06 16:16:13 2007 .. use rsslist in the rss plugin
+
+1216 Mar 05 23:35:43 2007 .. check for self.stopped before reconnect
+
+1215 Mar 05 23:12:23 2007 .. implement redirect
+
+1214 Mar 05 22:35:10 2007 .. don't allow queuing on timer command
+
+1213 Mar 05 22:03:51 2007 .. add timer plugin
+
+1212 Mar 04 21:47:53 2007 .. nits
+
+1211 Mar 04 20:57:32 2007 .. add more tests
+
+1210 Mar 04 19:21:23 2007 .. remove test_collective for now
+
+1209 Mar 04 18:05:53 2007 .. cleanup
+
+1208 Mar 04 17:56:04 2007 .. get correct rowcount
+
+1207 Mar 04 15:45:51 2007 .. use db.commit()
+
+1206 Mar 04 12:19:11 2007 .. remove debug prints
+
+1205 Mar 04 09:07:54 2007 .. add postgres support
+
+1204 Mar 03 23:23:45 2007 .. add test_core and test_convert .. remove comments from test_away ..
+
+1203 Mar 03 19:30:41 2007 .. cleanup afterwards
+
+1202 Mar 03 19:11:03 2007 .. add test_collective
+
+1201 Mar 03 14:30:46 2007 .. add more tests
+
+1200 Mar 03 11:18:47 2007 .. add test user if it doesn't exist
+
+1199 Mar 03 11:11:43 2007 .. remove cruft
+
+1198 Mar 03 11:09:56 2007 .. add birthday and botsnack tests
+
+1197 Mar 03 10:12:05 2007 .. update alias test
+
+1196 Mar 03 09:59:49 2007 .. add away test
+
+1195 Mar 02 22:03:20 2007 .. allow alias override
+
+1194 Mar 02 21:38:30 2007 .. removed files/setup.py superseeded by ./setup.py
+
+1193 Mar 02 21:38:05 2007 .. added checks to alias set
+
+1192 Mar 02 20:50:30 2007 .. add a sleep(1)
+
+1191 Mar 02 20:43:19 2007 .. start outputhandler on bot init
+
+1190 Mar 02 10:35:53 2007 .. add autovoice test
+
+1189 Mar 02 09:31:34 2007 .. wait for alarm to remove itself
+
+1188 Mar 02 09:21:44 2007 .. rename bot.getresult() to bot.test() .. add test_alias
+
+1187 Mar 02 00:45:53 2007 .. update test_alert
+
+1186 Mar 02 00:30:40 2007 .. implement test_alarm .. fix test_split
+
+1185 Mar 01 22:19:59 2007 .. use ievent.origtxt in relay
+
+1184 Mar 01 22:17:42 2007 .. fix split check
+
+1183 Mar 01 19:26:33 2007 .. add wikipedia
+
+1182 Mar 01 17:59:46 2007 .. little update
+
+1181 Mar 01 17:12:14 2007 .. implement getresult what we can use in unittests
+
+1180 Mar 01 08:30:33 2007 .. don't run the bot as root .. properly shutdown on SIGTERM
+
+1179 Feb 28 21:10:58 2007 .. properly check for relay
+
+1178 Feb 28 20:00:15 2007 .. over to test
+
+1177 Feb 28 12:57:15 2007 .. remove invalid nick check
+
+1176 Feb 28 12:22:31 2007 .. add karma count to karma-search .. fix reload of plug when database is not
+
+1175 Feb 28 09:37:10 2007 .. use bot.me in bot.quit()
+
+1174 Feb 28 09:31:04 2007 .. add autoreply
+
+1173 Feb 28 09:21:05 2007 .. update README
+
+1172 Feb 28 08:42:08 2007 .. add gozerbot-stop
+
+1171 Feb 28 08:18:00 2007 .. install gozerbot-start
+
+1170 Feb 28 08:08:03 2007 .. fix missing txt incase of a !cmnd .. remove debug prints
+
+1169 Feb 28 08:00:27 2007 .. update
+
+1168 Feb 28 07:57:52 2007 .. add udpmasks
+
+1167 Feb 28 07:17:58 2007 .. add -v option
+
+1166 Feb 28 06:53:41 2007 .. add time to remind
+
+1165 Feb 28 06:27:13 2007 .. add man page and start prog
+
+1164 Feb 28 06:23:17 2007 .. up version
+
+
+0.6.2
+~~~~~
+
+
+1163 Feb 25 15:42:02 2007 .. Added tag 0.6.2 for changeset 8e2dc79626da00659d1d4d42b075b7bba5c22a7d
+
+1162 Feb 25 04:26:10 2007 .. don't install docs
+
+1161 Feb 24 23:22:29 2007 .. install docs
+
+1160 Feb 24 21:36:28 2007 .. make log clean on loglevel 2
+
+1159 Feb 24 21:14:45 2007 .. give beter example of using % in adduserhost
+
+1158 Feb 24 21:10:33 2007 .. move starting of commandhandler to bot constructor
+
+1157 Feb 24 21:05:43 2007 .. nits
+
+1156 Feb 24 21:03:51 2007 .. up version
+
+1155 Feb 24 18:41:07 2007 .. log send error
+
+1154 Feb 24 18:03:59 2007 .. getlists shouldn't return result[0][0] .. should be result
+
+1153 Feb 24 08:17:39 2007 .. forgot nick
+
+1152 Feb 24 07:58:34 2007 .. fix topic/nick relays
+
+1151 Feb 24 07:47:25 2007 .. add nick and topic relays
+
+1150 Feb 24 07:33:55 2007 .. use aliasset .. add shutdown alias
+
+1149 Feb 23 23:23:20 2007 .. fix reconnect
+
+1148 Feb 23 14:09:06 2007 .. add dboldstyle option that converts arguments to latin-1
+
+1147 Feb 22 21:40:51 2007 .. make note of data.new dir
+
+1146 Feb 22 17:41:33 2007 .. drop output if outputhandler.noouput is set
+
+1145 Feb 22 17:28:46 2007 .. add cwd to path
+
+1144 Feb 22 17:26:42 2007 .. typo
+
+1143 Feb 22 14:09:55 2007 .. add py-gozerbot port
+
+1142 Feb 22 13:11:56 2007 .. update
+
+1141 Feb 21 21:58:37 2007 .. fix
+
+1140 Feb 21 18:56:04 2007 .. enlarge waitforqueue timeout
+
+1139 Feb 21 18:39:59 2007 .. over to test
+
+1138 Feb 21 18:27:16 2007 .. add missing return
+
+1137 Feb 21 10:10:25 2007 .. add LICENSE
+
+1136 Feb 21 09:56:06 2007 .. properly boot
+
+1135 Feb 21 09:11:12 2007 .. add missing config import
+
+1134 Feb 21 08:57:08 2007 .. over to test
+
+1133 Feb 21 08:52:04 2007 .. over to test
+
+
+0.6.1
+~~~~~
+
+
+1132 Feb 20 14:44:30 2007 .. Added tag 0.6.1 for changeset 8129335a60e375d7cb021a44f924890f43b17d1b
+
+1131 Feb 19 23:03:44 2007 .. auto version numbers in setup.py
+
+1130 Feb 19 22:58:49 2007 .. bumped version number
+
+1129 Feb 19 22:48:46 2007 .. updated control file
+
+1128 Feb 19 22:32:57 2007 .. updated
+
+1127 Feb 19 22:30:07 2007 .. fixt changelog
+
+1125 Feb 19 22:24:49 2007 .. added clean after finished build
+
+1123 Feb 19 21:25:46 2007 .. fixt typo
+
+1122 Feb 19 22:23:58 2007 .. update changelog
+
+1121 Feb 19 21:49:08 2007 .. up version
+
+1120 Feb 19 21:45:42 2007 .. properly
+
+1119 Feb 19 21:41:04 2007 .. add gozerplugs package
+
+1118 Feb 19 21:32:58 2007 .. change
+
+1117 Feb 19 21:20:32 2007 .. added debian package and build information
+
+1116 Feb 19 17:22:50 2007 .. add size
+
+1115 Feb 19 15:36:00 2007 .. remove extra reply
+
+1114 Feb 19 09:00:48 2007 .. sleep 5 seconds on reconnect
+
+1113 Feb 19 08:58:05 2007 .. stop output when reconnecting
+
+1112 Feb 19 07:52:50 2007 .. reset connetok
+
+1111 Feb 18 21:58:50 2007 .. addapt missing txt to alias length
+
+1110 Feb 18 21:31:31 2007 .. exclude % from forget txt
+
+1109 Feb 18 20:21:51 2007 .. fixed up ReST docs
+
+1108 Feb 18 19:06:35 2007 .. changed rss
+
+1107 Feb 18 13:36:24 2007 .. add quit
+
+1106 Feb 18 13:34:03 2007 .. its gozerplugs.plugs now
+
+1105 Feb 18 13:33:06 2007 .. fix
+
+1104 Feb 18 13:25:46 2007 .. rejoin channels on reconnect
+
+1103 Feb 18 10:21:37 2007 .. join channels on reconnect
+
+1102 Feb 17 22:59:02 2007 .. update
+
+1101 Feb 17 22:29:39 2007 .. docify
+
+1100 Feb 17 21:48:14 2007 .. doc test
+
+1099 Feb 17 21:36:10 2007 .. update
+
+1098 Feb 17 21:31:47 2007 .. listify relay-list
+
+1097 Feb 17 20:49:39 2007 .. update docs .. THNX TRBS ;]
+
+1096 Feb 17 20:30:57 2007 .. remove x bit
+
+1095 Feb 17 20:27:30 2007 .. don't crash if we don't recognize an option
+
+1094 Feb 17 19:37:23 2007 .. nits
+
+1093 Feb 17 19:19:42 2007 .. properly return 1 on connect
+
+1092 Feb 17 19:18:21 2007 .. add joinchannels
+
+1091 Feb 17 19:14:44 2007 .. fix web plugs .. move join channels into fleet
+
+1090 Feb 17 19:03:38 2007 .. use *
+
+1089 Feb 17 18:53:07 2007 .. move
+
+1088 Feb 17 18:52:16 2007 .. move start log
+
+1087 Feb 17 18:38:48 2007 .. don't throw exception if we can save
+
+1086 Feb 17 18:29:54 2007 .. move creation of dirs/config file out of gozerbot __init__.py
+
+1085 Feb 17 18:15:25 2007 .. streamline runbot .. move useradd of owner out of Bot
+
+1084 Feb 17 15:04:19 2007 .. update
+
+1083 Feb 17 14:13:58 2007 .. fix forget
+
+1082 Feb 17 12:46:55 2007 .. fix tests
+
+1081 Feb 17 12:20:17 2007 .. properly reload
+
+1080 Feb 17 12:09:17 2007 .. streamline
+
+1079 Feb 17 12:00:59 2007 .. add sqlite_db
+
+1078 Feb 17 11:59:53 2007 .. add sqlite database scheme .. remove config
+
+1077 Feb 17 11:57:47 2007 .. if db query gives no results return nr of rows
+
+1076 Feb 17 00:20:13 2007 .. limit lq <nr> to max 4 items
+
+1075 Feb 17 00:11:56 2007 .. check if nr >= 1
+
+1074 Feb 17 00:08:21 2007 .. fix
+
+1073 Feb 16 23:40:34 2007 .. nit
+
+1072 Feb 16 23:40:17 2007 .. add note about upgrading from 0.5 to 0.6
+
+1071 Feb 16 23:26:08 2007 .. set default dbtype to mysql .. enable logging in dcctest
+
+1070 Feb 16 23:24:21 2007 .. move to a more generic database approach
+
+1069 Feb 16 22:05:36 2007 .. allow only owner to use install
+
+1068 Feb 16 22:00:03 2007 .. fix whole in getuser aka don't user REGEX
+
+1067 Feb 16 17:27:54 2007 .. allow numbers of quotes argument in lq
+
+1066 Feb 16 16:07:24 2007 .. remove
+
+1065 Feb 16 14:22:55 2007 .. properly import
+
+1064 Feb 16 13:43:07 2007 .. add -i optie to grep .. fix reload
+
+1063 Feb 16 12:31:25 2007 .. load config
+
+1062 Feb 16 12:00:30 2007 .. add upgrade06 script
+
+1061 Feb 16 11:27:41 2007 .. remove
+
+1060 Feb 16 11:27:25 2007 .. add configcreate
+
+1059 Feb 15 23:38:41 2007 .. check for data dir
+
+1058 Feb 15 22:52:43 2007 .. remove old markov-config
+
+1057 Feb 15 22:47:49 2007 .. numb
+
+1056 Feb 15 22:18:50 2007 .. add upgrade06 .. import gozerplugs.plugs etc
+
+1055 Feb 15 21:42:29 2007 .. make dcctest pass
+
+1054 Feb 15 21:23:20 2007 .. fix
+
+1053 Feb 15 21:11:34 2007 .. add __init__
+
+1052 Feb 15 21:08:17 2007 .. move to gozerplugs
+
+1051 Feb 15 18:11:10 2007 .. implement alarm with timed todo
+
+1050 Feb 15 16:57:10 2007 .. add missing rlog import
+
+1049 Feb 15 15:07:10 2007 .. and back
+
+1048 Feb 15 14:41:43 2007 .. remove myisam
+
+1047 Feb 15 06:43:01 2007 .. start ouputhandler earlier
+
+1046 Feb 14 19:51:55 2007 .. use a href
+
+1045 Feb 12 09:36:59 2007 .. use hg parents to determine hg revision
+
+1044 Feb 11 14:32:09 2007 .. allow time in tomorrow command
+
+1043 Feb 09 20:58:14 2007 .. add subversion to the source command
+
+1042 Feb 09 20:44:08 2007 .. remove unused MySQLdb import
+
+1041 Feb 09 20:34:23 2007 .. move REGEXP over to LIKE
+
+1040 Feb 09 20:05:52 2007 .. add lists-merge
+
+1039 Feb 08 23:20:14 2007 .. properly detect txt
+
+1038 Feb 08 22:26:16 2007 .. lower name on fleet-add
+
+1037 Feb 08 22:12:48 2007 .. test change
+
+1036 Feb 08 21:49:09 2007 .. sleep sometime before reboot
+
+1035 Feb 08 21:16:14 2007 .. prevent relay looping
+
+1034 Feb 08 21:05:42 2007 .. beautify
+
+1033 Feb 08 20:42:53 2007 .. use [nick] * txt in relay instead of * [nick] txt so it is easier to parse
+
+1032 Feb 08 20:34:01 2007 .. fix upgrade-loud
+
+1031 Feb 08 20:30:29 2007 .. fix
+
+1030 Feb 08 20:29:52 2007 .. listify fleet-list command
+
+1029 Feb 08 20:21:32 2007 .. up version
+
+1028 Feb 08 20:19:29 2007 .. sync non db lists with dbplugs/lists.py interface
+
+1027 Feb 08 13:11:42 2007 .. over to test
+
+1026 Feb 08 13:11:06 2007 .. tune
+
+1025 Feb 08 13:06:35 2007 .. over to test
+
+1024 Feb 08 13:05:04 2007 .. over to upgrade test
+
+1023 Feb 08 13:02:55 2007 .. over to test
+
+1022 Feb 08 12:58:18 2007 .. over to test
+
+1021 Feb 08 12:57:30 2007 .. fix
+
+1020 Feb 08 12:55:53 2007 .. over to test
+
+1019 Feb 08 12:56:52 2007 .. fix
+
+1018 Feb 08 12:54:54 2007 .. over to test
+
+1017 Feb 08 12:53:52 2007 .. add upgrade-silent
+
+1016 Feb 08 10:39:11 2007 .. its bot.state['ratelimit']
+
+1015 Feb 08 09:57:57 2007 .. convert to utf-8 .. use channel.lower()
+
+1014 Feb 08 01:35:50 2007 .. up version
+
+1013 Feb 08 01:34:58 2007 .. supress relay join Presence flooding
+
+1012 Feb 08 00:11:22 2007 .. import trbs rlog changes
+
+1011 Feb 07 23:07:01 2007 .. re-apply: fix checkchan
+
+1009 Feb 07 22:43:55 2007 .. added logfile capability with optional logfile="logfile.log" syntax in data/config
+
+1005 Feb 05 20:08:50 2007 .. optimized some functions with iterator tuple comprehensions
+
+1002 Feb 05 03:21:17 2007 .. added delay before firing up markov learn threads
+
+1000 Feb 05 00:41:19 2007 .. added words dictonary with index (thx to dunker)
+
+999 Feb 04 18:29:19 2007 .. added hgignore
+
+998 Feb 08 00:06:48 2007 .. remove debug stuff
+
+997 Feb 08 00:05:10 2007 .. properly replace a fleet bot .. strip bold character in jabberbot.say()
+
+996 Feb 07 22:32:38 2007 .. don't deadlock on reconnect .. init bot.userchannels[nick] on 352
+
+995 Feb 07 21:39:24 2007 .. tune irc <-> jabber relay
+
+994 Feb 07 13:57:35 2007 .. add jabber part/join to relay .. add jabberpresence so we can do toirc
+
+993 Feb 07 11:43:38 2007 .. return 1 on succesfull join
+
+992 Feb 07 11:30:49 2007 .. wait a little bit longer
+
+991 Feb 07 11:29:11 2007 .. check if join succeeds
+
+989 Feb 07 10:28:39 2007 .. lower nick when adding to userhost cache
+
+988 Feb 07 11:00:39 2007 .. fix checkchan
+
+987 Feb 06 21:54:42 2007 .. use channel nick
+
+986 Feb 06 21:47:45 2007 .. check for channel nick first
+
+985 Feb 06 21:33:54 2007 .. up version
+
+984 Feb 06 21:31:24 2007 .. return 1 on join
+
+983 Feb 06 21:18:01 2007 .. check if join succeeds .. check for delay messages and drop them
+
+982 Feb 06 20:54:32 2007 .. implement error wait
+
+981 Feb 06 19:13:08 2007 .. revamp db.py so that exceptions get propagated
+
+980 Feb 06 18:44:58 2007 .. remove fleet-data
+
+979 Feb 06 00:44:54 2007 .. check on isalnum
+
+978 Feb 05 23:45:24 2007 .. up version
+
+977 Feb 05 23:40:40 2007 .. check if nickname is valid
+
+976 Feb 05 23:15:23 2007 .. remember nick used in channel
+
+975 Feb 05 21:38:26 2007 .. put nick back .. i'm going to make 0.5.10
+
+974 Feb 05 21:28:07 2007 .. remove nick option for now .. only works in 0.5.10
+
+973 Feb 05 20:51:18 2007 .. over to test
+
+972 Feb 05 20:44:15 2007 .. fix upgrade in jabber case
+
+971 Feb 05 20:37:16 2007 .. update
+
+970 Feb 05 17:53:17 2007 .. default jabber join nick to 'gozerbot'
+
+969 Feb 05 17:04:54 2007 .. ascii art
+
+968 Feb 05 15:48:22 2007 .. add FLEET and RELAY docs
+
+967 Feb 05 10:55:50 2007 .. forgot nick
+
+966 Feb 05 10:05:38 2007 .. sync with trbs
+
+965 Feb 04 22:00:11 2007 .. fix Apr month
+
+964 Feb 04 21:32:10 2007 .. make us OPER
+
+963 Feb 04 21:12:16 2007 .. allow todo txt for tomorrow command
+
+962 Feb 04 18:31:04 2007 .. fix
+
+961 Feb 04 18:26:46 2007 .. wait a bit until msgs are said
+
+960 Feb 04 15:36:28 2007 .. only change id when logging on google server
+
+959 Feb 04 15:13:39 2007 .. check if rssitems exists
+
+958 Feb 04 15:07:14 2007 .. start commandhandler
+
+957 Feb 04 13:20:12 2007 .. add note about init() and shutdown() functions
+
+956 Feb 04 09:40:41 2007 .. fix
+
+955 Feb 04 09:36:08 2007 .. add rss-feeds
+
+954 Feb 04 09:15:37 2007 .. add outputhandler
+
+953 Feb 03 21:42:38 2007 .. save state on exit
+
+952 Feb 03 21:09:26 2007 .. fix
+
+951 Feb 03 20:39:26 2007 .. update persistconfig
+
+950 Feb 03 20:34:07 2007 .. refreshed changes
+
+949 Feb 03 19:09:12 2007 .. cleanup and removed duplicate config options
+
+948 Feb 03 20:18:53 2007 .. update
+
+947 Feb 03 19:47:31 2007 .. up version
+
+946 Feb 03 19:44:46 2007 .. add greeting plug
+
+945 Feb 03 19:05:26 2007 .. add tomorrow command
+
+944 Feb 03 18:55:15 2007 .. add entry about waitforuser
+
+943 Feb 03 17:50:18 2007 .. add comment where to put the permoverload file
+
+942 Feb 03 17:49:11 2007 .. add entry about permoverload file
+
+941 Feb 03 17:13:15 2007 .. streamline
+
+940 Feb 03 16:57:31 2007 .. make gozerbot package usable in the interactive interpreter
+
+939 Feb 02 23:05:05 2007 .. move partyudp into udp
+
+938 Feb 02 22:19:17 2007 .. add regdir()
+
+937 Feb 02 21:00:41 2007 .. add fleet.startok to signal that fleet has started
+
+936 Feb 02 02:22:06 2007 .. commit test
+
+935 Feb 01 19:56:47 2007 .. revert
+
+934 Feb 01 19:52:43 2007 .. reload kernel plug at module load time
+
+933 Feb 01 19:37:48 2007 .. move handlers functions to callbacks
+
+932 Feb 01 12:47:23 2007 .. update
+
+931 Jan 31 19:17:00 2007 .. when testing if command would dispatch check for pipelining and if so only
+
+930 Jan 31 15:51:19 2007 .. make USER doc tell about user management
+
+929 Jan 31 15:44:25 2007 .. nits
+
+928 Jan 31 15:19:54 2007 .. convert JID to string in userhosts cache
+
+927 Jan 31 14:52:28 2007 .. allow searchquotes to be pipelined
+
+926 Jan 30 20:02:03 2007 .. save persistconfig items on change
+
+925 Jan 30 15:07:03 2007 .. add JABBER doc
+
+924 Jan 30 13:35:56 2007 .. fix
+
+923 Jan 30 13:34:19 2007 .. sort nicks list
+
+922 Jan 30 13:29:49 2007 .. add ignorenicks
+
+921 Jan 29 23:59:34 2007 .. up version
+
+920 Jan 29 23:47:15 2007 .. set persist.data to default if pickle.load fails
+
+919 Jan 29 23:33:23 2007 .. don't depend on xmpp
+
+918 Jan 29 23:02:19 2007 .. up version
+
+917 Jan 29 22:57:46 2007 .. fix
+
+916 Jan 29 17:57:24 2007 .. fix
+
+915 Jan 29 17:53:21 2007 .. set bot.name
+
+914 Jan 29 17:48:45 2007 .. fix addirc
+
+913 Jan 29 17:03:12 2007 .. fleet-jabberadd can only be used from jabberbots
+
+912 Jan 29 11:59:53 2007 .. fix item numbering
+
+911 Jan 29 10:49:29 2007 .. fix numbers
+
+910 Jan 28 17:18:06 2007 .. don't depend on xmpp
+
+909 Jan 28 17:03:56 2007 .. check if xmpp package is available
+
+908 Jan 28 16:29:30 2007 .. allow jabber bots in fleet
+
+907 Jan 27 20:33:03 2007 .. serialize fleet-cmnd
+
+906 Jan 27 19:56:25 2007 .. move splittxt into generic .. refine handle_join
+
+905 Jan 27 15:42:24 2007 .. add todo-settime
+
+904 Jan 26 17:40:13 2007 .. use list of nicks in !nicks command .. set subject in mail
+
+903 Jan 26 16:21:53 2007 .. add meet description
+
+902 Jan 26 15:54:42 2007 .. better response
+
+901 Jan 26 15:11:53 2007 .. bla
+
+900 Jan 26 15:09:10 2007 .. add copyright entry
+
+899 Jan 26 15:08:35 2007 .. add FAQ doc
+
+898 Jan 26 15:05:53 2007 .. make sure user set owneruserhost ok
+
+897 Jan 26 15:00:45 2007 .. make reference to owneruserhost
+
+896 Jan 26 13:54:13 2007 .. move country-reverse into country command
+
+895 Jan 26 13:31:08 2007 .. add example
+
+894 Jan 26 13:11:40 2007 .. only show commands in apropos that a user can do
+
+893 Jan 25 16:09:23 2007 .. add savecfgname
+
+892 Jan 25 15:51:02 2007 .. call boot on enable
+
+891 Jan 25 14:26:28 2007 .. fix
+
+890 Jan 25 13:54:13 2007 .. add not
+
+889 Jan 25 13:45:20 2007 .. jabber reconnect .. change bot.connected to bot.connectok
+
+888 Jan 24 14:28:03 2007 .. allow '*' in seen command
+
+887 Jan 23 20:13:39 2007 .. up version
+
+886 Jan 23 00:31:30 2007 .. the bot already makes the myplugs directory if it doesn't exist
+
+885 Jan 21 14:50:38 2007 .. unload jcallbacks on reload
+
+884 Jan 21 14:02:52 2007 .. add autoreply
+
+883 Jan 20 16:58:58 2007 .. add missing attributes
+
+882 Jan 19 14:42:25 2007 .. wrap rendezvous delete in try except
+
+881 Jan 18 23:27:28 2007 .. add mail-code command
+
+880 Jan 17 17:38:58 2007 .. add sleep
+
+879 Jan 17 17:26:40 2007 .. use list for running output
+
+878 Jan 17 17:19:36 2007 .. run trydispatch in the loop instead of its own thread
+
+877 Jan 17 15:49:24 2007 .. add ircevent.alias
+
+876 Jan 16 13:35:11 2007 .. up version
+
+875 Jan 16 13:32:28 2007 .. clone ircevent before passing on to callbacks
+
+874 Jan 15 15:56:33 2007 .. use typ='chat' in bot.say()
+
+873 Jan 12 16:14:22 2007 .. polltime needs to be an integer and > 60 seconds
+
+872 Jan 12 01:04:12 2007 .. remove debug prints .. don't use a copy of ievent in callbacks and put
+
+871 Jan 11 23:29:21 2007 .. add tail
+
+870 Jan 11 19:18:04 2007 .. fix
+
+869 Jan 11 18:14:48 2007 .. add a allowqueue attribute on the command object so we can disable
+
+868 Jan 11 15:13:01 2007 .. lower
+
+867 Jan 11 07:30:59 2007 .. skip __init__
+
+866 Jan 11 06:20:08 2007 .. use plugnames
+
+865 Jan 09 21:51:02 2007 .. make second char == '!' the escape char for pipelining
+
+864 Jan 08 23:46:33 2007 .. move to PersisConfig
+
+863 Jan 08 22:26:37 2007 .. make references to install-plug
+
+862 Jan 08 21:32:22 2007 .. remove old __init__.py .. just touch the files .. install use the myplugs
+
+861 Jan 08 19:47:32 2007 .. move webserver tot PersistConfig
+
+860 Jan 08 00:25:23 2007 .. re-enable save
+
+859 Jan 07 23:09:14 2007 .. added few comments
+
+858 Jan 07 23:07:41 2007 .. cleanupify
+
+857 Jan 07 23:19:57 2007 .. strip test stuff
+
+855 Jan 07 21:58:13 2007 .. added syncold
+
+854 Jan 07 21:57:22 2007 .. added cfg.syncold
+
+852 Jan 06 02:42:10 2007 .. added callback-event support in persistconfig, you can now get called back when an option changes
+
+851 Jan 06 19:54:33 2007 .. sync with old config data
+
+850 Jan 05 08:59:35 2007 .. gozerbotify
+
+849 Jan 05 05:50:16 2007 .. streamline
+
+847 Jan 05 04:19:22 2007 .. changed remove to undefine, behaves like a not-define, added aliases to remove
+
+846 Jan 05 04:18:53 2007 .. removed testing code
+
+845 Jan 05 02:29:20 2007 .. check if ievent.txt exists
+
+844 Jan 05 01:31:21 2007 .. fix
+
+843 Jan 05 00:15:52 2007 .. fixed name in plughelp of markov.py
+
+842 Jan 05 00:36:33 2007 .. move markovtalk plugin to markov plug
+
+841 Jan 05 00:35:40 2007 .. move tabs to spaces
+
+840 Jan 04 22:50:27 2007 .. better checking
+
+839 Jan 04 22:29:09 2007 .. initial commit of persistconfig
+
+838 Jan 04 16:34:42 2007 .. tune
+
+837 Jan 04 01:34:14 2007 .. check if jabber is enabled
+
+836 Jan 04 01:26:49 2007 .. delay plugins register
+
+835 Jan 02 23:24:56 2007 .. up version
+
+834 Jan 02 22:48:08 2007 .. make topic work with jabber
+
+833 Jan 02 21:38:25 2007 .. move gettopic and settopic into the bot
+
+832 Jan 01 18:32:10 2007 .. add googletalk hack
+
+831 Dec 31 17:09:54 2006 .. update sys.path if directory is passed as argument
+
+830 Dec 31 16:36:15 2006 .. log reconnect
+
+829 Dec 31 16:28:21 2006 .. cleanup db module
+
+828 Dec 26 21:20:03 2006 .. remove *args we don't do that yet
+
+827 Dec 26 21:14:31 2006 .. add ievent.command
+
+826 Dec 26 14:21:19 2006 .. add gozerbot.cron
+
+825 Dec 25 14:27:23 2006 .. don't convert incoming data to ascii
+
+824 Dec 24 15:44:14 2006 .. add ignore-list
+
+823 Dec 24 14:01:37 2006 .. remove execute bit
+
+822 Dec 23 22:14:15 2006 .. add encoding command
+
+821 Dec 23 22:10:02 2006 .. still allow -u option
+
+820 Dec 23 22:08:00 2006 .. switch to utf-8 as default
+
+819 Dec 23 19:11:14 2006 .. make learnurl non blocking
+
+818 Dec 23 17:37:08 2006 .. be start name agnostic
+
+817 Dec 23 17:27:29 2006 .. make sure arguments are passed when rebooting
+
+816 Dec 21 14:01:24 2006 .. tune connect()
+
+815 Dec 20 17:01:50 2006 .. allow bold
+
+814 Dec 20 14:43:51 2006 .. more fix
+
+813 Dec 20 14:40:53 2006 .. really fix
+
+812 Dec 20 14:37:11 2006 .. fix
+
+811 Dec 20 00:24:36 2006 .. lower loglevel
+
+810 Dec 20 00:24:04 2006 .. more bla
+
+809 Dec 20 00:23:20 2006 .. bla
+
+808 Dec 20 00:13:13 2006 .. up version
+
+807 Dec 19 22:21:10 2006 .. streamline toascii
+
+806 Dec 19 22:02:32 2006 .. put jcoll checking loglevel 0
+
+805 Dec 19 22:00:35 2006 .. make utf-8 work with jabber
+
+804 Dec 19 21:54:18 2006 .. properly check for utf-8
+
+803 Dec 19 21:45:00 2006 .. properly set encoding
+
+802 Dec 19 21:27:48 2006 .. add -u option that set defaultencoding to utf-8
+
+801 Dec 19 18:16:46 2006 .. lower remove sleep time
+
+800 Dec 19 15:38:22 2006 .. basic step
+
+799 Dec 19 15:31:48 2006 .. fix
+
+798 Dec 19 02:27:07 2006 .. add doconnect flag to Db constructor
+
+797 Dec 19 02:24:45 2006 .. fix
+
+796 Dec 19 02:14:26 2006 .. add connectargs
+
+795 Dec 19 01:47:52 2006 .. fix exception reporting
+
+794 Dec 19 01:42:25 2006 .. fix delete
+
+793 Dec 19 01:39:27 2006 .. it's scwachter.stop
+
+792 Dec 19 01:23:13 2006 .. add shoutcast watcher
+
+791 Dec 18 14:39:00 2006 .. remove url from version
+
+790 Dec 18 14:26:53 2006 .. add shoutcast
+
+789 Dec 15 11:41:18 2006 .. it's stoprunning
+
+788 Dec 14 20:07:10 2006 .. check if rssitem is stopped
+
+787 Dec 14 20:04:08 2006 .. add version to geturl .. make rss use it
+
+786 Dec 14 15:30:44 2006 .. test
+
+785 Dec 14 15:26:35 2006 .. add lockmanager and lock update/upgrade path
+
+784 Dec 13 16:14:45 2006 .. up version
+
+783 Dec 13 15:49:09 2006 .. add missing )
+
+782 Dec 12 07:37:47 2006 .. adjust loglevels
+
+781 Dec 12 07:16:23 2006 .. set default socket timeout to 30 seconds
+
+780 Dec 12 06:25:23 2006 .. add code-funcnames
+
+779 Dec 12 06:07:13 2006 .. add mailfrom
+
+778 Dec 12 06:06:20 2006 .. add !re
+
+777 Dec 12 04:18:27 2006 .. fix qtest
+
+776 Dec 12 03:44:52 2006 .. only save if channel data has changed
+
+775 Dec 12 02:50:04 2006 .. add mailserver config option
+
+774 Dec 12 01:55:15 2006 .. its mail not grep
+
+773 Dec 12 01:09:28 2006 .. require config['mailserver'] set
+
+772 Dec 12 01:05:29 2006 .. update flow doc
+
+771 Dec 12 00:40:39 2006 .. remove debug print
+
+770 Dec 12 00:31:35 2006 .. refer to command
+
+769 Dec 12 00:23:39 2006 .. test
+
+768 Dec 12 00:06:01 2006 .. add mail pipeline command
+
+767 Dec 11 15:28:48 2006 .. convert int to string
+
+766 Dec 10 14:19:00 2006 .. replace % by * (thnx to arnie)
+
+765 Dec 10 00:57:36 2006 .. wrap bot.socket.send in try except
+
+764 Dec 09 16:02:00 2006 .. allow LIKE based wildcards in dbusers
+
+763 Dec 08 21:17:46 2006 .. fix
+
+762 Dec 08 21:14:48 2006 .. we can log what we can't convert to ascii
+
+761 Dec 08 20:07:28 2006 .. be less verbose
+
+760 Dec 08 20:03:49 2006 .. fix a lot
+
+759 Dec 07 18:35:22 2006 .. fix
+
+758 Dec 07 16:22:02 2006 .. permoverload on all instances
+
+757 Dec 07 15:54:32 2006 .. rerun overload in reload
+
+756 Dec 07 14:48:00 2006 .. don't remove the channel on part
+
+755 Dec 07 07:10:28 2006 .. show aliases in apro
+
+754 Dec 06 19:39:59 2006 .. more plugdeny test
+
+753 Dec 06 19:39:04 2006 .. show which plug is in plugdeny
+
+752 Dec 06 19:36:27 2006 .. second upgrade test
+
+751 Dec 06 19:36:00 2006 .. fix
+
+750 Dec 06 19:35:09 2006 .. upgrade test
+
+749 Dec 06 19:34:16 2006 .. don't reload modules that are in plugdeny
+
+748 Dec 05 22:03:18 2006 .. use (name, bot.name, ievent.channel) as dict key
+
+747 Dec 05 02:25:29 2006 .. check if channel is joined
+
+746 Dec 02 23:39:26 2006 .. fix irc.out()
+
+745 Dec 01 16:09:11 2006 .. add fix_format
+
+744 Dec 01 15:43:16 2006 .. allow multiple control chars
+
+743 Dec 01 14:17:56 2006 .. check if permoverload works
+
+742 Dec 01 13:59:10 2006 .. fix permoverload
+
+741 Nov 30 23:53:09 2006 .. fix nr nodes count
+
+740 Nov 30 23:15:10 2006 .. make test JCOLL permission
+
+739 Nov 30 21:26:56 2006 .. fix JCOLL perm
+
+738 Nov 30 21:13:18 2006 .. autoadd user on jcoll-allow .. introduce JCOLL permission
+
+737 Nov 30 20:57:28 2006 .. put None on queue if nr of jcoll nodes responses are in
+
+736 Nov 30 20:24:37 2006 .. over to test
+
+735 Nov 30 19:53:50 2006 .. update doc
+
+734 Nov 30 19:47:10 2006 .. add choice
+
+733 Nov 30 19:18:23 2006 .. user ()
+
+732 Nov 30 16:40:03 2006 .. fix
+
+731 Nov 30 15:45:20 2006 .. jabber collective fase 1
+
+730 Nov 29 23:04:22 2006 .. fix typo
+
+729 Nov 28 01:30:54 2006 .. add -r option to grep aka use regular expression
+
+728 Nov 28 00:18:49 2006 .. upgrade to 0.5.1
+
+727 Nov 28 00:10:38 2006 .. return [] on empty nodes list
+
+726 Nov 27 23:22:20 2006 .. add aliases  .. add more
+
+725 Nov 27 22:56:26 2006 .. fix names example .. limit ps and running commands to OPER permission
+
+724 Nov 27 22:49:20 2006 .. add ps and running examples
+
+723 Nov 27 22:40:59 2006 .. add link to doc/BASIC and doc/OPER
+
+722 Nov 27 22:38:39 2006 .. add more doc .. adjust code to it
+
+721 Nov 27 21:18:17 2006 .. use other example
+
+720 Nov 27 21:15:46 2006 .. add UDP doc
+
+719 Nov 27 21:05:39 2006 .. forgot to save ;]
+
+718 Nov 27 21:04:06 2006 .. add collective .. speedup coll-fullboot .. don't boot on start
+
+717 Nov 27 18:29:32 2006 .. add netfreak
+
+716 Nov 27 17:35:42 2006 .. add snuf
+
+715 Nov 27 17:15:09 2006 .. fix
+
+714 Nov 27 17:12:02 2006 .. add user-getuserhosts
+
+713 Nov 27 15:38:55 2006 .. update .. fix reverse alias
+
+712 Nov 27 14:45:21 2006 .. convert to string .. try disconnectHandler
+
+711 Nov 26 20:57:56 2006 .. remove threading mixin
+
+710 Nov 26 18:40:06 2006 .. fix jabber relay
+
+709 Nov 26 17:21:03 2006 .. check for ievent.jabbber
+
+708 Nov 26 16:59:53 2006 .. copy ruserhost
+
+707 Nov 26 16:47:09 2006 .. use jabbermsg.stripped in owner check
+
+706 Nov 24 23:00:07 2006 .. add rstrip
+
+705 Nov 24 18:59:36 2006 .. fix typo
+
+704 Nov 24 15:26:27 2006 .. use connect time
+
+703 Nov 24 14:23:23 2006 .. show dropped message txt
+
+702 Nov 24 13:44:28 2006 .. put drop message on -1 loglevel
+
+701 Nov 24 13:43:17 2006 .. drop message first 7 seconds after start
+
+700 Nov 24 13:21:40 2006 .. allow start nr
+
+699 Nov 24 13:08:26 2006 .. drop message in the first 15 seconds
+
+698 Nov 24 12:43:30 2006 .. start nr with 0
+
+697 Nov 24 12:07:10 2006 .. add nr flag to reply
+
+696 Nov 23 21:52:33 2006 .. put logging of presence packets at level 1
+
+695 Nov 20 16:00:56 2006 .. allow google clients .. default jabber user check is on stripped jid
+
+694 Nov 20 02:23:44 2006 .. only log Message
+
+693 Nov 20 02:00:38 2006 .. introduce jabbercallbacks
+
+692 Nov 20 01:03:36 2006 .. update slashdot example
+
+691 Nov 20 00:50:30 2006 .. enable markov on jabber
+
+690 Nov 19 05:03:59 2006 .. remove maintain
+
+689 Nov 19 04:43:57 2006 .. disable irc commands on jabber bots
+
+688 Nov 19 04:11:58 2006 .. enable remind for jabber
+
+687 Nov 19 03:45:02 2006 .. add backlog
+
+686 Nov 19 00:39:10 2006 .. typo
+
+685 Nov 18 19:00:22 2006 .. fix
+
+684 Nov 18 18:58:06 2006 .. use chan not channel
+
+683 Nov 18 18:49:17 2006 .. enable logs in jabber
+
+682 Nov 18 17:33:09 2006 .. enable botnick: commands
+
+681 Nov 18 17:15:49 2006 .. fix
+
+680 Nov 18 17:06:45 2006 .. enable idle in jabber
+
+679 Nov 17 13:20:52 2006 .. fix jabber relay
+
+678 Nov 17 10:23:24 2006 .. add fromm
+
+677 Nov 17 10:08:29 2006 .. remove debug print
+
+676 Nov 17 01:44:48 2006 .. enable relay
+
+675 Nov 17 00:03:50 2006 .. set bot.connected on succesfull connection
+
+674 Nov 16 22:29:27 2006 .. re-enable meet for jabber bot
+
+673 Nov 16 22:26:28 2006 .. convert jid to string
+
+672 Nov 16 22:23:00 2006 .. check for jid case
+
+671 Nov 16 22:17:10 2006 .. add userhosts dict
+
+670 Nov 16 21:21:29 2006 .. add groupchat to bot.say
+
+669 Nov 16 18:19:38 2006 .. add action
+
+668 Nov 16 15:22:47 2006 .. add keepalive
+
+667 Nov 15 21:04:19 2006 .. add missing return
+
+666 Nov 14 17:07:07 2006 .. stelletje cg upgrade neuroten
+
+665 Nov 14 11:00:59 2006 .. over to test
+
+664 Nov 14 10:50:50 2006 .. over to test
+
+663 Nov 14 10:30:01 2006 .. over to test
+
+662 Nov 14 10:21:43 2006 .. lock messagehandler
+
+661 Nov 14 09:55:55 2006 .. over to test
+
+660 Nov 14 09:45:07 2006 .. put jcoll before groupchat
+
+659 Nov 14 09:29:43 2006 .. add jcoll
+
+658 Nov 14 05:09:33 2006 .. remove pyjbot remains .. reshuffle config example
+
+657 Nov 14 03:30:26 2006 .. properly call config.reload
+
+656 Nov 14 03:17:22 2006 .. remove debug stuff
+
+655 Nov 14 03:11:49 2006 .. over to test
+
+654 Nov 14 02:15:51 2006 .. over to test
+
+653 Nov 14 01:17:56 2006 .. over to test
+
+652 Nov 14 01:00:47 2006 .. over to test
+
+651 Nov 14 00:43:47 2006 .. always enforce printto
+
+650 Nov 14 00:24:50 2006 .. use ievent.printto
+
+649 Nov 13 22:48:26 2006 .. add channel option to cc
+
+648 Nov 13 22:28:12 2006 .. add channels to jabberbot
+
+647 Nov 13 18:05:29 2006 .. doe full jid on userhost
+
+646 Nov 13 17:53:49 2006 .. fix
+
+645 Nov 10 07:38:25 2006 .. allow control character
+
+644 Nov 10 07:03:44 2006 .. enable auto-register
+
+643 Nov 10 05:22:30 2006 .. bind to 'jabbermain'
+
+642 Nov 09 18:17:09 2006 .. fix channel setting in je jabberbot case
+
+641 Nov 09 16:53:55 2006 .. enable less/more in jabber
+
+640 Nov 09 11:14:32 2006 .. don't depend on xmpp if not enabled
+
+639 Nov 08 23:58:45 2006 .. enable pipelining
+
+638 Nov 08 19:51:24 2006 .. remove waitforuserdcc .. user ievent.userhost in install privwait
+
+637 Nov 08 17:08:05 2006 .. don't stop loop on exception
+
+636 Nov 08 11:46:46 2006 .. make wait work on userhost so jabberwait will work
+
+635 Nov 07 14:42:06 2006 .. sleep some more during learn
+
+634 Nov 07 13:00:17 2006 .. add ratelimiter
+
+633 Nov 06 23:13:12 2006 .. add UPGRADE permission
+
+632 Nov 06 23:00:47 2006 .. log iq
+
+631 Nov 06 22:59:32 2006 .. request roster
+
+630 Nov 06 22:40:00 2006 .. set id in reply .. add bot.state
+
+629 Nov 06 16:00:08 2006 .. add bot.jabber boolean .. use getStripped() on userhost
+
+628 Nov 06 14:52:51 2006 .. add xmpppy dependancy
+
+627 Nov 06 14:47:38 2006 .. only include jabber stuff if enabled
+
+626 Nov 06 14:20:39 2006 .. sync with gozerbot
+
+625 Nov 05 20:09:42 2006 .. use toascii
+
+624 Nov 05 16:16:16 2006 .. make bot log onto talk.google.com
+
+623 Nov 05 00:21:17 2006 .. properly log off on bot.exit()
+
+622 Nov 04 20:05:02 2006 .. add jabber support
+
+621 Oct 28 14:00:54 2006 .. strip multiple channels in joinedchannels list
+
+620 Oct 27 20:43:50 2006 .. fix time and prio
+
+619 Oct 27 19:24:50 2006 .. add pickletomysql
+
+618 Oct 26 17:12:19 2006 .. scan last said lines for words .. add loud/silent mode per channel
+
+617 Nov 05 16:23:40 2006 .. fix
+
+616 Nov 03 00:29:21 2006 .. add partyline loud and silent modes
+
+615 Nov 03 00:11:08 2006 .. remove unused import
+
+614 Nov 02 23:56:27 2006 .. allow optional sleeptime argument to rss-watch
+
+613 Nov 02 23:35:11 2006 .. show nr of nodes
+
+612 Nov 02 21:18:31 2006 .. str() web output
+
+611 Nov 02 19:24:04 2006 .. fix gozerpopen path
+
+610 Nov 01 18:26:53 2006 .. remove nonfree alias
+
+609 Nov 01 16:52:24 2006 .. typo
+
+608 Oct 31 16:25:33 2006 .. it's sent
+
+607 Oct 31 11:46:41 2006 .. woulddispatch uses a bot argument now
+
+606 Oct 31 11:43:15 2006 .. its TypeError
+
+605 Oct 31 11:32:50 2006 .. add channel permissions
+
+604 Oct 31 11:19:43 2006 .. make permoverload grok multiple permissions .. up version
+
+603 Oct 31 00:52:50 2006 .. try to set reuseport
+
+602 Oct 31 00:50:22 2006 .. try to set reuseport
+
+601 Oct 30 18:44:34 2006 .. fix (some) pychecker warnings
+
+600 Oct 29 13:09:03 2006 .. nit
+
+599 Oct 28 14:02:50 2006 .. strip multiple channels in joinedchannels list
+
+598 Oct 27 20:44:34 2006 .. fix priority and time display
+
+597 Oct 27 19:26:11 2006 .. add pickletomysql
+
+596 Oct 26 17:13:31 2006 .. scan last 5 lines for words .. add per channel loud/silent mode
+
+595 Oct 25 15:36:12 2006 .. properly return result
+
+594 Oct 25 15:00:13 2006 .. fix
+
+593 Oct 24 14:38:03 2006 .. show all hg pull response lines
+
+592 Oct 24 14:13:40 2006 .. remove debug print
+
+591 Oct 24 14:13:22 2006 .. nits
+
+590 Oct 24 13:43:33 2006 .. check if only 1 line is sent
+
+589 Oct 24 13:39:59 2006 .. put TOO LATE txt into saytodo
+
+588 Oct 24 03:15:53 2006 .. pug line split into try except
+
+587 Oct 24 03:02:24 2006 .. typo
+
+586 Oct 24 02:56:29 2006 .. do better ping sequence
+
+585 Oct 23 15:33:05 2006 .. its "sent"
+
+584 Oct 23 15:26:54 2006 .. make not of backups
+
+583 Oct 23 15:04:02 2006 .. move url to the front
+
+582 Oct 23 14:29:35 2006 .. put items in order of itemslist
+
+581 Oct 22 20:18:17 2006 .. allow bla | to me
+
+580 Oct 22 16:30:45 2006 .. save on joinedlist change
+
+579 Oct 22 15:50:25 2006 .. import from gozerdevel .. pass channel on to coll/coll-exec
+
+578 Oct 22 15:45:45 2006 .. add channel to coll/coll-exec
+
+577 Oct 21 01:14:09 2006 .. skip commands
+
+576 Oct 19 19:12:20 2006 .. sync with gozerbot repo
+
+575 Oct 19 19:10:53 2006 .. remove so we can sync to gozerbot repo
+
+574 Oct 04 16:40:13 2006 .. sync
+
+573 Oct 04 05:22:14 2006 .. document
+
+572 Oct 21 01:16:49 2006 .. skip commands
+
+571 Oct 20 05:32:22 2006 .. check for result
+
+570 Oct 20 00:34:17 2006 .. fix config reload
+
+569 Oct 18 18:18:50 2006 .. check if input line is given
+
+568 Oct 18 17:13:08 2006 .. give svn upgrade response
+
+567 Oct 18 17:11:08 2006 .. fix
+
+566 Oct 18 15:01:36 2006 .. put joined channel into bot state and use that to join channels
+
+565 Oct 18 14:37:25 2006 .. move splitted list into bot
+
+564 Oct 16 14:45:19 2006 .. don't show python version and os
+
+563 Oct 14 15:46:27 2006 .. fix
+
+562 Oct 13 21:09:26 2006 .. shorten welcome list on dcc chat partyline
+
+561 Oct 13 17:29:48 2006 .. only check for aliases if its a command
+
+560 Oct 13 09:43:29 2006 .. allow use of || to pass on pipelined command to collective node
+
+559 Oct 12 21:11:50 2006 .. learn faster .. only do markov command if channel is enabled
+
+558 Oct 12 21:03:20 2006 .. fix
+
+557 Oct 12 19:59:47 2006 .. remove debug prints
+
+556 Oct 12 19:58:15 2006 .. enable/disable markov learning per channel
+
+555 Oct 11 15:07:24 2006 .. fix last
+
+554 Oct 10 12:31:57 2006 .. make commands grepable .. remove debug prints
+
+553 Oct 10 00:25:27 2006 .. show who send the message
+
+552 Oct 10 00:22:07 2006 .. give response back
+
+551 Oct 10 00:04:19 2006 .. commit merge
+
+550 Oct 10 00:03:14 2006 .. add to plugin which allows to send output to nick (buffered)
+
+549 Oct 09 16:44:04 2006 .. convert elements of list to string
+
+548 Oct 08 20:45:30 2006 .. add count
+
+547 Oct 07 23:00:48 2006 .. fix seen
+
+546 Oct 07 22:13:37 2006 .. check on ' |'
+
+545 Oct 07 16:42:03 2006 .. removed converting args to string in thread logging .. don't spawn separate
+
+544 Oct 07 14:41:38 2006 .. fix 437
+
+543 Oct 06 22:19:50 2006 .. only do onjoin when there is txt to say
+
+542 Oct 06 18:38:15 2006 .. check if ievent.txt is available
+
+541 Oct 06 17:37:23 2006 .. allow list as argument to ievent.reply so we can grep better .. cleanup log
+
+540 Oct 04 15:50:46 2006 .. remove word_list
+
+539 Oct 04 12:43:08 2006 .. recycle if result < 20 chars
+
+538 Oct 04 05:20:13 2006 .. document
+
+537 Oct 04 00:13:21 2006 .. don't show nr of items
+
+536 Oct 03 23:56:38 2006 .. split on '|' and '&&'
+
+535 Oct 03 20:17:50 2006 .. up version
+
+534 Oct 03 20:12:26 2006 .. import commands pipeline .. grep
+
+533 Oct 03 20:06:45 2006 .. bla
+
+532 Oct 03 14:04:12 2006 .. make grep work when results queues are used
+
+531 Oct 03 13:01:32 2006 .. add pipeline functionality
+
+530 Oct 02 16:55:46 2006 .. use words that are more than 4 characters and find the word with the lowest nr of followers
+
+529 Sep 28 17:19:42 2006 .. add missing return
+
+528 Sep 28 15:21:52 2006 .. make onjoin per channel
+
+527 Sep 26 20:01:36 2006 .. properly learn urls
+
+526 Sep 25 20:26:12 2006 .. fix callback precondition
+
+525 Sep 25 19:31:22 2006 .. lower nick on detection
+
+524 Sep 25 16:52:20 2006 .. do do markov on dcctest .. add JOIN callback
+
+523 Sep 24 20:01:30 2006 .. remove pickle and use a learnlist of items that will be learned on startup
+
+522 Sep 23 00:14:35 2006 .. fikst missing {}
+
+521 Sep 22 22:53:26 2006 .. fixt small typo
+
+520 Sep 22 22:54:32 2006 .. strip learn from commands
+
+519 Sep 22 22:51:10 2006 .. added update-config
+
+518 Sep 22 22:37:38 2006 .. new changes
+
+517 Sep 22 22:29:15 2006 .. renamed markovtalk-teach to markovtalk-learn
+
+516 Sep 22 15:48:35 2006 .. add markovconfig
+
+515 Oct 02 18:23:03 2006 .. add Rexodus to THNX
+
+514 Oct 02 13:18:29 2006 .. fix
+
+513 Oct 01 21:31:47 2006 .. use quote #
+
+512 Oct 01 20:50:24 2006 .. strip channel
+
+511 Oct 01 20:42:54 2006 .. move channel check into Channels
+
+510 Oct 01 20:34:46 2006 .. check for channel
+
+509 Oct 01 20:30:55 2006 .. check if channel is already joined .. check for errno 4 (interrupted system call) in udp
+
+508 Oct 01 20:12:13 2006 .. add karma to quotes
+
+507 Oct 01 13:43:09 2006 .. check if argument given is an url .. don't put timeout to 1 in partyudp
+
+506 Sep 29 17:36:26 2006 .. change added response
+
+505 Sep 28 14:38:13 2006 .. only aply alias once
+
+504 Sep 27 21:33:38 2006 .. create log file if it doesn't exist
+
+503 Sep 27 20:25:58 2006 .. strip handle functions from convert-list
+
+502 Sep 25 21:52:00 2006 .. use a better response message
+
+501 Sep 25 19:49:26 2006 .. use ievent.printto and disallow dcc chat
+
+500 Sep 25 18:58:44 2006 .. remove nrbytes back
+
+499 Sep 25 18:04:49 2006 .. fix no reply
+
+498 Sep 25 15:38:11 2006 .. its partyudp config var
+
+497 Sep 22 14:49:48 2006 .. remove markovtalk for now
+
+496 Sep 22 02:55:38 2006 .. don't use woulddispatch instead test on cc and bot.nick: and bot.nick,
+
+495 Sep 22 00:01:42 2006 .. created new object based tokens
+
+494 Sep 22 00:01:57 2006 .. add markovtalk (beta)
+
+493 Sep 21 23:42:29 2006 .. test back
+
+492 Sep 21 21:39:39 2006 .. first letter is a capital
+
+491 Sep 21 18:20:26 2006 .. move to one commandhandler for all bots .. remove irchandler in Irc, use handle_ievent directly
+
+490 Sep 21 12:02:23 2006 .. use *sys.argv in reboot
+
+489 Sep 20 22:44:27 2006 .. netsplit is *.
+
+488 Sep 20 22:33:59 2006 .. fix 311 .. fix fakein .. fix tests
+
+487 Sep 19 22:44:32 2006 .. use item.strip()
+
+486 Sep 19 18:42:35 2006 .. run trydispatch in its own thread so it can block
+
+485 Sep 19 18:27:30 2006 .. add timeout to db.connect .. put plugins.trydispatch in own thread so it can block
+
+484 Sep 19 17:14:30 2006 .. don't re-raise exception just log the error
+
+483 Sep 19 02:12:17 2006 .. sync output
+
+482 Sep 18 20:08:24 2006 .. use getmmap
+
+481 Sep 18 19:11:20 2006 .. add return after pushing reboot to the mainhandler
+
+480 Sep 18 19:56:25 2006 .. create dispatchtest so we can let woulddispatch return 1 or None
+
+479 Sep 18 19:22:32 2006 .. add getmmap
+
+478 Sep 18 12:54:07 2006 .. use deepcopy
+
+477 Sep 17 20:34:57 2006 .. add default argument to Persist
+
+476 Sep 17 16:51:07 2006 .. use getwho to get userhost
+
+475 Sep 17 15:59:03 2006 .. up version
+
+474 Sep 17 15:57:25 2006 .. lower nick name
+
+473 Sep 17 02:25:55 2006 .. add SAY and ACTION perms
+
+472 Sep 17 02:24:58 2006 .. add channel argument to say and action
+
+471 Sep 16 16:49:23 2006 .. fix nickrecapture
+
+470 Sep 16 15:18:13 2006 .. start regplugin in its own thread
+
+469 Sep 16 15:02:45 2006 .. fix delnode
+
+468 Sep 16 14:55:42 2006 .. move toascii into generic .. streamline collective
+
+467 Sep 16 00:36:16 2006 .. add Server: gozerbot version to header txt
+
+466 Sep 15 23:09:49 2006 .. add coll-ping and add checks for active
+
+465 Sep 15 22:35:27 2006 .. add setperms alias
+
+464 Sep 14 20:24:56 2006 .. add action and say
+
+463 Sep 14 19:28:50 2006 .. make speed work as expected
+
+462 Sep 14 13:38:24 2006 .. fix reversealias
+
+461 Sep 14 11:40:48 2006 .. move testing if nick already taken in bot.donick()
+
+460 Sep 14 00:07:08 2006 .. add attribute to disable automatic nick change on nick already take .. streamline wait
+
+459 Sep 13 16:41:14 2006 .. hg pull -u might return 256 so don't check returncode
+
+458 Sep 13 00:12:22 2006 .. remove references to nonfree
+
+457 Sep 12 21:10:42 2006 .. default precondition of callback to None
+
+456 Sep 12 21:06:42 2006 .. add a Gozerpopen4 class with close method that will propely wait for the child
+
+455 Sep 12 20:57:13 2006 .. upgrade test
+
+454 Sep 11 20:08:43 2006 .. fix incase of no time-todo items available
+
+453 Sep 11 16:07:11 2006 .. add load alias
+
+452 Sep 10 21:52:02 2006 .. fix response test
+
+451 Sep 10 15:32:29 2006 .. check for valid data/time
+
+450 Sep 10 01:25:50 2006 .. send \n with quitmsg
+
+449 Sep 10 00:33:59 2006 .. rstrip string from socket
+
+448 Sep 09 18:17:35 2006 .. deop outselves if ops is disabled
+
+447 Sep 08 16:46:26 2006 .. only set running flag when watch thread is started
+
+446 Sep 08 16:43:12 2006 .. show which rss watch failed to start
+
+445 Sep 08 15:20:41 2006 .. upgrade test
+
+444 Sep 08 15:16:44 2006 .. use txt.rstrip()
+
+443 Sep 08 03:23:51 2006 .. strip channel in ircevent .. first stop the bot on bot.exit()
+
+442 Sep 08 02:59:04 2006 .. remove txt.strip()
+
+441 Sep 07 21:28:43 2006 .. add coll-getnode
+
+440 Sep 07 21:02:07 2006 .. it's bot
+
+439 Sep 07 21:00:15 2006 .. remove ops if ops is disabled in channel
+
+438 Sep 07 13:18:33 2006 .. remove dns command
+
+437 Sep 06 14:16:20 2006 .. remove test handle_exception
+
+436 Sep 05 22:45:58 2006 .. use handle_one
+
+435 Sep 05 22:11:49 2006 .. add ]V[ to THNX
+
+434 Sep 05 20:40:47 2006 .. precompile regexs
+
+433 Sep 04 23:18:27 2006 .. log saving on level 10
+
+432 Sep 04 23:03:06 2006 .. move logging of executed command to eventhandler
+
+431 Sep 04 21:56:04 2006 .. put web traffic at speed 9
+
+430 Sep 04 21:54:54 2006 .. remove empty line
+
+429 Sep 04 21:28:59 2006 .. move lockdec out of main loop
+
+428 Sep 04 20:32:03 2006 .. log what we are locking on
+
+427 Sep 04 18:21:01 2006 .. catch socket errno 35 .. resource temp unavailable
+
+426 Sep 04 18:03:58 2006 .. cleanup
+
+425 Sep 04 16:26:19 2006 .. cleanup
+
+424 Sep 03 17:09:50 2006 .. check for iq 0
+
+423 Sep 02 15:08:27 2006 .. add no-op
+
+422 Sep 01 15:51:25 2006 .. revert to bot.msg / sleep3
+
+421 Sep 01 15:18:55 2006 .. only check for options in gozerpopen
+
+420 Sep 01 00:29:01 2006 .. move plugs/list.py to plugs/lists.py
+
+419 Sep 01 00:15:42 2006 .. move dbplugs/list to dbplugs/lists
+
+418 Aug 31 20:56:05 2006 .. add partyudp .. udp packets send to partyline members
+
+417 Aug 31 19:00:03 2006 .. remove debug print
+
+416 Aug 31 18:18:46 2006 .. add user-search
+
+415 Aug 31 17:17:25 2006 .. add coll-rename
+
+414 Aug 31 16:59:03 2006 .. add collstatus
+
+413 Aug 31 14:04:06 2006 .. upgrade filedetected bug fixed
+
+412 Aug 31 13:59:40 2006 .. add maintain
+
+411 Aug 31 13:07:50 2006 .. move owner check to name == 'owner'
+
+410 Aug 31 12:40:50 2006 .. don't lower owner
+
+409 Aug 30 21:52:55 2006 .. upgrade test
+
+408 Aug 30 21:51:08 2006 .. fix files detection
+
+407 Aug 30 21:47:57 2006 .. add getperms alias
+
+406 Aug 30 01:41:09 2006 .. forgotten os.sep .. up version
+
+405 Aug 30 01:27:47 2006 .. don't use ./ in reboot .. add svn update
+
+404 Aug 30 01:07:29 2006 .. use os.sep
+
+403 Aug 30 00:10:53 2006 .. move less/more into core
+
+402 Aug 30 00:07:19 2006 .. move more into less
+
+401 Aug 29 23:28:21 2006 .. revamp gozerpopen
+
+400 Aug 29 23:12:32 2006 .. make uptime "real"  .. fix elapsedstring
+
+399 Aug 29 22:53:44 2006 .. don't lower userhost
+
+398 Aug 29 22:46:56 2006 .. better checkactive output
+
+397 Aug 29 22:38:29 2006 .. check if we already got quote
+
+396 Aug 29 22:33:06 2006 .. use containment
+
+395 Aug 24 00:33:28 2006 .. move size to its own plugin
+
+394 Aug 23 15:56:36 2006 .. save channels after part
+
+393 Aug 23 15:55:08 2006 .. save channels after delchan
+
+392 Aug 23 12:57:57 2006 .. add missing return
+
+391 Aug 23 12:08:25 2006 .. don't put None in queue if node fails
+
+390 Aug 22 23:06:17 2006 .. add arc for his solaris testing
+
+389 Aug 22 23:03:02 2006 .. check if ping is a test ping if so don't provide origin just pong back the
+
+388 Aug 22 21:56:27 2006 .. more lower
+
+387 Aug 22 21:52:46 2006 .. use lower case channel names
+
+386 Aug 22 20:37:40 2006 .. log collective pings on loglevel 1
+
+385 Aug 22 19:30:34 2006 .. add channel and personal lists
+
+384 Aug 21 23:49:20 2006 .. use ievent.rest as listname
+
+383 Aug 21 23:21:53 2006 .. fix
+
+382 Aug 21 23:07:18 2006 .. add dbplugs list plugin
+
+381 Aug 21 18:52:43 2006 .. support a README file for files installed from site .. make a alias for
+
+380 Aug 21 18:03:16 2006 .. move channel check into trydispatch
+
+379 Aug 21 17:29:05 2006 .. use -o etime
+
+378 Aug 21 16:55:16 2006 .. check if activechecker is running
+
+377 Aug 21 16:38:36 2006 .. make alternick per bot .. sleep 3 seconds before joining channels ..
+
+376 Aug 21 15:46:28 2006 .. check for result
+
+375 Aug 21 13:56:51 2006 .. add new config var "alternick" .. call Irc.reconnect with orignick
+
+374 Aug 20 14:39:52 2006 .. arcs request
+
+373 Aug 19 22:31:42 2006 .. add coll-checkactive
+
+372 Aug 19 21:58:10 2006 .. return connect result
+
+371 Aug 18 00:11:26 2006 .. sleep 15 min instead of 1
+
+370 Aug 17 23:07:06 2006 .. make reboot work after dir is provided as argument
+
+369 Aug 17 22:40:17 2006 .. make activechecker a object so we can set a stop flag .. set default socket
+
+368 Aug 17 20:23:55 2006 .. delnode should also remove node from active list
+
+367 Aug 17 19:07:56 2006 .. add node to active list if it becomes active again
+
+366 Aug 17 19:03:19 2006 .. add coll-exec
+
+365 Aug 17 17:26:05 2006 .. show elapsed time
+
+364 Aug 17 17:18:15 2006 .. put activechecker into collective
+
+363 Aug 17 00:47:52 2006 .. check for karma void in good/bad
+
+362 Aug 17 00:38:15 2006 .. typo
+
+361 Aug 17 00:34:47 2006 .. check if channelmode is +t and if so if we are ops on that channel
+
+360 Aug 17 00:20:26 2006 .. add support for channel mode
+
+359 Aug 16 23:01:22 2006 .. expicitly test for (1139, "Got error 'repetition-operator operand invalid'
+
+358 Aug 16 13:50:07 2006 .. do reconnect on Connection lost
+
+357 Aug 15 03:05:15 2006 .. remove time
+
+356 Aug 14 18:57:25 2006 .. typo
+
+355 Aug 14 16:42:32 2006 .. fix webserver defaultallow/deny .. add WEBSERVER doc
+
+354 Aug 12 19:39:52 2006 .. udp has moved to its own plugin a looong time ago
+
+353 Aug 12 16:24:00 2006 .. better __str__
+
+352 Aug 12 16:30:51 2006 .. remove shutdown from reconnect
+
+351 Aug 11 18:44:37 2006 .. faster quit .. add user attribute to ircevent
+
+350 Aug 11 01:06:16 2006 .. remove stopreadloop
+
+349 Aug 11 01:02:37 2006 .. typo
+
+348 Aug 11 01:01:53 2006 .. also check for self.stopped in readloop
+
+347 Aug 10 13:34:52 2006 .. prevent ignore/limiter for OPER
+
+346 Aug 09 22:09:27 2006 .. add code-exceptions command .. don't run tests in dcctest
+
+345 Aug 09 22:07:28 2006 .. fix permit
+
+344 Aug 09 22:03:25 2006 .. fix permit
+
+343 Aug 09 19:39:38 2006 .. don't run a separate ping thread instead ping db before execute .. lock
+
+342 Aug 09 17:24:55 2006 .. do ping before execute
+
+341 Aug 09 17:20:10 2006 .. revert back to the old ways
+
+340 Aug 09 17:10:06 2006 .. ping every 5 seconds
+
+339 Aug 09 17:07:49 2006 .. don't re-raise mysql exception, just print it
+
+338 Aug 09 16:53:12 2006 .. fix
+
+337 Aug 08 22:50:35 2006 .. reboot via the mainhandler
+
+336 Aug 08 20:22:56 2006 .. default to python
+
+335 Aug 08 20:19:39 2006 .. introduce a mainhandler thats running in the main thread
+
+334 Aug 08 18:00:53 2006 .. make reboot run from parent thread, so it works on FBSD python2.5 .. don't
+
+333 Aug 08 17:13:20 2006 .. typo
+
+332 Aug 08 17:09:18 2006 .. support SunOS ps
+
+331 Aug 08 16:46:15 2006 .. fix typo
+
+330 Aug 08 16:01:09 2006 .. add quote-last <searchitem>
+
+329 Aug 08 16:58:50 2006 .. use MySQLdb.OperationError
+
+328 Aug 08 03:46:30 2006 .. ignore output
+
+327 Aug 08 03:19:30 2006 .. add ignore
+
+326 Aug 08 02:34:00 2006 .. add limiter
+
+325 Aug 07 21:36:29 2006 .. first stop the bot in bot.exit() .. use sys.argv[0] in reboot
+
+324 Aug 07 16:51:56 2006 .. check for config['dbenable']
+
+323 Aug 07 15:17:41 2006 .. up version .. forgot links
+
+322 Aug 07 14:28:40 2006 .. move RE groups into ievent instead of passing them as argument
+
+321 Aug 07 14:07:29 2006 .. fix
+
+320 Aug 07 14:00:38 2006 .. allow (bot.name, ievent.channel) indexes
+
+319 Aug 07 13:42:48 2006 .. make channel shop index on channel name not (bot.name, ievent.channel)
+
+318 Aug 07 13:34:10 2006 .. fix got-chan
+
+317 Aug 07 12:35:30 2006 .. don't use 'name' variable twice
+
+316 Aug 06 18:48:33 2006 .. remove print
+
+315 Aug 04 20:59:36 2006 .. give proper feedback if we already have a user with userhost
+
+314 Aug 04 19:45:27 2006 .. properly update userhosts cache on NICK
+
+313 Aug 03 12:07:15 2006 .. nits
+
+312 Aug 01 21:54:10 2006 .. check for svn revision
+
+311 Aug 01 21:42:17 2006 .. up version
+
+310 Aug 01 21:37:19 2006 .. adjust to new google subversion repo
+
+309 Aug 01 19:13:21 2006 .. check if provided url is not an option
+
+308 Aug 01 18:48:42 2006 .. allow svn upgrade
+
+307 Aug 01 14:57:14 2006 .. fix upgrade/update .. fix mono <nick>
+
+306 Aug 01 02:26:03 2006 .. use lock on save()
+
+305 Aug 01 02:02:13 2006 .. fix user-adduserhost
+
+304 Aug 01 01:09:48 2006 .. centralize popen2.Popen4
+
+303 Aug 01 00:25:12 2006 .. use hostnamere to check if provided data is a hostname .. put PROBE
+
+302 Jul 31 21:28:55 2006 .. load dbplugs plugs first
+
+301 Jul 31 21:07:18 2006 .. fix lists
+
+300 Jul 31 20:52:07 2006 .. expand size command
+
+299 Jul 30 18:16:25 2006 .. set loglevel on socket timeout and ping to 1
+
+298 Jul 30 18:09:18 2006 .. nits
+
+297 Jul 30 17:39:30 2006 .. use list as arg in popen
+
+296 Jul 28 01:52:03 2006 .. fix less.size()
+
+295 Jul 27 17:33:28 2006 .. make contrib directory
+
+294 Jul 27 17:18:51 2006 .. remove
+
+293 Jul 27 16:48:01 2006 .. do hostname lookup in ipcalc
+
+292 Jul 27 15:59:33 2006 .. remove
+
+291 Jul 27 15:58:53 2006 .. add country code argument to examples
+
+290 Jul 27 00:47:20 2006 .. add part and join messages to relay
+
+289 Jul 26 15:08:09 2006 .. more nit
+
+288 Jul 26 15:06:28 2006 .. nits
+
+287 Jul 26 00:25:41 2006 .. remove useless code
+
+286 Jul 26 00:17:26 2006 .. check aliases in perm command
+
+285 Jul 26 00:11:50 2006 .. strip period stuff from alarm
+
+284 Jul 24 21:42:33 2006 .. add mylist
+
+283 Jul 24 17:39:27 2006 .. add limlist.insert
+
+282 Jul 24 17:27:46 2006 .. add less
+
+281 Jul 24 14:58:59 2006 .. fix option
+
+280 Jul 23 22:37:30 2006 .. check if listname and item is provided before adding to list
+
+279 Jul 23 21:46:38 2006 .. accept .py argument
+
+278 Jul 23 20:53:35 2006 .. use config.set to set and save config var
+
+277 Jul 23 20:12:09 2006 .. add wisdom plugin thnx to snore
+
+276 Jul 23 19:30:45 2006 .. fix
+
+275 Jul 23 19:25:29 2006 .. add list plugin
+
+274 Jul 23 16:24:39 2006 .. remove non channels from loglist
+
+273 Jul 23 16:16:52 2006 .. check if provided channel is indeed a channel
+
+272 Jul 23 15:08:43 2006 .. fix users.userhosts and users.masks cache
+
+271 Jul 23 00:22:48 2006 .. make masks work
+
+270 Jul 22 23:40:18 2006 .. its tmp
+
+269 Jul 22 22:55:13 2006 .. use re.escape when using re.search
+
+268 Jul 21 17:52:48 2006 .. check if there is already a user with <nick> as username
+
+267 Jul 21 17:04:34 2006 .. move aliascheck to trydispatch .. make 'v' a alias for version
+
+266 Jul 21 15:07:35 2006 .. remove more ievent.options cruft
+
+265 Jul 21 14:50:16 2006 .. fix apro
+
+264 Jul 21 14:30:36 2006 .. we no longer have ievent.options
+
+263 Jul 21 14:19:28 2006 .. fix aliases
+
+262 Jul 21 13:14:06 2006 .. add comment that upgradeserver is only needed if hg repo changed
+
+261 Jul 21 11:42:00 2006 .. move makeargrest to ircevent.py
+
+260 Jul 21 11:22:18 2006 .. pylint
+
+259 Jul 21 04:58:52 2006 .. fix log say monitor
+
+258 Jul 21 04:06:52 2006 .. forth batch
+
+257 Jul 21 03:13:03 2006 .. third batch
+
+256 Jul 21 02:02:11 2006 .. second batch and *FIX*
+
+255 Jul 21 00:52:55 2006 .. first batch of doc strings rewrite
+
+254 Jul 20 23:02:29 2006 .. makes docs a little more friendlier
+
+253 Jul 20 22:46:35 2006 .. add 1st attempt to describe the dataflow in the bot
+
+252 Jul 20 21:11:21 2006 .. do try finally in lockdec so no matter what we unlock on exit
+
+251 Jul 20 19:45:10 2006 .. move ievent.args and ievent.rest parsing to Plugins.dispatch() and Callback.callback()
+
+250 Jul 20 17:46:17 2006 .. make dcctest pass
+
+249 Jul 20 16:23:28 2006 .. remove frame
+
+248 Jul 20 16:18:10 2006 .. move ievent.args and rest to Ircevent.parse .. remove ievent.options
+
+247 Jul 20 15:15:53 2006 .. use re.split('\s', txt) to split on 1 space .. fix ievent.rest .. fix options
+
+246 Jul 20 14:32:26 2006 .. MySQLdb already escapes string
+
+245 Jul 20 12:49:13 2006 .. make nickrecapture work
+
+244 Jul 19 14:12:55 2006 .. add invite
+
+243 Jul 18 18:08:20 2006 .. nit
+
+242 Jul 18 14:00:33 2006 .. beter argument name
+
+241 Jul 18 13:31:37 2006 .. put sleep in web loop
+
+240 Jul 18 12:05:38 2006 .. pass bot to Ircevent.parse() .. rewrite Ircevent.parse .. save config on exit
+
+239 Jul 18 09:18:39 2006 .. skip non channels
+
+238 Jul 18 07:27:14 2006 .. remove some unused imports .. remove bogus set method in Persist
+
+237 Jul 18 05:55:43 2006 .. up version
+
+236 Jul 18 05:37:54 2006 .. make ircevent RFC compatible
+
+235 Jul 18 03:34:19 2006 .. use datadir .. use self
+
+234 Jul 18 03:21:57 2006 .. sleep 5 seconds before rss update
+
+233 Jul 17 18:54:01 2006 .. use i
+
+232 Jul 17 18:52:46 2006 .. remove forced escaping of REGEXP arguments
+
+231 Jul 17 17:29:10 2006 .. only join channels started with # .. only strip : from ievent.txt
+
+230 Jul 17 13:21:04 2006 .. add channel option to shopping list
+
+229 Jul 16 15:29:01 2006 .. fix
+
+228 Jul 16 01:27:42 2006 .. update pfc
+
+227 Jul 16 01:12:09 2006 .. set nick on changenick
+
+226 Jul 15 23:58:39 2006 .. use ievent.txt in QUIT case
+
+225 Jul 15 23:50:11 2006 .. add QUIT to pfc
+
+224 Jul 15 23:35:38 2006 .. add changenick
+
+223 Jul 15 23:32:47 2006 .. remove bots() from fleet .. add nick recapture
+
+222 Jul 15 19:35:16 2006 .. beter reconnect
+
+221 Jul 15 17:46:45 2006 .. add linux errno
+
+220 Jul 15 15:36:01 2006 .. switch over to nonblocking socket
+
+219 Jul 15 14:09:05 2006 .. add break in readloop exception handling
+
+218 Jul 14 18:57:14 2006 .. add  JOIN and PART to the pfc
+
+217 Jul 14 18:06:07 2006 .. use a postfixcount to determine what the postfix is
+
+216 Jul 14 13:27:25 2006 .. add entry over myplugs directory
+
+215 Jul 13 23:24:03 2006 .. use >> to append to log instead of replace
+
+214 Jul 12 14:20:06 2006 .. fix ievent.missing in adressing mode
+
+213 Jul 12 13:50:06 2006 .. use ievent.options
+
+212 Jul 11 22:31:46 2006 .. use ievent.userhost in ratelimiter .. put lock around ratelimiter
+
+211 Jul 11 21:27:17 2006 .. upgrade test
+
+210 Jul 11 21:26:05 2006 .. upgrade test
+
+209 Jul 11 21:25:26 2006 .. fix
+
+208 Jul 11 21:24:01 2006 .. upgrade test
+
+207 Jul 11 21:23:05 2006 .. update version on upgrade
+
+206 Jul 11 16:14:30 2006 .. convert day string to integer
+
+205 Jul 11 15:33:54 2006 .. sort on day of the month
+
+204 Jul 11 12:59:47 2006 .. put sleep in relay
+
+203 Jul 11 00:51:41 2006 .. add how=noescape
+
+202 Jul 11 00:25:13 2006 .. set direct dispatch item separator to \n\n
+
+201 Jul 11 00:13:50 2006 .. remove bogus focustxt
+
+200 Jul 11 00:08:01 2006 .. don't use <br> in how=direct case
+
+199 Jul 10 19:11:25 2006 .. support options for commands
+
+198 Jul 10 15:45:49 2006 .. use ievent.rest
+
+197 Jul 10 15:38:41 2006 .. lower argument
+
+196 Jul 10 15:35:41 2006 .. add country-rev
+
+195 Jul 09 22:08:35 2006 .. add txt about installing remote plugins
+
+194 Jul 09 22:04:13 2006 .. make ievent argument to install function mandatory
+
+193 Jul 06 19:44:07 2006 .. make a special case for REGEXP values
+
+192 Jul 06 18:26:51 2006 .. really fix
+
+191 Jul 06 14:15:57 2006 .. up version
+
+190 Jul 06 14:14:22 2006 .. escape database strings and escape REGEXP
+
+189 Jul 05 13:27:56 2006 .. remove debug print
+
+188 Jul 05 13:06:58 2006 .. fix example
+
+187 Jul 05 13:03:09 2006 .. fix relay
+
+186 Jul 05 12:37:58 2006 .. log bot output
+
+185 Jul 03 21:04:19 2006 .. be less verbose on quiting dcc connections
+
+184 Jul 03 20:59:17 2006 .. add stop method .. try except on partyline socket close .. exit fleet before
+
+183 Jul 03 16:46:34 2006 .. add upgradeurl config option and allow url argument to upgrade command
+
+182 Jul 03 15:42:04 2006 .. fix links
+
+181 Jul 02 20:57:29 2006 .. dont forget log
+
+180 Jul 02 20:56:58 2006 .. be less verbose on shutdown
+
+179 Jul 02 18:22:55 2006 .. only shutdown partylist member on bot that exits
+
+178 Jul 02 12:18:05 2006 .. improve help command
+
+177 Jul 01 21:40:11 2006 .. mv plugs/aliases.py to plugs/alias.py
+
+176 Jul 01 17:28:10 2006 .. add WEB permission
+
+175 Jul 01 16:07:33 2006 .. make Fleet.cmndall wait for results .. shutdown partyline sockets on reboot
+
+174 Jul 01 12:08:23 2006 .. use multiple queues
+
+173 Jun 30 05:50:42 2006 .. links data is in the plugin
+
+172 Jun 30 04:51:48 2006 .. reshuffle
+
+171 Jun 30 02:13:42 2006 .. fix
+
+170 Jun 29 22:39:22 2006 .. remove links gozerbot module
+
+169 Jun 29 22:39:02 2006 .. add links-del plus move all links data into plugin
+
+168 Jun 29 22:15:29 2006 .. make away bot and channel sensitive
+
+167 Jun 28 20:48:42 2006 .. add install-plug and install-list
+
+166 Jun 28 13:27:07 2006 .. remove debug print
+
+165 Jun 27 18:22:23 2006 .. thnx snufj
+
+164 Jun 27 18:19:44 2006 .. add geoip
+
+163 Jun 27 17:42:43 2006 .. remove setup.py
+
+162 Jun 27 16:50:49 2006 .. remove revision
+
+161 Jun 27 16:38:39 2006 .. remove __revision__
+
+160 Jun 27 15:58:43 2006 .. strip protocol stuff
+
+159 Jun 27 15:24:02 2006 .. unescape web data
+
+158 Jun 26 23:13:53 2006 .. check for basic errors
+
+157 Jun 26 16:54:10 2006 .. add gallontoliter and litertogallon
+
+156 Jun 26 16:40:14 2006 .. show username if we already have a user with that userhost in the user
+
+155 Jun 26 16:32:40 2006 .. add convert-list
+
+154 Jun 26 16:23:52 2006 .. implement per conversion function call
+
+153 Jun 25 15:03:50 2006 .. add aliases to apropos
+
+152 Jun 25 14:46:25 2006 .. switch to gozernonfree4
+
+151 Jun 24 12:51:39 2006 .. remove world
+
+150 Jun 23 17:53:19 2006 .. use env
+
+149 Jun 23 16:41:11 2006 .. fix
+
+148 Jun 23 16:02:23 2006 .. add datadir module
+
+147 Jun 23 15:56:38 2006 .. remove gozerbot.world plus up version
+
+146 Jun 23 11:53:16 2006 .. remove ingoresockets hack .. skip if not init() found
+
+145 Jun 23 11:14:09 2006 .. sleep in dcc loop
+
+144 Jun 23 09:46:59 2006 .. loop over users if userhosts or masks cache didnt produce an user
+
+143 Jun 23 05:35:42 2006 .. init() must return 1 for reload to succeed
+
+142 Jun 23 05:17:20 2006 .. hmpf
+
+141 Jun 23 04:17:24 2006 .. remove print .. use /me in case of action privmsg log
+
+140 Jun 23 03:57:10 2006 .. split op <br>/n
+
+139 Jun 23 03:55:19 2006 .. recognize older replies
+
+138 Jun 23 03:49:14 2006 .. strip last empty entry
+
+137 Jun 23 03:43:25 2006 .. check if result is not None
+
+136 Jun 23 03:39:37 2006 .. show proper nr of nodes replied
+
+135 Jun 23 03:31:30 2006 .. return multiple results seperated by <br>
+
+134 Jun 23 03:01:37 2006 .. bunch of todoos
+
+133 Jun 23 01:39:04 2006 .. fix delete
+
+132 Jun 23 01:31:20 2006 .. add users.userhosts en users.masks
+
+131 Jun 22 13:09:44 2006 .. add user-name command
+
+130 Jun 20 22:38:25 2006 .. add snore
+
+129 Jun 20 17:48:26 2006 .. remove sendraw
+
+128 Jun 19 22:23:18 2006 .. add serkoon
+
+127 Jun 19 17:10:01 2006 .. eck for AttributeError and KeyError
+
+126 Jun 19 17:07:02 2006 .. plugin init() and shutdown() calls are allowed to fail
+
+125 Jun 17 19:31:46 2006 .. fix
+
+124 Jun 16 19:52:19 2006 .. add links
+
+123 Jun 15 16:30:00 2006 .. add flow example .. describe ievent en bot args
+
+122 Jun 06 09:22:40 2006 .. remove same revision check
+
+121 May 27 16:30:12 2006 .. add MEET permission
+
+120 May 25 15:53:39 2006 .. its time for 0.4.4
+
+119 May 18 19:11:03 2006 .. nit
+
+118 May 17 17:30:35 2006 .. add user-usersstatus and user-usersperm
+
+117 May 15 21:51:47 2006 .. fix in case of 1 word responses
+
+116 May 06 21:49:34 2006 .. fix typo
+
+115 May 05 12:19:08 2006 .. check if txtlist has at least 2 items
+
+114 May 04 07:39:48 2006 .. use thr.start_new_thread
+
+113 May 03 21:08:17 2006 .. explicitly call close in geturl
+
+112 Apr 29 20:44:22 2006 .. allow invite for OPER perm
+
+111 Apr 28 18:42:18 2006 .. loop over result in dcc chat broadcast command
+
+110 Apr 28 16:34:28 2006 .. make broadcast partyline collective work .. show nick in broadcast command
+
+109 Apr 28 16:14:29 2006 .. add partyline broadcast_notself
+
+108 Apr 27 20:26:03 2006 .. add ax
+
+107 Apr 27 20:05:16 2006 .. strip PRIVMSG and CMND
+
+106 Apr 27 13:29:27 2006 .. fix UPPERCASE arguments
+
+105 Apr 26 19:37:42 2006 .. use strip
+
+104 Apr 26 19:27:14 2006 .. up version .. show revision on startup
+
+103 Apr 26 18:44:00 2006 .. show url
+
+102 Apr 26 18:38:41 2006 .. use string.capwords() and check if lang is 2 chars
+
+101 Apr 26 17:29:33 2006 .. add wikipedia
+
+100 Apr 26 15:34:24 2006 .. check for errors in hp pull -u
+
+99 Apr 26 14:45:14 2006 .. add split test
+
+98 Apr 26 14:44:27 2006 .. remove sleep
+
+97 Apr 26 14:42:48 2006 .. run callbacks in thread so it can block
+
+96 Apr 23 14:09:34 2006 .. log less
+
+95 Apr 21 15:48:15 2006 .. tune
+
+94 Apr 21 15:47:10 2006 .. introduce Irchandler
+
+93 Apr 20 20:48:39 2006 .. put backup sleep a bit later on so that the backup thread also sleeps in case of an exception
+
+92 Apr 20 18:19:50 2006 .. default callbacks handling to threaded .. check if we are op in channel before voicing
+
+91 Apr 19 15:06:50 2006 .. allow rss for OPER permission
+
+90 Apr 19 13:55:17 2006 .. add url to urlget version
+
+89 Apr 19 13:49:04 2006 .. fix version in geturl
+
+88 Apr 19 13:20:43 2006 .. notify if hg tip command doesnt work
+
+87 Apr 18 15:49:44 2006 .. don't delete channel in handle_part, instead do it when the !part command is
+
+86 Apr 17 22:30:27 2006 .. skip dev/null
+
+85 Apr 17 22:11:51 2006 .. add mailexceptions
+
+84 Apr 17 19:22:56 2006 .. add test_alert
+
+83 Apr 17 17:21:21 2006 .. add alarms unit test
+
+82 Apr 17 17:21:01 2006 .. put tests in try except
+
+81 Apr 17 16:04:01 2006 .. make tests reloadable
+
+80 Apr 17 15:09:58 2006 .. add tests command
+
+79 Apr 17 15:09:40 2006 .. add gozertests
+
+78 Apr 15 21:23:08 2006 .. add sleep 0.1 incase of thread error .. fix whoquote .. show error in
+
+77 Apr 13 16:15:16 2006 .. chech for stopreadloop in the socket timeout handling
+
+76 Apr 13 16:11:45 2006 .. don't set stopped in shutdown
+
+75 Apr 12 20:37:28 2006 .. called the reload function pluglistreload
+
+74 Apr 12 20:30:56 2006 .. reload dbplugs after plugs
+
+73 Apr 12 11:16:02 2006 .. nit
+
+72 Apr 12 11:11:07 2006 .. check for plugins already in dbplugs
+
+71 Apr 11 19:57:29 2006 .. nit
+
+70 Apr 11 19:24:05 2006 .. return nr of nodes in boot() .. put web/nodes in list
+
+69 Apr 11 18:37:50 2006 .. also return time of quote
+
+68 Apr 11 18:32:00 2006 .. change hg url to http://r8.cg.nu/hg/gozerbot .. check for data in quote-who
+
+67 Apr 11 13:32:56 2006 .. do ywd also for birthday dbplug
+
+66 Apr 11 13:01:45 2006 .. beautify
+
+65 Apr 11 12:49:23 2006 .. make elapsedstring year-weeks-days response possible
+
+64 Apr 11 11:38:35 2006 .. show what callbacks instead of functions
+
+63 Apr 10 21:47:05 2006 .. put socket timeout on 5 minutes
+
+62 Apr 10 17:33:28 2006 .. reshuffle rlog levels
+
+61 Apr 10 17:09:00 2006 .. adjust loglevels .. strip ievent.txt .. don't send \n in handle_ping
+
+60 Apr 10 15:29:09 2006 .. over to test
+
+59 Apr 10 15:55:31 2006 .. over to test
+
+58 Apr 09 15:23:20 2006 .. pull polltimeout to 1 second
+
+57 Apr 08 21:21:43 2006 .. if hg pull -u doesnt succeed then there are no changes
+
+56 Apr 08 15:08:14 2006 .. typo
+
+55 Apr 08 15:07:29 2006 .. only send quit msg if were connected
+
+54 Apr 08 14:14:22 2006 .. remove weer alias
+
+53 Apr 08 14:11:48 2006 .. put socket timeout to 15 seconds on connect
+
+52 Apr 07 20:20:56 2006 .. svn log -rnewres:oldrev+1
+
+51 Apr 07 20:18:20 2006 .. reset timeout
+
+50 Apr 07 20:13:23 2006 .. send ping on socket timeout
+
+49 Apr 07 19:17:50 2006 .. init Queue
+
+48 Apr 07 19:15:31 2006 .. its ping()
+
+47 Apr 07 19:14:11 2006 .. add missing continue
+
+46 Apr 07 18:15:00 2006 .. add summary
+
+45 Apr 07 18:13:47 2006 .. do pong check
+
+44 Apr 07 17:36:46 2006 .. remove hg-init trick .. adjust upgrade and update
+
+43 Apr 07 17:05:03 2006 .. dont do pongcheck .. reconnect after socket timeout .. show summaries in
+
+42 Apr 07 16:08:14 2006 .. split on ' end '
+
+41 Apr 06 23:49:24 2006 .. properly reset on bot.exit() .. unset self.stopped on connect
+
+40 Apr 06 17:50:34 2006 .. wrap connect in a try except
+
+39 Apr 06 17:11:17 2006 .. up version
+
+38 Apr 06 17:08:15 2006 .. log error in getdata()
+
+37 Apr 06 16:34:21 2006 .. revamp connect/reconnect code
+
+36 Apr 06 15:24:33 2006 .. put max reconnect attempt to 5
+
+35 Apr 06 15:06:34 2006 .. fix alias-search
+
+34 Apr 06 14:48:56 2006 .. move loc to code-stat .. add words and chars
+
+33 Apr 06 13:11:57 2006 .. nit
+
+32 Apr 05 17:26:11 2006 .. bind failure is a socket.gaierror
+
+31 Apr 05 14:46:56 2006 .. use select.poll
+
+30 Apr 05 14:20:54 2006 .. don't set nonblocking
+
+29 Apr 05 14:19:18 2006 .. if not using timeout quit the bot using socket.shutdown
+
+28 Apr 05 14:12:55 2006 .. add webtimeout
+
+27 Apr 05 14:12:20 2006 .. make timeout config-able
+
+26 Apr 05 14:41:57 2006 .. check for .hg .. continue on socket.error
+
+25 Apr 05 14:18:14 2006 .. check for .hg
+
+24 Apr 05 14:10:11 2006 .. add hg related commands
+
+23 Apr 05 13:17:50 2006 .. set sockettimeout to 1 sec .. this way server can shutdown
+
+22 Apr 05 11:52:19 2006 .. we need shutdown so that the webserver will stop
+
+21 Apr 04 21:59:19 2006 .. make aliases with more than one word work
+
+20 Apr 04 21:36:22 2006 .. log what plugins we are shutting down
+
+19 Apr 04 21:21:19 2006 .. don't do sock.shutdown()
+
+18 Apr 04 18:41:07 2006 .. remove PROGRAMTHEBOT
+
+17 Apr 04 18:38:09 2006 .. remove config.py~
+
+16 Apr 04 16:19:02 2006 .. we don't use svn anymore
+
+15 Apr 04 15:26:09 2006 .. upgrade.py test
+
+14 Apr 04 15:25:19 2006 .. only check for dbenable if its a dbplug
+
+13 Apr 04 15:21:38 2006 .. upgrade.py test
+
+12 Apr 04 15:19:12 2006 .. more test
+
+11 Apr 04 15:17:40 2006 .. test
+
+10 Apr 04 15:12:49 2006 .. show all files
+
+9 Apr 04 14:33:56 2006 .. coll-delnode uses a <name> now
+
+8 Apr 04 14:20:58 2006 .. make sure name is added on ipnr:port
+
+7 Apr 04 13:12:12 2006 .. fix
+
+6 Apr 04 14:49:02 2006 .. test
+
+5 Apr 04 14:08:14 2006 .. show changed files
+
+4 Apr 04 13:51:16 2006 .. check for sys.exc_value
+
+3 Apr 04 12:50:04 2006 .. don't init ievent.queue on copyin
+
+2 Apr 03 22:42:47 2006 .. show hg revision in !version
+
+1 Apr 03 22:27:18 2006 .. remove latest
+
+0 Apr 03 22:21:55 2006 .. import
+

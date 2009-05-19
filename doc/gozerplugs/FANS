@@ -1,0 +1,88 @@
+======
+ FANS 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show the lovers and haters of a karma item
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *fans (love)*
+
+    :description: show fans of karma item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !fans gozerbot
+        <output> gozerbot has no fans
+
+
+2) *fans-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fans-cfg
+        <output> options: dehighlight=1 .. version="GOZERBOT 0.9"
+
+
+3) *fans-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !fans-cfgsave
+        <output> config saved
+
+
+4) *haters (hate)*
+
+    :description: show haters of karma item
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !haters gozerbot
+        <output> gozerbot has no haters
+
+
+5) *karma-vs (vs)*

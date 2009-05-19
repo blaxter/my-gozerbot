@@ -1,0 +1,87 @@
+=====
+ DNS 
+=====
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+do ip or host lookup
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *dns*
+
+    :description: look up an ip or hostname
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !dns gozerbot.org
+        <output> gozerbot.org resolves to: 217.149.194.139
+
+
+2) *hexip*
+
+    :description: return the hex ip notation of an ip, or vice versa
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hexip 7F000001
+        <output> ipv4 ip 127.0.0.1 resolves to localhost
+
+
+3) *host*
+
+    :description: get hostname for ip
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !host 194.109.129.219
+        <output> irc.xs4all.nl
+
+
+4) *ip*
+
+    :description: show ip number of host
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !ip gozerbot.org
+        <output> 217.149.194.139
+
+

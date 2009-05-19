@@ -1,0 +1,55 @@
+======
+ TEST 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+plugin to do tests
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *test-plugs*
+
+    :description: run all the examples in the plugins
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !test-plugs
+        <output> starting loop 0 .. command: list | not todo .. 8b ..
+        <output>  alarm .. alias .. all .. anon .. at .. autoreply ..
+        <output>  autovoice .. away .. banner .. bash .. beats .. bender
+        <output>  .. birthday .. botsnack .. bugtracker .. buzz .. chanperm
+        <output>  .. choice .. cloud .. code .. core .. count .. country
+        <output>  .. dict .. dns .. dope .. drinks .. echo .. event
+        <output>  .. facts .. fans .. fleet .. gcalc .. gcollect ..
+        <output>  googletalk .. grab .. greeting .. grep .. hello ..
+        <output>  hex2ip .. hexjoin .. httpwatch .. identify .. idle
+        <output>  .. ignore .. infoitem .. ipcalc .. irc .. jabber ..
+         - output trunked -
+
+

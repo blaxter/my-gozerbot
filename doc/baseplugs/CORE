@@ -1,0 +1,481 @@
+======
+ CORE 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:03:32 2009
+ 
+| 
+
+description
+-----------
+| 
+
+core commands for the bot
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *apro (apropos)*
+
+    :description: apro <what> .. search for commands that contain <what>
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !apro com
+        <output> bug-comments .. whatcommands .. commands .. hg-committers
+        <output>  (committers) .. committers
+
+
+2) *available (plugins)*
+
+    :description: show what plugins are available but not loaded (see the list command for loaded plugins)
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !available
+        <output> relay
+
+
+3) *callbacks*
+4) *cc*
+
+    :description: set control char of channel or show control char of channel
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !cc !
+        <output> control char set to !
+
+
+
+    ::
+
+        <user> !cc
+        <output> control character(s) for channel #test are/is !
+
+
+5) *cc-add*
+
+    :description: cc-add <control char> .. add control character
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cc-add #
+        <output> control char # added
+
+
+6) *cc-del*
+
+    :description: cc-del <control character> .. remove cc
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !cc-del #
+        <output> control char # deleted
+
+
+7) *cleanpyc*
+8) *commands*
+
+    :description: show commands of <plugin>
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !commands core
+        <output> apro (apropos) .. available (plugins) .. callbacks
+        <output>  .. cc .. cc-add .. cc-del .. cleanpyc .. commands
+        <output>  .. encoding .. help .. intro .. less .. less-size
+        <output>  .. list (ll) .. loglevel .. more .. nowrunning ..
+        <output>  party-loud .. party-silent .. partylist .. perm ..
+        <output>  quit (halt) .. reboot .. running .. save .. threads
+        <output>  .. u .. uptime (up) .. userhostcache .. version (v)
+        <output>  .. whatcommands .. whatperms .. whereis
+
+
+9) *encoding*
+
+    :description: show default encoding
+
+    :permissions: USER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !encoding
+        <output> default encoding is utf-8
+
+
+10) *help*
+
+    :description: get help on <cmnd> or <plugin>
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !help test
+        <output> plugin description: plugin to do tests .. commands:
+        <output>  test-plugs .. give test response .. alias: None ..
+        <output>  examples:  test
+
+
+
+    ::
+
+        <user> !help misc
+        <output> plugin description: miscellaneous commands .. commands:
+        <output>  ps .. response .. source (about) .. test .. time (t)
+        <output>  .. timezone
+
+
+11) *intro*
+
+    :description: do a whois of <nick> to sync userhost into the userhost cache
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !intro dunker
+        <output> whois command send
+
+
+12) *less*
+
+    :description: less [<who>] [<index1>] <index2> .. get txt from bots output cache
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !less 0
+        <output> no data available for test 0 0
+
+
+
+    ::
+
+        <user> !less 0 2
+        <output> no data available for test 0 2
+
+
+
+    ::
+
+        <user> !less bart 1 0
+        <output> no data available for bart 1 0
+
+
+13) *less-size*
+
+    :description: show sizes of data in bot's ouput cache
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !less-size
+        <output> none
+14) *list (ll)*
+
+    :description: list registered plugins or list commands in plugin
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !list
+        <output> 8b .. alarm .. alias .. all .. anon .. at .. autoreply
+        <output>  .. autovoice .. away .. banner .. bash .. beats ..
+        <output>  bender .. birthday .. botsnack .. bugtracker .. buzz
+        <output>  .. chanperm .. choice .. cloud .. code .. core ..
+        <output>  count .. country .. dict .. dig .. dns .. dope ..
+        <output>  drinks .. echo .. eval .. event .. facts .. fans ..
+        <output>  fleet .. gcalc .. gcollect .. googletalk .. grab ..
+        <output>  greeting .. grep .. hello .. hex2ip .. hexjoin ..
+        <output>  hg .. httpwatch .. identify .. idle .. ignore .. infoitem
+        <output>  .. install .. ipcalc .. irc .. jabber .. job .. karma
+         - output trunked -
+
+
+
+    ::
+
+        <user> !list rss
+        <output> rss-add .. rss-addchannel .. rss-additem .. rss-addmarkup
+        <output>  .. rss-all .. rss-channels .. rss-del .. rss-delchannel
+        <output>  .. rss-delitem .. rss-delmarkup .. rss-description
+        <output>  .. rss-dump .. rss-feeds .. rss-get .. rss-itemslist
+        <output>  .. rss-link .. rss-list .. rss-markup .. rss-markuplist
+        <output>  .. rss-running .. rss-scan .. rss-search .. rss-setsleeptime
+        <output>  .. rss-seturl .. rss-sleeptime .. rss-start .. rss-stop
+        <output>  .. rss-stopwatch .. rss-sync .. rss-url .. rss-watch
+
+
+15) *more*
+
+    :description: return txt from output cache
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !more
+        <output> no more data available for test
+
+
+
+    ::
+
+        <user> !more test
+        <output> no more data available for test
+
+
+16) *nowrunning*
+17) *party-loud*
+
+    :description: enable partyline noise
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !party-loud
+        <output> partyline put to loud mode
+
+
+18) *party-silent*
+
+    :description: disable partyline noise
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !party-silent
+        <output> partyline put to silent mode
+
+
+19) *partylist*
+
+    :description: show connected partylist users
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !partylist
+        <output> no party yet!
+
+
+20) *perm*
+
+    :description: show permission of command
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !perm quit
+        <output> quit command needs ['OPER'] permission
+
+
+21) *running*
+
+    :description: show running jobs
+
+    :permissions: USER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !running
+        <output> running.5 = 1
+
+
+22) *save*
+
+    :description: save bot data
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !save
+        <output> saving .. done
+
+
+23) *threads*
+
+    :description: show running threads
+
+    :permissions: USER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !thread
+        <output> none
+24) *u*
+
+    :description: u <nick> .. get userhost cache entry for <nick>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !u dunker
+        <output> bart@gozerbot.org
+
+
+25) *uptime (up)*
+
+    :description: show uptime of the bot
+
+    :permissions: USER .. WEB .. JCOLL
+
+    :examples:
+
+    ::
+
+        <user> !uptime
+        <output> uptime is 16 seconds
+
+
+26) *version (v)*
+
+    :description: show version of the bot
+
+    :permissions: USER .. WEB .. JCOLL .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !version
+        <output> GOZERBOT 0.9-RC3 SQLITE HG revision 2717
+
+
+27) *whatcommands*
+
+    :description: show commands with permission <perm>
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !whatcommands USER
+        <output> 8b .. active .. age .. alarm .. alarm-mylist .. alias-get
+        <output>  .. alias-search .. apro .. at .. available .. bash
+        <output>  .. bd .. bd-del .. bd-set .. beats .. beer .. bender
+        <output>  .. botsnack .. bug-comments .. bug-list .. bug-show
+        <output>  .. buzz .. cc .. channels .. chat .. choice .. chuck
+        <output>  .. cmnd .. coffee .. commands .. count .. country
+        <output>  .. country-rev .. dayline .. dict .. dig .. dispatch
+        <output>  .. dns .. echo .. encoding .. event-add .. event-join
+        <output>  .. event-list .. event-part .. event-who .. excuse
+        <output>  .. fans .. fleet-list .. gcalc .. got .. got-chan
+         - output trunked -
+
+
+28) *whatperms*
+
+    :description: show what permissions are available
+
+    :permissions: USER .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !whatperms
+        <output> ACTION .. ANONKARMA .. ANONQUOTE .. ANY .. BUGS ..
+        <output>  BUGSOPER .. CLOUD .. EVAL .. EVENT .. FORGET .. IGNORE
+        <output>  .. INFOADD .. JCOLL .. JOIN .. KARMA .. MAIL .. MEET
+        <output>  .. MPD .. OPER .. PROBE .. QUOTE .. QUOTEADD .. QUOTEDEL
+        <output>  .. RSS .. SAY .. SENDRAW .. UPGRADE .. USER .. WEB
+
+
+29) *whereis*
+
+    :description: whereis <cmnd> .. show in which plugins <what> is
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !whereis test
+        <output> misc
+
+

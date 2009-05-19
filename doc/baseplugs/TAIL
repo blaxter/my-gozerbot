@@ -1,0 +1,47 @@
+======
+ TAIL 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:10:35 2009
+ 
+| 
+
+description
+-----------
+| 
+
+show last <nr> elements of pipeline
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *tail*
+
+    :description: show last <nr> lines of pipeline output
+
+    :permissions: USER .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !list | tail 5
+        <output> wikipedia .. wikiquote .. wisdom .. wowwiki .. yahoo
+
+

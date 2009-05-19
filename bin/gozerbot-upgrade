@@ -1,0 +1,474 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+
+""" upgrades de gozerdata directory """
+
+__copyright__ = 'this file is in the public domain'
+
+import sys, os, tempfile, types
+
+sys.path.insert(0, os.getcwd())
+
+try:
+    nestdir = os.getcwd() + os.sep + 'gozernest'
+    sys.path.insert(0, nestdir)
+    for file in os.listdir(nestdir):
+        if file.endswith('.egg'):
+            print "adding %s" % file
+            sys.path.insert(0, nestdir + os.sep + file)
+except:
+    pass
+
+from optparse import OptionParser
+
+parser = OptionParser(usage='usage: %prog [options]', version='%prog 0.9')
+parser.add_option('', '--plug', type='string', default=False, dest='plug',
+                  metavar='PATH',
+                  help="provide plugin to upgrade")
+parser.add_option('-l', '--logs', action="store_true", default=False, dest='logs',
+                  metavar='PATH',
+                  help="copy over the logfiles")
+
+opts, args = parser.parse_args()
+opts.args = args
+
+from gozerbot.utils.exception import handle_exception
+from gozerbot.plugins import plugins
+from gozerbot.datadir import datadir
+
+def upgradeplug(plugin):
+    if not os.path.exists(datadir + os.sep + 'plugs'):
+        os.mkdir(datadir + os.sep + 'plugs')
+    if not os.path.exists(datadir + os.sep + 'plugs' + os.sep + plugin):
+        os.mkdir(datadir + os.sep + 'plugs' + os.sep + plugin)
+    plug = plugins.regplugin('gozerplugs', plugin)
+    plug.upgrade()
+
+try:
+    plugin = opts.plug
+    if plugin:
+        upgradeplug(plugin)
+        os._exit(0)
+except AttributeError:
+    pass
+
+try:
+    source = sys.argv[1]
+    target = sys.argv[2]
+except IndexError:
+    print "gozerbot-upgrade <old botdir> <new botdir>"
+    os._exit(1)
+
+sourcedata = source + os.sep + 'gozerdata'
+targetdata = target + os.sep + 'gozerdata'
+
+print "STARTING"
+
+import gozerbot.config
+oldloglevel = gozerbot.config.config['loglevel']
+gozerbot.config.config.set('loglevel', 100)
+from gozerbot.utils.exception import handle_exception
+from gozerbot.datadir import makedirs
+from gozerbot.persist.persist import Persist
+from gozerbot.generic import rlog
+from gozerbot.database.db import Db
+from gozerbot.config import Config, fleetbotconfigtxt, mainconfigtxt
+from gozerbot.plugins import plugins
+from gozerbot.gozerimport import gozer_import
+import re, os, sys, shutil, thread, time
+
+from gozerbot.utils.popen import gozerpopen
+from gozerbot.utils.generic import gethighest, dosed, copyfile, convertpickle
+import gozerbot.compat.persist
+import gozerbot.compat.config
+copied = []
+
+def upgrade(source, target):
+    try:
+        shutil.copytree(source, target)
+    except OSError:
+        handle_exception()
+        print "can't copy %s to %s" % (source, target)
+        os._exit(1)
+    time.sleep(3)
+    for f in os.listdir(target):
+        if not os.path.isdir(f) and not f.endswith('.db'):
+            dosed(target + os.sep + f, 's/cgozerbot\./cgozerbot\.compat\./')
+            dosed(target + os.sep + f, 's/myplugs\./gozerbot\.compat\./')
+            dosed(target + os.sep + f, 's/cgozerplugs\.plugs\./cgozerbot\.compat\./')
+            dosed(target + os.sep + f, 's/gozerbot\.compat\.persist\./gozerbot\.compat\./')
+            copied.append(f)
+    print "COPIED %s" % ' .. '.join(copied)
+
+print "MAKE TMP DIR"
+tmpdir = tempfile.mkdtemp()
+
+def do08():
+    print "doing 0.8 upgrade" 
+    print "DOING THE SED"
+    upgrade(sourcedata, tmpdir + os.sep + 'olddata')
+    origsource = sourcedata
+    sourcedata = tmpdir + os.sep + 'olddata'
+    ddir = tmpdir + os.sep + 'gozerdata'
+    plugsdir = ddir + os.sep + 'plugs'
+    if not os.path.isdir(plugsdir):
+        os.mkdir(plugsdir)
+    print "CONVERTING MAIN CONFIG FILE" 
+    ddd = ddir + os.sep + 'plugs' + os.sep + 'udp'
+    try:
+        if not os.path.isdir(ddd):
+            os.mkdir(ddd)
+    except:
+        print "can't make udp plug dir"
+        os._exit(1)
+    ddd = ddir + os.sep + 'plugs' + os.sep + 'tcp'
+    try:
+        if not os.path.isdir(ddd):
+            os.mkdir(ddd)
+    except:
+        print "can't make tcp plug dir"
+        os._exit(1)
+    cfg = gozerbot.compat.config.Config(sourcedata)
+    cfg.reload()
+    newcfg = Config(ddir, 'mainconfig', mainconfigtxt)
+    print "converting from %s to %s" % (cfg['version'], newcfg['version'])
+    udpcfg = Config(ddir + os.sep + 'plugs' + os.sep + 'udp')
+    tcpcfg = Config(ddir + os.sep + 'plugs' + os.sep + 'tcp')
+    if type(cfg['owneruserhost']) == types.ListType:
+        newcfg['owner'] = cfg['owneruserhost']
+    else:
+        newcfg['owner'] = []
+        newcfg['owner'].append("%s" % cfg['owneruserhost'])
+    if type(cfg['jabberowner']) == types.ListType:
+        newcfg['owner'] += cfg['jabberowner']
+    else:
+        newcfg['owner'].append(cfg['jabberowner'])
+    try:
+        newcfg['owner'].remove('bartholo@localhost')
+    except ValueError:
+        pass
+    try:
+        newcfg['owner'].remove('dunker@jabber.xs4all.nl')
+    except ValueError:
+        pass
+    try:
+        newcfg['loglevel'] = int(cfg['loglevel'])
+    except (ValueError, TypeError):
+        newcfg['loglevel'] = cfg['loglevel']
+    newcfg['quitmsg'] = cfg['quitmsg']
+    newcfg['mask'] = cfg['umask'] or cfg['mask']
+    newcfg['mask'] = str(newcfg['mask'])
+    newcfg['debug'] = cfg['debug'] or 0
+    newcfg['nodb'] = 0
+    if not cfg.has_key('dbenable') or not cfg.has_key('dbtype'):
+        newcfg['dbtype'] = 'mysql'
+    elif not cfg['dbenable']:
+        newcfg['dbtype'] = 'sqlite'
+        newcfg['dbname'] = 'db/main.db'
+    else:
+        newcfg['dbtype'] = cfg['dbtype'] or 'mysql'
+        newcfg['dbname'] = cfg['dbname']
+    newcfg['dbhost'] = cfg['dbhost']
+    newcfg['dbuser'] = cfg['dbuser']
+    newcfg['dbpasswd'] = cfg['dbpasswd']
+    print 'using dbtype: %s' % newcfg['dbtype']
+    try:
+        newcfg['stripident'] = cfg['stripident']
+    except KeyError:
+        pass
+    try:
+        newcfg['bindhost'] = cfg['bindhost']
+    except KeyError:
+        pass
+    for key, value in cfg.iteritems():
+        if key.startswith('udp'):
+            try:
+                udpcfg[key] = int(value)
+            except (ValueError, TypeError):
+                udpcfg[key] = value
+        elif key.startswith('tcp'):
+            tcpcfg[key] = value
+    if not udpcfg.has_key('udpbot'):
+        udpcfg['udpbot'] = "main"
+    if not udpcfg.has_key('udpseed'):
+        udpcfg['udpseed'] = ""
+    udpcfg['udpparty'] = cfg['partyudp']
+    tcpcfg['tcpparty'] = cfg['partytcp']
+    newcfg.save()
+    from gozerbot.config import config
+    config.reload()
+    udpcfg.save()
+    tcpcfg.save()
+    print "MAKING FLEET CONFIGS"
+    fleet = gozerbot.compat.persist.Persist(sourcedata + os.sep + 'fleet')
+    if fleet.data:
+        for name, data in fleet.data.iteritems():
+            ddd = ddir + os.sep + 'fleet' + os.sep + name
+            try:
+                if not os.path.isdir(ddd):
+                    os.mkdir(ddd)
+                fleetcfg = Config(ddir + os.sep + 'fleet' + os.sep + name, 'config', \
+inittxt=fleetbotconfigtxt) 
+            except Exception, ex:
+                handle_exception()
+                continue
+            fleetcfg['name'] = name
+            try:
+                fleetcfg['type'] = data[0]
+            except:
+                fleetcfg['type'] = 'irc'
+            try:
+                fleetcfg['owner'] = data[1]
+            except:
+                fleetcfg['owner'] = []
+            if fleetcfg['type'] == 'irc':
+                try:
+                    fleetcfg['nick'] = data[2]
+                except:
+                    fleetcfg['nick'] = 'gozerbot'
+                try:
+                    fleetcfg['server'] = data[3]
+                except:
+                    fleetcfg['server'] = 'localhost'
+                try:
+                    fleetcfg['port'] = int(data[4])
+                except: 
+                    fleetcfg['port'] = 0
+                try:
+                    fleetcfg['password'] = data[5]
+                except:
+                    fleetcfg['password'] = ''
+                try:
+                    fleetcfg['ipv6'] = int(data[6])
+                except:
+                    fleetcfg['ipv6'] = 0
+                try:
+                    fleetcfg['ssl'] = int(data[7])
+                except:
+                    fleetcfg['ssl'] = 0
+            else:
+                try:
+                    fleetcfg['host'] = data[2]
+                except:
+                    fleetcfg['host'] = 'jabber.xs4all.nl'
+                fleetcfg['server'] =  fleetcfg['host']
+                try:
+                    fleetcfg['user'] = data[3]
+                except:
+                    fleetcfg['user'] = 'botter@jabber.xs4all.nl'
+                try:
+                    fleetcfg['password'] = data[4]
+                except: 
+                    fleetcfg['password'] = 'notset'
+                try:
+                    fleetcfg['port'] = int(data[5])
+                except:
+                    fleetcfg['port'] = 5222
+            try: 
+                print "saving %s fleet bot data" % fleetcfg['name']
+                fleetcfg.save()
+            except Exception, ex:
+                handle_exception() 
+            
+            convertpickle(sourcedata + os.sep + '%s.channels' % fleetcfg['name'], ddd + os.sep + 'channels')
+            convertpickle(sourcedata + os.sep + '%s.userhosts' % fleetcfg['name'], ddd + os.sep + 'userhosts')
+            convertpickle(sourcedata + os.sep + '%s.state' % fleetcfg['name'], ddd + os.sep + 'state')
+
+    print "DISABLING DEFAULT BOTS"
+    try:
+        ddd = ddir + os.sep + 'fleet' + os.sep + 'default'
+        if not os.path.isdir(ddd):
+            os.mkdir(ddd)
+        fleetcfg = Config(ddd, inittxt=fleetbotconfigtxt)
+        fleetcfg['enable'] = 0
+        fleetcfg.save()
+    except:
+        pass
+    try:
+        ddd = ddir + os.sep + 'fleet' + os.sep + 'jabber'
+        if not os.path.isdir(ddd):
+            os.mkdir(ddd)
+        fleetcfg = Config(ddd, inittxt=fleetbotconfigtxt)
+        fleetcfg['enable'] = 0
+        fleetcfg.save()
+    except:
+        pass
+
+    print "COPY PLUGIN CONFIGS"
+
+    plugsdir = ddir + os.sep + 'plugs'
+
+    if not os.path.isdir(plugsdir):
+        os.mkdir(plugsdir)
+
+    import gozerbot.compat.persistconfig
+    got = []
+    for file in os.listdir(sourcedata):
+        if file.endswith('-config'):
+            try:
+                p = gozerbot.compat.persist.Persist(sourcedata + os.sep + file)
+            except Exception, ex:
+                print "can't make config of %s: %s" % (file, str(ex))
+                continue
+            if not p:
+                print "can't make config of %s" % file
+                continue
+            pdir = ddir + os.sep + 'plugs' + os.sep + file.split('-')[0]
+            plugcfg = Config(pdir, 'config')
+            for name, option in p.data.iteritems():
+                try:
+                    try:
+                        plugcfg[name] = int(option.value)
+                    except (ValueError, TypeError):
+                        plugcfg[name] = option.value
+                except Exception, ex:
+                    try:
+                        try:
+                            plugcfg[name] = int(option)
+                        except (ValueError, TypeError):
+                            plugcfg[name] = option
+                    except Exception, ex:
+                        print "exception converting %s: %s/%s" % (file, name, option)
+            got.append(file)
+            plugcfg.save()
+    if got:
+        print "converted %s" % ' .. '.join(got)
+
+    got = []
+    if os.path.isfile(sourcedata + os.sep + 'db' + os.sep + 'users.db'):
+        for f in os.listdir(sourcedata + os.sep + 'db'):
+            try:
+                shutil.copy(sourcedata + os.sep + 'db' + os.sep + f, ddir + os.sep + 'db' + os.sep + f)
+            except Exception, ex:
+                if 'directory' not in str(ex):
+                    print "can't copy %s .. %s" % (f, str(ex))
+                    continue
+            got.append(f)
+        print "copied over database files: %s" % ' .. '.join(got)
+    if not cfg['dbenable']:    
+        print "ADDING USERS"
+        import gozerbot.datadir
+        gozerbot.datadir.datadir = ddir
+        reload(gozerbot.database.db)
+
+        from gozerbot.compat.users import Users
+        u = Users(sourcedata + os.sep + 'users')
+        assert(u)
+        from gozerbot.database.alchemy import startmaindb
+        from gozerbot.users import Dbusers
+        users = Dbusers(ddir)
+        startmaindb(ddir)
+        added = []
+        for i in u.data:
+            try:
+                users.add(i.name, i.userhosts, i.perms)
+            except Exception, ex:
+                rlog(10, 'upgrade', "can't add user %s .. %s" % (i.name, str(ex)))
+                continue
+            try:
+                users.adduseremail(i.name, i.email)
+            except:
+                pass
+            for j in i.permit:
+                try:
+                    users.adduserpermit(i.name, j)
+                except:
+                    pass
+            for j in i. status:
+                try:
+                    users.adduserstatus(i.name, j)
+                except:
+                    pass
+            added.append(i.name)
+        print "added the following users: %s" % ' .. '.join(added)
+
+    print "UPGRADE DATABASE"
+    from gozerbot.database.alchemy import startmaindb, dbupgrade
+    try:
+        startmaindb(ddir, newcfg)
+        dbupgrade(newcfg)
+    except Exception, ex:
+        handle_exception()
+
+    print "COPY OVER OLD FILES"
+
+    for f in os.listdir(sourcedata):
+        try:
+            shutil.copy(sourcedata + os.sep + f, ddir + os.sep + 'old' + os.sep + f)
+        except Exception, ex:
+            if 'directory' not in str(ex):
+                print "can't copy %s .. %s" % (f, str(ex))
+
+    print "CHECKING FOR OLD DATADIRS"
+    if os.path.isdir(targetdata + '.old'):
+        newdir = gethighest(target, 'gozerdata.old')
+    else:
+        newdir = 'gozerdata.old'
+
+    if os.path.isdir(targetdata):
+        print "MOVING %s TO %s" % (targetdata, target + os.sep + newdir)
+        os.rename(targetdata, target + os.sep + newdir)
+
+    print "COPYING RESULTS TO %s" % targetdata
+    gozerbot.datadir.datadir = targetdata
+    shutil.copytree(ddir, targetdata)
+    #time.sleep(5)
+    #print "UPGRADING PLUGINS"
+    #plugdone = []
+    #for f in os.listdir(target + os.sep + 'gozerplugs'):
+    #    if f.endswith('py'):
+    #        try:
+    #            upgradeplug(f[:-3])
+    #            plugdone.append(f[:-3])
+    #        except AttributeError:
+    #            pass
+    #        except Exception, ex:
+    #            handle_exception()
+    #print "upgraded: %s" % ' '.join(plugdone)
+ 
+def do09():
+    print "doing 0.9 upgrade"
+    print "CHECKING FOR OLD DATADIRS"
+    if os.path.isdir(targetdata + '.old'):
+        newdir = gethighest(target, 'gozerdata.old')
+    else:
+        newdir = 'gozerdata.old'
+
+    if os.path.isdir(targetdata):
+        print "MOVING %s TO %s" % (targetdata, target + os.sep + newdir)
+        os.rename(targetdata, target + os.sep + newdir)
+    print "COPYING RESULTS TO %s" % targetdata
+    gozerbot.datadir.datadir = targetdata
+    shutil.copytree(sourcedata, targetdata)
+
+def copylogfiles():
+    t = target + os.sep + 'logs'
+    print "CHECKING FOR OLD DATADIRS"
+    if os.path.isdir(target + os.sep + 'logs.old'):
+        newdir = gethighest(target, 'logs.old')
+    else:
+        newdir = 'logs.old'
+
+    if os.path.isdir(target):
+        print "MOVING %s TO %s" % (t, target + os.sep + newdir)
+        os.rename(t, target + os.sep + newdir)
+    print "COPYING LOGFILEs TO %s" % t
+    shutil.copytree(source + os.sep + 'logs', t)
+
+try:
+    print 'CREATING DIRECTORIES'
+    makedirs(tmpdir + os.sep + 'gozerdata')
+    if os.path.exists(sourcedata + os.sep + 'fleet'):
+        print "O.9 datadir detected"
+        do09()
+    else:
+        do08()
+    if opts.logs:
+        copylogfiles()
+
+finally:
+    print "REMOVING TMP DIR"
+    shutil.rmtree(tmpdir)
+    
+print "DONE"

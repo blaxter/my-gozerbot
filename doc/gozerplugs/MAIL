@@ -1,0 +1,102 @@
+======
+ MAIL 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+mail related commands
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *mail-set*
+
+    :description: set email of user giving the command .. send confirm mail
+
+    :permissions: MAIL .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !mail-set bart@gozerbot.org
+        <output> can't send test email: config['mailserver'] is not
+        <output>  set
+
+
+2) *mail*
+
+    :description: mail pipelined data to user giving the command
+
+    :permissions: MAIL .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !todo | mail
+        <output> can't get email of test
+
+
+3) *mail-code*
+
+    :description: check mail confirmation code
+
+    :permissions: MAIL .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !mail-code 333
+        <output> reply is not ok .. try again
+
+
+4) *mail-time*
+
+    :description: mail the log since given time
+
+    :permissions: MAIL .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !mail-time 12:00
+        <output> logging is not enabled in #test
+
+
+5) *re*
+
+    :description: mail the log since last spoken word
+
+    :permissions: MAIL .. OPER
+
+    :examples:
+
+    ::
+
+        <user> !re
+        <output> logging is not enabled in #test
+
+

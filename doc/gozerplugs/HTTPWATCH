@@ -1,0 +1,66 @@
+===========
+ HTTPWATCH 
+===========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+periodically check urls
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *httpwatch-add*
+2) *httpwatch-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !httpwatch-cfg
+        <output> options: run=True .. sleep=300 .. version="GOZERBOT
+        <output>  0.9"
+
+
+3) *httpwatch-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !httpwatch-cfgsave
+        <output> config saved
+
+
+4) *httpwatch-del*
+5) *httpwatch-list*
+6) *httpwatch-peek*
+7) *httpwatch-start*
+8) *httpwatch-stop*

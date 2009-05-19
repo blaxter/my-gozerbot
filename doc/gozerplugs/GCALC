@@ -1,0 +1,45 @@
+=======
+ GCALC 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+use the google calculator
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *gcalc*
+
+    :description: Calculate an expression using the google calculator
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !gcalc 1 + 1
+        <output> 1 + 1 = 2
+
+

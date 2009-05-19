@@ -1,0 +1,45 @@
+=======
+ TIMER 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+do a timing of a command
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *timer*
+
+    :description: time a command
+
+    :permissions: USER .. WEB
+
+    :examples:
+
+    ::
+
+        <user> !timer version
+        <output> GOZERBOT 0.9 SQLITE
+
+

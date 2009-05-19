@@ -1,0 +1,87 @@
+=========
+ HEXJOIN 
+=========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+show ip and hostname from user joining a channel
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *hexjoin-cfg*
+
+    :description: plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !hexjoin-cfg
+        <output> options: channels=[] .. version="GOZERBOT 0.9"
+
+
+2) *hexjoin-cfgsave*
+
+    :description: save plugin configuration
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !hexjoin-cfgsave
+        <output> config saved
+
+
+3) *hexjoin-disable*
+
+    :description: disable hexjoin in the channel this command is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !hexjoin-disable
+        <output> #test channel is not in channels list
+
+
+4) *hexjoin-enable*
+
+    :description: enable hexjoin in the channel the command is given in
+
+    :permissions: OPER
+
+    :examples:
+
+    ::
+
+        <user> !hexjoin-enable
+        <output> #test channel added
+
+

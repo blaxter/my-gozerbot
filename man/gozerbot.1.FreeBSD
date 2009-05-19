@@ -1,0 +1,49 @@
+.TH GOZERBOT 1 "18 Sep 07" "FreeBSD" "GOZERBOT Manual"
+.SH NAME
+gozerbot \- an IRC and Jabber bot written in Python
+.SH SYNOPSIS
+.B gozerbot-start [data directory]
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.B gozerbot
+program.
+.SH USAGE
+A template configuration file ~/.gozerbot/gozerdata/config will be created when running
+.B gozerbot-start
+for the first time, or can be created in some other directory by running
+.B gozerbot-start [data directory].
+Once at least one valid IRC server or Jabber service for gozerbot to connect to has been specified in that file, running
+.B gozerbot-start [data directory]
+again will start gozerbot.
+.PP
+To perform further configuration, message your gozerbot on the IRC server or Jabber service to which it has connected, using the name specified in the configuration file (by default, gozerbot).  To summon gozerbot to an IRC channel, you will need to
+.B
+/msg gozerbot join #channel.
+Other useful commands are:
+
+.TP
+.B !perms
+.IP
+See what permissions you have
+
+.TP
+.B !available
+.IP
+See what plugins are available
+
+.TP
+.B !commands
+.IP
+See what commands are available
+
+.TP
+.B !help [command]
+.IP
+Obtain usage information for a command
+
+.SH "SEE ALSO"
+The program is documented fully in the text documentation,
+homepage is at http://gozerbot.org
+.SH AUTHOR
+This manual page was written by Jeremy Malcolm <terminus@debian.org>,
+for the Debian GNU/Linux system (but may be used by others).

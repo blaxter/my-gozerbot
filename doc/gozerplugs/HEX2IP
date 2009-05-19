@@ -1,0 +1,45 @@
+========
+ HEX2IP 
+========
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+ 
+| 
+
+description
+-----------
+| 
+
+convert a hexadecimal number to an ip addres
+
+| 
+
+
+| 
+
+commands
+--------
+| 
+
+1) *hex2ip*
+
+    :description: convert hexadecimal number to ip addres
+
+    :permissions: USER
+
+    :examples:
+
+    ::
+
+        <user> !hex2ip 54008c8a
+        <output> 54008c8a is 84.0.140.138 .. hostname is dsl54008C8A.pool.t-online.hu
+
+

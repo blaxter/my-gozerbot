@@ -1,0 +1,47 @@
+=======
+ COUNT 
+=======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:04:04 2009
+ 
+| 
+
+description
+-----------
+| 
+
+the count command counts the number of results in a pipeline
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *count*
+
+    :description: count nr of items
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !todo | count
+        <output> 5
+
+

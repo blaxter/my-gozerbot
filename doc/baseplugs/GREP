@@ -1,0 +1,47 @@
+======
+ GREP 
+======
+| 
+
+about
+-----
+| 
+
+:author:  Bart Thate <bthate@gmail.com>
+:contact: IRCNET/#dunkbots
+:distribution: core
+:license: Public Domain
+:doc created at: Sun Jan  4 21:04:02 2009
+ 
+| 
+
+description
+-----------
+| 
+
+ grep elements of a pipeline
+
+| 
+
+  register all .py files 
+
+| 
+
+commands
+--------
+| 
+
+1) *grep*
+
+    :description: grep the output of a command
+
+    :permissions: USER .. WEB .. CLOUD
+
+    :examples:
+
+    ::
+
+        <user> !list | grep core
+        <output> core
+
+
