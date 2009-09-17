@@ -66,7 +66,7 @@ TOKEN_NICK = NickMarker()
 # if ORDER_K==2: { ('eat','eggs'):['with',TOKEN,), ('eggs','with'): ['bacon',] }
 # ...
 # Logical setting is often 2 or 3
-ORDER_K = 3
+ORDER_K = 2
 
 # Maximum generation cycles
 MAXGEN = 500
