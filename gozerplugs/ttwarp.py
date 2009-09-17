@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 from gozerbot.commands import cmnds
-
+import socket
 from htmlentitydefs import name2codepoint as n2cp
 import re
 import httplib2
@@ -11,54 +11,9 @@ from time import strftime
 import datetime
 import time
 
-DEFAULT_USER  = "blaxter"
-LOGINS        = {'_Josh_'     : {'user'    : 'jacalvo',
-                                 'password': 'jacalvo',
-                                 'disabled': '1',
-                                'foo': 'feo'},
-
-                 'cpenas'     : {'user'    : 'cpenas',
-                                 'password': 'cpenas'      },
-
-                 'isaac'      : {'user'    : 'iclerencia',
-                                 'password': 'iclerencia',
-                                 'disabled': '1',
-                                 'foo': 'que lo sepas'},
-
-                 'blaxter'    : {'user'    : 'jgarcia',
-                                 'password': 'jgarcia'     },
-
-                 'capitangolo': {'user'    : 'vjimenez',
-                                 'password': 'vjimenez'    },
-
-                 'psanchez':    {'user'    : 'psanchez',
-                                 'password': 'psanchez'    },
-
-                 'pablo'       : {'user'    : 'pmarti',
-                                 'password': 'pmarti'      },
-
-                 'nestor':       {'user'   : 'nestopina',
-                                 'password': 'nestopina'    },
-
-                 'jlbelmonte':   {'user'    : 'jlbelmonte',
-                                  'password': 'jlbelmonte'    },
-
-                 'koke':         {'user'    : 'jbernal',
-                                  'password': 'jbernal'    },
-
-                 'rmunoz':       {'user'    : 'rmunoz',
-                                  'password': 'rmunoz'    },
-                 'jaime':        {'user'    : 'jsoriano',
-                                  'password': 'jsoriano' },
-
-               }
-NAME_IN_HQ = "Jesús García Sáez"
-BASE_URL   = "https://lisa.warp.es"
-###########################################################################
-h=httplib2.Http(".cache")
-h.follow_redirects = False
-h.add_certificate('/home/blaxter/.ssl/foo.key', '/home/blaxter/.ssl/jgarcia.crt', 'lisa.warp.es');
-
+# Here, there are all constants needed with hardcoded passwords
+# Also there is a h variable, instance of httplib2
+from ttwarp_data import *
 
 def substitute_entity(match):
    ent = match.group(2)
@@ -75,7 +30,7 @@ def substitute_entity(match):
       return ent
 
 def decode_htmlentities(string):
-   return string
+    #return string
    entity_re = re.compile("&(#?)(\d{1,5}|\w{1,8});")
    return entity_re.subn(substitute_entity, string)[0]
 
@@ -255,43 +210,71 @@ def _guess(author_guess):
 
 # v handle_xxxxx methods -------------------------------------------------------
 
+def error_socket( ievent ):
+    ievent.reply( "Error en la conexión co, ya lo siento" )
+
 def handle_adagio(bot, ievent):
-    reply = _adage_request()
-    print_reply( reply )
+    try:
+        reply = _adage_request()
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_author(bot, ievent):
-    reply = _author_request()
-    print_reply( reply )
+    try:
+        reply = _author_request()
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_score(bot, ievent):
-    reply = _score_request()
-    print_reply( reply )
+    try:
+        reply = _score_request()
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_guess(bot, ievent):
-    if len(ievent.args) == 1:
-        author = str( ievent.args[0] )
+    try:
+        if len(ievent.args) == 1:
+            author = str( ievent.args[0] )
 
-        reply = _guess( author )
-        print_reply( reply )
+            reply = _guess( author )
+            print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_rocks(bot, ievent):
-    reply = _vote_adage_request(ievent.nick, True)
-    print_reply( reply )
+    try:
+        reply = _vote_adage_request(ievent.nick, True)
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_sucks(bot, ievent):
-    reply = _vote_adage_request(ievent.nick, False)
-    print_reply( reply )
+    try:
+        reply = _vote_adage_request(ievent.nick, False)
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_punch_in(bot, ievent):
-    reply = _punch_request(ievent.nick, True)
-    print_reply( reply )
+    try:
+        reply = _punch_request(ievent.nick, True)
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
 
 def handle_punch_out(bot, ievent):
-    reply = _punch_request(ievent.nick, False)
-    print_reply( reply )
+    try:
+        reply = _punch_request(ievent.nick, False)
+        print_reply( ievent, reply )
+    except socket.error:
+        error_socket( ievent )
+
 
 def print_reply(ievent, reply):
-    if reply: 
+    if reply:
         for line in reply:
             ievent.reply( line )
 
