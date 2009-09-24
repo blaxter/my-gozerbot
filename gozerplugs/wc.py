@@ -4,6 +4,8 @@ from threading import Semaphore
 
 COMMAND_WC = "wc"
 COMMAND_WC_DONE = "wc_done"
+COMMAND_WC_BLAME = "wc_blame"
+COMMAND_FLUSH_WC = "flush_wc"
 
 class Wc:
     def __init__(self):
@@ -30,8 +32,23 @@ class Wc:
 
     def is_waiting(self, nick):
         return (nick in self.waiting)
+    def who(self):
+        return self.user
 
 wc = Wc()
+
+def handle_wc_blame(bot, ievent):
+    if wc.who():
+        ievent.reply("En el baño está: " + wc.who())
+    else:
+        ievent.reply("Está vacio maño")
+
+def handle_flush_wc(bot, ievent):
+    if wc.who():
+        wc.user = None
+        ievent.reply("Done, baño libre")
+    else:
+        ievent.reply("No hay nadie usándolo")
 
 def handle_wc_done(bot, ievent):
     if wc.being_used_by(ievent.nick):
@@ -56,3 +73,5 @@ def handle_wc(bot, ievent):
 
 cmnds.add(COMMAND_WC, handle_wc, 'ANY')
 cmnds.add(COMMAND_WC_DONE, handle_wc_done, 'ANY')
+cmnds.add(COMMAND_WC_BLAME, handle_wc_blame, 'ANY')
+cmnds.add(COMMAND_FLUSH_WC, handle_flush_wc, 'ANY')
