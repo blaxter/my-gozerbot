@@ -9,6 +9,9 @@ COMMAND_FLUSH_WC = "flush_wc"
 
 class Wc:
     def __init__(self):
+        self.flush()
+
+    def flush(self):
         self.sem = Semaphore(1)
         self.user = None
         self.waiting = []
@@ -45,7 +48,7 @@ def handle_wc_blame(bot, ievent):
 
 def handle_flush_wc(bot, ievent):
     if wc.who():
-        wc.user = None
+        wc.flush()
         ievent.reply("Done, baño libre")
     else:
         ievent.reply("No hay nadie usándolo")
